@@ -1,0 +1,34 @@
+# Core API clients
+openai>=1.0.0
+google-generativeai>=0.3.0
+anthropic>=0.7.0
+
+# Image processing
+pillow>=10.0.0
+
+# Data handling
+pandas>=2.0.0
+numpy>=1.24.0
+
+# Visualization
+matplotlib>=3.7.0
+seaborn>=0.12.0
+
+# Utilities
+python-dotenv>=1.0.0
+requests>=2.31.0
+
+# Jupyter for analysis
+jupyter>=1.0.0
+ipykernel>=6.25.0
+
+# Optional: Object detection (if implementing YOLO approach)
+# ultralytics>=8.0.0
+# opencv-python>=4.8.0
+# torch>=2.0.0
+# torchvision>=0.15.0
+
+# Optional: Demo interface (if time allows)
+# gradio>=4.0.0
+# streamlit>=1.28.0
+
