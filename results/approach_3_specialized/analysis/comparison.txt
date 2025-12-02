@@ -1,0 +1,37 @@
+================================================================================
+APPROACH 3 vs APPROACH 2 COMPARISON REPORT
+================================================================================
+
+APPROACH 3A (OCR-ENHANCED) vs APPROACH 2 (TEXT IMAGES)
+--------------------------------------------------------------------------------
+Approach 2 (Baseline):
+  Count: 10
+  Mean latency: 3.10s
+  Mean word count: 111.2
+
+Approach 3A: No successful results (SSL certificate issue)
+
+Common images: []
+
+APPROACH 3B (DEPTH-ENHANCED) vs APPROACH 2 (NAVIGATION IMAGES)
+--------------------------------------------------------------------------------
+Approach 2 (Baseline):
+  Count: 20
+  Mean latency: 3.77s
+  Mean word count: 132.4
+
+Approach 3B (Depth-Enhanced):
+  Count: 20
+  Mean latency: 5.33s
+  Latency difference: +1.56s (+41.5%)
+  Mean word count: 141.2
+
+Common images: 20
+
+SUMMARY
+--------------------------------------------------------------------------------
+Approach 3 provides specialized enhancements:
+  - 3A (OCR): Better text reading for text-heavy images
+  - 3B (Depth): Enhanced spatial detail for navigation scenarios
+Tradeoff: Higher latency (3-6s) vs Approach 2 baseline (~3-4s)
+Use Case: When task-specific accuracy is more important than speed

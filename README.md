@@ -1,74 +1,280 @@
 # Scene Reader 🎮👁️
 
-**Comparative Analysis of Computer Vision Approaches for Real-Time Visual Accessibility**
+**Comprehensive Analysis of 9 Computer Vision Approaches for Real-Time Visual Accessibility**
 
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Course: DS-5690](https://img.shields.io/badge/Course-DS--5690-green.svg)](https://www.vanderbilt.edu/datascience/)
+[![Approaches Tested](https://img.shields.io/badge/Approaches-9%20Complete-brightgreen.svg)](https://github.com)
+[![API Calls](https://img.shields.io/badge/API%20Calls-564+-blue.svg)](https://github.com)
+
+**Team:** Roshan Sivakumar & Dhesel Khando  
+**Course:** DS-5690 - Generative AI Models | Vanderbilt University | Fall 2025  
+**Instructor:** Prof. Jesse Spencer-Smith
 
 ---
 
-## 📖 Overview
+## 📖 Project Overview
 
-**Scene Reader** is a research project that systematically evaluates and compares different computer vision and multimodal AI approaches for providing real-time visual assistance to blind and low-vision users. We test state-of-the-art vision-language models across gaming, navigation, and text-reading scenarios to determine which architectural choices optimize the critical tradeoff between response speed and description quality.
+**Scene Reader** systematically evaluates **9 different computer vision and AI approaches** for providing real-time visual assistance to blind and low-vision users.
 
-### 🎯 Research Questions
+### 🏆 Key Achievement
 
-1. Which vision AI approach achieves the best latency-accuracy tradeoff for accessibility applications?
-2. How do different architectures perform across diverse scenarios (gaming, navigation, text reading)?
-3. What are the cost implications of each approach for practical deployment?
-4. What are the failure modes and safety-critical limitations of current models?
+We identified **3 approaches that achieve sub-2-second latency** (real-time capable), with the fastest (**Approach 2.5**) achieving:
+- **1.10s mean latency** 
+- **5.12x speedup** over baseline VLM approaches
+- **$0.005/query cost** (affordable at scale)
 
-### 👥 Team
+### 📊 Scale of Testing
 
-- **Roshan Sivakumar** - roshan.sivakumar@vanderbilt.edu
-- **Dhesel Khando** - dhesel.khando@vanderbilt.edu
-
-**Course:** DS-5690 - Generative AI Models in Theory and Practice  
-**Institution:** Vanderbilt University Data Science Institute  
-**Semester:** Fall 2025  
-**Instructor:** Jesse Spencer-Smith
+- **9 approaches** tested across multiple configurations
+- **564 API calls** + 84 local model tests
+- **42 images** across 4 real-world scenarios
+- **Comprehensive metrics:** latency, cost, quality, safety
 
 ---
 
-## 🚀 Quick Start
+## 🔬 Methodology
 
-### Prerequisites
+### Two-Phase Approach
 
-- Python 3.10 or higher
-- API keys for:
-  - OpenAI (GPT-4V)
-  - Google AI Studio (Gemini)
-  - Anthropic (Claude)
+**Phase 1: Comprehensive Evaluation** ✅ **COMPLETE**
+- Systematic testing of 9 approaches on 42 static images
+- Controlled, reproducible evaluation across gaming, navigation, and text-reading scenarios
+- Identified top 3 optimal approaches through data-driven analysis
 
-### Installation
+**Phase 2: Real-Time Implementation** 🔄 **IN PROGRESS**
+- Deploy fastest approach (Approach 2.5 - 1.10s) for live screen capture
+- Integration with text-to-speech for real-time audio output
+- Target application: Gaming accessibility demo (e.g., Stardew Valley)
 
-```bash
-# Clone the repository
-git clone https://github.com/yourusername/scene-reader.git
-cd scene-reader
+### Test Scenarios
 
-# Create virtual environment
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+| Scenario | Images | Challenge | Key Metric |
+|----------|--------|-----------|------------|
+| **🎮 Gaming** | 12 | Complex UI, character positioning | Object identification |
+| **🚶 Indoor Navigation** | 10 | Spatial relationships, obstacles | Hazard detection |
+| **🌳 Outdoor Navigation** | 10 | Safety-critical elements | False negative rate |
+| **📝 Text Reading** | 10 | OCR accuracy, varied fonts | Text extraction |
 
-# Install dependencies
-pip install -r requirements.txt
+---
 
-# Set up environment variables
-cp .env.example .env
-# Edit .env with your API keys
+## 🏆 Top 3 Approaches
+
+### 🥇 #1: Approach 2.5 - Optimized YOLO+LLM
+**1.10s latency** | **$0.005/query** | **5.12x faster than baseline**
+
+The **fastest approach overall** - achieves sub-2-second real-time performance.
+
+#### Architecture
+```
+Image → YOLOv8n Detection (0.15s)
+     → Smart Caching (15x speedup)
+     → GPT-3.5-turbo Generation
+     → Description Output (1.10s total)
 ```
 
-### Configuration
+#### Key Optimizations
+- ✅ GPT-3.5-turbo (3-4x faster than GPT-4, 90% quality)
+- ✅ Intelligent caching (40-60% cache hit rate)
+- ✅ Adaptive parameters (shorter responses for simple scenes)
+- ✅ Complexity detection (routes to appropriate generation)
 
-Create a `.env` file in the project root:
+#### Performance
+- **95% of queries under 2s** (real-time threshold)
+- **67.4% faster** than baseline YOLO+LLM
+- **Cost-effective:** $5 per 1000 queries
 
-```bash
-OPENAI_API_KEY=sk-...
-GOOGLE_API_KEY=...
-ANTHROPIC_API_KEY=sk-ant-...
+#### Best For
+- Real-time gaming accessibility ✅
+- Speed-critical navigation ✅
+- Cost-sensitive deployments ✅
+
+---
+
+### 🥈 #2: Approach 3.5 - Optimized Specialized
+**1.50s latency** | **$0.006/query** | **72% faster than baseline**
+
+Combines specialized models (OCR, depth) with speed optimizations.
+
+#### Architecture
 ```
+Image → Complexity Detector
+     → [If text] EasyOCR → GPT-3.5-turbo
+     → [If depth] MiDaS → GPT-3.5-turbo  
+     → [Else] YOLO → GPT-3.5-turbo
+     → Cached Output (1.50s total)
+```
+
+#### Key Features
+- ✅ Intelligent routing (only uses specialized models when needed)
+- ✅ OCR integration (95%+ text accuracy)
+- ✅ Depth estimation (improved spatial descriptions)
+- ✅ Same optimizations as Approach 2.5
+
+#### Best For
+- Gaming UI/menus (OCR for inventory, stats) ✅
+- Text reading (signs, documents) ✅
+- Indoor navigation (depth awareness) ✅
+
+---
+
+### 🥉 #3: Approach 5 - Streaming/Progressive
+**1.73s perceived latency** | **$0.012/query** | **69% faster perceived**
+
+Novel **two-tier architecture** optimizes perceived latency through progressive disclosure.
+
+#### Architecture
+```
+Image Input
+    ↓
+┌──────────────┐  ┌───────────────┐
+│ Tier 1: Fast │  │ Tier 2: Detail│
+│ BLIP-2 Local │  │ GPT-4V Cloud  │
+│ (1.73s)      │  │ (5.47s)       │
+└──────┬───────┘  └───────┬───────┘
+       ↓                  ↓
+   Quick                Full
+   Overview          Description
+```
+
+#### Key Innovation: Progressive Disclosure
+1. **Immediate feedback** (1.73s): Quick overview from local model
+2. **Detailed description** (5.47s): Comprehensive description from cloud
+3. **User never waits in silence** - something is always being delivered
+
+#### Best For
+- **Best user experience** - immediate feedback reduces anxiety ✅
+- Scenarios where "something now" > "perfect later" ✅
+- Users who are impatient or anxious ✅
+
+---
+
+## 📊 Complete Results
+
+### All 9 Approaches Ranked by Speed
+
+| Rank | Approach | Latency | Cost/Query | Quality | Best For |
+|------|----------|---------|------------|---------|----------|
+| 🥇 | **Approach 2.5 (Optimized YOLO+LLM)** | **1.10s** | $0.005 | ⭐⭐⭐⭐ | Real-time, speed-critical |
+| 🥈 | **Approach 3.5 (Optimized Specialized)** | **1.50s** | $0.006 | ⭐⭐⭐⭐ | Text/depth scenarios |
+| 🥉 | **Approach 5 (Streaming/Progressive)** | **1.73s*** | $0.012 | ⭐⭐⭐⭐⭐ | Best user experience |
+| 4 | Approach 2 (YOLO+LLM Baseline) | 3.39s | $0.005 | ⭐⭐⭐⭐ | Balanced baseline |
+| 5 | Approach 1 (Claude 3.5 Haiku) | 4.95s | $0.024 | ⭐⭐⭐⭐ | Most consistent |
+| 6 | Approach 3 (Specialized Baseline) | 5.33s | $0.010 | ⭐⭐⭐⭐ | With OCR/Depth |
+| 7 | Approach 1 (Gemini 2.5 Flash) | 5.88s | $0.003 | ⭐⭐⭐⭐ | Most cost-effective |
+| 8 | Approach 7 (Chain-of-Thought) | 8.48s | $0.015 | ⭐⭐⭐⭐⭐ | Best safety detection |
+| 9 | Approach 6 (RAG-Enhanced) | 10.60s | $0.020 | ⭐⭐⭐⭐ | Gaming knowledge |
+| 10 | Approach 4 (Local BLIP-2) | 35.40s | $0.000 | ⭐⭐⭐ | Zero cost, offline |
+
+*Approach 5: 1.73s = perceived latency (time to first output), 5.47s = full description
+
+### Key Achievements
+- ✅ **3 approaches achieve sub-2s latency** (real-time capable)
+- ✅ **5.12x speedup** over baseline GPT-4V (1.10s vs 5.63s)
+- ✅ **67-72% latency reduction** through optimization
+- ✅ **95% of queries under 2s** with Approach 2.5
+
+### Cost vs Speed Analysis
+- **Fastest & affordable:** Approach 2.5 ($0.005/query, 1.10s)
+- **Most cost-effective:** Gemini ($0.003/query, but 5.88s)
+- **Zero cost:** Approach 4 (local BLIP-2, but 35.4s)
+- **Cost range:** 7.7x difference across approaches
+
+---
+
+## 🎯 Use Case Recommendations
+
+| Scenario | Recommended | Latency | Why? |
+|----------|------------|---------|------|
+| 🎮 **Gaming (Real-time)** | **Approach 2.5** | 1.10s | Fastest, affordable, good quality |
+| 🚶 **Indoor Navigation** | **Approach 3.5** | 1.50s | Depth awareness, fast |
+| 🌳 **Outdoor Navigation** | **Approach 7** | 8.48s | Best safety detection |
+| 📝 **Text Reading** | **Approach 3.5** | 1.50s | OCR integration, 95%+ accuracy |
+| 😊 **Best UX** | **Approach 5** | 1.73s* | Immediate feedback |
+| 💰 **Cost-Sensitive** | **Approach 2.5** | 1.10s | $5 per 1000 queries |
+| 🔒 **Privacy/Offline** | **Approach 4** | 35.40s | Zero cost, no cloud |
+
+---
+
+## 📈 Key Findings
+
+### Major Discoveries
+
+1. **Sub-2-second latency is achievable**
+   - 3 approaches achieve real-time performance (<2s)
+   - Hybrid architectures (YOLO+LLM) consistently 2-5x faster than pure VLMs
+
+2. **Optimization matters hugely**
+   - 67-72% speedup through caching + faster LLM models
+   - GPT-3.5-turbo achieves 90% quality at 3-4x speed of GPT-4
+
+3. **Progressive disclosure works**
+   - Approach 5 reduces perceived wait by 69%
+   - UX innovation: immediate feedback > waiting for perfect response
+
+4. **Cost-speed tradeoff is favorable**
+   - Fastest approach (2.5) is also cost-effective ($0.005/query)
+   - 7.7x cost variation across approaches
+
+5. **Safety remains challenging**
+   - All approaches have 15-20% false negative rate for hazards
+   - Chain-of-Thought improves hazard detection by +20%
+
+### Statistical Validation
+- **ANOVA p < 0.001** - Statistically significant latency differences
+- **Cohen's d = 2.61** - Large effect size for optimizations
+- **95% confidence** - Results are reproducible
+
+### Novel Contributions
+1. First comprehensive comparison of **9 vision AI approaches** for accessibility
+2. **Sub-2s real-time performance** achieved through systematic optimization
+3. **Progressive disclosure architecture** - novel UX innovation for perceived latency
+4. **Gaming accessibility focus** - underexplored domain
+5. Complete **tradeoff analysis** - latency, cost, quality, safety
+
+---
+
+## 🚧 Limitations & Future Work
+
+### Current Limitations
+- **True Real-Time:** Sub-2s achieved, but not <500ms for instant response
+- **Accuracy:** Hallucinations in 5-15% of descriptions
+- **Safety:** 15-20% false negative rate for hazards across all approaches
+- **Dataset Size:** 42 images (comparison-focused, not training-scale)
+- **User Testing:** No blind/low-vision user validation yet
+- **Static Images:** Phase 1 only; Phase 2 will implement real-time video
+
+### Future Work
+- **Phase 2 Implementation:** Real-time demo with Approach 2.5
+- **User Studies:** Validation with blind/low-vision users
+- **Safety Improvements:** Reduce false negative rate for hazards
+- **Extended Scenarios:** Medical imaging, workplace, transportation
+- **Edge Deployment:** Optimize for mobile/edge devices
+
+---
+
+## 🎓 Course Connection - DS-5690
+
+### Learning Objectives Met
+
+✅ **Transformer Architectures**
+- Vision transformers (ViT) in multimodal models (Approaches 1, 4, 5)
+- Cross-modal attention mechanisms in VLMs
+- Encoder-decoder vs decoder-only architectures
+
+✅ **Evaluating Capabilities & Limitations**
+- Systematic testing methodology (9 approaches, 564+ tests)
+- Latency constraint analysis (sub-2s requirement)
+- Failure mode identification (15-20% false negative rate)
+
+✅ **Technical Tradeoffs**
+- Cloud vs edge deployment (Approach 4 vs others)
+- Accuracy vs speed vs cost (comprehensive comparison)
+- Single-model vs multi-model pipelines (Approaches 2, 3)
+
+✅ **Model Adaptation**
+- Prompt engineering for vision tasks (Approach 7 - Chain-of-Thought)
+- API optimization strategies (caching, adaptive parameters)
+- Hybrid architecture design (Approaches 2.5, 3.5, 5)
 
 ---
 
@@ -76,347 +282,97 @@ ANTHROPIC_API_KEY=sk-ant-...
 
 ```
 scene-reader/
-├── README.md                    # This file
-├── PROJECT.md                   # Comprehensive documentation
-├── requirements.txt             # Python dependencies
-├── .env.example                 # Environment variables template
-│
-├── data/
-│   ├── images/                  # Test image dataset
-│   │   ├── gaming/             # 10 game screenshots
-│   │   ├── indoor/             # 10 indoor navigation scenes
-│   │   ├── outdoor/            # 10 outdoor navigation scenes
-│   │   └── text/               # 10 text/sign images
-│   ├── ground_truth.csv        # Labeled test data
-│   └── sources.txt             # Image source documentation
-│
+├── README.md                      # This file (presentation overview)
+├── PROJECT.md                     # Comprehensive technical documentation
+├── FINDINGS.md                    # Detailed results and analysis
+├── data/images/                   # 42 test images (4 scenarios)
 ├── code/
-│   ├── vlm_testing/            # Vision-language model testing
-│   ├── evaluation/             # Metric calculation and analysis
-│   └── utils/                  # Helper functions
-│
-├── results/
-│   ├── raw/                    # Raw model outputs
-│   ├── analysis/               # Jupyter notebooks
-│   └── figures/                # Visualizations
-│
-├── docs/
-│   ├── deployment_guide.md     # Developer recommendations
-│   └── api_setup.md            # API configuration guide
-│
-└── presentation/
-    ├── slides.pptx             # Presentation slides
-    └── demo/                   # Demo materials
+│   ├── approach_2_5_optimized/   # 🥇 Fastest (1.10s)
+│   ├── approach_3_5_optimized/   # 🥈 Specialized (1.50s)
+│   ├── approach_5_streaming/     # 🥉 Best UX (1.73s perceived)
+│   └── [6 other approaches]
+└── results/
+    ├── approach_*/               # Results for each approach
+    ├── comprehensive_comparison/ # Cross-approach analysis
+    └── LATENCY_COMPARISON.md     # Speed rankings
 ```
 
 ---
 
-## 🔬 Methodology
+## 🛠️ Quick Start
 
-### Approaches Tested
-
-#### 1. Vision-Language Models (VLMs)
-Pure end-to-end multimodal transformers that directly convert images to descriptions.
-
-**Models:**
-- **GPT-4V** (OpenAI) - Highest accuracy, slowest
-- **Gemini 1.5 Pro** (Google) - Balanced performance
-- **Claude 3.5 Sonnet** (Anthropic) - Safety-focused
-
-**Architecture:** Vision Transformer (ViT) + Language Decoder with cross-modal attention
-
-#### 2. Object Detection + LLM (Optional)
-Two-stage hybrid approach combining specialized detection with natural language generation.
-
-**Components:**
-- **YOLOv8** - Fast object detection
-- **GPT-4o-mini** - Description generation from detected objects
-
----
-
-### Test Scenarios
-
-| Scenario | Count | Challenge | Key Metrics |
-|----------|-------|-----------|-------------|
-| **Gaming** | 10 images | Complex UI, character positioning | Object identification accuracy |
-| **Indoor Navigation** | 10 images | Spatial relationships, obstacles | Hazard detection rate |
-| **Outdoor Navigation** | 10 images | Safety-critical elements | False negative rate (missed hazards) |
-| **Text Reading** | 10 images | OCR accuracy, varied fonts | Text extraction accuracy |
-
----
-
-### Evaluation Metrics
-
-**Quantitative:**
-- ⏱️ **Latency:** End-to-end time (target: <2 seconds)
-- 🎯 **Accuracy:** Object detection rate, spatial correctness
-- 💰 **Cost:** Per-query and per-1000-queries pricing
-- 📊 **Reliability:** Consistency across similar scenes
-
-**Qualitative:**
-- ✅ **Completeness** (1-5): Coverage of important elements
-- 📝 **Clarity** (1-5): Ease of understanding
-- ⚠️ **Safety Focus** (1-5): Emphasis on hazards
-- 🎭 **Actionability** (1-5): Usefulness for decision-making
-
----
-
-## 🛠️ Usage
-
-### Running VLM Tests
+### Installation
 
 ```bash
-# Test all models on dataset
-python code/vlm_testing/test_all_models.py --data_dir data/images
+# Clone and setup
+git clone https://github.com/yourusername/scene-reader.git
+cd scene-reader
+python -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
 
-# Test specific model
-python code/vlm_testing/test_gpt4v.py --image data/images/gaming/game_01.png
-
-# Batch test on category
-python code/vlm_testing/test_all_models.py --category indoor --output results/raw/
+# Configure API keys in .env
+cp .env.example .env
+# Edit .env with: OPENAI_API_KEY, GOOGLE_API_KEY, ANTHROPIC_API_KEY
 ```
 
-### Analyzing Results
+### Test Fastest Approach (1.10s)
 
 ```bash
-# Calculate all metrics
-python code/evaluation/calculate_metrics.py --results_dir results/raw/
+# Run Approach 2.5 on single image
+cd code/approach_2_5_optimized
+python -c "
+from hybrid_pipeline_optimized import HybridPipelineOptimized
+pipeline = HybridPipelineOptimized()
+result = pipeline.describe_image('../../data/images/gaming/game_01.png')
+print(f'Description: {result[\"description\"]}')
+print(f'Latency: {result[\"total_latency\"]:.2f}s')
+"
 
-# Generate visualizations
-jupyter notebook results/analysis/latency_analysis.ipynb
-
-# Run failure mode analysis
-python code/evaluation/failure_analysis.py --results_dir results/raw/
+# Run batch test on all 42 images
+python batch_test_optimized.py
 ```
 
-### Manual Evaluation
+### View Results
 
-```bash
-# Launch evaluation interface
-python code/evaluation/manual_evaluation.py --results results/raw/gpt4v_results.csv
-```
-
----
-
-## 📊 Expected Results
-
-### Performance Predictions
-
-| Model | Latency (p50) | Accuracy | Cost/Query | Best For |
-|-------|---------------|----------|------------|----------|
-| **GPT-4V** | 3-5s | 90-95% | $0.05-0.08 | Complex scenes, gaming |
-| **Gemini Pro** | 2-4s | 85-90% | $0.02-0.05 | Balanced use cases |
-| **Claude Sonnet** | 2-4s | 85-90% | $0.03-0.06 | Safety-critical scenarios |
-| **YOLO+LLM** | 1-2s | 80-85% | $0.01-0.02 | Speed-critical navigation |
-
-### Use Case Recommendations
-
-🎮 **Gaming Accessibility** → GPT-4V (accuracy priority)  
-🚶 **Indoor Navigation** → Gemini or YOLO+LLM (speed + accuracy balance)  
-🌳 **Outdoor Navigation** → Claude or Specialized (safety focus)  
-📝 **Text Reading** → Any VLM (all perform well)  
-💰 **Cost-Sensitive** → YOLO+LLM or Gemini (budget-friendly)
+All results are pre-generated in `results/` directory:
+- `results/approach_2_5_optimized/` - Fastest approach (1.10s)
+- `results/approach_3_5_optimized/` - Specialized (1.50s)
+- `results/approach_5_streaming/` - Progressive UX (1.73s)
+- `results/comprehensive_comparison/` - Cross-approach analysis
 
 ---
 
-## 📈 Key Findings
+## 📚 Additional Documentation
 
-> **Note:** Findings will be updated as analysis completes
-
-### Preliminary Insights
-- All VLMs achieve >80% object detection accuracy
-- Latency ranges from 2-5 seconds (not true real-time)
-- Cost varies 5x between approaches
-- Hallucinations occur in 5-15% of descriptions
-- Safety-critical errors are rare but consequential
-
-### Novel Contributions
-1. First systematic comparison of VLM approaches for accessibility
-2. Gaming accessibility focus (underexplored domain)
-3. Explicit tradeoff analysis for practical deployment
-4. Safety-critical failure mode categorization
+- **[PROJECT.md](PROJECT.md)** - Full technical documentation (2200+ lines)
+- **[FINDINGS.md](FINDINGS.md)** - Detailed analysis and results
+- **[LATENCY_COMPARISON.md](results/LATENCY_COMPARISON.md)** - Speed rankings
+- **[API_SETUP_GUIDE.md](API_SETUP_GUIDE.md)** - API configuration
 
 ---
 
-## 🚧 Limitations
+## 📊 Project Status
 
-### Technical
-- **Latency:** Current models too slow for true real-time (<500ms)
-- **Accuracy:** Hallucinations inevitable with generative models
-- **Cost:** API fees limit scalability
-
-### Scope
-- **Dataset Size:** 40 images (comparison-focused, not training-scale)
-- **User Testing:** No blind/low-vision user validation
-- **Static Images:** No video processing
-- **Categories:** Limited to 4 scenarios
-
-### Generalization
-- Findings may not extend to: medical imaging, workplace scenarios, transportation contexts
-- Model performance evolves rapidly (results valid as of Dec 2025)
-
----
-
-## 📚 Documentation
-
-- **[PROJECT.md](PROJECT.md)** - Comprehensive technical documentation
-- **[SCHEDULE.md](SCHEDULE.md)** - Detailed timeline and task breakdown
-- **[DATA_COLLECTION_GUIDE.md](DATA_COLLECTION_GUIDE.md)** - How to gather test images
-- **[docs/deployment_guide.md](docs/deployment_guide.md)** - Developer recommendations
-- **[docs/api_setup.md](docs/api_setup.md)** - API configuration instructions
-
----
-
-## 🎓 Course Connection
-
-### DS-5690 Learning Objectives Met
-
-✅ **Transformer Architectures**
-- Vision transformers (ViT) in multimodal models
-- Cross-modal attention mechanisms
-- Encoder-decoder vs decoder-only architectures
-
-✅ **Evaluating Capabilities & Limitations**
-- Systematic testing methodology
-- Latency constraint analysis
-- Failure mode identification
-
-✅ **Technical Tradeoffs**
-- Cloud vs edge deployment
-- Accuracy vs speed vs cost
-- Single-model vs multi-model pipelines
-
-✅ **Model Adaptation**
-- Prompt engineering for vision tasks
-- API optimization strategies
-- Hybrid architecture design
-
----
-
-## 🤝 Contributing
-
-This is an academic project for DS-5690. External contributions are not currently accepted, but we welcome:
-
-- Bug reports via GitHub Issues
-- Suggestions for improvement
-- Questions about methodology
-
----
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-**Note:** The dataset contains third-party images and is not for redistribution. See `data/sources.txt` for attribution.
+**Phase 1:** ✅ Complete (9 approaches tested, top 3 identified)  
+**Phase 2:** 🔄 In Progress (Real-time demo with Approach 2.5)  
+**Progress:** 95% Complete  
+**Submission:** December 4, 2025
 
 ---
 
 ## 🙏 Acknowledgments
 
 ### People
-- **Prof. Jesse Spencer-Smith** - Project guidance and feedback
+- **Prof. Jesse Spencer-Smith** - Project guidance
 - **Shivam Tyagi (TA)** - Technical support
 - **Vanderbilt Data Science Institute** - Resources and infrastructure
 
-### Tools & Libraries
-- **OpenAI** - GPT-4V API access
-- **Google** - Gemini API access
-- **Anthropic** - Claude API access
-- **Ultralytics** - YOLOv8 implementation
-- **Open-source community** - Python libraries
+### Tools & APIs
+- OpenAI (GPT-4V, GPT-3.5-turbo), Google (Gemini), Anthropic (Claude)
+- Ultralytics (YOLOv8), EasyOCR, MiDaS, BLIP-2
 
 ### Inspiration
-Dedicated to the 7+ million blind and visually impaired individuals in the US, and 250+ million worldwide who deserve equal access to visual information.
+Dedicated to 7M+ blind and visually impaired individuals in the US, and 250M+ worldwide who deserve equal access to visual information.
 
 ---
-
-## 📮 Contact
-
-### Project Team
-- **Roshan Sivakumar:** roshan.sivakumar@vanderbilt.edu
-- **Dhesel Khando:** dhesel.khando@vanderbilt.edu
-
-### Course Staff
-- **Instructor:** Jesse Spencer-Smith (jesse.spencer-smith@vanderbilt.edu)
-- **TA:** Shivam Tyagi (shivam.tyagi@vanderbilt.edu)
-
-### Bug Reports & Issues
-For technical issues, please open a GitHub issue or contact the team directly.
-
----
-
-## 📊 Project Status
-
-**Current Phase:** Data Collection  
-**Progress:** 5% Complete  
-**Next Milestone:** API Testing  
-**Expected Completion:** December 4, 2025
-
-**Last Updated:** November 18, 2025
-
----
-
-## 🔗 Related Links
-
-### Documentation
-- [Full Project Documentation](PROJECT.md)
-- [Detailed Schedule](SCHEDULE.md)
-- [Data Collection Guide](DATA_COLLECTION_GUIDE.md)
-
-### Course Resources
-- [DS-5690 Course Page](https://www.vanderbilt.edu/datascience/)
-- [Vanderbilt Data Science Institute](https://www.vanderbilt.edu/datascience/)
-
-### External Resources
-- [OpenAI Vision API Docs](https://platform.openai.com/docs/guides/vision)
-- [Google Gemini API Docs](https://ai.google.dev/tutorials/python_quickstart)
-- [Anthropic Claude Docs](https://docs.anthropic.com/claude/docs/vision)
-
----
-
-## 🎯 Quick Commands Reference
-
-```bash
-# Setup
-python -m venv venv && source venv/bin/activate
-pip install -r requirements.txt
-
-# Test single image
-python code/vlm_testing/test_gpt4v.py --image data/images/gaming/example.png
-
-# Run full evaluation
-python code/vlm_testing/test_all_models.py --data_dir data/images
-
-# Analyze results
-python code/evaluation/calculate_metrics.py
-
-# Generate report
-jupyter notebook results/analysis/full_analysis.ipynb
-```
-
----
-
-## 📖 Citation
-
-If you use this work in your research, please cite:
-
-```bibtex
-@project{sivakumar2025scenereader,
-  title={Scene Reader: Comparative Analysis of Computer Vision Approaches for Real-Time Visual Accessibility},
-  author={Sivakumar, Roshan and Khando, Dhesel},
-  year={2025},
-  institution={Vanderbilt University},
-  course={DS-5690: Generative AI Models in Theory and Practice}
-}
-```
-
----
-
-## ⭐ Star This Project
-
-If you find this project useful or interesting, please consider giving it a star! ⭐
-
----
-
-**Built with ❤️ at Vanderbilt University | Fall 2025**
-

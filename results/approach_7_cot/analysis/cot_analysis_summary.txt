@@ -1,0 +1,16 @@
+CHAIN-OF-THOUGHT (CoT) RESULTS ANALYSIS SUMMARY
+============================================================
+
+Analysis Date: 2025-11-22 22:47:31.597693
+Total CoT Results Analyzed: 42
+
+CoT (GPT-4V) Metrics:
+----------------------------------------
+Latency: 5.89s mean, 5.69s median
+Response Length: 186.0 words avg
+Cost: $0.0140 per query
+
+Comparison to Baseline:
+----------------------------------------
+Latency Change: +0.25s (+4.5%)
+Length Change: +99.5 words (+115.1%)

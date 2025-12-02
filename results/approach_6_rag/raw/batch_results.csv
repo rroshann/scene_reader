@@ -1,0 +1,1253 @@
+filename,category,vlm_model,use_rag,configuration,base_description,enhanced_description,game_name,entities,num_retrieved_chunks,retrieved_chunks,base_latency,entity_extraction_latency,retrieval_latency,enhancement_latency,total_latency,base_tokens,enhancement_tokens,success,error,timestamp
+SlayTheSpire_Defect_vs_Sentry_ZapPlus.png,gaming,gpt-4o,False,gpt-4o,"The image is a screenshot from a video game called ""Slay the Spire."" The layout features a battle scene.
+
+- The player's character (on the left) is in a duel with an enemy (on the right).
+- The player's character has 47 out of 82 health remaining, and there are two orb slots with lightning orbs.
+- The enemy has 30 out of 50 health remaining and is being struck by a lightning effect, possibly from the player's action.
+- In the foreground, there are cards displayed, including ""Zap+,"" which channels lightning, ""Strike,"" and ""Defend+.""
+- The ""End Turn"" button is visible on the bottom right.
+
+The key action card ""Zap+"" is centrally highlighted, indicating the focus on channeling lightning.","The image is a screenshot from a video game called ""Slay the Spire."" The layout features a battle scene.
+
+- The player's character (on the left) is in a duel with an enemy (on the right).
+- The player's character has 47 out of 82 health remaining, and there are two orb slots with lightning orbs.
+- The enemy has 30 out of 50 health remaining and is being struck by a lightning effect, possibly from the player's action.
+- In the foreground, there are cards displayed, including ""Zap+,"" which channels lightning, ""Strike,"" and ""Defend+.""
+- The ""End Turn"" button is visible on the bottom right.
+
+The key action card ""Zap+"" is centrally highlighted, indicating the focus on channeling lightning.",,,0,,8.475503206253052,,,,8.475503206253052,1380,,True,,2025-11-23T14:41:55.069158
+SlayTheSpire_Defect_vs_Sentry_ZapPlus.png,gaming,gpt-4o,True,gpt-4o+RAG,"This is a screenshot of a game called ""Slay the Spire."" The scene shows a player character on the left in combat with an enemy on the right. The player character has 47 out of 82 health points remaining, and there are two glowing orbs, each with the number 3, floating nearby.
+
+The enemy on the right has 30 out of 50 health points and is being hit by a lightning strike. In the center, a card named ""Zap+"" is displayed, describing the action ""Channel 1 Lightning."" At the bottom of the screen, there are additional cards in the player's hand titled ""Strike,"" ""Dualcast,"" and ""Defend+.""
+
+In the bottom right corner, there's an ""End Turn"" button.","You are currently playing ""Slay the Spire,"" a deck-building roguelike game where your goal is to ascend a spire filled with various enemies, using strategic card play to defeat them.
+
+In this combat scenario, you are controlling one of the game's characters, likely The Defect, given the presence of a Lightning orb and the card ""Zap+."" You have 47 out of 82 health points remaining, indicating you are still in a strong position, but you should be cautious of incoming damage. 
+
+On the right, your enemy has 30 out of 50 health points and is currently being struck by lightning, which suggests that you have successfully channeled a Lightning orb using the ""Zap+"" card. This card not only deals damage but also helps you build energy towards your other Lightning orb effects, which can be powerful in future turns.
+
+In your hand, you have three additional cards:
+- **""Strike""**: This deals 6 damage, a straightforward option to reduce the enemy's health further.
+- **""Dualcast""**: This can be particularly powerful, as it allows you to double the effects of your orbs, potentially unleashing a significant amount of damage if you have multiple orbs active.
+- **""Defend+""**: This card will block 8 damage, which could be vital if you anticipate a strong attack from your enemy next turn.
+
+At the bottom right, you see the ""End Turn"" button, which you will need to select after playing your cards to proceed to the enemy's turn. 
+
+To formulate a strategy:
+- If you suspect the enemy will deal a strong attack, consider playing ""Defend+"" to mitigate damage.
+- You can use ""Strike"" to chip away at the enemy's health.
+- If you're looking to maximize damage, playing ""Dualcast"" first could amplify your Lightning damage output by hitting the enemy harder.
+
+Keep an ear out for any sound cues that may indicate the enemy's next move",slay_the_spire,[],3,"['Slay the Spire - Game Knowledge Base\n\nGAME OVERVIEW:\n\nSlay the Spire is a deck-building roguelike ga', 'ks\n- Spheric Guardian: High block, moderate health\nKEY CARDS:\n- Strike: Basic attack card, deals 6 d', 'y played\n- Exhaust pile: Cards removed from combat\nCOMBAT STATUS:\n- Look for enemy intents (what the']",8.406691789627075,2.193450927734375e-05,0.23452425003051758,9.312703132629395,17.972261905670166,1375,1033,True,,2025-11-23T14:42:14.046991
+SlayTheSpire_Defect_vs_Sentry_ZapPlus.png,gaming,gemini-2.5-flash,False,gemini-2.5-flash,"You are in a card battle. Your character is on the left, at 47/82 health, with 3 energy available. An enemy is on the right, at 30/50 health, intending to deal 7 damage. The ""Zap+"" card, costing 0 energy, is highlighted in the center, causing a lightning bolt to strike the enemy for 7 damage. In your hand, you also have 'Strike' (1 cost), 'Dualcast+' (0 cost), and 'Defend+' (1 cost).","You are in a card battle. Your character is on the left, at 47/82 health, with 3 energy available. An enemy is on the right, at 30/50 health, intending to deal 7 damage. The ""Zap+"" card, costing 0 energy, is highlighted in the center, causing a lightning bolt to strike the enemy for 7 damage. In your hand, you also have 'Strike' (1 cost), 'Dualcast+' (0 cost), and 'Defend+' (1 cost).",,,0,,9.240909099578857,,,,9.240909099578857,,,True,,2025-11-23T15:02:18.304253
+SlayTheSpire_Defect_vs_Sentry_ZapPlus.png,gaming,gemini-2.5-flash,True,gemini-2.5-flash+RAG,"**Selected Card Action:** The 'Zap+' card, costing 0 energy, is highlighted and has just struck the enemy on the right with lightning for 7 damage.
+
+**Critical Status:** The enemy is now at 30/50 health. You are at 47/82 health, with two active green orbs (showing '3' each).
+
+**Immediate Concerns/Options:** The enemy is critically low on health. You have 'Strike' (1 cost), 'Dualcast+' (0 cost), and 'Defend+' (1 cost) cards available in your hand to continue your turn, or you can select 'End Turn' on the bottom right.","You're currently playing **Slay the Spire**, a deck-building roguelike game where strategic card play is essential for defeating enemies as you climb the spire.
+
+**Current Situation:**
+You have just used the **'Zap+'** card, which costs 0 energy and struck the enemy on your right, a **Spheric Guardian**, with a lightning attack for 7 damage. This card channels a Lightning orb, which deals damage to enemies at the start of their turn. 
+
+**Enemy Status:**
+The Spheric Guardian now has **30 out of 50 health**, indicating it's critically low on health. This means it could be eliminated with the right strategy, making it a high-priority target. 
+
+**Your Status:**
+Your own health stands at **47 out of 82**. You are currently in a reasonably healthy position but should be cautious of incoming damage. You have **two active green orbs** that each display a '3', indicating you have generated 3 Lightning damage ready to be unleashed at the start of the enemy's turn.
+
+**Available Actions:**
+- **Strike (1 energy):** This basic attack deals 6 damage. If you choose to play this, it will bring the Spheric Guardian down to 24 health. 
+- **Dualcast+ (0 energy):** This card allows you to double the effects of your orbs. Since you have 2 Lightning orbs, using this card now will deal 6 damage (3 from each orb) directly to the enemy, dropping its health to 24 and potentially allowing you to finish it off with your next move.
+- **Defend+ (1 energy):** This card blocks 5 damage, which can be useful if you anticipate an attack next turn, but given the enemy's low health, it may not be the best choice right now.
+
+**Strategic Consideration:**
+Considering the Spheric Guardian is low on health, your priority should be to eliminate it quickly",slay_the_spire,[],3,"['ks\n- Spheric Guardian: High block, moderate health\nKEY CARDS:\n- Strike: Basic attack card, deals 6 d', 'y played\n- Exhaust pile: Cards removed from combat\nCOMBAT STATUS:\n- Look for enemy intents (what the', 'tcher card, deals 9 damage and enters Wrath stance\nRELICTS:\n- Relics provide passive bonuses\n- Commo']",11.923264980316162,9.298324584960938e-06,0.1335759162902832,10.042519807815552,22.10869073867798,,1029,True,,2025-11-23T15:02:41.416372
+SlayTheSpire_Defect_vs_Sentry_ZapPlus.png,gaming,claude-3-5-haiku,False,claude-3-5-haiku,"This is a screenshot from a digital card battle game, likely ""Slay the Spire"". The scene is set in a dark, dungeon-like environment with brick walls. 
+
+Key details:
+- Center: A large blue-tinted card titled ""Zap"" is highlighted, which is a ""Channel 1 Lightning"" skill card
+- Left side: A blue-clothed character with 47/82 health
+- Right side: Another character with 30/50 health, with a lightning effect
+- Bottom: Player's hand of cards includes ""Strike"", ""Dualcast"", and ""Defend"" cards
+- Right side: ""End Turn"" button
+
+The game appears to be in mid-combat, with characters positioned on a stone floor, and lightning visual effects indicating an electrical/lightning-based attack or skill being used.","This is a screenshot from a digital card battle game, likely ""Slay the Spire"". The scene is set in a dark, dungeon-like environment with brick walls. 
+
+Key details:
+- Center: A large blue-tinted card titled ""Zap"" is highlighted, which is a ""Channel 1 Lightning"" skill card
+- Left side: A blue-clothed character with 47/82 health
+- Right side: Another character with 30/50 health, with a lightning effect
+- Bottom: Player's hand of cards includes ""Strike"", ""Dualcast"", and ""Defend"" cards
+- Right side: ""End Turn"" button
+
+The game appears to be in mid-combat, with characters positioned on a stone floor, and lightning visual effects indicating an electrical/lightning-based attack or skill being used.",,,0,,9.232868909835815,,,,9.232868909835815,,,True,,2025-11-23T15:02:51.836190
+SlayTheSpire_Defect_vs_Sentry_ZapPlus.png,gaming,claude-3-5-haiku,True,claude-3-5-haiku+RAG,"This is a screenshot from a digital card game, likely Slay the Spire, showing a battle scene:
+
+Layout:
+- Left side: A blue-clothed character with 47/82 health
+- Center: A large ""Zap"" skill card highlighting a lightning strike
+- Right side: Another blue-clothed character with 30/50 health
+- Bottom: Player's hand of cards including ""Strike"", ""Dualcast"", and ""Defend""
+- Background: Dark, dungeon-like stone environment with chains and dim lighting
+
+Critical status:
+- Both characters have significant health remaining
+- Player has multiple card options for attack and defense
+- A lightning effect is prominent on the central card and right side of the screen
+
+Immediate concerns:
+- The player appears to be mid-combat
+- The ""End Turn"" button is visible, suggesting it's the player's turn to act
+- The ""","You are playing **Slay the Spire**, a strategic deck-building roguelike where you ascend a spire, battling various enemies while managing your cards effectively.
+
+### Enhanced Description:
+
+In this battle scene:
+
+- **Left Side:** The character on the left is a **Defect**, indicated by the blue clothing. This character has **47 out of 82 health**, meaning they are currently in decent shape but should be mindful of incoming damage.
+  
+- **Center:** The highlighted card is **""Zap,""** which channels 1 Lightning orb, generating 6 damage each turn. This is a powerful card for the Defect, as it allows for continuous damage without consuming energy on subsequent turns. Utilizing ""Zap"" can be beneficial if you plan to maximize your damage output.
+
+- **Right Side:** The character on the right, also in blue, is likely another Defect or a similar character, showing **30 out of 50 health**. This indicates they are more vulnerable than your character, presenting an opportunity to focus your attacks on them.
+
+- **Bottom:** In your hand, you have three cards: 
+  - **""Strike""** (basic attack, deals 6 damage) – a reliable option for direct damage.
+  - **""Dualcast""** (a powerful card for the Defect that can double the effect of your orbs) – useful if you have Lightning orbs activated.
+  - **""Defend""** (blocks 5 damage) – crucial for mitigating damage if you anticipate an attack from the enemy.
+
+- **Background:** The dark, dungeon-like stone environment with chains and dim lighting sets a tense atmosphere typical of Slay the Spire, enhancing the feeling of urgency during combat.
+
+### Critical Insights:
+
+- **Health Status:** Both characters have significant health, but keep an eye on the enemy's intentions, which can often be indicated by their behavior or an icon above them. It’s important to anticipate their next move.
+
+- **",slay_the_spire,[],3,"['ks\n- Spheric Guardian: High block, moderate health\nKEY CARDS:\n- Strike: Basic attack card, deals 6 d', 'Slay the Spire - Game Knowledge Base\n\nGAME OVERVIEW:\n\nSlay the Spire is a deck-building roguelike ga', 'y played\n- Exhaust pile: Cards removed from combat\nCOMBAT STATUS:\n- Look for enemy intents (what the']",8.71958589553833,9.298324584960938e-06,0.1329200267791748,9.554115295410156,18.43243384361267,,1062,True,,2025-11-23T15:03:11.275221
+SlayTheSpire_Silent_vs_Exploders_Act2_Combat.png,gaming,gpt-4o,False,gpt-4o,"This is a screenshot from the game ""Slay the Spire."" The player, ""tvswanderer,"" is controlling a character called ""the Silent,"" shown on the left side of the screen with 36 out of 70 health points. The battle screen displays three enemies on the right: a red one with 14 health and a 5 attack marker, a green one with 1 out of 12 health, and a gray one with 6 out of 14 health with a poison effect. 
+
+At the bottom, the player's hand consists of cards: ""Shiv,"" ""Defend"" (three of them), ""Survivor,"" and ""Poisoned Stab."" The player has 3 energy to spend on actions. The ""End Turn"" button is visible, indicating it's the player's turn.","This is a screenshot from the game ""Slay the Spire."" The player, ""tvswanderer,"" is controlling a character called ""the Silent,"" shown on the left side of the screen with 36 out of 70 health points. The battle screen displays three enemies on the right: a red one with 14 health and a 5 attack marker, a green one with 1 out of 12 health, and a gray one with 6 out of 14 health with a poison effect. 
+
+At the bottom, the player's hand consists of cards: ""Shiv,"" ""Defend"" (three of them), ""Survivor,"" and ""Poisoned Stab."" The player has 3 energy to spend on actions. The ""End Turn"" button is visible, indicating it's the player's turn.",,,0,,7.500364780426025,,,,7.500364780426025,1389,,True,,2025-11-23T14:42:28.587570
+SlayTheSpire_Silent_vs_Exploders_Act2_Combat.png,gaming,gpt-4o,True,gpt-4o+RAG,"This image is a screenshot from the game ""Slay the Spire."" The player, represented by a character in a green cloak and skull mask, is on the left side with 36 out of 70 health points. There are three enemy slimes on the right side: a blue slime with 14/14 health that plans to attack with 5 damage, a green slime with 1/12 health, and another with 6/14 health and 2 poison stacks.
+
+The player has 3 energy points to spend on cards displayed at the bottom: ""Shiv,"" ""Defend"" (three copies), ""Survivor,"" and ""Poisoned Stab."" The player can end their turn with the ""End Turn"" button on the right. The setting appears to be a dungeon with green flames on the walls.","You are currently playing ""Slay the Spire,"" a deck-building roguelike game where you aim to ascend a spire, battling various enemies and enhancing your card deck along the way.
+
+In this combat scenario, your character, who is likely The Silent (given the green cloak and skull mask), has 36 out of 70 health points remaining. On the right, you face three enemy slimes, each with different health statuses and intentions. 
+
+- **Blue Slime:** It has 14 health and plans to attack you for 5 damage next turn. This means you need to prepare to mitigate some damage if you can't eliminate it first.
+- **Green Slime:** Only has 1 health left and is not threatening you at this moment; it’s a prime target for an easy elimination as it won't retaliate.
+- **Another Green Slime:** This one has 6 health and has 2 poison stacks, which means it will deal additional damage over time if it remains on the field.
+
+You have 3 energy points to spend on your cards, which are displayed at the bottom of the screen. Here's a breakdown of your available options:
+
+- **Shiv:** This is a quick attack card that deals 5 damage. It can be useful to finish off the green slime with 1 health.
+- **Defend (3 copies):** Each Defend card blocks 5 damage. You can play one or more to absorb the blue slime’s impending attack, reducing your health loss.
+- **Survivor:** This card allows you to block 8 damage and choose a card to discard, which can be strategic if you want to thin your deck or avoid drawing unhelpful cards later.
+- **Poisoned Stab:** This card deals 6 damage and applies 2 poison. It’s effective against the blue slime if you can afford to play it, as it will start applying poison damage over the turns.
+
+At the far right, there’s an",slay_the_spire,[],3,"['Slay the Spire - Game Knowledge Base\n\nGAME OVERVIEW:\n\nSlay the Spire is a deck-building roguelike ga', 'ks\n- Spheric Guardian: High block, moderate health\nKEY CARDS:\n- Strike: Basic attack card, deals 6 d', 'y played\n- Exhaust pile: Cards removed from combat\nCOMBAT STATUS:\n- Look for enemy intents (what the']",6.926599979400635,1.4781951904296875e-05,0.12995386123657227,7.039067029953003,14.120203971862793,1392,1050,True,,2025-11-23T14:42:43.714454
+SlayTheSpire_Silent_vs_Exploders_Act2_Combat.png,gaming,gemini-2.5-flash,False,gemini-2.5-flash,"You are in turn-based combat. Your character, 'The Silent', is on the left with **36/70 HP** and **3 energy**.
+
+In front of you are three slimes, all intending to attack you for **5 damage** each:
+1.  **Leftmost (Green):** Critically low at **1/12 HP**, also poisoned.
+2.  **Middle (Blue):** Full health at **14/14 HP**.
+3.  **Rightmost (Blue):** Low at **6/14 HP**, also weak.
+
+Your hand has 6 cards: **Shiv** (0 energy attack), **Survivor** (1 energy, 8 Block), **4 Defend cards** (1 energy, 5 Block each), and **Poisoned Stab** (1 energy attack, applies 3 Poison). The 'End Turn' button is on the right.
+
+You have 141 gold and 1 potion. You are on the 4th Floor.","You are in turn-based combat. Your character, 'The Silent', is on the left with **36/70 HP** and **3 energy**.
+
+In front of you are three slimes, all intending to attack you for **5 damage** each:
+1.  **Leftmost (Green):** Critically low at **1/12 HP**, also poisoned.
+2.  **Middle (Blue):** Full health at **14/14 HP**.
+3.  **Rightmost (Blue):** Low at **6/14 HP**, also weak.
+
+Your hand has 6 cards: **Shiv** (0 energy attack), **Survivor** (1 energy, 8 Block), **4 Defend cards** (1 energy, 5 Block each), and **Poisoned Stab** (1 energy attack, applies 3 Poison). The 'End Turn' button is on the right.
+
+You have 141 gold and 1 potion. You are on the 4th Floor.",,,0,,10.356825113296509,,,,10.356825113296509,,,True,,2025-11-23T15:03:37.769657
+SlayTheSpire_Silent_vs_Exploders_Act2_Combat.png,gaming,gemini-2.5-flash,True,gemini-2.5-flash+RAG,"You are in a turn-based battle, standing on the left at 36/70 health with 3 energy.
+
+**Immediate Concerns:** Two slimes on the right are attacking for a combined total of 10 damage this turn.
+
+**Enemy Status (right side, from left to right):**
+1.  **Slime 1:** Critically low at 1/12 HP, and is vulnerable.
+2.  **Slime 2:** Full health at 14/14 HP, attacking for 5 damage.
+3.  **Slime 3:** Low at 6/14 HP, attacking for 5 damage, and is poisoned.
+
+You have 6 cards in your hand, including ""Shiv"", ""Survivor"" (gains 8 block), and ""Defend"" (gains 5 block).","You are currently playing **Slay the Spire**, a turn-based roguelike deck-building game where you navigate through various enemies and challenges. 
+
+### Current Situation:
+- You are on the left side of the screen, with **36 out of 70 health** remaining, indicating you have taken some damage but still have a fair amount of health left. You have **3 energy** to spend this turn, allowing you to play multiple cards. 
+
+### Immediate Threat:
+- Two slimes on the right side are poised to attack you for a combined total of **10 damage** this turn, which can significantly impact your health if not mitigated.
+
+### Enemy Status (right side):
+1. **Slime 1:** Critically low at **1/12 HP**. This enemy is **vulnerable**, meaning it will take **50% more damage** from your attacks. It’s a prime target for finishing off this turn.
+  
+2. **Slime 2:** Full health at **14/14 HP**, attacking for **5 damage**. This slime is a threat but less urgent since Slime 1 is on the brink of defeat.
+
+3. **Slime 3:** Low at **6/14 HP**, also attacking for **5 damage** and is currently **poisoned**, meaning it will take damage at the start of its turn. 
+
+### Your Hand:
+You have **6 cards** to choose from this turn:
+- **Shiv:** A quick attack card that deals **4 damage**. It’s useful for taking down weaker enemies or adding damage to those already weakened.
+- **Survivor:** Provides you with **8 block**, which can help mitigate incoming damage this turn. This is essential if you want to preserve your health.
+- **Defend:** Grants **5 block**, which is another option for defense.
+
+### Actionable Recommendations:
+1. **Prioritize Slime 1:** You can use your **Shiv**",slay_the_spire,[],3,"['ks\n- Spheric Guardian: High block, moderate health\nKEY CARDS:\n- Strike: Basic attack card, deals 6 d', '0% more damage\n- Weak: Enemy deals 25% less damage\nCOMMON ENEMIES:\n- Cultist: Low health, buffs othe', 'atcher: Monk character, uses stances (Wrath, Calm)\nCOMBAT MECHANICS:\n- Energy: Each turn you have 3 ']",8.131366968154907,1.5974044799804688e-05,0.17415189743041992,6.319422245025635,14.907998085021973,,1112,True,,2025-11-23T15:03:53.682366
+SlayTheSpire_Silent_vs_Exploders_Act2_Combat.png,gaming,claude-3-5-haiku,False,claude-3-5-haiku,"This is a screenshot from the video game ""Slay the Spire"", a turn-based roguelike deck-building game. The scene is set on the 4th floor of a dark, dungeon-like environment with stone walls and green flames.
+
+Key details:
+- Player health is 36/70 (top left)
+- A ghostly green creature is on the left side of the screen
+- Multiple small enemy creatures are on the right side with varying health bars
+- The bottom of the screen shows a hand of cards for strategic gameplay
+- Current player cards include ""Shiv"", ""Defend"", ""Survivor"", and ""Poisoned Stab""
+- Game is in early access, dated 01-25-2018
+
+Critical status:
+- Player appears to be in combat
+- Multiple enemies present with different health levels
+- Player has defensive and attack card options available
+
+The visual style is dark an","This is a screenshot from the video game ""Slay the Spire"", a turn-based roguelike deck-building game. The scene is set on the 4th floor of a dark, dungeon-like environment with stone walls and green flames.
+
+Key details:
+- Player health is 36/70 (top left)
+- A ghostly green creature is on the left side of the screen
+- Multiple small enemy creatures are on the right side with varying health bars
+- The bottom of the screen shows a hand of cards for strategic gameplay
+- Current player cards include ""Shiv"", ""Defend"", ""Survivor"", and ""Poisoned Stab""
+- Game is in early access, dated 01-25-2018
+
+Critical status:
+- Player appears to be in combat
+- Multiple enemies present with different health levels
+- Player has defensive and attack card options available
+
+The visual style is dark an",,,0,,7.092606067657471,,,,7.092606067657471,,,True,,2025-11-23T15:04:01.977216
+SlayTheSpire_Silent_vs_Exploders_Act2_Combat.png,gaming,claude-3-5-haiku,True,claude-3-5-haiku+RAG,"This is a screenshot from the video game ""Slay the Spire"", a deck-building roguelike game. The scene is set on the 4th floor of a dungeon with a dark, stone environment. 
+
+Layout:
+- A ghostly green figure (an enemy) is on the left side of the screen
+- Green flame-like torches are in the center background
+- Multiple small blob-like enemies are at the bottom center of the screen
+- The player's health is 36/70 at the top left
+- A hand of cards is displayed at the bottom of the screen
+
+Critical Status:
+- The player is in combat with multiple enemies
+- Different enemies have varying health levels (14/14, 1/12, 6/14)
+- The player has defensive cards like ""Defend"" and ""Survivor"" in hand
+- An ""End Turn"" button is available on the right side","You are currently playing ""Slay the Spire,"" a strategic deck-building roguelike where you ascend a spire, facing various enemies along the way. This scene is set on the 4th floor of a dark stone dungeon, where you are engaged in combat against multiple foes.
+
+**Layout Overview:**
+- On the **left side**, there is a ghostly green figure, likely a spectral enemy, which may have abilities that affect your cards or health.
+- In the **center background**, glowing green flame-like torches provide ominous lighting, adding to the atmosphere but not influencing gameplay directly.
+- At the **bottom center**, you see multiple small blob-like enemies, each with different health levels: one has 14/14 health, another is significantly weakened at 1/12, and a third has 6/14 health. Prioritizing attacks on the weaker enemy could yield a quick victory.
+- Your **health** is displayed at the top left as 36/70, indicating you still have some room for damage but should consider defensive strategies to avoid being defeated.
+- At the **bottom of the screen**, your current hand of cards includes defensive options like ""Defend"" and ""Survivor,"" which can mitigate incoming damage. 
+
+**Critical Status:**
+- You are currently in combat, so consider the intents of your enemies. If they plan to attack, using your defensive cards will be crucial to reduce damage.
+- The **“End Turn” button** on the right side signifies that you can conclude your action phase. Make sure to use any available cards before clicking this to maximize your turn's effectiveness.
+
+**Actionable Strategies:**
+1. **Use Defensive Cards:** With enemies threatening to deal damage, playing ""Defend"" can block 5 damage, while ""Survivor"" can help you reduce damage further and allow you to discard cards you may not want in the next turn.
+2. **Target Weaker Enemies:** Focusing",slay_the_spire,[],3,"['Slay the Spire - Game Knowledge Base\n\nGAME OVERVIEW:\n\nSlay the Spire is a deck-building roguelike ga', 'ks\n- Spheric Guardian: High block, moderate health\nKEY CARDS:\n- Strike: Basic attack card, deals 6 d', 'y played\n- Exhaust pile: Cards removed from combat\nCOMBAT STATUS:\n- Look for enemy intents (what the']",7.4009130001068115,1.2159347534179688e-05,0.15262293815612793,8.097445011138916,15.671485185623169,,1069,True,,2025-11-23T15:04:18.654498
+SlayTheSpire_Watcher_vs_Cultist_LargeWolf_Act3.png,gaming,gpt-4o,False,gpt-4o,"This is a screenshot from the game ""Slay the Spire,"" featuring the character ""The Watcher."" 
+
+- The player's character is on the left with 45 out of 79 health points. 
+- Two enemies are visible: one on the right with 40 out of 53 health, preparing an attack with a power of 6, and another larger enemy on the far right with full 320 health, set to attack four times with a power of 8 each.
+- At the bottom are five playable cards: Scrawl, Empty Mind, Inner Peace, Strike, and an unidentified card with a skill cost of 2.
+- The player’s energy available for this turn is 2 out of 4.
+- Artifacts and potions are visible at the top, indicating various bonuses and resources available.
+
+The environment is a dark, cave-like setting, common in the game.","This is a screenshot from the game ""Slay the Spire,"" featuring the character ""The Watcher."" 
+
+- The player's character is on the left with 45 out of 79 health points. 
+- Two enemies are visible: one on the right with 40 out of 53 health, preparing an attack with a power of 6, and another larger enemy on the far right with full 320 health, set to attack four times with a power of 8 each.
+- At the bottom are five playable cards: Scrawl, Empty Mind, Inner Peace, Strike, and an unidentified card with a skill cost of 2.
+- The player’s energy available for this turn is 2 out of 4.
+- Artifacts and potions are visible at the top, indicating various bonuses and resources available.
+
+The environment is a dark, cave-like setting, common in the game.",,,0,,12.362977981567383,,,,12.362977981567383,1403,,True,,2025-11-23T14:43:03.128742
+SlayTheSpire_Watcher_vs_Cultist_LargeWolf_Act3.png,gaming,gpt-4o,True,gpt-4o+RAG,"This is a screenshot from the game ""Slay the Spire."" The player, identified as ""tckmn,"" is controlling a character called ""The Watcher."" The player has 45 out of 79 health points remaining. 
+
+At the bottom of the screen, there are four cards drawn: ""Scrawl,"" ""Empty Mind,"" ""Inner Peace,"" and ""Strike."" Each card has an energy cost indicated in the top-left corner (1 or 0).
+
+In the center-right, there are two enemies. The one on the left has 40 out of 53 health and is preparing to deal 6 damage. The one on the right has full health at 320 and is preparing an attack of 8 damage four times.
+
+The player currently has 2 out of 4 energy available. The turn can end by clicking ""End Turn"" on the right side of the screen. 
+
+Various icons at the top of the screen suggest relics or items in possession, along with a gold amount of 11.","You are currently playing ""Slay the Spire,"" a deck-building roguelike game where you climb a spire, battling various enemies and collecting cards to enhance your strategy. Your player identifier is ""tckmn,"" and you are controlling ""The Watcher,"" a character that utilizes stances to optimize damage and defense.
+
+**Current Game State:**
+- **Health:** You have 45 out of a maximum of 79 health points remaining, indicating you are still in a relatively strong position, but you need to be cautious due to the incoming damage from your enemies.
+- **Energy:** You have 2 out of 4 energy available for this turn. Energy is crucial for playing cards, so consider your options carefully to maximize your effectiveness.
+
+**Cards in Hand:**
+1. **Scrawl (Cost: 1 Energy):** This card will allow you to draw additional cards, providing potential new strategies for your turn.
+2. **Empty Mind (Cost: 1 Energy):** This card lets you enter a Calm stance, which can help you gain energy back on your next turn if you play cards that allow you to exit this stance.
+3. **Inner Peace (Cost: 0 Energy):** This card also allows you to enter a Calm stance and restore health, making it a good option if you're looking to recover some of your lost health.
+4. **Strike (Cost: 1 Energy):** A basic attack card that deals 6 damage to an enemy. It's the most straightforward option for dealing damage this turn.
+
+**Enemies:**
+- **Left Enemy:** Has 40 out of 53 health remaining and is preparing to deal 6 damage on its turn. This enemy could be a priority target if you want to reduce the incoming damage.
+- **Right Enemy:** Full health at 320 and is preparing to attack with 8 damage four times. This enemy poses a significant threat due to its potential for high damage output over the turn, so consider",slay_the_spire,[],3,"['tcher card, deals 9 damage and enters Wrath stance\nRELICTS:\n- Relics provide passive bonuses\n- Commo', 'Slay the Spire - Game Knowledge Base\n\nGAME OVERVIEW:\n\nSlay the Spire is a deck-building roguelike ga', 'ks\n- Spheric Guardian: High block, moderate health\nKEY CARDS:\n- Strike: Basic attack card, deals 6 d']",14.336809396743774,1.6927719116210938e-05,0.12758708000183105,6.718783855438232,21.20010495185852,1429,1154,True,,2025-11-23T14:43:25.334297
+SlayTheSpire_Watcher_vs_Cultist_LargeWolf_Act3.png,gaming,gemini-2.5-flash,False,gemini-2.5-flash,"**Critical Threat:** You are currently in Wrath stance, taking double damage. The large blue beast on the far right intends to hit you for 8x4 (32 damage), and the bird-masked enemy in the center for 6 damage. This total of 38 damage will be doubled to 76, which is lethal as you only have 45 health. **You must exit Wrath this turn.**
+
+**Spatial Layout & Status:**
+*   **You (The Watcher):** On the far left, at 45/79 health. You have 2 of 4 energy remaining.
+*   **Center Enemy:** A blue bird-masked creature, 40/53 health. It has 3 Vulnerable and intends to attack for 6 damage.
+*   **Far Right Enemy:** A large blue four-legged beast, at full health (320/320). It has 10 Artifact, 1 Strength, and 2 Metallicize. It intends to attack for 8x4 (32 damage).
+
+**Your Hand (4 cards, 2 energy remaining):**
+1.  **Scrawl+ (0 energy):** Skill, draw 3 cards.
+2.  **Empty Mind+ (1 energy):** Skill, draw 3 cards (If in Calm, exit Calm, gain 2 energy).
+3.  **Inner Peace (1 energy):** Skill (If in Calm, exit Calm, gain 1 energy, enter Calm). This card will allow you to exit Wrath and enter Calm.
+4.  **Strike (1 energy):** Attack, deal 6 damage.
+
+**Immediate Action:** Use ""Inner Peace"" for 1 energy to switch from Wrath to Calm, preventing lethal incoming damage.","**Critical Threat:** You are currently in Wrath stance, taking double damage. The large blue beast on the far right intends to hit you for 8x4 (32 damage), and the bird-masked enemy in the center for 6 damage. This total of 38 damage will be doubled to 76, which is lethal as you only have 45 health. **You must exit Wrath this turn.**
+
+**Spatial Layout & Status:**
+*   **You (The Watcher):** On the far left, at 45/79 health. You have 2 of 4 energy remaining.
+*   **Center Enemy:** A blue bird-masked creature, 40/53 health. It has 3 Vulnerable and intends to attack for 6 damage.
+*   **Far Right Enemy:** A large blue four-legged beast, at full health (320/320). It has 10 Artifact, 1 Strength, and 2 Metallicize. It intends to attack for 8x4 (32 damage).
+
+**Your Hand (4 cards, 2 energy remaining):**
+1.  **Scrawl+ (0 energy):** Skill, draw 3 cards.
+2.  **Empty Mind+ (1 energy):** Skill, draw 3 cards (If in Calm, exit Calm, gain 2 energy).
+3.  **Inner Peace (1 energy):** Skill (If in Calm, exit Calm, gain 1 energy, enter Calm). This card will allow you to exit Wrath and enter Calm.
+4.  **Strike (1 energy):** Attack, deal 6 damage.
+
+**Immediate Action:** Use ""Inner Peace"" for 1 energy to switch from Wrath to Calm, preventing lethal incoming damage.",,,0,,24.99527907371521,,,,24.99527907371521,,,True,,2025-11-23T15:04:44.662400
+SlayTheSpire_Watcher_vs_Cultist_LargeWolf_Act3.png,gaming,gemini-2.5-flash,True,gemini-2.5-flash+RAG,"You are in a critical situation. Your Watcher character has 45/79 HP and will take **lethal damage** this turn.
+
+1.  **Incoming Damage:** You are Vulnerable and will take a total of 57 damage this turn (9 from the bird creature, 48 from the wolf creature), while you only have 45 HP.
+2.  **Enemies:**
+    *   **Center:** Bird-like creature (40/53 HP) is attacking for 6 (9 with Vulnerable).
+    *   **Right:** Large wolf-like creature (320/320 HP) is attacking for 8x4 (32, or 48 with Vulnerable).
+3.  **Your Turn:** You have 2 energy available. Your hand contains: Scrawl+ (0 cost, draw 3), Empty Mind+ (1 cost, draw 3), Inner Peace (1 cost, if in Calm, gain 2 energy), and Strike (1 cost, attack). No block cards are in hand.","You are playing **Slay the Spire**, a deck-building roguelike where you control a character, the Watcher, who utilizes unique stances and cards to navigate battles and climb the spire.
+
+### Current Situation:
+You are in a critical position with your Watcher character at **45/79 HP**. This turn, you will take **lethal damage** due to the incoming attacks from enemies, which is particularly concerning given your current health.
+
+### Incoming Damage:
+- **Vulnerability Effect:** You are currently Vulnerable, meaning all damage you receive this turn is increased by 50%. 
+- **Total Damage:** You will take **57 damage** this turn:
+  - **From the Bird-like Creature (Center):** It has **40/53 HP** and is attacking for **6 damage**, which becomes **9 damage** due to your Vulnerable status.
+  - **From the Wolf-like Creature (Right):** It has **320/320 HP** and is making a multi-hit attack that deals **8 damage four times**, totaling **32 damage**, which escalates to **48 damage** with your Vulnerability.
+
+### Enemy Positions:
+- **Center:** The bird-like creature is attacking you directly. It has moderate health, making it a priority target for damage if you survive this turn.
+- **Right:** The large wolf-like creature is significantly more dangerous due to its high health and strong multi-hits. 
+
+### Your Turn:
+You have **2 energy available** to play cards from your hand, which consists of:
+1. **Scrawl+ (0 cost)**: Draws **3 cards**. This is a great option to replenish your hand without spending energy.
+2. **Empty Mind+ (1 cost)**: Draws **3 cards** and can help find defensive options or more powerful attacks.
+3. **Inner Peace (1 cost)**: If you are in the Calm stance, it gains you **2 energy**. If",slay_the_spire,[],3,"['ks\n- Spheric Guardian: High block, moderate health\nKEY CARDS:\n- Strike: Basic attack card, deals 6 d', 'Slay the Spire - Game Knowledge Base\n\nGAME OVERVIEW:\n\nSlay the Spire is a deck-building roguelike ga', '0% more damage\n- Weak: Enemy deals 25% less damage\nCOMMON ENEMIES:\n- Cultist: Low health, buffs othe']",18.707952976226807,1.2159347534179688e-05,0.14072084426879883,8.7088041305542,27.56542992591858,,1146,True,,2025-11-23T15:05:13.233777
+SlayTheSpire_Watcher_vs_Cultist_LargeWolf_Act3.png,gaming,claude-3-5-haiku,False,claude-3-5-haiku,"This image appears to be a screenshot from a turn-based strategy or card game, likely ""Slay the Spire"". The scene is set in a dark, organic-looking environment with skeletal or root-like structures in the background.
+
+Layout:
+- Left side: A purple/blue character with 45/79 health
+- Center: A white/blue character with 40/53 health
+- Right side: A larger blue creature with 320/320 health
+
+Bottom of screen shows:
+- 4 cards with different abilities: ""Scramble"", ""Empty Mind"", ""Inner Peace"", and ""Strike""
+- Player's energy is 2/4
+- ""End Turn"" button on right side
+
+Top of screen displays:
+- Player health (45/79)
+- Various inventory icons
+- Game version and date information
+
+The characters appear to be in a battle sequence, with health bars and potential combat","This image appears to be a screenshot from a turn-based strategy or card game, likely ""Slay the Spire"". The scene is set in a dark, organic-looking environment with skeletal or root-like structures in the background.
+
+Layout:
+- Left side: A purple/blue character with 45/79 health
+- Center: A white/blue character with 40/53 health
+- Right side: A larger blue creature with 320/320 health
+
+Bottom of screen shows:
+- 4 cards with different abilities: ""Scramble"", ""Empty Mind"", ""Inner Peace"", and ""Strike""
+- Player's energy is 2/4
+- ""End Turn"" button on right side
+
+Top of screen displays:
+- Player health (45/79)
+- Various inventory icons
+- Game version and date information
+
+The characters appear to be in a battle sequence, with health bars and potential combat",,,0,,13.517269134521484,,,,13.517269134521484,,,True,,2025-11-23T15:05:27.777246
+SlayTheSpire_Watcher_vs_Cultist_LargeWolf_Act3.png,gaming,claude-3-5-haiku,True,claude-3-5-haiku+RAG,"This image appears to be a screenshot from the video game ""Slay the Spire,"" a roguelike deck-building game. The scene depicts a dark, organic-looking cavern or dungeon environment with a teal and gray color palette.
+
+There are three characters/entities in the scene:
+- Left: A purple-colored character (the player)
+- Center: A blue-gray bird-like or spirit character
+- Right: A larger blue creature
+
+The bottom of the screen shows a hand of cards:
+- ""Scramble"" (purple)
+- ""Empty Mind"" (orange)
+- ""Inner Peace"" (blue)
+- ""Strike"" (red)
+
+The top of the screen displays the player's stats:
+- Health: 45/79
+- Various inventory icons
+- Other game metrics like level and resources
+
+The player appears to be in combat, with health bars visible for each entity. The game","You're currently playing ""Slay the Spire,"" a roguelike deck-building game where your goal is to ascend a tower, battling various enemies and collecting cards to enhance your deck.
+
+In this screenshot, you're in a dark, organic cavern environment, indicative of one of the later acts in the game. The color palette features deep teals and grays, creating a foreboding atmosphere typical for dungeon settings. 
+
+**Character Overview**:
+- **Left**: Your character, the **Watcher**, is represented as a purple figure. As the Watcher, you utilize unique stances, such as Wrath for increased damage or Calm for energy management. Pay attention to your stance strategy, as switching stances can significantly alter your gameplay approach.
+  
+- **Center**: The blue-gray bird-like character is likely an enemy known as a **Spheric Guardian**. This creature has high block and moderate health, posing a challenge in this encounter. Understanding its attack patterns and intent is key to your strategy.
+
+- **Right**: The larger blue creature might be another enemy type, adding to the complexity of this battle. As you engage, keep track of their health and attack intentions.
+
+**Combat Mechanics**:
+At the bottom of the screen, you have a hand of cards:
+- **Scramble (Purple)**: This card allows you to manipulate your draw pile, potentially giving you more options in future turns.
+- **Empty Mind (Orange)**: This card helps you transition out of your current stance while drawing cards, which can be crucial for adapting your strategy.
+- **Inner Peace (Blue)**: Useful for gaining energy, especially if you're transitioning to Calm stance.
+- **Strike (Red)**: A basic attack card that deals 6 damage. Consider using this against the Spheric Guardian to chip away at its health.
+
+**Player Stats**:
+At the top of the screen, your health is currently at **45/79**. Keep an eye on this number, especially",slay_the_spire,[],3,"['Slay the Spire - Game Knowledge Base\n\nGAME OVERVIEW:\n\nSlay the Spire is a deck-building roguelike ga', 'ks\n- Spheric Guardian: High block, moderate health\nKEY CARDS:\n- Strike: Basic attack card, deals 6 d', 'y played\n- Exhaust pile: Cards removed from combat\nCOMBAT STATUS:\n- Look for enemy intents (what the']",13.104077100753784,1.0013580322265625e-05,0.13496088981628418,6.2084667682647705,19.47469425201416,,1059,True,,2025-11-23T15:05:48.255081
+StardewValley_StardewValleyFair_Festival.png,gaming,gpt-4o,False,gpt-4o,"The image shows a pixel art scene from a game with a market or festival setting. In the center, people gather around circular patterned tiles, with some walking or standing nearby. Several red and white striped tents are set up—one with a person behind a booth and another with various items. There's a wheel with an arrow near a person in a top hat, suggesting a game or attraction. On the top right, stalls display produce and other items. Autumn-colored trees and decorations are visible, along with barrels and a building labeled ""The Stardrop Saloon"" on the right. The atmosphere is lively and festive.","The image shows a pixel art scene from a game with a market or festival setting. In the center, people gather around circular patterned tiles, with some walking or standing nearby. Several red and white striped tents are set up—one with a person behind a booth and another with various items. There's a wheel with an arrow near a person in a top hat, suggesting a game or attraction. On the top right, stalls display produce and other items. Autumn-colored trees and decorations are visible, along with barrels and a building labeled ""The Stardrop Saloon"" on the right. The atmosphere is lively and festive.",,,0,,4.489715099334717,,,,4.489715099334717,1345,,True,,2025-11-23T14:43:36.864715
+StardewValley_StardewValleyFair_Festival.png,gaming,gpt-4o,True,gpt-4o+RAG,"The image is a scene from a video game, likely ""Stardew Valley."" It's set in a festival or fairground area, featuring several red-and-white striped tents. In the center, various characters are gathered on cobblestone pavement. There are multiple stalls selling produce and goods at the top, with colorful fruits and vegetables displayed.
+
+On the left, a booth with a character is visible, and on the right, a similar booth is there with another character. Near the bottom center, a character is seated next to a wheel with an arrow, possibly for a game of chance. The surroundings include autumn-themed trees and some barrels. A building labeled ""The Stardrop Saloon"" is on the right side. The scene is lively, with people and activities spread throughout the area.","You are currently experiencing a scene from **Stardew Valley**, specifically during the **Stardew Valley Fair**, an important annual festival that celebrates the harvest season and offers various games and competitions. 
+
+In the center of the scene, you see a lively gathering of characters on cobblestone pavement. This is where villagers come together to celebrate, and it's a great opportunity to interact with them. Engaging with different NPCs (non-playable characters) during this event can enhance your relationships, potentially unlocking unique cutscenes or benefits later in the game.
+
+At the top of the scene, you notice multiple stalls displaying vibrant, colorful fruits and vegetables. These items represent the produce you can grow on your farm. Participating in the fair can allow you to showcase your best crops, which can earn you prizes and increase your standing in the community.
+
+To your left, there’s a booth with a character, likely selling goods or offering a mini-game. On the right, another booth with a different character could provide additional items or challenges. Engaging with these booths is essential, as they often contain seasonal items or festival-exclusive goods that can enrich your gameplay.
+
+Near the bottom center, a character is seated next to a large wheel with an arrow. This is probably part of a game of chance, where you can spin the wheel to win various prizes, including tokens or items that can be useful in your farming endeavors. Participating in games like this can be a fun way to earn rewards while enjoying the festive atmosphere.
+
+Surrounding the area, you can hear the sounds of autumn-themed trees rustling, which adds to the seasonal charm of the fair. The barrels scattered around could be used for storage or may contain items you can collect or use later.
+
+On the right side of the scene, there’s a building labeled **""The Stardrop Saloon.""** This is a key location in Pelican Town where you can interact with villagers, buy meals, and sometimes participate in events. It",stardew_valley,[],3,"['Stardew Valley - Game Knowledge Base\n\nGAME OVERVIEW:\n\nStardew Valley is a farming simulation game wh', 'lding relationships unlocks cutscenes and benefits\nFESTIVALS:\n- Stardew Valley Fair: Annual fall fes', 'nes: Underground areas with monsters and resources\nFARMING:\n- Crops: Plant seeds, water daily, harve']",5.296672105789185,8.821487426757812e-06,0.14778995513916016,8.894592761993408,14.363608837127686,1380,1108,True,,2025-11-23T14:43:52.234256
+StardewValley_StardewValleyFair_Festival.png,gaming,gemini-2.5-flash,False,gemini-2.5-flash,"You are at a busy pixel art fair, centered on a large circular brick platform. Directly to your right is a prominent green and orange spinning wheel. Three red-and-white striped vendor tents are around you: two to your left and one to your upper right. Pierre's market stall, filled with produce, is visible at the top-right. Your current gold is 5919, and you have 248 star points/energy (top-left). The Stardrop Saloon is located at the bottom-right.","You are at a busy pixel art fair, centered on a large circular brick platform. Directly to your right is a prominent green and orange spinning wheel. Three red-and-white striped vendor tents are around you: two to your left and one to your upper right. Pierre's market stall, filled with produce, is visible at the top-right. Your current gold is 5919, and you have 248 star points/energy (top-left). The Stardrop Saloon is located at the bottom-right.",,,0,,6.769807815551758,,,,6.769807815551758,,,True,,2025-11-23T15:05:56.033785
+StardewValley_StardewValleyFair_Festival.png,gaming,gemini-2.5-flash,True,gemini-2.5-flash+RAG,"You are at a lively outdoor festival in Stardew Valley, likely the Fall Fair.
+
+**Spatial Layout:**
+*   **Central area:** Many characters are walking around on stone paving.
+*   **Stalls/Tents:** Three red-and-white striped tents (mid-left, mid-right, bottom-left) likely offer games or goods. A large stall to your upper-right, labeled 'PIERRE'S', is stocked with produce and items.
+*   **Games:** A green and orange spinning wheel game is prominent in the bottom-center.
+*   **Buildings:** The 'STARDROP SALOON' building is on your far right.
+
+**Critical Status:**
+*   You have **248 Star Tokens** (top-left) and **5919 Gold** (top-right) available for use at the festival.
+*   The spinning wheel game's arrow points upwards.
+
+**Immediate Concerns:**
+*   No immediate threats. The area is safe for exploration and participation in activities.","You are playing **Stardew Valley**, a charming farming simulation game where you manage your farm, build relationships with villagers, and participate in seasonal festivals. Right now, you are at the **Fall Fair**, a lively celebration that occurs annually, allowing you to engage in various games, win prizes, and enjoy the community spirit.
+
+**Spatial Layout:**
+- **Central Area:** You find yourself amidst a bustling crowd of villagers, each contributing to the festive atmosphere. The stone-paved path beneath you is bustling with activity, making it an ideal spot to interact with others.
+- **Stalls/Tents:** 
+  - To your **mid-left**, **mid-right**, and **bottom-left**, there are **three red-and-white striped tents**. These typically house games or vendors selling seasonal goods. You can approach these tents to learn about their offerings or participate in games.
+  - A prominent stall labeled **'PIERRE'S'** sits to your **upper-right**, filled with seasonal produce and items. It's a great opportunity to stock up on supplies for your farm or to buy unique festival goods.
+- **Games:** In the **bottom-center**, there is a **green and orange spinning wheel game**. This is a classic festival activity where you can spin the wheel to win prizes, which are often Star Tokens that can be used to purchase items at the festival.
+- **Buildings:** On your **far right**, you see the **STARDROP SALOON**, a key location in Pelican Town where you can relax, enjoy food, and interact with villagers.
+
+**Critical Status:**
+- Currently, you have **248 Star Tokens** (displayed in the top-left corner) to use for games and prizes at the festival, along with **5919 Gold** (top-right) for purchasing items. The more Star Tokens you collect, the more rewards you can earn, including unique festival items or decorations for your farm.
+
+**Immediate Concerns:**
+- The area",stardew_valley,[],3,"['Stardew Valley - Game Knowledge Base\n\nGAME OVERVIEW:\n\nStardew Valley is a farming simulation game wh', 'lding relationships unlocks cutscenes and benefits\nFESTIVALS:\n- Stardew Valley Fair: Annual fall fes', 'nes: Underground areas with monsters and resources\nFARMING:\n- Crops: Plant seeds, water daily, harve']",9.367264032363892,1.2636184692382812e-05,0.1480238437652588,9.648482084274292,19.17052912712097,,1147,True,,2025-11-23T15:06:16.208058
+StardewValley_StardewValleyFair_Festival.png,gaming,claude-3-5-haiku,False,claude-3-5-haiku,"This is a screenshot from the video game Stardew Valley, depicting a festival scene with multiple white and red striped tents on a cobblestone ground. The scene has an autumn-like orange/yellow color palette with trees in the background and a saloon building on the right side. Several character sprites are standing around the tents, some inside them, suggesting some kind of community event or market. There are wooden barrels, a circular platform in the center, and a variety of colorful shelves with items on the right side of the image. The pixelated, retro-style graphics are characteristic of the game's visual design.
+
+Key spatial details:
+- Tents are arranged in a semi-circle
+- Characters are scattered throughout the area
+- Right side has a storage/inventory display
+- Bottom right shows a building labeled ""Stardew Saloon""
+
+The scene looks busy and social, typical of Stardew","This is a screenshot from the video game Stardew Valley, depicting a festival scene with multiple white and red striped tents on a cobblestone ground. The scene has an autumn-like orange/yellow color palette with trees in the background and a saloon building on the right side. Several character sprites are standing around the tents, some inside them, suggesting some kind of community event or market. There are wooden barrels, a circular platform in the center, and a variety of colorful shelves with items on the right side of the image. The pixelated, retro-style graphics are characteristic of the game's visual design.
+
+Key spatial details:
+- Tents are arranged in a semi-circle
+- Characters are scattered throughout the area
+- Right side has a storage/inventory display
+- Bottom right shows a building labeled ""Stardew Saloon""
+
+The scene looks busy and social, typical of Stardew",,,0,,6.753008127212524,,,,6.753008127212524,,,True,,2025-11-23T15:06:23.989962
+StardewValley_StardewValleyFair_Festival.png,gaming,claude-3-5-haiku,True,claude-3-5-haiku+RAG,"This is a scene from the video game Stardew Valley, showing a bustling outdoor market or fair area. There are three white and red striped tents spread across a cobblestone ground, with various characters standing near or inside them. The scene has an autumnal color palette with orange trees and ground.
+
+Key spatial details:
+- Tents are arranged in a semi-circular pattern
+- A large circular pink platform is in the center
+- A saloon/building is visible on the right side
+- Barrels and trees frame the edges of the scene
+
+Each tent appears to be a vendor booth with a character inside, suggesting a marketplace or festival setting. The bottom right shows a circular timer or indicator, and the top right has a shelf with various colorful items (possibly fruits or goods).
+
+The pixelated art style is characteristic of Stardew Valley, showing multiple characters in different colored clothing interacting or standing near the market","You're currently experiencing a vibrant scene from **Stardew Valley**, specifically during the **Stardew Valley Fair**, an annual autumn festival that celebrates the harvest season. This event offers a variety of activities and games, allowing you to interact with the community and earn rewards.
+
+In front of you, the **three white and red striped tents** are arranged in a semi-circle on the **cobblestone ground**, each serving as a vendor booth where villagers are showcasing their goods. This is typical for the fair, where you can buy seasonal items, participate in competitions, and enjoy the festive atmosphere. 
+
+The **large circular pink platform** at the center is likely where the main events or competitions take place. Participating in these activities is a key part of the festival, as it can earn you valuable rewards and increase your friendship with the townsfolk.
+
+To your right, the **saloon or building** adds to the bustling atmosphere and might serve as a place to gather and chat with villagers, possibly offering food or drinks to boost your energy. 
+
+**Barrels** and **trees** framing the edges provide a natural feel to the market area, enhancing the autumnal theme with their vibrant orange leaves. 
+
+In the **bottom right corner**, you notice a circular timer or indicator, which is essential for keeping track of the time you have left for festival activities. Be mindful of this, as the fair has a set duration, and you want to make the most of it!
+
+The **top right shelf** appears to hold various colorful items, likely fruits or goods that you can purchase. Interacting with these items can provide you with new resources or even festival-themed items that may not be available at other times of the year.
+
+As you navigate through the fair, remember to check your **inventory** at the bottom of the screen, which displays the items you're carrying. This can help you decide what to purchase or trade during the event. Also, keep an eye on your **health and energy",stardew_valley,[],3,"['Stardew Valley - Game Knowledge Base\n\nGAME OVERVIEW:\n\nStardew Valley is a farming simulation game wh', 'lding relationships unlocks cutscenes and benefits\nFESTIVALS:\n- Stardew Valley Fair: Annual fall fes', 'nes: Underground areas with monsters and resources\nFARMING:\n- Crops: Plant seeds, water daily, harve']",6.873230218887329,1.1920928955078125e-05,0.13642001152038574,7.942452907562256,14.971354961395264,,1135,True,,2025-11-23T15:06:39.966693
+StardewValley_TownSquare_VillageCenter.png,gaming,gpt-4o,False,gpt-4o,"The image is from a top-down view of a town square in a pixel art style, typical of a game like Stardew Valley. 
+
+- **Center**: A character stands on a stone path intersecting with other paths.
+- **Top**: A large stone plaza with circular patterns.
+- **Top Right**: A building labeled ""The Stardrop Saloon.""
+- **Bottom Left**: A blue-roofed house with a fenced yard.
+- **Bottom Center**: A red-roofed house with a small garden.
+- **Bottom Right**: A white and black-roofed house.
+- **Other features**: Trees, shrubs, and benches are scattered throughout. Paths connect various buildings and areas.","The image is from a top-down view of a town square in a pixel art style, typical of a game like Stardew Valley. 
+
+- **Center**: A character stands on a stone path intersecting with other paths.
+- **Top**: A large stone plaza with circular patterns.
+- **Top Right**: A building labeled ""The Stardrop Saloon.""
+- **Bottom Left**: A blue-roofed house with a fenced yard.
+- **Bottom Center**: A red-roofed house with a small garden.
+- **Bottom Right**: A white and black-roofed house.
+- **Other features**: Trees, shrubs, and benches are scattered throughout. Paths connect various buildings and areas.",,,0,,3.8833818435668945,,,,3.8833818435668945,1369,,True,,2025-11-23T14:44:03.177870
+StardewValley_TownSquare_VillageCenter.png,gaming,gpt-4o,True,gpt-4o+RAG,"The image shows a scene from a pixel-art style video game, likely from ""Stardew Valley."" It features a small town area with different buildings and pathways. 
+
+- Center: Cobblestone plaza with a circular pattern.
+- Bottom left: Blue building with a purple roof, surrounded by trees and a fence.
+- Bottom center: Small red-roofed house next to the blue building.
+- Bottom right: Large black-roofed building, possibly a shop or community center.
+- Top right: ""The Stardrop Saloon"" with a dark roof, located near the plaza.
+- Trees, bushes, and pathways are spread throughout, with one leading from the center plaza in each cardinal direction.
+- Time in the game: 1:40 PM, visible at the top right corner along with other game information.","You're currently in **Stardew Valley**, a charming farming simulation game where you manage a farm, build relationships with villagers, and explore various locations. 
+
+**Scene Overview:**
+- **Center:** The cobblestone plaza features a circular pattern, which is often a gathering place for town events and festivals. Pay attention to the plaza, as it might be a focal point for interactions, especially during seasonal events.
+- **Bottom Left:** The blue building with a purple roof is likely the **Wizard's Tower** or a similar structure. If you're looking to learn magic or interact with the Wizard character, this is the place to go. The trees and fence surrounding it can also provide resources like wood or foraged items.
+- **Bottom Center:** The small red-roofed house typically represents a villager's home. It may belong to someone you can befriend. Checking in on villagers can unlock unique cutscenes and help you grow your social connections, which can lead to benefits like gifts or recipes.
+- **Bottom Right:** The large black-roofed building is probably the **Community Center** or a shop. If it’s the Community Center, you’ll want to complete bundles there to unlock rewards and improvements for the town. If it’s a shop, you can buy supplies, seeds, or other items necessary for your farming or crafting needs.
+- **Top Right:** ""The Stardrop Saloon"" is a key location for socializing with villagers, gathering information, or participating in mini-games. It's a great spot to build friendships by giving gifts or simply enjoying the atmosphere.
+- **Surroundings:** Trees, bushes, and pathways provide opportunities for foraging and exploration. The paths lead in each cardinal direction, crucial for navigating between your farm, the mines, and other areas of Pelican Town. 
+
+**Game Information:**
+- The time is currently 1:40 PM, which is important for planning your activities. Remember that many villagers have specific schedules, so",stardew_valley,[],3,"['Stardew Valley - Game Knowledge Base\n\nGAME OVERVIEW:\n\nStardew Valley is a farming simulation game wh', 'lding relationships unlocks cutscenes and benefits\nFESTIVALS:\n- Stardew Valley Fair: Annual fall fes', 'nes: Underground areas with monsters and resources\nFARMING:\n- Crops: Plant seeds, water daily, harve']",5.3345630168914795,1.5020370483398438e-05,0.1342759132385254,7.3991899490356445,12.882629156112671,1388,1116,True,,2025-11-23T14:44:17.066150
+StardewValley_TownSquare_VillageCenter.png,gaming,gemini-2.5-flash,False,gemini-2.5-flash,"You are viewing a pixel art town map. Your character is in the center, standing on a paved path next to large flower pots.
+
+**Spatial Layout:** To your immediate left are two houses, one with a blue roof and one with a red roof. Ahead and to your right is ""The Stardrop Saloon"" (a brick building) with a dog pen nearby. To your bottom right is a white church. The town features green grass, trees, and paved paths connecting the buildings.
+
+**Critical Status:** It's Tuesday, day 2, 1:40 PM. You have 455 gold. Your active tool (bottom bar) is a pickaxe.
+
+**Immediate Concerns:** No immediate threats or obstacles are visible. You are on a clear paved path.","You are viewing a pixel art town map. Your character is in the center, standing on a paved path next to large flower pots.
+
+**Spatial Layout:** To your immediate left are two houses, one with a blue roof and one with a red roof. Ahead and to your right is ""The Stardrop Saloon"" (a brick building) with a dog pen nearby. To your bottom right is a white church. The town features green grass, trees, and paved paths connecting the buildings.
+
+**Critical Status:** It's Tuesday, day 2, 1:40 PM. You have 455 gold. Your active tool (bottom bar) is a pickaxe.
+
+**Immediate Concerns:** No immediate threats or obstacles are visible. You are on a clear paved path.",,,0,,7.79366397857666,,,,7.79366397857666,,,True,,2025-11-23T15:06:48.769816
+StardewValley_TownSquare_VillageCenter.png,gaming,gemini-2.5-flash,True,gemini-2.5-flash+RAG,"You are viewing a pixel-art town map from an overhead perspective.
+
+**Spatial Layout:**
+*   **Center:** A paved town square with a circular hub. Your character is standing on a paved path just below this hub, facing right.
+*   **Left:** A blue house with a purple roof and a beige house with a red roof are visible on the left side, near a body of water at the bottom.
+*   **Right:** The Stardrop Saloon is at the top right, and a white church-like building is below it. A fenced-in dog pen is near the saloon.
+*   **Paths:** Grey stone paths connect the main areas; dirt paths weave through the grassy sections.
+
+**Critical Status:**
+*   It is 1:40 PM on Tuesday, day 2. You have 455 gold.
+*   Your inventory bar at the bottom displays various tools and items.
+
+**Immediate Concerns:**
+*   No immediate threats or obstacles are visible. You are on a clear path in a central area, ready to move.","You are playing **Stardew Valley**, a farming simulation game that allows you to manage a farm, interact with villagers, and explore various locations in the game world.
+
+### Enhanced Description:
+
+You are viewing a pixel-art town map from an overhead perspective, specifically the central area of **Pelican Town**.
+
+**Spatial Layout:**
+- **Center:** You are positioned on a paved path just below the circular **town square**, which serves as the heart of Pelican Town where many events and festivals occur. Your character is facing right, ready to explore or interact with the surrounding areas.
+- **Left:** To your left, you see a **blue house with a purple roof** and a **beige house with a red roof**. These are likely homes of villagers, whom you can befriend to unlock special cutscenes and benefits. Near these houses is a body of water, possibly a river or pond, where you can fish for various aquatic resources.
+- **Right:** On the right side, the **Stardrop Saloon** is located at the top right, a place where you can purchase food and drinks to restore your energy. Below it is a **white church-like building**, which could be the town's place of worship or community center. Adjacent to the saloon, there's a fenced-in **dog pen**, indicating you might have or can adopt a pet, which adds charm to your farm life.
+- **Paths:** Grey stone paths connect the main areas of town, and dirt paths wind through grassy sections, inviting exploration and resource gathering.
+
+**Critical Status:**
+- The current time is **1:40 PM on Tuesday, day 2** of the game, which means you have time to complete tasks before nightfall. Remember, the day ends at **2 AM**, and you’ll need to sleep before then to progress.
+- You have **455 gold** at your disposal, which can be spent at shops for tools, seeds, and other items",stardew_valley,[],3,"['Stardew Valley - Game Knowledge Base\n\nGAME OVERVIEW:\n\nStardew Valley is a farming simulation game wh', 'lding relationships unlocks cutscenes and benefits\nFESTIVALS:\n- Stardew Valley Fair: Annual fall fes', 'd\n- Toolbar: Bottom shows equipped tools and items\nGAMEPLAY MECHANICS:\n- Energy: Depletes when using']",6.6737682819366455,1.0967254638671875e-05,0.14515304565429688,8.841301441192627,15.667718172073364,,1159,True,,2025-11-23T15:07:05.448053
+StardewValley_TownSquare_VillageCenter.png,gaming,claude-3-5-haiku,False,claude-3-5-haiku,"This image depicts a detailed pixel-art style map from the game Stardew Valley, showing a section of a farm and surrounding area. The scene is rich with green grass, yellow dirt paths, and several buildings:
+
+Layout:
+- Center: Large cobblestone plaza with a circular red design
+- Left side: Blue wooden house
+- Center-right: Red wooden house
+- Right side: Two wooden buildings (one appears to be a stable/shed)
+
+Key details:
+- Multiple trees and bushes scattered across the map
+- Wooden fences around various sections
+- Small water area visible at bottom left
+- A character (small pixel figure) is standing near the central plaza
+- Bottom toolbar shows game inventory/tools
+- Time and season indicators in top right corner
+
+The scene looks peaceful and organized, typical of a farming simulation game, with carefully arranged paths, buildings, and landscaping.","This image depicts a detailed pixel-art style map from the game Stardew Valley, showing a section of a farm and surrounding area. The scene is rich with green grass, yellow dirt paths, and several buildings:
+
+Layout:
+- Center: Large cobblestone plaza with a circular red design
+- Left side: Blue wooden house
+- Center-right: Red wooden house
+- Right side: Two wooden buildings (one appears to be a stable/shed)
+
+Key details:
+- Multiple trees and bushes scattered across the map
+- Wooden fences around various sections
+- Small water area visible at bottom left
+- A character (small pixel figure) is standing near the central plaza
+- Bottom toolbar shows game inventory/tools
+- Time and season indicators in top right corner
+
+The scene looks peaceful and organized, typical of a farming simulation game, with carefully arranged paths, buildings, and landscaping.",,,0,,6.444631099700928,,,,6.444631099700928,,,True,,2025-11-23T15:07:12.919793
+StardewValley_TownSquare_VillageCenter.png,gaming,claude-3-5-haiku,True,claude-3-5-haiku+RAG,"This is a pixel art scene from the video game Stardew Valley, showing a detailed top-down view of a farming and town area. The landscape is primarily green with yellow-sandy paths connecting various buildings and areas. Key elements include:
+
+Layout:
+- Several wooden houses in different colors (blue, red, brown)
+- A central stone-tiled plaza with a circular red feature
+- Wooden fences bordering various sections
+- Dense green trees and bushes throughout
+- A blue water area at the bottom left
+- Yellow paths winding between structures
+
+Buildings:
+- A ""Stardrop Saloon"" sign visible on one building
+- Multiple small houses with different architectural styles
+- Trash cans and mailboxes near the houses
+
+Characters:
+- A small pixel character (likely the player) standing near the central plaza
+- Another character near some objects in a garden area
+
+Game Details:
+- Top-right","You are currently playing **Stardew Valley**, a charming farming simulation game where you manage your own farm, build relationships with townsfolk, and explore a variety of environments.
+
+### Scene Overview:
+In this top-down pixel art scene, you find yourself in **Pelican Town**, a vibrant community centered around farming and seasonal festivals.
+
+### Layout:
+- **Central Plaza**: This stone-tiled area with a circular red feature is a hub for community events and shops. Pay attention to this spot, as it often hosts seasonal festivals like the **Stardew Valley Fair**, where you can participate in games and win prizes.
+- **Paths**: The yellow sandy paths connecting various buildings allow for easy navigation. As you explore, these paths will guide you to essential locations, including shops and your farm.
+- **Fences and Greenery**: Wooden fences separate different sections of the town, while dense green trees and bushes provide forageable items like berries—useful for crafting or gifting to villagers.
+- **Blue Water Area**: Located at the bottom left, this represents a pond or river where you can fish. Fishing is a great way to gather food or earn money.
+
+### Buildings:
+- **Stardrop Saloon**: With a sign visible, this is a place to interact with villagers, enjoy food, and sometimes find quests. It's an excellent spot to build relationships, as you can give gifts to NPCs here.
+- **Houses**: The small houses in various colors belong to different villagers. Each has distinct personalities and schedules, so learning their preferences can unlock special cutscenes and benefits.
+- **Trash Cans and Mailboxes**: Located near the houses, these can provide resources. Check trash cans for discarded items that can be recycled or repurposed.
+
+### Characters:
+- **Player Character**: The small pixel character near the central plaza represents you, the farmer. You can engage with villagers, explore, or head to your farm to tend to",stardew_valley,[],3,"['Stardew Valley - Game Knowledge Base\n\nGAME OVERVIEW:\n\nStardew Valley is a farming simulation game wh', 'lding relationships unlocks cutscenes and benefits\nFESTIVALS:\n- Stardew Valley Fair: Annual fall fes', 'nes: Underground areas with monsters and resources\nFARMING:\n- Crops: Plant seeds, water daily, harve']",7.018805027008057,5.9604644775390625e-06,0.11574077606201172,8.619674921035767,15.773594856262207,,1130,True,,2025-11-23T15:07:29.704565
+StardewValley_Winter_IceFishingContest.png,gaming,gpt-4o,False,gpt-4o,"This is a screenshot from the game ""Stardew Valley."" It shows four characters fishing by a lake. Three are standing on the orange dirt path along the water, while one is fishing on a small grassy island. The layout shows the characters from left to right: one on the island, three along the top of the lake. 
+
+The user interface on the left displays inventory items like tools and weapons. The top right corner shows the day (Saturday, the 20th), time (1:00 PM), and money (10,250). On the right, there's an exclamation mark icon for quests or alerts. The setting is bright and colorful, representing a sunny day.","This is a screenshot from the game ""Stardew Valley."" It shows four characters fishing by a lake. Three are standing on the orange dirt path along the water, while one is fishing on a small grassy island. The layout shows the characters from left to right: one on the island, three along the top of the lake. 
+
+The user interface on the left displays inventory items like tools and weapons. The top right corner shows the day (Saturday, the 20th), time (1:00 PM), and money (10,250). On the right, there's an exclamation mark icon for quests or alerts. The setting is bright and colorful, representing a sunny day.",,,0,,3.652205228805542,,,,3.652205228805542,680,,True,,2025-11-23T14:44:27.756760
+StardewValley_Winter_IceFishingContest.png,gaming,gpt-4o,True,gpt-4o+RAG,"This image is a screenshot from the game Stardew Valley. It shows a group of characters fishing at a lake. 
+
+- At the top right, the date is ""Sat. 20,"" and the time is ""1:00 pm."" The player has a balance of 10,250 in-game currency.
+- Three characters are standing at the top center near the lake, casting their fishing lines into the water.
+- A fourth character is fishing alone on the lower left side.
+- The left side of the screen shows a menu with various tools and items, including a pickaxe, hoe, scythe, and swords.
+- The right side has icons related to in-game alerts and menus.
+
+The background is a bright, colorful landscape with green grass and a blue lake.","You are currently playing *Stardew Valley*, a charming farming simulation game where you can cultivate crops, raise animals, and build relationships with townsfolk. 
+
+In this screenshot, it’s ""Saturday, the 20th,"" at ""1:00 PM,"" and your in-game currency stands at 10,250 gold. This is a significant amount, allowing you to purchase various tools, seeds, or gifts for villagers to improve your relationships. 
+
+At the top center of the screen, three characters are gathered near the lake, casting their fishing lines. Fishing is a relaxing activity in *Stardew Valley* that can provide valuable resources, including fish used for cooking or gifting. Remember, the type of fish you catch can vary by season and weather, so consider the time of year when you decide to fish.
+
+To the lower left, a fourth character fishes alone. Interacting with villagers while fishing can sometimes lead to conversations that unlock new quests or insights into their preferences, further enhancing your gameplay experience.
+
+On the left side, you see a menu displaying your tools, including a pickaxe, hoe, scythe, and swords. These tools are essential for various tasks: the pickaxe is used for mining, the hoe for tilling soil for farming, the scythe for harvesting crops or grass, and swords are used for combat in the mines. It's important to manage your inventory effectively, ensuring you have the right tools for the tasks at hand. 
+
+The right side of the screen contains icons for in-game alerts and menus. Familiarize yourself with these icons, as they can provide important notifications about your farm, events, or reminders for daily tasks.
+
+In the background, the vibrant landscape features green grass and a blue lake, which not only adds to the aesthetic but also indicates the tranquil environment of Pelican Town, where your farm and the community are located. Enjoying the scenery can enhance your relaxation while playing, but don’t forget to keep an eye on the time",stardew_valley,[],3,"['Stardew Valley - Game Knowledge Base\n\nGAME OVERVIEW:\n\nStardew Valley is a farming simulation game wh', 'lding relationships unlocks cutscenes and benefits\nFESTIVALS:\n- Stardew Valley Fair: Annual fall fes', 'd\n- Toolbar: Bottom shows equipped tools and items\nGAMEPLAY MECHANICS:\n- Energy: Depletes when using']",3.5860140323638916,3.600120544433594e-05,0.12821197509765625,7.446928977966309,11.18188190460205,699,1102,True,,2025-11-23T14:44:39.944734
+StardewValley_Winter_IceFishingContest.png,gaming,gemini-2.5-flash,False,gemini-2.5-flash,"You are fishing in a river, positioned bottom-left. Three other characters are fishing along the bank to your right. It's 1:00 PM on Saturday, day 20. You have 10250 gold, and your energy bar is about three-quarters full on the right.","You are fishing in a river, positioned bottom-left. Three other characters are fishing along the bank to your right. It's 1:00 PM on Saturday, day 20. You have 10250 gold, and your energy bar is about three-quarters full on the right.",,,0,,4.113321781158447,,,,4.113321781158447,,,True,,2025-11-23T15:07:34.855044
+StardewValley_Winter_IceFishingContest.png,gaming,gemini-2.5-flash,True,gemini-2.5-flash+RAG,"You are fishing in a river. Four other characters are fishing beside you, to your right and center. The time is 1:00 PM on Saturday, the 20th. You have 10250 gold and about 75% energy remaining. An exclamation mark icon on the right indicates a pending notification or quest.","You are currently playing **Stardew Valley**, a farming simulation game where you manage your own farm, engage with the local community, and explore various locations.
+
+As you fish in the river, you are surrounded by four other characters, who are also casting their lines beside you, to your right and in the center. It’s 1:00 PM on Saturday, the 20th, giving you ample time to enjoy the day before needing to wrap up by 2:00 AM. You currently have **10,250 gold**, which is a good amount to spend on seeds, tools, or community upgrades. Your energy is at about **75%**, which is essential for maintaining your productivity. Remember, energy decreases as you use tools or perform tasks, so be mindful of how long you fish or work today.
+
+An **exclamation mark icon** appears on the right side of your screen, indicating that you have a pending notification or quest. This could be a task from a villager or a new opportunity to explore. It's advisable to check on this soon, as completing quests can provide rewards that enhance your gameplay experience.
+
+At the bottom of your screen, your **toolbar** displays the tools and items you have equipped. Make sure you have your fishing rod ready, as it’s crucial for catching fish. If you decide to switch activities, you’ll want to select the appropriate tool for farming or mining, since different tasks require specific tools.
+
+Keep in mind that the game operates on a day and night cycle, so you must manage your time wisely. If you plan to head into the mines later, be prepared for combat with monsters, and ensure you have enough health and energy to face them. If your health drops to zero, you could lose items or money, so it’s wise to carry food for restoration.
+
+Overall, you have a productive day ahead of you. Consider whether to fish for a bit longer or tackle the quest indicated by the exclamation mark. Balancing your activities",stardew_valley,[],3,"['d\n- Toolbar: Bottom shows equipped tools and items\nGAMEPLAY MECHANICS:\n- Energy: Depletes when using', 'lding relationships unlocks cutscenes and benefits\nFESTIVALS:\n- Stardew Valley Fair: Annual fall fes', 'Stardew Valley - Game Knowledge Base\n\nGAME OVERVIEW:\n\nStardew Valley is a farming simulation game wh']",3.790294885635376,2.09808349609375e-05,0.13837695121765137,8.603010892868042,12.544615030288696,,1011,True,,2025-11-23T15:07:48.405683
+StardewValley_Winter_IceFishingContest.png,gaming,claude-3-5-haiku,False,claude-3-5-haiku,"This is a screenshot from the video game Stardew Valley, showing a pixelated fishing scene. The image is divided into a grassy green landscape with an orange-colored path, and a blue water area. Multiple characters are positioned along the shoreline, fishing with rods. The top right shows the date (Sat. 20 at 1:00 pm) and a score or currency value of 10,250. The left side of the screen displays a vertical toolbar with various tools and items. The scene has a vibrant, detailed pixel art style typical of the game, with characters standing on a path next to a body of water with a tree in the foreground.","This is a screenshot from the video game Stardew Valley, showing a pixelated fishing scene. The image is divided into a grassy green landscape with an orange-colored path, and a blue water area. Multiple characters are positioned along the shoreline, fishing with rods. The top right shows the date (Sat. 20 at 1:00 pm) and a score or currency value of 10,250. The left side of the screen displays a vertical toolbar with various tools and items. The scene has a vibrant, detailed pixel art style typical of the game, with characters standing on a path next to a body of water with a tree in the foreground.",,,0,,4.776526212692261,,,,4.776526212692261,,,True,,2025-11-23T15:07:54.205988
+StardewValley_Winter_IceFishingContest.png,gaming,claude-3-5-haiku,True,claude-3-5-haiku+RAG,"This image appears to be a screenshot from the video game Stardew Valley. The scene shows a pixelated riverside landscape with characters fishing along an orange-colored path next to a blue water body. 
+
+Layout:
+- Left side: Vertical toolbar with tools and items
+- Right side: Game interface with date (Sat. 20, 1:00 pm) and score/money (10250)
+- Center: Multiple pixel characters standing on an orange path by a blue river
+- A tree is located in the middle of the scene
+
+Critical details:
+- Characters are fishing, with fishing lines extending into the water
+- The environment is green and lush, typical of the game's farm/rural setting
+- Time of day and location suggest a leisurely fishing activity
+
+Immediate concerns:
+- No urgent threats or obstacles visible
+- Characters appear to be engaged in a calm, recreational activity
+
+The image captures a typical moment of","You are currently playing **Stardew Valley**, a charming farming simulation game where you manage your own farm, interact with villagers, and explore various locations in a vibrant rural setting.
+
+In this scene, you are by a **blue river** on an **orange-colored path**, which indicates a popular fishing spot. The lush, green environment is typical of Stardew Valley, where the aesthetics encourage leisurely activities like fishing. 
+
+### Layout Overview:
+- **Left Side:** You see a vertical toolbar displaying the tools and items you have equipped. This is crucial for quickly accessing your fishing rod, which you’re currently using to fish.
+- **Right Side:** The game interface shows the current date (Saturday, 20th) and time (1:00 PM), indicating it's a good time for outdoor activities. Your current money is displayed as **10,250 gold**, which you can use to buy seeds, tools, or gifts for villagers.
+- **Center:** Multiple pixelated characters are positioned along the riverbank, each engaged in fishing. This cooperative activity can help you catch fish, which can be sold for profit or used in cooking recipes.
+
+### Critical Details:
+- **Fishing Mechanics:** The fishing lines extending into the water suggest that you or your friends are actively trying to catch fish. To successfully catch fish in the game, be prepared to press a button at the right moment when you see an exclamation mark, indicating a fish has bitten.
+- **Tree in the Middle:** The tree offers a potential resource. If you have an axe equipped from your toolbar, you can chop it down or collect wood from it—useful for crafting and building.
+
+### Immediate Concerns:
+- There are currently no threats or obstacles in this serene fishing scene, allowing for a relaxing experience. Engaging in fishing can yield various types of fish, which can be used for cooking or sold for profit, contributing to your overall farm success.
+
+### Actionable Information:
+- Consider using your fishing rod to catch fish",stardew_valley,[],3,"['Stardew Valley - Game Knowledge Base\n\nGAME OVERVIEW:\n\nStardew Valley is a farming simulation game wh', 'lding relationships unlocks cutscenes and benefits\nFESTIVALS:\n- Stardew Valley Fair: Annual fall fes', 'nes: Underground areas with monsters and resources\nFARMING:\n- Crops: Plant seeds, water daily, harve']",6.142347097396851,1.621246337890625e-05,0.13319087028503418,7.540069818496704,13.83956003189087,,1136,True,,2025-11-23T15:08:09.049443
+four_in_a_row-opp_move_1.png,gaming,gpt-4o,False,gpt-4o,"The image shows a Connect Four game board. It is mostly empty, except for the bottom right corner, where there are two discs placed vertically. The top disc is red, and the bottom disc is green. The rest of the board has empty slots.","The image shows a Connect Four game board. It is mostly empty, except for the bottom right corner, where there are two discs placed vertically. The top disc is red, and the bottom disc is green. The rest of the board has empty slots.",,,0,,1.9613261222839355,,,,1.9613261222839355,933,,True,,2025-11-23T14:44:48.954710
+four_in_a_row-opp_move_1.png,gaming,gpt-4o,True,gpt-4o+RAG,"The image shows a Connect Four game board. It has seven columns and six rows. In the bottom right corner, there are two discs placed vertically: a green disc at the bottom and a red disc directly above it. The rest of the slots on the board are empty.","You are playing Connect Four, a classic two-player connection game where the objective is to be the first to connect four of your discs in a row—either horizontally, vertically, or diagonally.
+
+The game board you see consists of seven vertical columns and six horizontal rows. Currently, the bottom right corner of the board holds two discs: a green disc at the bottom and a red disc directly above it. This means you (with the red discs) have placed your disc above your opponent's green disc.
+
+Here are some actionable insights for your next move:
+- Consider placing your next disc in one of the columns adjacent to the green disc to either block your opponent from connecting four or to set up your own potential connections.
+- If you can place a disc in a column that allows you to create a diagonal, vertical, or horizontal line of four, prioritize that move.
+- Keep an eye on the columns that have the most potential for future plays, and think about how each move can impact the game in both offense and defense.
+
+Stay aware of your opponent's moves and adjust your strategy accordingly to prevent them from winning while trying to achieve your own connection!",four_in_a_row,[],0,[],2.635998010635376,4.1961669921875e-05,0.1063690185546875,4.426810026168823,7.184356689453125,937,498,True,,2025-11-23T14:44:57.145060
+four_in_a_row-opp_move_1.png,gaming,gemini-2.5-flash,False,gemini-2.5-flash,"A Connect Four style game board shows a 6x7 grid of empty dark holes. In the second column from the right, at the bottom, is a green game piece. Directly above it, in the same column, is a red game piece with a small white dot in its center, indicating it might be the last played or active piece.","A Connect Four style game board shows a 6x7 grid of empty dark holes. In the second column from the right, at the bottom, is a green game piece. Directly above it, in the same column, is a red game piece with a small white dot in its center, indicating it might be the last played or active piece.",,,0,,5.096701145172119,,,,5.096701145172119,,,True,,2025-11-23T15:08:15.156440
+four_in_a_row-opp_move_1.png,gaming,gemini-2.5-flash,True,gemini-2.5-flash+RAG,"A 7x6 grid of circular slots, like a game board. In the exact center column, near the bottom: a green piece is on the lowest row, and a red piece is directly above it, one row up. The red piece has a small white dot in its center, indicating it might be active or special. All other 40 slots are empty and available for play.","You are playing *Four in a Row*, a strategic game where the objective is to connect four of your pieces in a row—horizontally, vertically, or diagonally—before your opponent does.
+
+Currently, you have a 7x6 grid in front of you, which serves as the playing board. The bottom row of the center column (column 4) features your green piece, while directly above it, in the same column, is a red piece, indicating your opponent's move. The red piece has a small white dot in its center, suggesting it may have a special ability or be an active piece. This could mean it might block your next move or provide a strategic advantage if you connect with it.
+
+With 40 slots still empty, you have plenty of opportunities to place your pieces. To maximize your chances of winning, consider placing your next piece in one of the adjacent columns (3 or 5) to either create a potential connection with your green piece or block your opponent from making a winning move in the next round. Reflect on your opponent's potential moves as well, as they may attempt to connect four pieces vertically or horizontally.
+
+Stay alert, as the game can shift quickly with every move. Good luck!",four_in_a_row,[],0,[],9.59976601600647,1.0013580322265625e-05,0.14224600791931152,7.1396708488464355,16.891123056411743,,541,True,,2025-11-23T15:08:33.055232
+four_in_a_row-opp_move_1.png,gaming,claude-3-5-haiku,False,claude-3-5-haiku,"This image shows a grid of 49 dark circular spots (7 rows by 7 columns), arranged in a uniform pattern on a dark blue-gray background. In the bottom-center area of the grid, there are two colored circles: a pink/salmon-colored circle at the top with a small white dot in its center, and a mint green circle directly below it. All other circles are a uniform dark color. The overall layout suggests this could be a game board, data visualization, or interactive interface element.","This image shows a grid of 49 dark circular spots (7 rows by 7 columns), arranged in a uniform pattern on a dark blue-gray background. In the bottom-center area of the grid, there are two colored circles: a pink/salmon-colored circle at the top with a small white dot in its center, and a mint green circle directly below it. All other circles are a uniform dark color. The overall layout suggests this could be a game board, data visualization, or interactive interface element.",,,0,,3.568067789077759,,,,3.568067789077759,,,True,,2025-11-23T15:08:37.639275
+four_in_a_row-opp_move_1.png,gaming,claude-3-5-haiku,True,claude-3-5-haiku+RAG,"This image shows a grid of circular slots, 7 columns wide by 6 rows tall, mostly filled with dark navy blue circles. Two circles stand out:
+
+1. A salmon pink circle near the center-right of the grid
+2. A mint green circle directly below the pink one
+
+Both colored circles have a small white dot in their center. The overall background is a slightly lighter shade of navy blue, giving the grid a uniform, structured appearance like a game board or interface element.","You are playing **Four in a Row**, a strategic connection game where the goal is to align four of your colored circles vertically, horizontally, or diagonally before your opponent does.
+
+In the grid you see, it consists of **7 columns** and **6 rows**, primarily filled with **dark navy blue circles** which represent empty slots. There are two notable circles:
+
+1. A **salmon pink circle** located near the center-right of the grid. This likely indicates one of your moves or an opponent's move, depending on whose turn it is.
+2. A **mint green circle** directly below the pink circle, representing another strategic point that could be critical for your next move.
+
+Each circle has a **small white dot in its center**, which can signify that it is a playable slot. The overall background is a slightly lighter shade of navy blue, providing a clear contrast to the filled circles.
+
+**Actionable Guidance**: 
+- If it's your turn and you control the pink circles, consider placing your next move in a column that can help you connect four in a row. The mint green circle below the pink may also indicate a potential block if it belongs to your opponent, so be aware of their next move.
+- Think ahead about how your placement can either create a winning line for yourself or prevent your opponent from achieving four in a row.
+
+Use this grid to plan your moves strategically, keeping an eye on both your position and your opponent’s potential to connect four.",four_in_a_row,[],0,[],3.4638547897338867,1.4066696166992188e-05,0.1600329875946045,6.644376993179321,10.283715963363647,,608,True,,2025-11-23T15:08:48.927302
+four_in_a_row-opp_move_4.png,gaming,gpt-4o,False,gpt-4o,"The image shows a Connect Four game grid. The grid is partially filled with red and green discs. On the left-most column, there is a vertical line of three red discs at the bottom. In the second column from the left, there is a vertical line of four green discs topped by one red disc above it. The rest of the grid is empty.","The image shows a Connect Four game grid. The grid is partially filled with red and green discs. On the left-most column, there is a vertical line of three red discs at the bottom. In the second column from the left, there is a vertical line of four green discs topped by one red disc above it. The rest of the grid is empty.",,,0,,2.679239273071289,,,,2.679239273071289,954,,True,,2025-11-23T14:45:06.873995
+four_in_a_row-opp_move_4.png,gaming,gpt-4o,True,gpt-4o+RAG,"The image shows a Connect Four game grid. On the left, there is a vertical line of alternating red and green discs, starting from the bottom: red, green, red, green, and red at the top. The rest of the grid is empty.","You are playing **Connect Four**, a classic two-player game where the objective is to connect four of your discs in a row, either vertically, horizontally, or diagonally. 
+
+In the current game grid, you have a vertical line of alternating discs on the left side: starting from the bottom, there is a red disc at the bottom, followed by a green disc, then another red, a green disc above that, and finally, a red disc at the top. The rest of the grid remains empty, indicating that no other moves have been made yet.
+
+**Game Context and Strategy:**
+- The vertical line of discs on the left indicates that you are potentially setting up for a connect-four strategy. You have three red discs in total, which could lead to a vertical win if you manage to connect four in that column.
+- Be aware of your opponent's potential moves. If they place a disc in the same column, they could block your opportunity to connect four. 
+- Since the rest of the grid is empty, you have freedom to place your next disc either in this column to build on your vertical strategy or in other columns to create horizontal or diagonal connections.
+
+**Actionable Tip:**
+Consider placing your next disc either in the left column to further your vertical strategy or in other columns to create multiple potential connects, increasing your chances of winning while limiting your opponent's options.",four_in_a_row,[],0,[],1.9504213333129883,4.482269287109375e-05,0.1108710765838623,6.23450493812561,8.317543029785156,934,543,True,,2025-11-23T14:45:16.194252
+four_in_a_row-opp_move_4.png,gaming,gemini-2.5-flash,False,gemini-2.5-flash,"This is a Connect 4 game board, 6 rows high and 7 columns wide. The current player, Red, has a disc floating above the second column from the left, indicating the next move.
+
+**Critical Status:**
+*   Red pieces are located in: the first column (bottom row), the second column (third row from bottom), and the fourth column (second and third rows from bottom).
+*   Green pieces are located in: the second column (bottom and second rows from bottom), the third column (second row from bottom), and the fourth column (bottom row).
+*   Neither player has an immediate winning line of three pieces that could complete a 4-in-a-row with the next move.
+
+**Immediate Concerns:**
+*   Dropping the red piece into the second column, as indicated, will place it on top of an existing red piece. This move does not create a 4-in-a-row for Red, nor does it block an immediate winning threat from Green.","This is a Connect 4 game board, 6 rows high and 7 columns wide. The current player, Red, has a disc floating above the second column from the left, indicating the next move.
+
+**Critical Status:**
+*   Red pieces are located in: the first column (bottom row), the second column (third row from bottom), and the fourth column (second and third rows from bottom).
+*   Green pieces are located in: the second column (bottom and second rows from bottom), the third column (second row from bottom), and the fourth column (bottom row).
+*   Neither player has an immediate winning line of three pieces that could complete a 4-in-a-row with the next move.
+
+**Immediate Concerns:**
+*   Dropping the red piece into the second column, as indicated, will place it on top of an existing red piece. This move does not create a 4-in-a-row for Red, nor does it block an immediate winning threat from Green.",,,0,,22.736579179763794,,,,22.736579179763794,,,True,,2025-11-23T15:09:12.675241
+four_in_a_row-opp_move_4.png,gaming,gemini-2.5-flash,True,gemini-2.5-flash+RAG,"This is a 6-row by 7-column grid game board, similar to Connect 4. Red just placed a piece (marked with a white dot) in the second column from the left, five rows up from the bottom.
+
+**Critical Status:** Green has three pieces forming a diagonal line upwards, extending from the second column (two rows up from the bottom) to the fourth column (four rows up from the bottom).
+
+**Immediate Action:** It is Green's turn, and Green can win immediately. Green should place a piece in the fifth column from the left, five rows up from the bottom, to complete a four-in-a-row diagonal and win the game.","You are playing **Four in a Row**, a game where players take turns dropping pieces into a vertical grid, with the goal of connecting four pieces in a row—either horizontally, vertically, or diagonally. 
+
+Currently, the game board is structured as a 6-row by 7-column grid. The last move was made by the Red player, who placed a piece in the second column from the left, five rows up from the bottom, indicated by a white dot. 
+
+**Critical Status:** The Green player has three pieces forming a diagonal line that extends from the second column (two rows up from the bottom) to the fourth column (four rows up from the bottom). This means Green is just one move away from winning.
+
+**Immediate Action:** It is now Green's turn. To secure victory, Green should place a piece in the fifth column from the left, five rows up from the bottom. This action will create a diagonal line of four Green pieces, allowing Green to win the game.
+
+As you decide, consider that placing your piece in the fifth column not only completes the diagonal but also prevents Red from having an opportunity to block it on their next turn.",four_in_a_row,[],0,[],33.0931499004364,3.600120544433594e-05,0.14060401916503906,5.080120801925659,38.32219481468201,,583,True,,2025-11-23T15:09:52.002006
+four_in_a_row-opp_move_4.png,gaming,claude-3-5-haiku,False,claude-3-5-haiku,"The image shows a grid of 49 circular spaces, arranged in 7 rows and 7 columns. Most of the circles are dark gray or black, creating a uniform background. However, there are 7 colored circles - 4 pink/salmon-colored and 3 green-colored - arranged in a specific pattern:
+
+- One pink circle with a white dot is near the top center of the grid
+- Below this, there are alternating green and pink circles forming a descending vertical shape
+- At the bottom left of this pattern, there are additional green and pink circles
+
+The colored circles stand out distinctly against the dark, grid-like background, creating a visual contrast and suggesting some sort of game, design, or data visualization layout.","The image shows a grid of 49 circular spaces, arranged in 7 rows and 7 columns. Most of the circles are dark gray or black, creating a uniform background. However, there are 7 colored circles - 4 pink/salmon-colored and 3 green-colored - arranged in a specific pattern:
+
+- One pink circle with a white dot is near the top center of the grid
+- Below this, there are alternating green and pink circles forming a descending vertical shape
+- At the bottom left of this pattern, there are additional green and pink circles
+
+The colored circles stand out distinctly against the dark, grid-like background, creating a visual contrast and suggesting some sort of game, design, or data visualization layout.",,,0,,4.605915784835815,,,,4.605915784835815,,,True,,2025-11-23T15:09:57.631326
+four_in_a_row-opp_move_4.png,gaming,claude-3-5-haiku,True,claude-3-5-haiku+RAG,"This image shows a grid of circular buttons, 7 columns wide by 6 rows tall, with a dark blue-gray background. Most buttons are dark, almost black, but 6 buttons are colored - 3 in salmon pink and 3 in mint green. These colored buttons are arranged in a roughly triangular or arrow-like pattern in the center-left area of the grid. One salmon pink button near the top center has a small white dot in its middle. The overall layout suggests this could be part of a game board, puzzle, or interactive interface design.","You're playing **Four in a Row**, a classic strategy game where the objective is to connect four of your colored discs either vertically, horizontally, or diagonally before your opponent does.
+
+In front of you is a grid of circular buttons, arranged in 7 columns and 6 rows, set against a dark blue-gray background. Most buttons are dark, almost black, indicating empty spaces where players can place their discs. However, there are 6 colored buttons that represent the current state of play: 3 salmon pink buttons and 3 mint green buttons.
+
+The colored buttons are positioned in a triangular pattern on the left side of the grid. This suggests that they are the discs placed by you and your opponent. Notably, one salmon pink button near the top center features a small white dot in its middle, indicating that this button might be the most recent move or a critical position in the game—potentially part of a winning strategy.
+
+To make your next move, consider where you want to place your disc. You can choose any of the columns below the colored buttons. Look for opportunities to connect four of your colored discs while also blocking your opponent’s potential connections. Keep an eye on the patterns—if three of your discs are aligned but one is missing, aim to place your disc in that row or column to secure your win.
+
+Use this grid layout to strategize your next move effectively. Focus on creating opportunities for yourself while preventing your opponent from achieving four in a row.",four_in_a_row,[],0,[],3.896591901779175,1.3828277587890625e-05,0.13980793952941895,7.025446891784668,11.081264972686768,,621,True,,2025-11-23T15:10:09.719647
+four_in_a_row-opp_won.png,gaming,gpt-4o,False,gpt-4o,"The image depicts a Connect Four game board. It's a grid with circular slots. There are red and green discs in the bottom row. 
+
+- From left to right: the first four slots have red discs, with stars on the first, third, and fourth.
+- The fifth slot is empty.
+- The sixth and seventh slots contain green discs.
+
+The red discs form a four-in-a-row sequence horizontally, indicating a win.","The image depicts a Connect Four game board. It's a grid with circular slots. There are red and green discs in the bottom row. 
+
+- From left to right: the first four slots have red discs, with stars on the first, third, and fourth.
+- The fifth slot is empty.
+- The sixth and seventh slots contain green discs.
+
+The red discs form a four-in-a-row sequence horizontally, indicating a win.",,,0,,2.5737578868865967,,,,2.5737578868865967,968,,True,,2025-11-23T14:45:25.827120
+four_in_a_row-opp_won.png,gaming,gpt-4o,True,gpt-4o+RAG,"The image shows a Connect Four game grid. The bottom-left part of the grid is filled with four red discs forming a horizontal line. These discs contain green stars. On the right side, there are three green discs stacked vertically. The layout suggests the red player has won with four in a row horizontally.","You are playing **Connect Four**, a classic two-player game where the objective is to connect four of your discs in a row, either vertically, horizontally, or diagonally.
+
+In the current game state, the grid is displayed as a vertical rectangular board with seven columns and six rows. On the bottom-left part of the grid, you have successfully filled four horizontal spaces with red discs, each adorned with a green star. This signifies a winning condition, as you have connected four discs in a row, which means you have won this round!
+
+On the right side of the grid, you can see three green discs stacked vertically. This indicates that your opponent is playing as the green player and has placed their discs in that column. However, since you have already achieved the winning condition, the game concludes with your victory.
+
+In summary, you can celebrate your win! If you wish to play again, you can reset the game and start a new match. Remember, the key strategy is to not only focus on connecting your own discs but also to block your opponent from achieving four in a row.",four_in_a_row,[],0,[],2.0488100051879883,1.52587890625e-05,0.11707305908203125,5.209298133850098,7.393881797790527,943,491,True,,2025-11-23T14:45:34.227056
+four_in_a_row-opp_won.png,gaming,gemini-2.5-flash,False,gemini-2.5-flash,"This is a 7-column, 6-row game board.
+
+**Critical Status:**
+*   The bottom row has four pink tokens with green stars (columns 1-4), followed by three green tokens (columns 5-7).
+*   The second row from the bottom has one pink token in column 4 and one green token in column 7.
+*   All other slots are empty.
+
+**Immediate Concerns:** Pink (stars) has four tokens in a row on the bottom (columns 1-4). Placing a pink token in column 5 on the bottom row would complete a win. Green needs to play in column 5 immediately to block.","This is a 7-column, 6-row game board.
+
+**Critical Status:**
+*   The bottom row has four pink tokens with green stars (columns 1-4), followed by three green tokens (columns 5-7).
+*   The second row from the bottom has one pink token in column 4 and one green token in column 7.
+*   All other slots are empty.
+
+**Immediate Concerns:** Pink (stars) has four tokens in a row on the bottom (columns 1-4). Placing a pink token in column 5 on the bottom row would complete a win. Green needs to play in column 5 immediately to block.",,,0,,3.9008071422576904,,,,3.9008071422576904,,,True,,2025-11-23T15:10:14.631922
+four_in_a_row-opp_won.png,gaming,gemini-2.5-flash,True,gemini-2.5-flash+RAG,"On a Connect 4 board, Red has won by placing four tokens with green stars horizontally on the bottom row, starting from the far left. Green has three tokens on the bottom right and one above the far-right token.","You are playing Connect 4, a classic strategy game where the goal is to connect four of your colored tokens in a row—horizontally, vertically, or diagonally—before your opponent does.
+
+Currently, the board is set up with Red's tokens, which are represented by green stars, winning the game by successfully placing four tokens horizontally across the bottom row, starting from the far left. This means Red has strategically aligned their tokens, blocking any potential moves from Green.
+
+On the bottom right, Green has three tokens stacked next to each other, with an additional token directly above the rightmost one. While this positioning shows some potential for Green to create a vertical or horizontal connection in future turns, it is currently not enough to win.
+
+To summarize, Red has claimed victory, and while Green still has some tokens on the board, they need to reevaluate their strategy for future games. Consider focusing on blocking your opponent's moves while looking for opportunities to create your own winning combinations. If you were to continue playing, think about placing your tokens in a way that could either create a line of four or disrupt your opponent's path to victory.",four_in_a_row,[],0,[],3.0009472370147705,1.0967254638671875e-05,0.13575124740600586,5.4796669483184814,8.624685049057007,,488,True,,2025-11-23T15:10:24.259327
+four_in_a_row-opp_won.png,gaming,claude-3-5-haiku,False,claude-3-5-haiku,"Here's a description of the image:
+
+Layout: A grid of 49 circles arranged in 7 rows and 7 columns. Most circles are dark navy blue/black.
+
+Active Elements:
+- Bottom left: 4 pink circles with cyan stars inside
+- Center bottom: 1 pink circle without a star
+- Bottom right: 4 mint green circles
+
+Critical Status:
+- The colored circles appear to be part of a game or interactive interface
+- Pink and green elements seem purposefully placed
+- The star icons suggest specific functionality or scoring
+
+The overall design looks like a game board or UI element with a minimalist, geometric design. The contrast between the dark background and the pink/green elements creates visual interest and suggests interactive potential.","Here's a description of the image:
+
+Layout: A grid of 49 circles arranged in 7 rows and 7 columns. Most circles are dark navy blue/black.
+
+Active Elements:
+- Bottom left: 4 pink circles with cyan stars inside
+- Center bottom: 1 pink circle without a star
+- Bottom right: 4 mint green circles
+
+Critical Status:
+- The colored circles appear to be part of a game or interactive interface
+- Pink and green elements seem purposefully placed
+- The star icons suggest specific functionality or scoring
+
+The overall design looks like a game board or UI element with a minimalist, geometric design. The contrast between the dark background and the pink/green elements creates visual interest and suggests interactive potential.",,,0,,5.059962749481201,,,,5.059962749481201,,,True,,2025-11-23T15:10:30.343384
+four_in_a_row-opp_won.png,gaming,claude-3-5-haiku,True,claude-3-5-haiku+RAG,"This is a grid of circles, 8 columns wide by 6 rows tall, with most circles being dark blue/black. 
+
+Distinctive features:
+- Bottom row has colored circles
+  - Left side: 4 pink/salmon circles, 3 with blue stars inside
+  - Right side: 4 green/teal circles
+- One salmon-colored circle is in the 5th row, near the center
+- One green/teal circle is in the 5th row on the far right
+
+The overall layout suggests this could be a game board, tracking interface, or data visualization matrix with specific color-coded indicators or progress markers.","You are playing *Four in a Row*, a classic game where the goal is to connect four of your colored discs in a row, either horizontally, vertically, or diagonally, before your opponent does.
+
+### Enhanced Description:
+You are looking at a game board structured as a grid, consisting of 8 columns and 6 rows. Most circles on the board are dark blue or black, representing empty slots where players can drop their discs. 
+
+#### Distinctive Features:
+- **Bottom Row (Row 6)**:
+  - The left side features **4 salmon-colored circles**. Of these, **3 circles have blue stars inside**, indicating potential scoring opportunities or special moves that can be activated by landing a disc in these slots.
+  - The right side has **4 green/teal circles**. These might represent your opponent's potential moves or special abilities, so be cautious if they land a disc in this area.
+
+- **Row 5**:
+  - Near the center, there is **1 salmon-colored circle**, which could be a strategic position for your next move, as placing your disc here could lead to connecting with the discs in the bottom row.
+  - On the far right side, there is **1 green/teal circle**, indicating where your opponent could potentially make a move to block your winning combination.
+
+### Actionable Insights:
+- **Strategize Your Move**: Consider placing your disc in the central salmon-colored circle in Row 5 to create opportunities for connecting four in a row.
+- **Defensive Play**: Monitor the green/teal circles, particularly the ones in Row 6. Be prepared to block your opponent if they attempt to connect four using these positions.
+
+Understanding the layout and the significance of the colored circles will help you make informed decisions and improve your chances of winning in *Four in a Row*.",four_in_a_row,[],0,[],4.563448190689087,1.3113021850585938e-05,0.13439583778381348,7.952022075653076,12.67161512374878,,720,True,,2025-11-23T15:10:44.021473
+tic_tac_toe-opp_move_1.png,gaming,gpt-4o,False,gpt-4o,"This is an image of a tic-tac-toe board. It's a 3x3 grid. The center square contains an ""O"" and the bottom right square contains an ""X"". The other squares are empty.","This is an image of a tic-tac-toe board. It's a 3x3 grid. The center square contains an ""O"" and the bottom right square contains an ""X"". The other squares are empty.",,,0,,1.4337592124938965,,,,1.4337592124938965,927,,True,,2025-11-23T14:45:42.719028
+tic_tac_toe-opp_move_1.png,gaming,gpt-4o,True,gpt-4o+RAG,"This is an image of a tic-tac-toe game. The grid is empty except for two marks: 
+
+1. A circle (""O"") is placed in the center cell.
+2. An ""X"" is placed in the bottom right cell. 
+
+The grid is otherwise blank, indicating that these are the only moves made so far.","You are playing **Tic Tac Toe**, a classic two-player game where the objective is to be the first to get three of your marks in a row—either horizontally, vertically, or diagonally. 
+
+In the current state of the game, the **3x3 grid** has the following placements: 
+
+- An **""O""** (indicating Player 2) is strategically positioned in the **center cell** (middle-center). This is a valuable spot as it allows for the most potential winning combinations.
+- An **""X""** (indicating Player 1) is placed in the **bottom right cell** (bottom-right). This position, while not as advantageous as the center, can still contribute to a win if Player 1 manages to create a line with additional moves.
+
+With only two marks on the board, there are many available moves. The empty squares are located in the following positions:
+- Top-left (0,0)
+- Top-center (0,1)
+- Top-right (0,2)
+- Middle-left (1,0)
+- Middle-right (1,2)
+- Bottom-left (2,0)
+- Bottom-center (2,1)
+
+**Actionable Insights:**
+- As Player 2, your best move would be to consider placing your next ""O"" in one of the corners or edges to create two threats simultaneously, potentially leading to a win in your next turn.
+- Pay attention to blocking Player 1’s potential winning moves if they get close to three ""X""s in a row.
+- If you can place an ""O"" in the bottom-left (2,0) or bottom-center (2,1), you could set up for both a block and a win in subsequent turns.
+
+The game is still in progress, and it's crucial to think ahead about both your offensive and defensive strategies. Remember, the first player to align three of their marks wins, so each move counts!",tic_tac_toe,[],3,"['Tic Tac Toe - Game Knowledge Base\n\nGAME OVERVIEW:\n\nTic Tac Toe is a simple two-player game played on', '-left to bottom-right or top-right to bottom-left)\nSTRATEGY:\n- Center square is most valuable\n- Corn', ""ll 9 squares are filled with no winner, it's a tie\nBOARD LAYOUT:\n- 3 rows, 3 columns = 9 total squar""]",2.254504919052124,1.3828277587890625e-05,0.13074588775634766,9.27091097831726,11.67296814918518,951,1024,True,,2025-11-23T14:45:55.398033
+tic_tac_toe-opp_move_1.png,gaming,gemini-2.5-flash,False,gemini-2.5-flash,This is a Tic-Tac-Toe board on a black background. A white 'O' occupies the center square. A white 'X' is in the bottom-right square. All other six squares are currently empty. No immediate wins or threats are apparent.,This is a Tic-Tac-Toe board on a black background. A white 'O' occupies the center square. A white 'X' is in the bottom-right square. All other six squares are currently empty. No immediate wins or threats are apparent.,,,0,,3.597429037094116,,,,3.597429037094116,,,True,,2025-11-23T15:10:48.628020
+tic_tac_toe-opp_move_1.png,gaming,gemini-2.5-flash,True,gemini-2.5-flash+RAG,Tic-Tac-Toe board: 'O' is in the center square. 'X' is in the bottom-right square. Six squares are empty. No winner yet; 'O' controls the critical center square.,"You are currently playing **Tic Tac Toe**, a classic two-player game on a 3x3 grid. 
+
+### Current Board State:
+- The center square, which is crucial for control, has an 'O' in it, indicating that Player 2 (who uses 'O') has a strong position. 
+- The bottom-right square is occupied by 'X', marking Player 1's move.
+- There are six empty squares remaining, which you can use to make your next strategic move. 
+
+### Board Layout:
+- The grid consists of three rows and three columns, totaling nine squares. The squares can be referred to by their positions:
+  - **Top Row**: top-left, top-center, top-right
+  - **Middle Row**: middle-left, middle-center, middle-right
+  - **Bottom Row**: bottom-left, bottom-center, bottom-right
+- In terms of coordinates, the center square is at (1,1) and the bottom-right square is at (2,2).
+
+### Game Mechanics:
+- Players alternate turns placing their marks (either 'X' or 'O') in the empty squares. The objective is to get three of your marks in a row either horizontally, vertically, or diagonally.
+- Since 'O' occupies the center square, Player 2 has a tactical advantage, as controlling the center allows for more opportunities to create winning combinations.
+
+### Actionable Strategy:
+- As Player 1, your next move should focus on either:
+  - Blocking Player 2 (O) from potentially winning on their next turn by placing your 'X' in a strategic position.
+  - Creating a setup where you can win in your following turn, ideally by placing your 'X' in one of the corners (top-left, top-right, bottom-left, or bottom-center) to set up multiple threats.
+
+### Current Game Status:
+- No winner yet, but the game is in progress. It's essential to think several moves",tic_tac_toe,[],3,"['Tic Tac Toe - Game Knowledge Base\n\nGAME OVERVIEW:\n\nTic Tac Toe is a simple two-player game played on', ""ll 9 squares are filled with no winner, it's a tie\nBOARD LAYOUT:\n- 3 rows, 3 columns = 9 total squar"", '-left to bottom-right or top-right to bottom-left)\nSTRATEGY:\n- Center square is most valuable\n- Corn']",4.620376110076904,1.4066696166992188e-05,0.14095211029052734,8.361114025115967,13.12859296798706,,1005,True,,2025-11-23T15:11:02.763125
+tic_tac_toe-opp_move_1.png,gaming,claude-3-5-haiku,False,claude-3-5-haiku,"This is a tic-tac-toe game board with a 3x3 grid of squares. The board is black with white lines creating the grid. A white ""O"" is placed in the center square, and a white ""X"" is placed in the bottom right square. The game appears to be in progress, with some empty squares still available.","This is a tic-tac-toe game board with a 3x3 grid of squares. The board is black with white lines creating the grid. A white ""O"" is placed in the center square, and a white ""X"" is placed in the bottom right square. The game appears to be in progress, with some empty squares still available.",,,0,,2.665107250213623,,,,2.665107250213623,,,True,,2025-11-23T15:11:06.444127
+tic_tac_toe-opp_move_1.png,gaming,claude-3-5-haiku,True,claude-3-5-haiku+RAG,"This is a Tic-Tac-Toe game board:
+- Black background with white grid lines creating 9 squares (3x3)
+- A white ""O"" is placed in the center square
+- A white ""X"" is placed in the bottom right square
+- The game appears to be in progress, with one ""O"" and one ""X"" so far","You are currently playing a Tic-Tac-Toe game, a classic two-player strategy game where the objective is to be the first to align three of your marks in a row. The game is played on a 3x3 grid, which is represented here by a black background with white grid lines creating nine equal squares.
+
+Currently, the game board shows the following:
+- A white ""O"" is placed in the center square (middle-center position).
+- A white ""X"" is placed in the bottom right square (bottom-right position).
+
+This indicates that it is your turn to play. Here’s how the game mechanics work:
+- You and your opponent take turns placing either an ""X"" or an ""O"" in the empty squares.
+- Your goal is to align three of your marks either horizontally, vertically, or diagonally. 
+
+As of now, there are two moves on the board, so the game is still in progress. Consider your options:
+- The center square is occupied by ""O,"" which means you cannot place your mark there.
+- The bottom-right square is occupied by ""X.""
+- This leaves you with the following available squares: top-left, top-center, top-right, middle-left, middle-right, bottom-left, and bottom-center.
+
+To maximize your chances of winning, think about placing your mark in one of these open squares to either create a line of three or block your opponent if they are close to winning. For example, placing an ""X"" in the top-center (top-middle position) could give you the opportunity to create a vertical line if your opponent does not block you.
+
+Keep in mind the winning conditions:
+- Aim to get three of your marks in a row.
+- Be aware of your opponent's potential moves to prevent them from winning.
+
+Make your next move strategically!",tic_tac_toe,[],3,"['Tic Tac Toe - Game Knowledge Base\n\nGAME OVERVIEW:\n\nTic Tac Toe is a simple two-player game played on', ""ll 9 squares are filled with no winner, it's a tie\nBOARD LAYOUT:\n- 3 rows, 3 columns = 9 total squar"", 'how game status (in progress, X wins, O wins, tie)\nGAME STATES:\n- In progress: Game still ongoing\n- ']",2.6688029766082764,1.2159347534179688e-05,0.13862895965576172,7.73822808265686,10.565886974334717,,948,True,,2025-11-23T15:11:18.013464
+tic_tac_toe-opp_move_2.png,gaming,gpt-4o,False,gpt-4o,"This is a tic-tac-toe board. The grid consists of three rows and three columns.
+
+- Top row: empty on the left, circle in the center, and ""X"" on the right.
+- Middle row: empty on the left, circle in the center, empty on the right.
+- Bottom row: circle on the left, ""X"" in the center, and ""X"" on the right.","This is a tic-tac-toe board. The grid consists of three rows and three columns.
+
+- Top row: empty on the left, circle in the center, and ""X"" on the right.
+- Middle row: empty on the left, circle in the center, empty on the right.
+- Bottom row: circle on the left, ""X"" in the center, and ""X"" on the right.",,,0,,2.1834278106689453,,,,2.1834278106689453,967,,True,,2025-11-23T14:46:04.639193
+tic_tac_toe-opp_move_2.png,gaming,gpt-4o,True,gpt-4o+RAG,"The image shows a tic-tac-toe grid. The layout from top-left to bottom-right is as follows:
+
+- Top row: Empty, empty, empty
+- Middle row: Circle, circle, cross
+- Bottom row: Circle, empty, cross
+
+The game has not been won yet, and it's the turn of the player using crosses.","You are currently playing Tic Tac Toe, a classic two-player game designed to test strategy and foresight on a simple 3x3 grid. The objective is to be the first player to align three of your marks—either X or O—in a row, which can happen horizontally, vertically, or diagonally.
+
+### Current Game State:
+- **Grid Layout:**
+  - **Top Row:** Empty, empty, empty
+  - **Middle Row:** Circle (O), circle (O), cross (X)
+  - **Bottom Row:** Circle (O), empty, cross (X)
+
+### Spatial Information:
+- **Positions:** 
+  - Top-left: Empty
+  - Top-center: Empty
+  - Top-right: Empty
+  - Middle-left: O
+  - Middle-center: O
+  - Middle-right: X
+  - Bottom-left: O
+  - Bottom-center: Empty
+  - Bottom-right: X
+
+### Turn Information:
+It's your turn as the player using X's. You need to think strategically about your next move, as your goal is to create a line of three X's while also preventing your opponent (who is using O's) from winning.
+
+### Actionable Strategies:
+1. **Winning Move:** You can win on your next turn if you place an X in the bottom-center square (empty). This will create a vertical line of X's in the middle column.
+   
+2. **Blocking Move:** If you do not place an X in the bottom-center, your opponent can win on their next turn by placing an O in that square, completing their vertical line.
+
+3. **Consider Other Moves:** 
+   - Placing an X in the top-left, top-center, or top-right will not help you win this turn and will leave your middle column vulnerable.
+
+### Summary:
+To secure a potential win this turn and to block your opponent's winning opportunity, place your X in the bottom-center square. This is crucial for",tic_tac_toe,[],3,"['Tic Tac Toe - Game Knowledge Base\n\nGAME OVERVIEW:\n\nTic Tac Toe is a simple two-player game played on', ""ll 9 squares are filled with no winner, it's a tie\nBOARD LAYOUT:\n- 3 rows, 3 columns = 9 total squar"", '-left to bottom-right or top-right to bottom-left)\nSTRATEGY:\n- Center square is most valuable\n- Corn']",2.1797711849212646,1.621246337890625e-05,0.12501096725463867,11.60884404182434,13.932821989059448,953,1031,True,,2025-11-23T14:46:19.577949
+tic_tac_toe-opp_move_2.png,gaming,gemini-2.5-flash,False,gemini-2.5-flash,"You are viewing a Tic-Tac-Toe board.
+1.  **Spatial Layout:** The 3x3 grid has white lines on a black background.
+    *   **Top Row:** Left is empty, middle has 'O', right has 'X'.
+    *   **Middle Row:** All three cells are empty.
+    *   **Bottom Row:** Left has 'O', middle is empty, right has 'X'.
+2.  **Critical Status:** 'X' has two marks in the right column (top and bottom). 'O' has two marks (top-middle and bottom-left).
+3.  **Immediate Concerns:** 'X' will win if they place a mark in the middle-right cell. 'O' must block this by placing their next mark in the middle-right cell.","You are viewing a Tic-Tac-Toe board.
+1.  **Spatial Layout:** The 3x3 grid has white lines on a black background.
+    *   **Top Row:** Left is empty, middle has 'O', right has 'X'.
+    *   **Middle Row:** All three cells are empty.
+    *   **Bottom Row:** Left has 'O', middle is empty, right has 'X'.
+2.  **Critical Status:** 'X' has two marks in the right column (top and bottom). 'O' has two marks (top-middle and bottom-left).
+3.  **Immediate Concerns:** 'X' will win if they place a mark in the middle-right cell. 'O' must block this by placing their next mark in the middle-right cell.",,,0,,5.253847122192383,,,,5.253847122192383,,,True,,2025-11-23T15:11:24.277901
+tic_tac_toe-opp_move_2.png,gaming,gemini-2.5-flash,True,gemini-2.5-flash+RAG,"This is a Tic-Tac-Toe board.
+(1) **Spatial Layout:**
+*   Top row: Left empty, Center has O, Right has X.
+*   Middle row: All empty.
+*   Bottom row: Left has O, Center empty, Right has X.
+
+(2) **Critical Status:** X has two in the right column and needs the middle-right square to win.
+
+(3) **Immediate Concerns:** If it's your turn as O, you must play in the middle-right square to block X from winning.","You are playing **Tic Tac Toe**, a classic two-player game on a 3x3 grid where the objective is to place three of your marks in a row—this can be done either horizontally, vertically, or diagonally.
+
+### Current Game State:
+- **Grid Layout:**
+  - **Top Row:** Left square is empty, center has an O (your mark), and the right square has an X (your opponent's mark).
+  - **Middle Row:** All squares are empty.
+  - **Bottom Row:** Left square has an O (your mark), the center is empty, and the right square has an X (your opponent's mark).
+
+### Critical Status:
+- The right column has two of your opponent's X marks (top-right and bottom-right). They need to place an X in the middle-right square to win on their next turn.
+
+### Immediate Action Required:
+- As it is your turn, you must place your O in the **middle-right square** to block your opponent from winning. Failing to do so will allow them to complete three X's vertically in the next move.
+
+### Strategic Context:
+- **Winning Conditions:** If you successfully place your O in the middle-right square, you will prevent your opponent from winning in that column. This is crucial to keep the game in play and potentially set yourself up for a win later.
+- **Best Moves:** The center square is generally the most valuable position, followed by corners. However, blocking your opponent's immediate win takes priority here.
+
+### Summary:
+To summarize, focus on placing your O in the middle-right square to block X's winning move. This not only protects your chances in the game but also keeps the competition alive for future turns.",tic_tac_toe,[],3,"['Tic Tac Toe - Game Knowledge Base\n\nGAME OVERVIEW:\n\nTic Tac Toe is a simple two-player game played on', ""ll 9 squares are filled with no winner, it's a tie\nBOARD LAYOUT:\n- 3 rows, 3 columns = 9 total squar"", '-left to bottom-right or top-right to bottom-left)\nSTRATEGY:\n- Center square is most valuable\n- Corn']",2.5581119060516357,1.3113021850585938e-05,0.1365060806274414,8.259113311767578,10.960067987442017,,1020,True,,2025-11-23T15:11:36.243854
+tic_tac_toe-opp_move_2.png,gaming,claude-3-5-haiku,False,claude-3-5-haiku,"This is a tic-tac-toe grid with a game in progress. The grid is 3x3 with white lines dividing the squares on a black background. 
+
+Current game state:
+- O's are placed in the bottom left and center squares
+- X's are placed in the top right and bottom right squares
+- The center right square is still empty
+
+The game appears to be ongoing, with neither player having won yet. Strategic positioning suggests both players are actively trying to block potential winning lines.","This is a tic-tac-toe grid with a game in progress. The grid is 3x3 with white lines dividing the squares on a black background. 
+
+Current game state:
+- O's are placed in the bottom left and center squares
+- X's are placed in the top right and bottom right squares
+- The center right square is still empty
+
+The game appears to be ongoing, with neither player having won yet. Strategic positioning suggests both players are actively trying to block potential winning lines.",,,0,,3.287907838821411,,,,3.287907838821411,,,True,,2025-11-23T15:11:40.545363
+tic_tac_toe-opp_move_2.png,gaming,claude-3-5-haiku,True,claude-3-5-haiku+RAG,"This is a Tic-Tac-Toe game board in black and white. The grid is a standard 3x3 square divided by two vertical and two horizontal lines. The board is populated with game symbols: white circle ""O"" and white cross ""X"" marks. 
+
+Current game state:
+- Two ""O"" marks are placed in the bottom left and center squares
+- Two ""X"" marks are placed in the top right and bottom right squares
+- Four squares remain empty
+
+The game appears to be in progress, with no clear winner yet visible.","You are currently playing Tic Tac Toe, a classic two-player game where the objective is to be the first to get three of your marks in a row on a 3x3 grid. 
+
+**Current Game Board State:**
+- The grid is divided into 9 squares: 
+  - Top Row: top-left, top-center, top-right
+  - Middle Row: middle-left, middle-center, middle-right
+  - Bottom Row: bottom-left, bottom-center, bottom-right
+- Your opponent has placed an ""X"" in the top-right (2,2) and bottom-right (2,1) squares.
+- You have placed an ""O"" in the bottom-left (0,2) and center (1,1) squares.
+- Four squares remain empty: top-left (0,0), top-center (0,1), middle-right (1,2), and bottom-center (2,0).
+
+**Game Mechanics:**
+- Players take turns placing their marks. You are currently playing as ""O,"" and it is now your turn to make a move.
+- Your goal is to create a line of three ""O"" marks either horizontally, vertically, or diagonally.
+
+**Strategic Considerations:**
+- You should aim to block your opponent from winning while also trying to create your own winning line.
+- Your opponent has two ""X"" marks in the right column (top-right and bottom-right). If you do not block the middle-right (1,2) square, they could win on their next turn.
+- Placing your ""O"" in the middle-right (1,2) square will prevent this and also gives you the chance to work towards winning with a future move.
+
+**Conclusion:**
+The game is currently in progress, and no winner has emerged yet. Make your move wisely to either block your opponent or set yourself up for a win in the next turns.",tic_tac_toe,[],3,"['Tic Tac Toe - Game Knowledge Base\n\nGAME OVERVIEW:\n\nTic Tac Toe is a simple two-player game played on', ""ll 9 squares are filled with no winner, it's a tie\nBOARD LAYOUT:\n- 3 rows, 3 columns = 9 total squar"", 'how game status (in progress, X wins, O wins, tie)\nGAME STATES:\n- In progress: Game still ongoing\n- ']",3.5863301753997803,1.1920928955078125e-05,0.1293470859527588,9.394997835159302,13.128366947174072,,1006,True,,2025-11-23T15:11:54.679744
+tic_tac_toe-user_won.png,gaming,gpt-4o,False,gpt-4o,"The image is of a tic-tac-toe board. The grid is made up of three rows and three columns. Here's the layout:
+
+- Top row: The first cell is empty, the second cell contains an ""X,"" and the third cell contains an ""X.""
+- Middle row: The first cell has an ""O,"" the second cell is empty, and the third cell has an ""O.""
+- Bottom row: The first cell is empty, the second cell has an ""X,"" and the third cell is empty. 
+
+No player has won yet.","The image is of a tic-tac-toe board. The grid is made up of three rows and three columns. Here's the layout:
+
+- Top row: The first cell is empty, the second cell contains an ""X,"" and the third cell contains an ""X.""
+- Middle row: The first cell has an ""O,"" the second cell is empty, and the third cell has an ""O.""
+- Bottom row: The first cell is empty, the second cell has an ""X,"" and the third cell is empty. 
+
+No player has won yet.",,,0,,2.792728900909424,,,,2.792728900909424,996,,True,,2025-11-23T14:46:29.415196
+tic_tac_toe-user_won.png,gaming,gpt-4o,True,gpt-4o+RAG,"This is a Tic-Tac-Toe game grid with three rows and three columns. The positions are as follows:
+
+- Top row: Empty, ""X"", Empty
+- Middle row: Empty, ""O"", ""X""
+- Bottom row: ""O"", Empty, ""X""
+
+There is a vertical line of ""X""s in the right column, indicating a win for ""X"".","You are currently playing **Tic Tac Toe**, a classic two-player game where the objective is to get three of your marks in a row—either horizontally, vertically, or diagonally—before your opponent does.
+
+### Game Board Overview:
+You are presented with a 3x3 grid, which consists of three rows and three columns. Here’s the current layout of the board:
+
+- **Top row**: Empty (top-left), ""X"" (top-center), Empty (top-right)
+- **Middle row**: Empty (middle-left), ""O"" (middle-center), ""X"" (middle-right)
+- **Bottom row**: ""O"" (bottom-left), Empty (bottom-center), ""X"" (bottom-right)
+
+### Game Status:
+There is a vertical line of ""X""s in the right column (top-right, middle-right, bottom-right), which indicates that player X has won the game. This is an important moment, as it signifies that X has achieved the winning condition of three in a row vertically. 
+
+### Actionable Insights:
+- **For Player O**: As the second player, your immediate goal should be to block your opponent from winning in future games. If you’re starting a new game, aim for the center square in your first move; it provides the best strategic advantage.
+- **For Player X**: Since you have already won this round, consider reflecting on your moves. Winning through the right column demonstrates effective placement and the importance of controlling the center or corners to create multiple opportunities for victory.
+
+### Game Mechanics Recap:
+- Players alternate placing their marks (X or O) in empty squares.
+- The game concludes when one player aligns three of their marks in a row or when all squares are filled with no winner, resulting in a tie.
+
+Remember, each game is an opportunity to refine your strategy, like blocking your opponent’s moves and creating threats of your own. Focus on the spatial layout of the board in future rounds",tic_tac_toe,[],3,"['Tic Tac Toe - Game Knowledge Base\n\nGAME OVERVIEW:\n\nTic Tac Toe is a simple two-player game played on', ""ll 9 squares are filled with no winner, it's a tie\nBOARD LAYOUT:\n- 3 rows, 3 columns = 9 total squar"", '-left to bottom-right or top-right to bottom-left)\nSTRATEGY:\n- Center square is most valuable\n- Corn']",2.1495847702026367,1.5020370483398438e-05,0.1273651123046875,8.767174005508423,11.063397884368896,961,1039,True,,2025-11-23T14:46:41.483491
+tic_tac_toe-user_won.png,gaming,gemini-2.5-flash,False,gemini-2.5-flash,"Player X has won this Tic-Tac-Toe game, with three X's vertically in the rightmost column. There is an O in the center square and another O in the bottom-left square.","Player X has won this Tic-Tac-Toe game, with three X's vertically in the rightmost column. There is an O in the center square and another O in the bottom-left square.",,,0,,3.389286994934082,,,,3.389286994934082,,,True,,2025-11-23T15:11:59.077388
+tic_tac_toe-user_won.png,gaming,gemini-2.5-flash,True,gemini-2.5-flash+RAG,"**X has won.** Three white 'X' marks occupy the entire rightmost column. Gray 'O' pieces are in the center square (Row 2, Column 2) and the bottom-left square (Row 3, Column 1).","You are playing **Tic Tac Toe**, a classic two-player game where the objective is to be the first to align three of your marks—either 'X' or 'O'—in a row. 
+
+**Game Status:** The game has concluded, and **X has won**. This victory is confirmed by the three white 'X' marks that occupy the entire rightmost column (positions: middle-right, bottom-right, and top-right). 
+
+For better understanding of the board layout:
+- The board consists of 9 squares arranged in a 3x3 grid.
+- The 'O' marks are positioned in the center square (middle-center, Row 2, Column 2) and the bottom-left square (bottom-left, Row 3, Column 1).
+
+**Game Mechanics Recap:**
+- Winning conditions are met by having three of your marks in a line, whether vertically, horizontally, or diagonally.
+- Since all the winning spaces in the rightmost column are filled with 'X', the game concludes with a win for player X.
+
+**Actionable Information:**
+If you wish to play again, remember to strategize on where to place your marks to either block your opponent from winning or create your own winning line. Consider the center square as a strategic spot, as it allows more opportunities for creating multiple lines of three.",tic_tac_toe,[],3,"[""ll 9 squares are filled with no winner, it's a tie\nBOARD LAYOUT:\n- 3 rows, 3 columns = 9 total squar"", 'how game status (in progress, X wins, O wins, tie)\nGAME STATES:\n- In progress: Game still ongoing\n- ', 'Tic Tac Toe - Game Knowledge Base\n\nGAME OVERVIEW:\n\nTic Tac Toe is a simple two-player game played on']",3.803729772567749,8.106231689453125e-06,0.13480496406555176,6.254455089569092,10.199516773223877,,831,True,,2025-11-23T15:02:13.252736
+tic_tac_toe-user_won.png,gaming,claude-3-5-haiku,False,claude-3-5-haiku,"This is a Tic-Tac-Toe game board with a black background. The grid is 3x3, divided by white lines. On the left side of the board:
+- Center square has a gray ""O""
+- Bottom left square has a gray ""O""
+
+On the right side of the board:
+- Top right, middle right, and bottom right squares have white ""X"" marks
+
+Currently, no player has won the game, and several squares are still empty. The board appears to be mid-game with both ""O"" and ""X"" players having made moves.","This is a Tic-Tac-Toe game board with a black background. The grid is 3x3, divided by white lines. On the left side of the board:
+- Center square has a gray ""O""
+- Bottom left square has a gray ""O""
+
+On the right side of the board:
+- Top right, middle right, and bottom right squares have white ""X"" marks
+
+Currently, no player has won the game, and several squares are still empty. The board appears to be mid-game with both ""O"" and ""X"" players having made moves.",,,0,,4.361602067947388,,,,4.361602067947388,,,True,,2025-11-23T15:02:18.634451
+tic_tac_toe-user_won.png,gaming,claude-3-5-haiku,True,claude-3-5-haiku+RAG,"The image is a tic-tac-toe game board with a 3x3 grid. The board uses white lines to create the grid, with a black background. Two players are using different symbols:
+
+- One player uses gray circles (O)
+- The other player uses white X marks
+
+The board shows an ongoing game state:
+- Top right column is filled with X marks
+- Middle center has an O
+- Bottom left has an O
+- Other squares are empty black spaces
+
+The game appears to be in progress, with no clear winner yet determined.","You are currently playing a game of Tic Tac Toe, a straightforward two-player game set on a 3x3 grid. In this ongoing match, you are using gray circles (O), while your opponent is using white X marks.
+
+### Current Game State:
+- The **top right** square (position (0,2)) is filled with an X.
+- The **middle center** square (position (1,1)) contains your O.
+- The **bottom left** square (position (2,0)) also has your O.
+- The remaining squares are empty, indicated by black spaces.
+
+### Game Mechanics:
+- Players alternate turns to place their marks (X or O) in any empty square.
+- The objective is to be the first to align three of your marks in a row—this can be done **horizontally**, **vertically**, or **diagonally**. 
+- Currently, there is no winner, as the game is still in progress.
+
+### Strategic Insights:
+- You have two O marks positioned, which means you're one move away from potentially winning if you can place another O in the **middle left** (position (1,0)) or **top left** (position (0,0)), depending on where your opponent does not block you.
+- Be aware that your opponent (X) has already claimed the **top right** position, so they may be looking to create a line of X’s either horizontally, vertically, or diagonally. 
+
+### Next Steps:
+- Consider your next move carefully. Placing an O in the **middle left** will not only set you up for a win on your next turn but may also force your opponent to block you, which could prevent them from advancing their strategy.
+- Remember to always keep an eye on potential lines of three for both you and your opponent, and adjust your strategy accordingly.
+
+This game encourages strategic thinking, so plan your moves with both offense and defense in mind!",tic_tac_toe,[],3,"['Tic Tac Toe - Game Knowledge Base\n\nGAME OVERVIEW:\n\nTic Tac Toe is a simple two-player game played on', ""ll 9 squares are filled with no winner, it's a tie\nBOARD LAYOUT:\n- 3 rows, 3 columns = 9 total squar"", 'how game status (in progress, X wins, O wins, tie)\nGAME STATES:\n- In progress: Game still ongoing\n- ']",3.987562894821167,1.3828277587890625e-05,0.13465499877929688,9.279085874557495,13.41540002822876,,1017,True,,2025-11-23T15:02:33.055201

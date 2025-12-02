@@ -1,0 +1,56 @@
+Slay the Spire - Game Knowledge Base
+
+GAME OVERVIEW:
+Slay the Spire is a deck-building roguelike game where players climb a spire, fighting enemies and collecting cards.
+
+CHARACTERS:
+- The Ironclad: Warrior character, focuses on strength and damage
+- The Silent: Rogue character, uses poison and shivs
+- The Defect: Robot character, uses orbs and powers
+- The Watcher: Monk character, uses stances (Wrath, Calm)
+
+COMBAT MECHANICS:
+- Energy: Each turn you have 3 energy (can be increased)
+- Cards: Play cards from your hand each turn
+- Block: Reduces incoming damage
+- Strength: Increases attack damage
+- Dexterity: Increases block amount
+- Poison: Deals damage at start of enemy turn
+- Vulnerable: Enemy takes 50% more damage
+- Weak: Enemy deals 25% less damage
+
+COMMON ENEMIES:
+- Cultist: Low health, buffs other enemies
+- Jaw Worm: Moderate health, attacks and defends
+- Louse: Low health, can apply debuffs
+- Sentry: Moderate health, adds Dazed cards to your deck
+- Exploder: Low health, explodes when killed dealing damage
+- Large Gremlin: High health, strong attacks
+- Spheric Guardian: High block, moderate health
+
+KEY CARDS:
+- Strike: Basic attack card, deals 6 damage
+- Defend: Basic block card, blocks 5 damage
+- Bash: Ironclad card, deals 8 damage and applies Vulnerable
+- Neutralize: Silent card, deals 3 damage and applies Weak
+- Zap: Defect card, channels 1 Lightning orb
+- Eruption: Watcher card, deals 9 damage and enters Wrath stance
+
+RELICTS:
+- Relics provide passive bonuses
+- Common examples: Burning Blood (heal 6 HP after combat), Ring of the Snake (draw 2 extra cards turn 1)
+
+UI ELEMENTS:
+- Health bar: Shows current HP / max HP
+- Energy: Number in bottom right shows available energy
+- Hand: Cards you can play this turn
+- Draw pile: Cards not yet drawn
+- Discard pile: Cards already played
+- Exhaust pile: Cards removed from combat
+
+COMBAT STATUS:
+- Look for enemy intents (what they plan to do next turn)
+- Block before attacks to reduce damage
+- Manage energy efficiently
+- Plan multi-turn strategies
+

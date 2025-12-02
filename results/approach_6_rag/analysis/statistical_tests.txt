@@ -1,0 +1,30 @@
+Statistical Significance Tests - Approach 6 (RAG-Enhanced Vision)
+============================================================
+
+1. Paired t-test: Base vs RAG-Enhanced Latency
+   Base mean: 6.461s
+   RAG mean: 14.741s
+   Mean difference: 8.280s
+   t-statistic: -18.849
+   p-value: 0.000000
+   Result: Significant difference (p < 0.05)
+   N pairs: 36
+
+2. One-way ANOVA: Latency by VLM Model
+   F-statistic: 3.026
+   p-value: 0.055014
+   Result: No significant difference (p < 0.05)
+   Group means:
+     claude-3-5-haiku: 10.028s (n=24)
+     gemini-2.5-flash: 13.222s (n=24)
+     gpt-4o: 8.553s (n=24)
+
+3. Paired t-test: Base vs Enhanced Response Length
+   Base mean: 96.3 words
+   Enhanced mean: 276.7 words
+   Mean difference: 180.4 words
+   t-statistic: -22.216
+   p-value: 0.000000
+   Result: Significant difference (p < 0.05)
+   N pairs: 36
+

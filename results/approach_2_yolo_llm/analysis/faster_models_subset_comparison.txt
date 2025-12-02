@@ -1,0 +1,82 @@
+Approach 2: Faster LLM Models - Subset Test Results
+================================================================================
+
+Test Date: 2025-11-23 23:47:24
+Images Tested: 8
+Target Latency: <2 seconds
+
+Configuration Comparison:
+--------------------------------------------------------------------------------
+
+GPT-3.5-turbo (NEW):
+  Mean Total Latency: 1.45s
+  Mean Generation Latency: 1.26s
+  Mean Word Count: 52.8 words
+  Latency Range: 0.64s - 2.44s
+  Meets <2s Target: YES
+
+Gemini Flash (NEW):
+  Mean Total Latency: 1.63s
+  Mean Generation Latency: 1.53s
+  Mean Word Count: 29.0 words
+  Latency Range: 1.63s - 1.63s
+  Meets <2s Target: YES
+
+GPT-4o-mini (EXISTING):
+  Mean Total Latency: 2.77s
+  Mean Generation Latency: 2.61s
+  Mean Word Count: 92.4 words
+  Latency Range: 2.10s - 3.39s
+  Meets <2s Target: NO
+
+Claude Haiku (EXISTING):
+  Mean Total Latency: 3.69s
+  Mean Generation Latency: 3.57s
+  Mean Word Count: 91.8 words
+  Latency Range: 2.17s - 5.63s
+  Meets <2s Target: NO
+
+Per-Image Results:
+--------------------------------------------------------------------------------
+
+SlayTheSpire_Defect_vs_Sentry_ZapPlus.png (gaming):
+  GPT-3.5-turbo (NEW): 2.44s (gen: 1.76s)
+  GPT-4o-mini (EXISTING): 3.39s (gen: 3.02s)
+  Claude Haiku (EXISTING): 5.42s (gen: 5.13s)
+
+SlayTheSpire_Silent_vs_Exploders_Act2_Combat.png (gaming):
+  GPT-3.5-turbo (NEW): 1.45s (gen: 1.33s)
+  GPT-4o-mini (EXISTING): 2.32s (gen: 2.21s)
+  Claude Haiku (EXISTING): 3.68s (gen: 3.57s)
+
+INDOOR_Navigation_AccessibilityRamp_EntryDoor_BrickFacade.jpg (indoor):
+  GPT-3.5-turbo (NEW): 1.63s (gen: 1.52s)
+  GPT-4o-mini (EXISTING): 3.24s (gen: 2.91s)
+  Claude Haiku (EXISTING): 3.13s (gen: 3.03s)
+
+INDOOR_Navigation_ArchwayEntrance_Staircase_Wayfinding.jpg (indoor):
+  GPT-3.5-turbo (NEW): 1.92s (gen: 1.76s)
+  Gemini Flash (NEW): 1.63s (gen: 1.53s)
+  GPT-4o-mini (EXISTING): 2.52s (gen: 2.43s)
+  Claude Haiku (EXISTING): 5.63s (gen: 5.53s)
+
+OUTDOOR_EmptyParkingLot_Night_BlueStreetlights_HighContrast.png (outdoor):
+  GPT-3.5-turbo (NEW): 1.54s (gen: 1.44s)
+  GPT-4o-mini (EXISTING): 2.94s (gen: 2.85s)
+  Claude Haiku (EXISTING): 2.37s (gen: 2.29s)
+
+OUTDOOR_Navigation_ResidentialEntrance_StairsAndRailing_HouseNumber.png (outdoor):
+  GPT-3.5-turbo (NEW): 1.19s (gen: 1.07s)
+  GPT-4o-mini (EXISTING): 3.24s (gen: 3.14s)
+  Claude Haiku (EXISTING): 3.81s (gen: 3.69s)
+
+TEXT_AccessRules_PoolGateSign_RegulatoryText_ApartmentComplex.jpg (text):
+  GPT-3.5-turbo (NEW): 0.64s (gen: 0.52s)
+  GPT-4o-mini (EXISTING): 2.10s (gen: 1.98s)
+  Claude Haiku (EXISTING): 2.17s (gen: 2.07s)
+
+TEXT_CarDashboard_InstrumentCluster_WarningLights_ActiveDisplay.jpg (text):
+  GPT-3.5-turbo (NEW): 0.77s (gen: 0.66s)
+  GPT-4o-mini (EXISTING): 2.41s (gen: 2.31s)
+  Claude Haiku (EXISTING): 3.34s (gen: 3.23s)
+

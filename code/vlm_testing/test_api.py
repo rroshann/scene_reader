@@ -14,8 +14,17 @@ sys.path.append(str(Path(__file__).parent.parent.parent))
 
 load_dotenv()
 
-def test_openai_real(image_path):
-    """Test OpenAI GPT-4V with actual API call"""
+# Import system prompt
+from prompts import SYSTEM_PROMPT, USER_PROMPT
+
+def test_openai_real(image_path, system_prompt=None, user_prompt=None):
+    """Test OpenAI GPT-4V with actual API call
+    
+    Args:
+        image_path: Path to image file
+        system_prompt: Optional custom system prompt (defaults to prompts.SYSTEM_PROMPT)
+        user_prompt: Optional custom user prompt (defaults to prompts.USER_PROMPT)
+    """
     try:
         from openai import OpenAI
         
@@ -25,23 +34,42 @@ def test_openai_real(image_path):
         
         client = OpenAI(api_key=api_key)
         
+        # Use custom prompts if provided, otherwise use defaults
+        sys_prompt = system_prompt if system_prompt is not None else SYSTEM_PROMPT
+        usr_prompt = user_prompt if user_prompt is not None else (USER_PROMPT if USER_PROMPT else "Describe this image.")
+        
         # Read and encode image
         with open(image_path, "rb") as f:
             image_data = base64.b64encode(f.read()).decode()
+        
+        # Detect image format for proper MIME type
+        from PIL import Image
+        img = Image.open(image_path)
+        format_map = {
+            'PNG': 'image/png',
+            'JPEG': 'image/jpeg',
+            'JPG': 'image/jpeg',
+            'WEBP': 'image/webp',
+            'GIF': 'image/gif'
+        }
+        mime_type = format_map.get(img.format, 'image/png')  # Default to PNG
         
         print("  📤 Sending request to GPT-4V...")
         start_time = time.time()
         
         response = client.chat.completions.create(
             model="gpt-4o",
-            messages=[{
-                "role": "user",
-                "content": [
-                    {"type": "text", "text": "Describe this image for a blind person in 2-3 sentences."},
-                    {"type": "image_url", "image_url": {"url": f"data:image/png;base64,{image_data}"}}
-                ]
-            }],
-            max_tokens=200
+            messages=[
+                {"role": "system", "content": sys_prompt},
+                {
+                    "role": "user",
+                    "content": [
+                        {"type": "image_url", "image_url": {"url": f"data:{mime_type};base64,{image_data}"}},
+                        {"type": "text", "text": usr_prompt}
+                    ]
+                }
+            ],
+            max_tokens=300  # Increased for CoT (more verbose)
         )
         
         latency = time.time() - start_time
@@ -78,7 +106,11 @@ def test_google_real(image_path):
         
         for model_name in model_names:
             try:
-                model = genai.GenerativeModel(model_name)
+                # Use system instruction for Gemini
+                model = genai.GenerativeModel(
+                    model_name,
+                    system_instruction=SYSTEM_PROMPT
+                )
                 used_model_name = model_name
                 break
             except Exception as e:
@@ -96,10 +128,12 @@ def test_google_real(image_path):
         print("  📤 Sending request to Gemini...")
         start_time = time.time()
         
-        response = model.generate_content([
-            "Describe this image for a blind person in 2-3 sentences.",
-            img
-        ])
+        # User prompt can be minimal or empty - system prompt handles behavior
+        user_content = [img]
+        if USER_PROMPT:
+            user_content.insert(0, USER_PROMPT)
+        
+        response = model.generate_content(user_content)
         
         latency = time.time() - start_time
         description = response.text
@@ -117,6 +151,7 @@ def test_anthropic_real(image_path):
     """Test Anthropic Claude with actual API call"""
     try:
         import anthropic
+        from PIL import Image
         
         api_key = os.getenv('ANTHROPIC_API_KEY')
         if not api_key:
@@ -128,27 +163,67 @@ def test_anthropic_real(image_path):
         with open(image_path, "rb") as f:
             image_data = base64.b64encode(f.read()).decode()
         
+        # Detect actual image format
+        img = Image.open(image_path)
+        format_map = {
+            'PNG': 'image/png',
+            'JPEG': 'image/jpeg',
+            'JPG': 'image/jpeg',
+            'WEBP': 'image/webp',
+            'GIF': 'image/gif'
+        }
+        media_type = format_map.get(img.format, 'image/png')  # Default to PNG
+        
         print("  📤 Sending request to Claude...")
         start_time = time.time()
         
-        message = client.messages.create(
-            model="claude-3-5-sonnet-20241022",
-            max_tokens=200,
-            messages=[{
-                "role": "user",
-                "content": [
+        # Try different Claude model names (vision-capable models)
+        model_names = [
+            "claude-3-5-haiku-20241022",  # Fastest, cheapest
+            "claude-3-5-sonnet-20241022",  # Balanced
+            "claude-3-haiku-20240307",    # Older haiku (we know this works)
+            "claude-3-sonnet-20240229",    # Older sonnet
+            "claude-3-opus-20240229"       # Most capable
+        ]
+        message = None
+        last_error = None
+        
+        for model_name in model_names:
+            try:
+                # Build user content - image first, then optional text
+                user_content = [
                     {
                         "type": "image",
                         "source": {
                             "type": "base64",
-                            "media_type": "image/png",
+                            "media_type": media_type,  # Use detected format
                             "data": image_data,
                         },
-                    },
-                    {"type": "text", "text": "Describe this image for a blind person in 2-3 sentences."}
-                ],
-            }],
-        )
+                    }
+                ]
+                # Add user prompt if provided, otherwise minimal
+                if USER_PROMPT:
+                    user_content.append({"type": "text", "text": USER_PROMPT})
+                else:
+                    user_content.append({"type": "text", "text": "Describe this image."})
+                
+                message = client.messages.create(
+                    model=model_name,
+                    max_tokens=200,
+                    system=SYSTEM_PROMPT,  # Claude system prompt
+                    messages=[{
+                        "role": "user",
+                        "content": user_content
+                    }],
+                )
+                print(f"  ✅ Using model: {model_name}")
+                break
+            except Exception as e:
+                last_error = str(e)
+                continue
+        
+        if message is None:
+            raise Exception(f"Could not find working Claude model. Tried: {model_names}. Last error: {last_error}")
         
         latency = time.time() - start_time
         description = message.content[0].text
@@ -165,6 +240,7 @@ def test_anthropic_real(image_path):
 def find_test_image():
     """Try to find a test image in common locations"""
     possible_paths = [
+        Path("data/images/test/test_image.png"),
         Path("test_image.png"),
         Path("test_image.jpg"),
         Path("data/images/gaming") / "test.png",

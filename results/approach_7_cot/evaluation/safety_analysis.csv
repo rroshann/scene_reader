@@ -1,0 +1,120 @@
+filename,category,model,prompt_type,description,hazards_mentioned,hazards_detected_count,false_negative,safety_score,notes
+INDOOR_Navigation_AccessibilityRamp_EntryDoor_BrickFacade.jpg,indoor,GPT-4V-CoT,CoT,"1. **Scene Identification:**
+   - This is an outdoor entrance scene, likely leading into a building.
+
+2. **Objects and Elements:**
+   - A white door with a handle and deadbolt.
+   - A brick wall surro...","obstacle, door, wall, entrance",4,N,5,
+INDOOR_Navigation_ArchwayEntrance_Staircase_Wayfinding.jpg,indoor,GPT-4V-CoT,CoT,"### Step-by-Step Analysis
+
+1. **Scene Identification**:
+   - This is an indoor scene, specifically the entrance area of a home with a staircase.
+
+2. **Objects and Elements Present**:
+   - Wooden stair...","stairs, obstacle, door, wall, entrance",7,N,5,
+INDOOR_Navigation_BlindManWithCane_TactileSignage_Hallway.jpg,indoor,GPT-4V-CoT,CoT,"**Analysis:**
+
+1. **Scene Identification:** Indoor hallway scene.
+2. **Objects and Elements Present:** A person with a walking cane, beige walls, blue carpet, doors, a wall sign.
+3. **Spatial Location...","obstacle, door, wall, person",4,N,5,
+INDOOR_Navigation_CurvingStaircase_FoyerAccess_HardwoodFloor.jpg,indoor,GPT-4V-CoT,CoT,"**Scene Identification:**  
+This is an indoor home scene, specifically an entryway or foyer.
+
+**Object Detection:**  
+- A wooden staircase with white risers curving upward to the left.
+- A wooden floo...","stairs, door, wall, furniture, table",5,N,5,
+INDOOR_Navigation_ElevatorLobby_LongHallway_MarbleFlooring.jpg,indoor,GPT-4V-CoT,CoT,"**Step-by-step Analysis:**
+
+1. **Scene Identification**: This is an indoor scene, specifically a hallway.
+   
+2. **Objects and Elements**: 
+   - Multiple elevator doors
+   - Decorative wall lights
+   ...","obstacle, door, wall, exit",4,N,5,
+INDOOR_Navigation_LivingRoom_HallwayEntrance_MAINSTSign.jpg,indoor,GPT-4V-CoT,CoT,"**Scene Analysis:**
+
+1. **Type of Scene:**
+   - This is an indoor living room scene.
+
+2. **Objects and Elements Present:**
+   - Green velvet sofa, wooden armchair with cushions, large wooden coffee ta...","obstacle, door, wall, cabinet, table",5,N,5,
+INDOOR_Navigation_LongHallway_AccessPoints_ModernDesign.jpg,indoor,GPT-4V-CoT,CoT,"**Scene Identification:**
+This is an indoor hallway.
+
+**Object Detection:**
+- A closed door at the end of the hallway.
+- Another door on the left wall with a handle visible.
+- Light switches on both t...","obstacle, door, wall",3,N,5,
+INDOOR_Navigation_OfficeLobby_HRSignage_GlassWalledHallway.jpg,indoor,GPT-4V-CoT,CoT,"### Step-by-Step Analysis
+
+1. **Scene Identification**: This is an indoor office scene.
+   
+2. **Object Detection**: 
+   - Office with a reception area and seating.
+   - Signage for ""SUNRISE FINANCIAL...","obstacle, door, wall, entrance, table",5,N,5,
+INDOOR_Navigation_SensoryPath_HospitalClinic_FloorDecals.jpg,indoor,GPT-4V-CoT,CoT,"1. **Scene Identification**:
+   - The scene is an indoor hallway, likely in a school or child-focused environment.
+
+2. **Object and Element Detection**:
+   - The floor has colorful decals with words l...","obstacle, door, wall",3,N,5,
+INDOOR_Navigation_SlatPartition_GlassDoors_EntranceExit.jpg,indoor,GPT-4V-CoT,CoT,"1. **Scene Identification:** This is an indoor area, likely a modern entryway or hallway.
+
+2. **Objects and Elements:** The space includes a large glass door, a black modern chair, and a wooden divide...","obstacle, door, wall",3,N,5,
+OUTDOOR_EmptyParkingLot_Night_BlueStreetlights_HighContrast.png,outdoor,GPT-4V-CoT,CoT,"1. **Scene Identification**: The image depicts an outdoor parking lot at night.
+
+2. **Objects and Elements**: There are multiple tall light poles evenly spaced along the edges of the parking lot, illu...","vehicle, car, obstacle, light",4,N,5,
+OUTDOOR_Navigation_ResidentialEntrance_StairsAndRailing_HouseNumber.png,outdoor,GPT-4V-CoT,CoT,"1. **Scene Identification**: This is an outdoor residential scene showing the front of a house.
+
+2. **Objects and Elements Present**:
+   - The house facade with windows and a prominent front entrance....",obstacle,1,N,2,
+OUTDOOR_Navigation_StreetsideBikeRack_TrafficBarrier_UrbanStreet.png,outdoor,GPT-4V-CoT,CoT,"**Step-by-step Analysis**:
+
+1. **Scene Identification**:
+   - This is an urban street scene.
+
+2. **Object Detection**:
+   - There are several bicycles parked.
+   - Yellow safety posts and a barrier ar...","traffic, vehicle, car, sidewalk, sign",7,N,5,
+OUTDOOR_CityCrosswalk_OverheadView_CrowdCrossing_Taxis.jpg,outdoor,GPT-4V-CoT,CoT,"**Step-by-step Analysis:**
+
+1. **Scene Identification:**
+   - The scene depicts a busy urban crosswalk.
+
+2. **Objects and Elements Present:**
+   - Pedestrians, crosswalk (zebra stripes), vehicles.
+
+3....","crosswalk, traffic, vehicle, pedestrian, obstacle",6,N,3,
+OUTDOOR_CrowdedStreetMarket_ClothingVendors_UrbanSetting_Daylight.jpg,outdoor,GPT-4V-CoT,CoT,"1. **Scene Identification**: This is an outdoor market scene.
+
+2. **Objects and Elements**: The image contains numerous stalls displaying clothing and other goods. There are many people walking throug...",obstacle,1,N,2,
+OUTDOOR_Navigation_ComplexIntersection_BikeLane_PedestrianCrossing.jpg,outdoor,GPT-4V-CoT,CoT,"Step-by-Step Analysis:
+
+1. **Scene Identification**: This is an outdoor street intersection scene.
+
+2. **Objects and Elements**:
+   - Multiple traffic signs.
+   - Traffic lights.
+   - Bicycle lane mar...","crosswalk, traffic, vehicle, road, sign",6,Y,5,Missed pedestrian
+OUTDOOR_Navigation_ConcreteSidewalk_UtilityPoles_ResidentialStreet.jpg,outdoor,GPT-4V-CoT,CoT,"1. **Scene Identification**:
+   - This is an outdoor street scene.
+
+2. **Objects and Elements**:
+   - A sidewalk runs along the right side.
+   - Grass and a tree are to the right of the sidewalk.
+   -...","car, pedestrian, road, sidewalk, obstacle",6,N,5,
+OUTDOOR_Navigation_ModularAccessibilityRamp_Stairs_CommercialBuilding.jpg,outdoor,GPT-4V-CoT,CoT,"1. **Scene Identification**: This is an outdoor scene at the entrance of a building.
+
+2. **Objects and Elements Present**: The main features are a ramp and stairs made of metal with handrails. They le...","obstacle, sign",2,N,4,
+OUTDOOR_Navigation_PedestrianCrosswalk_SuburbanStreet_PersonCrossing.jpg,outdoor,GPT-4V-CoT,CoT,"**Scene Identification:**
+This is an urban street scene.
+
+**Object Detection:**
+- A pedestrian with a light blue backpack crossing the street.
+- Several parked cars along the right side of the street....","crosswalk, vehicle, car, pedestrian, road",9,N,5,
+OUTDOOR_Navigation_StonePatio_CurvedStairs_MultiLevelAccess.jpg,outdoor,GPT-4V-CoT,CoT,"1. **Scene Identification**:
+   - This is an outdoor residential patio.
+
+2. **Objects and Elements**:
+   - Stone patio with curved steps.
+   - Outdoor dining set with a small table and chairs.
+   - Ba...",car,1,N,2,

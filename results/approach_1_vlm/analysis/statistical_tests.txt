@@ -1,0 +1,27 @@
+STATISTICAL TESTS RESULTS
+============================================================
+
+ANOVA Test:
+F-statistic: 34.2545
+p-value: 0.000000
+Significant: True
+
+Paired T-Tests:
+
+GPT-4V vs Gemini:
+  t-statistic: -9.0036
+  p-value: 0.000000
+  Significant: True
+  Mean difference: -2.2174s
+
+GPT-4V vs Claude:
+  t-statistic: -13.3482
+  p-value: 0.000000
+  Significant: True
+  Mean difference: -1.9190s
+
+Gemini vs Claude:
+  t-statistic: 0.9030
+  p-value: 0.371958
+  Significant: False
+  Mean difference: 0.2340s

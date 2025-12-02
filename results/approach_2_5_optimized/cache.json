@@ -1,0 +1,19 @@
+{
+  "cache": {
+    "4dc15fbdbe6e9a2b8c5ea98a6ba422dbc3ec256402d009cce0525afc7371f66b": {
+      "description": "There is an airplane located at the right bottom of the image with high confidence. Additionally, a pair of scissors is also present at the right bottom with lower confidence. \n\nImmediate Concern: \n- Be cautious of the scissors at the right bottom to avoid any potential hazards.\n\nAction:\n- Ensure safety by avoiding contact with the scissors.\n- If interacting with the scene, be mindful of the position of the airplane and the scissors to prevent accidents.",
+      "generation_latency": 1.5405378341674805,
+      "tokens_used": 315,
+      "yolo_model": "yolov8n",
+      "llm_model": "gpt-3.5-turbo",
+      "cached_at": 1763968491.2422552
+    }
+  },
+  "stats": {
+    "hits": 0,
+    "misses": 1,
+    "evictions": 0,
+    "loads": 0,
+    "saves": 0
+  }
+}

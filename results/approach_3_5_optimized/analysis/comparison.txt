@@ -1,0 +1,70 @@
+================================================================================
+APPROACH 3.5 vs APPROACH 3 COMPARISON REPORT
+================================================================================
+
+Comparison Date: 2025-11-24 16:34:37
+
+OVERALL COMPARISON
+--------------------------------------------------------------------------------
+
+Approach 3.5 (Optimized):
+  Total tests: 60
+  Successful: 40 (66.7%)
+  Mean latency: 2.46s
+  Median latency: 2.03s
+
+Approach 3 (Baseline):
+  Total tests: 30
+  Successful: 20 (66.7%)
+  Mean latency: 5.33s
+  Median latency: 4.80s
+
+Improvement:
+  Latency reduction: 2.87s (53.9% faster)
+
+MODE-SPECIFIC COMPARISON
+--------------------------------------------------------------------------------
+
+DEPTH Mode:
+  Approach 3.5:
+    Count: 40
+    Mean latency: 2.46s
+  Approach 3:
+    Count: 20
+    Mean latency: 5.33s
+  Improvement: 2.87s (53.9% faster)
+
+GENERATION LATENCY COMPARISON
+--------------------------------------------------------------------------------
+
+Approach 3.5:
+  Mean: 2.19s
+  Median: 1.73s
+
+Approach 3:
+  Mean: 4.90s
+  Median: 4.39s
+
+Improvement: 2.71s (55.2% faster)
+
+OCR MODE SUCCESS RATE
+--------------------------------------------------------------------------------
+Approach 3.5: 0/20 (0.0%)
+Approach 3: 0/10 (0.0%)
+
+CONFIGURATION COMPARISON
+--------------------------------------------------------------------------------
+YOLOv8N+Depth-Anything+gpt-3.5-turbo+Cache+Adaptive:
+  Mean latency: 1.50s
+  Count: 20
+
+YOLOv8N+Depth-Anything+gpt-4o-mini:
+  Mean latency: 3.41s
+  Count: 20
+
+SUMMARY
+--------------------------------------------------------------------------------
+Approach 3.5 achieves:
+  - Mean latency: 2.46s
+  - Under 2s: 20/40 (50.0%)
+  - Cache hits: 0 (0.0%)

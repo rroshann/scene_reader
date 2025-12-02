@@ -1,0 +1,39 @@
+================================================================================
+APPROACH 5 (STREAMING) vs APPROACH 1 (BASELINE) COMPARISON
+================================================================================
+
+LATENCY COMPARISON
+--------------------------------------------------------------------------------
+Baseline (GPT-4V only):
+  Mean: 5.632s
+  Median: 2.827s
+  Count: 42
+
+Streaming Tier2 (GPT-4V):
+  Mean: 5.470s
+  Median: 4.708s
+  Count: 42
+
+Streaming Time to First Output (Tier1):
+  Mean: 1.728s
+  Median: 1.110s
+  Count: 42
+
+PERCEIVED LATENCY IMPROVEMENT
+--------------------------------------------------------------------------------
+Average latency reduction: 3.904s
+Percentage improvement: 69.3%
+
+IMPROVEMENT STATISTICS
+--------------------------------------------------------------------------------
+Mean improvement: 66.2%
+Median improvement: 75.5%
+Count: 42
+
+KEY FINDINGS
+--------------------------------------------------------------------------------
+✓ Streaming provides 3.90s faster perceived latency
+✓ This represents a 69.3% improvement over baseline
+✓ Users get immediate feedback from Tier1 (BLIP-2) while waiting for detailed description
+✓ Total latency is similar (max of tier1 and tier2, run in parallel)
+✓ Cost is the same (only Tier2 uses GPT-4V API)

@@ -1,0 +1,32 @@
+Local Models Analysis Summary
+============================================================
+
+Total Results: 42
+Successful: 42/42 (100.0%)
+
+Overall Total Latency:
+  Mean: 35.401s
+  Median: 36.761s
+  Std Dev: 13.205s
+  Min: 6.778s
+  Max: 61.239s
+
+Latency by Model:
+  blip2: 35.401s mean
+
+Device Usage:
+  MPS (Metal): 42 tests, 35.401s mean
+
+Response Lengths:
+  Mean: 34.3 words
+  Median: 38.0 words
+  Std Dev: 10.8 words
+
+Response Length by Model:
+  blip2: 34.3 words avg
+
+Cost Analysis:
+  Total Cost: $0.00 (local models, no API calls)
+  Cost per Query: $0.00
+  Cost per 1000 Queries: $0.00
+

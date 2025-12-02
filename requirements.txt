@@ -22,11 +22,25 @@ requests>=2.31.0
 jupyter>=1.0.0
 ipykernel>=6.25.0
 
-# Optional: Object detection (if implementing YOLO approach)
-# ultralytics>=8.0.0
-# opencv-python>=4.8.0
-# torch>=2.0.0
-# torchvision>=0.15.0
+# Object detection (Approach 2: YOLO + LLM)
+ultralytics>=8.0.0
+opencv-python>=4.8.0
+torch>=2.0.0
+torchvision>=0.15.0
+
+# RAG and Vector Database (Approach 6: RAG-Enhanced Vision)
+chromadb>=0.4.0
+sentence-transformers>=2.2.0
+
+# Local Models (Approach 4: Local Models)
+transformers>=4.35.0
+accelerate>=0.24.0
+huggingface-hub>=0.19.0
+# bitsandbytes>=0.41.0  # Optional: For quantization if memory issues
+
+# OCR (Approach 3.5: Optimized Specialized System)
+paddleocr>=2.7.0
+easyocr>=1.7.0
 
 # Optional: Demo interface (if time allows)
 # gradio>=4.0.0

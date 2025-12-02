@@ -1,0 +1,22 @@
+CoT vs Baseline GPT-4V Quality Comparison
+============================================================
+
+Common Images: 42
+
+Overall Scores:
+  CoT: 3.99
+  Baseline: 3.75
+  Improvement: +0.24 (+6.3%)
+
+By Dimension:
+  Completeness: +0.71 (4.21 vs 3.50)
+  Clarity: -0.38 (4.19 vs 4.57)
+  Conciseness: -2.74 (1.79 vs 4.52)
+  Actionability: +1.36 (4.76 vs 3.40)
+  Safety_focus: +1.19 (4.24 vs 3.05)
+
+By Category:
+  Gaming: +0.37 (3.80 vs 3.43, n=12)
+  Indoor: +0.16 (4.14 vs 3.98, n=10)
+  Outdoor: +0.24 (3.90 vs 3.66, n=10)
+  Text: +0.15 (4.16 vs 4.01, n=10)

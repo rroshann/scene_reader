@@ -1,0 +1,82 @@
+======================================================================
+Moondream2 vs BLIP-2 Subset Comparison Report
+======================================================================
+Generated: 2025-11-23T19:29:29.981893
+Test Images: 8 (2 per category)
+
+OVERALL STATISTICS
+----------------------------------------------------------------------
+Moondream2:
+  Success Rate: 8/8 (100.0%)
+  Average Latency: 156.68s
+  Min Latency: 83.25s
+  Max Latency: 190.03s
+  Average Description Length: 114.6 words
+
+BLIP-2:
+  Success Rate: 8/8 (100.0%)
+  Average Latency: 87.56s
+  Min Latency: 48.38s
+  Max Latency: 131.57s
+  Average Description Length: 14.8 words
+
+======================================================================
+SPEED COMPARISON
+----------------------------------------------------------------------
+Moondream2 Average: 156.68s
+BLIP-2 Average: 87.56s
+Speed Ratio: 0.56x
+❌ Moondream2 exceeds speed threshold (>= 15s)
+
+======================================================================
+PER-IMAGE COMPARISON
+----------------------------------------------------------------------
+
+1. SlayTheSpire_Defect_vs_Sentry_ZapPlus.png (gaming)
+   Moondream2: ✅ 174.77s, 141 words
+   BLIP-2: ✅ 66.01s, 0 words
+   Speed Difference: -108.76s (Moondream2 slower)
+
+2. SlayTheSpire_Silent_vs_Exploders_Act2_Combat.png (gaming)
+   Moondream2: ✅ 168.54s, 147 words
+   BLIP-2: ✅ 60.82s, 0 words
+   Speed Difference: -107.72s (Moondream2 slower)
+
+3. INDOOR_Navigation_AccessibilityRamp_EntryDoor_BrickFacade.jpg (indoor)
+   Moondream2: ✅ 190.03s, 73 words
+   BLIP-2: ✅ 122.54s, 38 words
+   Speed Difference: -67.49s (Moondream2 slower)
+
+4. INDOOR_Navigation_ArchwayEntrance_Staircase_Wayfinding.jpg (indoor)
+   Moondream2: ✅ 151.28s, 88 words
+   BLIP-2: ✅ 121.49s, 38 words
+   Speed Difference: -29.80s (Moondream2 slower)
+
+5. OUTDOOR_EmptyParkingLot_Night_BlueStreetlights_HighContrast.png (outdoor)
+   Moondream2: ✅ 83.25s, 94 words
+   BLIP-2: ✅ 52.54s, 0 words
+   Speed Difference: -30.71s (Moondream2 slower)
+
+6. OUTDOOR_Navigation_ResidentialEntrance_StairsAndRailing_HouseNumber.png (outdoor)
+   Moondream2: ✅ 142.86s, 87 words
+   BLIP-2: ✅ 97.16s, 39 words
+   Speed Difference: -45.70s (Moondream2 slower)
+
+7. TEXT_AccessRules_PoolGateSign_RegulatoryText_ApartmentComplex.jpg (text)
+   Moondream2: ✅ 173.50s, 130 words
+   BLIP-2: ✅ 48.38s, 0 words
+   Speed Difference: -125.12s (Moondream2 slower)
+
+8. TEXT_CarDashboard_InstrumentCluster_WarningLights_ActiveDisplay.jpg (text)
+   Moondream2: ✅ 169.22s, 157 words
+   BLIP-2: ✅ 131.57s, 3 words
+   Speed Difference: -37.65s (Moondream2 slower)
+
+======================================================================
+DECISION CRITERIA
+----------------------------------------------------------------------
+❌ Average latency (156.68s) exceeds threshold (15s)
+✅ All descriptions are non-empty
+
+❌ DECISION: STOP - Moondream2 does not meet criteria
+   Recommendation: Document findings and keep BLIP-2 only

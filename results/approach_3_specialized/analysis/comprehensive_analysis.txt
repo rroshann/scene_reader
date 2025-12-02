@@ -1,0 +1,100 @@
+================================================================================
+APPROACH 3: SPECIALIZED MULTI-MODEL SYSTEM - COMPREHENSIVE ANALYSIS
+================================================================================
+
+OVERALL STATISTICS
+--------------------------------------------------------------------------------
+Total tests: 30
+Successful: 20 (66.7%)
+Failed: 10 (33.3%)
+
+OVERALL LATENCY STATISTICS
+--------------------------------------------------------------------------------
+Count: 20.00s
+Mean: 5.33s
+Median: 4.80s
+P75: 6.63s
+P90: 8.51s
+P95: 8.90s
+Min: 2.52s
+Max: 8.92s
+Stdev: 1.77s
+
+COMPONENT LATENCY BREAKDOWN
+--------------------------------------------------------------------------------
+Detection:
+  Mean: 0.092s
+  Median: 0.080s
+  Min: 0.059s
+  Max: 0.189s
+  Stdev: 0.033s
+  Count: 20.000s
+Depth:
+  Mean: 0.394s
+  Median: 0.306s
+  Min: 0.124s
+  Max: 0.920s
+  Stdev: 0.223s
+  Count: 20.000s
+Generation:
+  Mean: 4.897s
+  Median: 4.393s
+  Min: 2.340s
+  Max: 8.611s
+  Stdev: 1.795s
+  Count: 20.000s
+
+RESPONSE LENGTH STATISTICS
+--------------------------------------------------------------------------------
+Word Count:
+  Mean: 141.2
+  Median: 124.0
+  Min: 68.0
+  Max: 214.0
+  Stdev: 54.0
+Token Count:
+  Mean: 449.6
+  Median: 348.0
+  Min: 292.0
+  Max: 758.0
+  Stdev: 174.1
+
+COST ANALYSIS
+--------------------------------------------------------------------------------
+Total Cost: $0.0026
+Cost per Query: $0.000128
+Cost per 1000 Queries: $0.13
+
+MODE-SPECIFIC ANALYSIS
+--------------------------------------------------------------------------------
+DEPTH Mode:
+  Total tests: 20
+  Successful: 20 (100.0%)
+  Mean latency: 5.33s
+
+OCR Mode:
+  Total tests: 10
+  Successful: 0 (0.0%)
+
+CATEGORY-SPECIFIC ANALYSIS
+--------------------------------------------------------------------------------
+Indoor:
+  Total tests: 10
+  Successful: 10 (100.0%)
+  Mean latency: 5.08s
+
+Outdoor:
+  Total tests: 10
+  Successful: 10 (100.0%)
+  Mean latency: 5.58s
+
+Text:
+  Total tests: 10
+  Successful: 0 (0.0%)
+
+FAILURE ANALYSIS
+--------------------------------------------------------------------------------
+Total failures: 10
+Failure rate: 33.3%
+Errors by type:
+  SSL/Certificate: 10

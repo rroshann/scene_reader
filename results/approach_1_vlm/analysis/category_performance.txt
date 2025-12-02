@@ -1,0 +1,19 @@
+CATEGORY-SPECIFIC PERFORMANCE SUMMARY
+============================================================
+
+GAMING:
+  Best Model: Gemini (3.55)
+  Scores: {'GPT-4V': 3.4333333333333336, 'Gemini': 3.5500000000000007, 'Claude': 3.4833333333333325}
+
+INDOOR:
+  Best Model: Gemini (4.03)
+  Scores: {'GPT-4V': 3.9799999999999995, 'Gemini': 4.03, 'Claude': 3.94}
+
+OUTDOOR:
+  Best Model: Gemini (3.93)
+  Scores: {'GPT-4V': 3.66, 'Gemini': 3.9300000000000006, 'Claude': 3.5199999999999996}
+
+TEXT:
+  Best Model: Claude (4.11)
+  Scores: {'GPT-4V': 4.01, 'Gemini': 3.97, 'Claude': 4.109999999999999}
+

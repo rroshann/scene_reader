@@ -1,0 +1,26 @@
+Statistical Tests: Approach 2 vs Approach 2.5
+================================================================================
+
+Paired samples: 42
+
+PAIRED T-TEST
+--------------------------------------------------------------------------------
+t-statistic: 14.6601
+p-value: 0.000000
+Significant: YES (p < 0.05)
+
+EFFECT SIZE (Cohen's d)
+--------------------------------------------------------------------------------
+Cohen's d: 2.6149
+Interpretation: large effect
+
+DESCRIPTIVE STATISTICS
+--------------------------------------------------------------------------------
+Approach 2: 3.39s (mean), 1.16s (std dev)
+Approach 2.5: 1.10s (mean), 0.44s (std dev)
+Mean difference: -2.29s
+
+CONCLUSION
+--------------------------------------------------------------------------------
+✅ Approach 2.5 shows statistically significant improvement over Approach 2
+Effect size: large (2.6149)

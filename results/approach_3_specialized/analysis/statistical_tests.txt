@@ -1,0 +1,22 @@
+Statistical Significance Tests - Approach 3 (Specialized Multi-Model System)
+================================================================================
+
+1. MODE COMPARISON: OCR vs Depth
+--------------------------------------------------------------------------------
+No OCR mode results (SSL issue)
+
+2. COMPONENT LATENCY ANALYSIS
+--------------------------------------------------------------------------------
+Detection (YOLO): n=20, mean=0.092s
+Depth: n=20, mean=0.394s
+Generation (LLM): n=20, mean=4.897s
+
+4. APPROACH 3B vs APPROACH 2 (NAVIGATION IMAGES)
+--------------------------------------------------------------------------------
+Paired samples: 20
+Approach 2 mean: 3.77s
+Approach 3B mean: 5.33s
+Paired t-test: t=-4.9032, p=0.000099
+Cohen's d: -0.9635
+Significant: YES (p < 0.05)
+

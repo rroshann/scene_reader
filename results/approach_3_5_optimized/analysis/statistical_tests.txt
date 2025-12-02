@@ -1,0 +1,116 @@
+================================================================================
+APPROACH 3.5: STATISTICAL SIGNIFICANCE TESTS
+================================================================================
+
+Analysis Date: 2025-11-24 16:35:38
+
+================================================================================
+PAIRED T-TEST: APPROACH 3.5 vs APPROACH 3
+================================================================================
+
+Common images: 20
+Approach 3.5 mean: 1.498s
+Approach 3 mean: 5.329s
+Mean difference: -3.831s
+Improvement: 71.9%
+
+t-statistic: -10.3966
+p-value: 0.000000
+Cohen's d (effect size): -2.3247
+
+Result: HIGHLY SIGNIFICANT (p < 0.001)
+Effect size interpretation: large
+
+================================================================================
+ONE-WAY ANOVA: CONFIGURATION DIFFERENCES
+================================================================================
+
+Configurations: 2
+  YOLOv8N+Depth-Anything+gpt-3.5-turbo+Cache+Adaptive:
+    n = 20
+    Mean = 1.498s
+    Std = 0.404s
+  YOLOv8N+Depth-Anything+gpt-4o-mini:
+    n = 20
+    Mean = 3.413s
+    Std = 1.418s
+
+F-statistic: 32.0638
+p-value: 0.000002
+
+Result: HIGHLY SIGNIFICANT (p < 0.001)
+
+================================================================================
+T-TEST: GPT-3.5-TURBO vs GPT-4O-MINI
+================================================================================
+
+GPT-3.5-turbo:
+  n = 20
+  Mean = 1.498s
+  Std = 0.414s
+
+GPT-4o-mini:
+  n = 20
+  Mean = 3.413s
+  Std = 1.455s
+
+Mean difference: -1.915s
+Improvement: 56.1%
+
+t-statistic: -5.6625
+p-value: 0.000002
+Cohen's d (effect size): -1.7906
+
+Result: HIGHLY SIGNIFICANT (p < 0.001)
+Effect size interpretation: large
+
+================================================================================
+ANOVA: COMPLEXITY-BASED LATENCY DIFFERENCES
+================================================================================
+
+Complexity levels: 3
+  simple:
+    n = 12
+    Mean = 1.360s
+    Std = 0.390s
+  medium:
+    n = 6
+    Mean = 1.742s
+    Std = 0.372s
+  complex:
+    n = 2
+    Mean = 1.588s
+    Std = 0.043s
+
+F-statistic: 1.9173
+p-value: 0.177481
+
+Result: NOT SIGNIFICANT (p >= 0.05)
+
+================================================================================
+T-TEST: GENERATION LATENCY IMPROVEMENT
+================================================================================
+
+GPT-3.5-turbo generation:
+  Mean = 1.204s
+  Std = 0.360s
+
+GPT-4o-mini generation:
+  Mean = 3.179s
+  Std = 1.460s
+
+Mean difference: -1.975s
+Improvement: 62.1%
+
+t-statistic: -5.8717
+p-value: 0.000001
+Cohen's d: -1.8568
+
+Result: HIGHLY SIGNIFICANT (p < 0.001)
+
+================================================================================
+SUMMARY
+================================================================================
+
+All statistical tests completed.
+See individual test results above for detailed analysis.

@@ -1,0 +1,88 @@
+================================================================================
+APPROACH 2.5 COMPREHENSIVE ANALYSIS REPORT
+================================================================================
+
+Generated: 2025-11-24 11:20:55
+Total Results: 84
+Successful: 84
+Failed: 0
+Success Rate: 100.0%
+
+LATENCY STATISTICS
+--------------------------------------------------------------------------------
+Total Latency:
+  Mean: 1.10s
+  Median: 0.97s
+  Std Dev: 0.44s
+  Min: 0.44s
+  Max: 2.67s
+  P25: 0.79s
+  P75: 1.34s
+  P95: 1.95s
+
+Detection Latency:
+  Mean: 0.08s
+  Median: 0.07s
+
+Generation Latency:
+  Mean: 0.98s
+  Median: 0.85s
+
+WORD COUNT STATISTICS
+--------------------------------------------------------------------------------
+Mean: 58.5 words
+Median: 51.0 words
+Std Dev: 33.0 words
+Range: 6 - 160 words
+
+CATEGORY ANALYSIS
+--------------------------------------------------------------------------------
+Gaming:
+  Count: 24
+  Mean Latency: 1.12s
+  Median Latency: 1.01s
+  Std Dev: 0.40s
+
+Indoor:
+  Count: 20
+  Mean Latency: 1.05s
+  Median Latency: 1.01s
+  Std Dev: 0.32s
+
+Outdoor:
+  Count: 20
+  Mean Latency: 1.25s
+  Median Latency: 1.09s
+  Std Dev: 0.66s
+
+Text:
+  Count: 20
+  Mean Latency: 0.99s
+  Median Latency: 0.93s
+  Std Dev: 0.29s
+
+CACHE PERFORMANCE
+--------------------------------------------------------------------------------
+Cache Hits: 0
+Cache Misses: 84
+Total Requests: 84
+Hit Rate: 0.0%
+
+Cache Miss Latency:
+  Mean: 1.10s
+  Median: 0.97s
+
+TARGET ACHIEVEMENT (<2 SECONDS)
+--------------------------------------------------------------------------------
+Under 2.0s: 80/84 (95.2%)
+Over 2.0s: 4/84 (4.8%)
+Mean Latency: 1.10s
+
+SUMMARY
+--------------------------------------------------------------------------------
+✅ Mean Latency: 1.10s
+✅ <2s Target: ACHIEVED (95.2% of tests)
+✅ Cache Hit Rate: 0.0%
+✅ Mean Word Count: 58.5 words
+
+================================================================================

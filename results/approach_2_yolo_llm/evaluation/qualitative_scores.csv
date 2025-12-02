@@ -1,0 +1,96 @@
+filename,category,configuration,yolo_model,llm_model,description,completeness,clarity,conciseness,actionability,safety_focus,overall_score,notes
+SlayTheSpire_Defect_vs_Sentry_ZapPlus.png,gaming,YOLOv8N+gpt-4o-mini,yolov8n,gpt-4o-mini,"In the scene, a person is positioned at the left center of your view, approximately 3-4 feet away. This person could be a potential obstacle, so be cautious as you navigate toward them. 
+
+To the left top and left center, there are two sports balls, but their lower confidence suggests they may not be significant obstacles. 
+
+A bird is located at the right center of your view, about 5-6 feet away, which is less critical but could be a distraction.
+
+Ensure to watch your path as you approach the person at the left center to avoid any collision. Stay alert for the sports balls, but prioritize navigating around the person.",,,,,,,
+SlayTheSpire_Defect_vs_Sentry_ZapPlus.png,gaming,YOLOv8N+claude-haiku,yolov8n,claude-haiku,"Accessibility Description:
+
+Caution: Person detected at left center of scene. Two sports balls are positioned in the upper and middle left area. A bird is located at the right center. 
+
+Key Safety Guidance:
+- Be aware of the person's position on the left side
+- Sports balls may create tripping or movement obstacles
+- Recommend careful navigation, especially near the left side of the space
+
+Spatial Layout:
+- Person is centrally positioned on the left side
+- Bird is centrally positioned on the right side
+- Sports balls are clustered in left area, potentially creating an uneven surface
+
+Recommended Action:
+- Move slowly and deliberately
+- Use mobility aid to check for potential ball obstacles
+- Be prepared to adjust path to avoid the person or balls
+
+Critical Note: Moderate confidence in object detection, so remain alert and use additional sensory information for full awareness.",,,,,,,
+SlayTheSpire_Defect_vs_Sentry_ZapPlus.png,gaming,YOLOv8N+gpt-4o-mini,yolov8n,gpt-4o-mini,"In the scene, a person is located at the left center, approximately 2-3 feet away from you. This individual is the most critical element to be aware of as they may obstruct your path. 
+
+To the left top and left center, there are two sports balls, but they are less significant in terms of immediate concern. Their exact positions are roughly 4-5 feet away from you and may require you to navigate around them.
+
+On the right center, there is a bird, about 5-6 feet away. While it may not pose a direct threat, be mindful of it as you move.
+
+**Actions to take:**
+- Proceed cautiously towards the center, keeping awareness of the person to your left. 
+- Be prepared to adjust your path to avoid the individual and the sports balls. 
+- Avoid sudden movements towards the bird; it may fly away if approached too quickly.",,,,,,,
+SlayTheSpire_Defect_vs_Sentry_ZapPlus.png,gaming,YOLOv8M+gpt-4o-mini,yolov8m,gpt-4o-mini,"In this scene, there is a person located at the left center of your field of view. There are two dogs, one at the left center near the person and another at the right center, close to the bird. 
+
+**Key details:**
+- **Left Center:** The person and one dog are nearby. Be cautious as you approach this area.
+- **Right Center:** Another dog is present, along with a bird, which may be a distraction or potential threat to the dogs.
+- **Left Top:** A sports ball is positioned higher up, likely further left, which may not be immediately relevant but could be a tripping hazard if you move in that direction.
+
+**Actions to take:**
+- Approach with caution towards the left center where the person and dog are. 
+- Be aware that the dogs could move suddenly; maintain distance until you assess their behavior.
+- Watch for any ball or distraction on your left as you navigate. 
+
+Stay alert to the presence of the person and the dogs as they may affect your path.",,,,,,,
+SlayTheSpire_Defect_vs_Sentry_ZapPlus.png,gaming,YOLOv8N+claude-haiku,yolov8n,claude-haiku,"Caution: Scene has multiple elements requiring attention.
+
+Key layout: A person is positioned at left center, with a bird at right center. Two sports balls are located in the upper left and left-center areas.
+
+Critical safety note: A person is in your immediate left-center visual field. Be aware of their proximity and potential movement.
+
+Recommended action: Proceed carefully, maintain awareness of the person's position. The sports balls suggest this may be a recreational or sports-related environment. Move slowly and be prepared to adjust your path to avoid collision with the person or potential ball movement.
+
+Priority is maintaining safe navigation while understanding the spatial context of the scene.",,,,,,,
+SlayTheSpire_Defect_vs_Sentry_ZapPlus.png,gaming,YOLOv8M+claude-haiku,yolov8m,claude-haiku,"Scene Overview:
+Caution: Active scene with multiple moving elements. Person and dogs near center, sports balls present.
+
+Key Spatial Layout:
+- Left side: Person standing, 2 sports balls nearby
+- Right side: Bird, 1 dog positioned
+- Center area: Highest activity zone
+
+Safety Considerations:
+- Person at left center - potential interaction point
+- Dogs present - be aware of potential movement
+- Sports balls may create tripping/navigation hazard
+
+Recommended Action:
+- Move carefully, maintain steady walking pace
+- Listen for dog or ball movements
+- Prepare to pause or adjust path if objects shift
+- Use mobility aid to detect potential obstacles
+
+Priority Alert: Moving objects in close proximity require careful navigation and heightened situational awareness.",,,,,,,
+SlayTheSpire_Defect_vs_Sentry_ZapPlus.png,gaming,YOLOv8M+gpt-4o-mini,yolov8m,gpt-4o-mini,"In the scene, you are positioned with several important elements surrounding you:
+
+1. **Left Center**: A person is located here, approximately 2-3 feet away. This is a safety-critical element; be cautious as they may be interacting with nearby dogs or other objects.
+
+2. **Left Center**: There are two dogs, one is close to the person at left center (about 1-2 feet away), and the other is at right center (around 5-6 feet away). Be mindful of their movements, as they may approach you.
+
+3. **Right Center**: A bird is present, approximately 5-6 feet from your position. While not a direct threat, be aware of its potential movements.
+
+4. **Left Top**: There are two sports balls at the top left of your field of view (more than 6 feet away). They may not pose an immediate concern but could be obstacles if you move in that direction.
+
+**Immediate Actions**: 
+- Exercise caution as you navigate, especially around the person and dogs at left center. 
+- If you need to move, consider a path that avoids the left side unless necessary, as there are multiple interacting elements there. 
+- Stay aware of the bird's location, as it could fly unexpectedly. 
+
+Overall, maintain a safe distance from the left side where the person and dogs are located.",,,,,,,

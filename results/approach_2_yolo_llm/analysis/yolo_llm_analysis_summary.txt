@@ -1,0 +1,23 @@
+YOLO + LLM Hybrid Pipeline Analysis Summary
+============================================================
+
+Total Results: 252
+Successful: 252/252 (100.0%)
+
+Overall Total Latency:
+  Mean: 3.734s
+  Median: 3.394s
+  Std Dev: 1.359s
+
+Detection Latency (YOLO):
+  Mean: 0.212s
+  Median: 0.174s
+
+Generation Latency (LLM):
+  Mean: 3.421s
+  Median: 3.107s
+
+Cost Analysis:
+  Total Cost: $0.0148
+  Cost per Query: $0.000059
+  Cost per 1000 Queries: $0.06

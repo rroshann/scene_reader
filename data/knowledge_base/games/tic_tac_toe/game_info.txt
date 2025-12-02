@@ -1,0 +1,40 @@
+Tic Tac Toe - Game Knowledge Base
+
+GAME OVERVIEW:
+Tic Tac Toe is a simple two-player game played on a 3x3 grid.
+
+RULES:
+- Players take turns placing X or O marks
+- First player to get 3 in a row (horizontal, vertical, or diagonal) wins
+- If all 9 squares are filled with no winner, it's a tie
+
+BOARD LAYOUT:
+- 3 rows, 3 columns = 9 total squares
+- Positions can be described as: top-left, top-center, top-right, middle-left, middle-center, middle-right, bottom-left, bottom-center, bottom-right
+- Or using coordinates: (0,0) to (2,2) or (1,1) to (3,3)
+
+WINNING CONDITIONS:
+- Three X's or O's in a row horizontally
+- Three X's or O's in a row vertically  
+- Three X's or O's diagonally (top-left to bottom-right or top-right to bottom-left)
+
+STRATEGY:
+- Center square is most valuable
+- Corners are second most valuable
+- Block opponent's winning moves
+- Create two threats simultaneously when possible
+
+UI ELEMENTS:
+- Grid: 3x3 board with squares
+- X marks: Player 1's moves
+- O marks: Player 2's moves
+- Empty squares: Available moves
+- May show whose turn it is
+- May show game status (in progress, X wins, O wins, tie)
+
+GAME STATES:
+- In progress: Game still ongoing
+- X wins: Three X's in a row
+- O wins: Three O's in a row
+- Tie: Board full, no winner
+

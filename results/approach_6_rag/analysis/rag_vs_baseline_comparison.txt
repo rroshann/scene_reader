@@ -1,0 +1,13 @@
+Approach 6 (RAG-Enhanced) vs Approach 1 (Pure VLM) Comparison
+============================================================
+
+Note: Comparison on gaming images only (12 images)
+
+Approach 6 - Base VLM (no RAG):
+  Mean latency: 6.461s
+  Count: 36
+
+Approach 6 - RAG-Enhanced:
+  Mean latency: 14.741s
+  Count: 36
+

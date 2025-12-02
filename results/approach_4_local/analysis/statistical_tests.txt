@@ -1,0 +1,13 @@
+Statistical Significance Tests - Approach 4 (Local Models)
+============================================================
+
+2. One-way ANOVA: Latency by Category
+   F-statistic: 5.295
+   p-value: 0.003777
+   Result: Significant difference (p < 0.05)
+   Group means:
+     gaming: 26.923s (n=12)
+     indoor: 46.379s (n=10)
+     outdoor: 33.645s (n=10)
+     text: 36.351s (n=10)
+

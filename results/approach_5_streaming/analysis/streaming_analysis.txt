@@ -1,0 +1,86 @@
+================================================================================
+APPROACH 5: STREAMING/PROGRESSIVE MODELS - ANALYSIS REPORT
+================================================================================
+
+SUCCESS RATES
+--------------------------------------------------------------------------------
+Total tests: 42
+Tier1 (BLIP-2) successful: 42/42 (100.0%)
+Tier2 (GPT-4V) successful: 42/42 (100.0%)
+Both tiers successful: 42/42 (100.0%)
+Either tier successful: 42/42 (100.0%)
+
+TIER1 (BLIP-2) LATENCY STATISTICS
+--------------------------------------------------------------------------------
+Count: 42
+Mean: 1.659s
+Median: 1.059s
+P75: 1.848s
+P90: 3.956s
+P95: 4.336s
+Min: 0.520s
+Max: 7.640s
+Std Dev: 1.434s
+
+TIER2 (GPT-4V) LATENCY STATISTICS
+--------------------------------------------------------------------------------
+Count: 42
+Mean: 5.470s
+Median: 4.708s
+P75: 6.172s
+P90: 8.996s
+P95: 12.039s
+Min: 2.877s
+Max: 13.334s
+Std Dev: 2.371s
+
+TOTAL LATENCY STATISTICS (Max of tier1 and tier2)
+--------------------------------------------------------------------------------
+Count: 42
+Mean: 5.505s
+Median: 4.723s
+Min: 2.891s
+Max: 13.349s
+
+PERCEIVED LATENCY IMPROVEMENT
+--------------------------------------------------------------------------------
+Mean improvement: 66.2%
+Median improvement: 75.5%
+Min improvement: -11.0%
+Max improvement: 94.4%
+Mean time to first output: 1.728s
+Mean tier2-only latency: 5.470s
+Average latency reduction: 3.742s
+
+DESCRIPTION LENGTH ANALYSIS
+--------------------------------------------------------------------------------
+Tier1 (BLIP-2):
+  Mean words: 9.4
+  Median words: 6.0
+  Mean chars: 44.3
+Tier2 (GPT-4V):
+  Mean words: 87.9
+  Median words: 82.5
+  Mean chars: 503.4
+
+COST ANALYSIS
+--------------------------------------------------------------------------------
+Total cost (Tier2 only): $0.5190
+Mean cost per query: $0.0124
+Cost per 1000 queries: $12.36
+Mean tokens per query: 1011
+Total tokens: 42450
+
+TIER1 LATENCY BY CATEGORY
+--------------------------------------------------------------------------------
+gaming: mean=1.866s, median=0.874s, n=12
+indoor: mean=2.290s, median=1.938s, n=10
+outdoor: mean=1.256s, median=0.887s, n=10
+text: mean=1.183s, median=1.147s, n=10
+
+TIER2 LATENCY BY CATEGORY
+--------------------------------------------------------------------------------
+gaming: mean=6.133s, median=5.564s, n=12
+indoor: mean=4.637s, median=4.594s, n=10
+outdoor: mean=4.632s, median=4.277s, n=10
+text: mean=6.347s, median=4.690s, n=10

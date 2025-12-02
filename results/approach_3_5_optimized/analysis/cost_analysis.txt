@@ -1,0 +1,66 @@
+================================================================================
+APPROACH 3.5: COST ANALYSIS
+================================================================================
+
+Analysis Date: 2025-11-24 16:35:58
+
+OVERALL COST STATISTICS
+--------------------------------------------------------------------------------
+Total queries: 40
+Total estimated cost: $0.006461
+Cost per query: $0.000162
+Cost per 1000 queries: $0.1615
+
+COST BY LLM MODEL
+--------------------------------------------------------------------------------
+gpt-3.5-turbo:
+  Queries: 20
+  Total cost: $0.004588
+  Cost per query: $0.000229
+  Cost per 1000 queries: $0.2294
+
+gpt-4o-mini:
+  Queries: 20
+  Total cost: $0.001873
+  Cost per query: $0.000094
+  Cost per 1000 queries: $0.0936
+
+COST COMPARISON
+--------------------------------------------------------------------------------
+GPT-3.5-turbo total cost: $0.004588
+GPT-4o-mini total cost: $0.001873
+Cost savings: $-0.002715 (-145.0%)
+
+GPT-3.5-turbo cost per query: $0.000229
+GPT-4o-mini cost per query: $0.000094
+Savings per query: $-0.000136 (-145.0%)
+
+TOKEN USAGE STATISTICS
+--------------------------------------------------------------------------------
+Total input tokens: 8,620
+Total output tokens: 3,690
+Total tokens: 12,310
+Average tokens per query: 308
+
+gpt-3.5-turbo:
+  Input tokens: 4,016
+  Output tokens: 1,720
+  Total tokens: 5,736
+  Avg per query: 287
+
+gpt-4o-mini:
+  Input tokens: 4,604
+  Output tokens: 1,970
+  Total tokens: 6,574
+  Avg per query: 329
+
+PRICING REFERENCE
+--------------------------------------------------------------------------------
+GPT-3.5-turbo:
+  Input: $0.50 per 1M tokens
+  Output: $1.50 per 1M tokens
+GPT-4o-mini:
+  Input: $0.15 per 1M tokens
+  Output: $0.60 per 1M tokens
+
+Note: Token counts are estimates based on word count if actual tokens not available.

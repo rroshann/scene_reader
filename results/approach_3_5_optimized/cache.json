@@ -1,0 +1,91 @@
+{
+  "cache": {
+    "bd9a69896fb5ebcc747beaffc1494afac500dca4c2b2f9a8ca123af3b8c5eb52": {
+      "description": "No objects were detected in the image. The text provided indicates the operating hours for the pool and spa, which are from 8am to 10pm.",
+      "generation_latency": 2.866140842437744,
+      "tokens_used": 160,
+      "yolo_model": "yolov8n",
+      "llm_model": "gpt-3.5-turbo",
+      "cached_at": 1764055931.0025358
+    },
+    "da0f7ba112505b6705c08b611b3ee8e548a7f80aff1af4b0caf5f3ad0785a5d2": {
+      "description": "One object, a clock located at the center with a confidence level of 0.42, was detected. The accompanying text appears to be a jumbled mix of characters and numbers, possibly due to an error in recognition or encoding.",
+      "generation_latency": 1.3474619388580322,
+      "tokens_used": 200,
+      "yolo_model": "yolov8n",
+      "llm_model": "gpt-3.5-turbo",
+      "cached_at": 1764055943.702594
+    },
+    "d39b06e50f0b3506461d2b84d2502691752e39ae947537065ebff355c4b650b6": {
+      "description": "The text mentions various coffee drinks and their prices, such as Flat White, Cappuccino, Latte, Macchiato, Long Black, and Mocha. The prices range from $3.50 to $5.00.",
+      "generation_latency": 0.7035839557647705,
+      "tokens_used": 192,
+      "yolo_model": "yolov8n",
+      "llm_model": "gpt-3.5-turbo",
+      "cached_at": 1764055956.901958
+    },
+    "343b60908a5644bd1a36342c0a01edfb4e7d568d55184e4d9a85f599a6958fab": {
+      "description": "Two books are detected in the image. The text in the image describes food items, such as \"YACUS WILD LOADED SIDES ROLLED IN A 13\" TORTILLA W/TATER TOTS INSIDE!\" and \"TOTS CALIFORNIA STUFF 6\" FLOUR TORTILLA.\" The text suggests the presence of unique and flavorful food",
+      "generation_latency": 1.4128997325897217,
+      "tokens_used": 206,
+      "yolo_model": "yolov8n",
+      "llm_model": "gpt-3.5-turbo",
+      "cached_at": 1764056025.014997
+    },
+    "7b706f4e87c81940c0a9bdefae65e34ba14d29a978e92c0113ebf2b4e2cd17ca": {
+      "description": "Two objects were detected in the image: a clock at the center bottom with a confidence level of 0.33 and a truck at the left bottom with a confidence level of 0.26. The safety-critical element identified is the truck at the left bottom with a confidence level of 0.26.",
+      "generation_latency": 1.5755388736724854,
+      "tokens_used": 174,
+      "yolo_model": "yolov8n",
+      "llm_model": "gpt-3.5-turbo",
+      "cached_at": 1764056028.689437
+    },
+    "c6fbb81ed6e49ff4ffea02a42246ddba59e4f2e119e4f872699ecc8be581d523": {
+      "description": "There is a dining table 119 meters ahead at the center bottom. Please proceed with caution to avoid any obstacles.",
+      "generation_latency": 1.0409319400787354,
+      "tokens_used": 100,
+      "yolo_model": "yolov8n",
+      "llm_model": "gpt-3.5-turbo",
+      "cached_at": 1764056030.6176682
+    },
+    "cc680e9d6c8f194ace33f90756969ee90db2e9dc8d13fc65dd55038e85141c36": {
+      "description": "There is a chair located 14 meters to your left. Additionally, there is a potted plant 31 meters directly ahead of you. Please proceed with caution to avoid any obstacles.",
+      "generation_latency": 1.264397144317627,
+      "tokens_used": 132,
+      "yolo_model": "yolov8n",
+      "llm_model": "gpt-3.5-turbo",
+      "cached_at": 1764056032.171629
+    },
+    "b7285c67611ed00da289c8f3153b70183a9d498c7e63e38c4a6124b987536bb8": {
+      "description": "There is a person located 92 meters ahead at the left center with a confidence level of 0.92. It is important to maintain a safe distance and proceed with caution.",
+      "generation_latency": 0.5876150131225586,
+      "tokens_used": 130,
+      "yolo_model": "yolov8n",
+      "llm_model": "gpt-3.5-turbo",
+      "cached_at": 1764056032.991912
+    },
+    "063628fec645a99f5a30a1bc1deff05f0b723dc17b71f7a01da33f19be61ce18": {
+      "description": "There are three objects detected in the environment:\n\n1. A dining table is located 1.66 meters ahead to the right.\n2. A potted plant is located 1.37 meters ahead to the right.\n3. A vase is located 1.40 meters ahead to the right.\n\nPlease proceed with caution to avoid any collisions with the detected objects.",
+      "generation_latency": 0.6844260692596436,
+      "tokens_used": 187,
+      "yolo_model": "yolov8n",
+      "llm_model": "gpt-3.5-turbo",
+      "cached_at": 1764056033.8464482
+    },
+    "e1ffd8d82a360395644c9df503c5514d139255b6c11d963326a8ec0ebe1ac1c7": {
+      "description": "You are currently 120 meters away from any objects or obstacles. It appears to be a clear path ahead. Please continue to proceed with caution and prioritize safety.",
+      "generation_latency": 0.43965888023376465,
+      "tokens_used": 88,
+      "yolo_model": "yolov8n",
+      "llm_model": "gpt-3.5-turbo",
+      "cached_at": 1764056034.4405272
+    }
+  },
+  "stats": {
+    "hits": 20,
+    "misses": 66,
+    "evictions": 0,
+    "loads": 5,
+    "saves": 60
+  }
+}

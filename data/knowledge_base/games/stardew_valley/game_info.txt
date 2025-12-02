@@ -1,0 +1,47 @@
+Stardew Valley - Game Knowledge Base
+
+GAME OVERVIEW:
+Stardew Valley is a farming simulation game where players manage a farm, interact with villagers, and explore the world.
+
+LOCATIONS:
+- Farm: Your home base, where you grow crops and raise animals
+- Pelican Town: Main town with shops and villagers
+- Town Square: Central area with shops and events
+- Stardew Valley Fair: Annual festival with games and competitions
+- Mines: Underground areas with monsters and resources
+
+FARMING:
+- Crops: Plant seeds, water daily, harvest when ready
+- Seasons: Spring, Summer, Fall, Winter (different crops each season)
+- Tools: Hoe (till soil), Watering Can (water crops), Axe (chop trees), Pickaxe (mine)
+- Animals: Cows, chickens, pigs provide resources (milk, eggs, truffles)
+
+VILLAGERS:
+- NPCs you can befriend and give gifts
+- Each has a schedule and favorite items
+- Building relationships unlocks cutscenes and benefits
+
+FESTIVALS:
+- Stardew Valley Fair: Annual fall festival
+- Ice Fishing Contest: Winter event
+- Various seasonal festivals throughout the year
+
+UI ELEMENTS:
+- Inventory: Bottom of screen shows items you're carrying
+- Health/Energy: Top left shows your health and energy bars
+- Time: Top right shows current time and day
+- Money: Top right shows your gold
+- Toolbar: Bottom shows equipped tools and items
+
+GAMEPLAY MECHANICS:
+- Energy: Depletes when using tools, restore with food or sleep
+- Health: Can be lost in mines, restore with food
+- Time: Day runs from 6 AM to 2 AM, must sleep by 2 AM
+- Skills: Farming, Mining, Foraging, Fishing, Combat
+
+COMBAT (in Mines):
+- Monsters appear in mines
+- Use sword to attack
+- Health bar shows remaining HP
+- Can die and lose items/money if health reaches zero
+

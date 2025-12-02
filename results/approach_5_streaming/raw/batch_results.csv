@@ -1,0 +1,175 @@
+filename,category,success,tier1_description,tier1_latency,tier1_success,tier1_error,tier2_description,tier2_latency,tier2_tokens,tier2_cost,tier2_success,tier2_error,total_latency,time_to_first_output,perceived_latency_improvement,timestamp
+SlayTheSpire_Defect_vs_Sentry_ZapPlus.png,gaming,True,a game of magic,7.639835834503174,True,,"This image is from a video game scene. On the left, a character is facing right, with two orbs floating nearby. The center shows a card titled ""Zap+"" with the ability to ""Channel 1 Lightning."" To the right, an enemy character is being struck by lightning, taking 7 damage, and has 30 out of 50 health remaining. At the bottom, several cards are displayed: two ""Strike"" cards, a ""Dualcast,"" and a ""Defend+"" card. An ""End Turn"" button is visible in the bottom right corner. The player's character has 47 out of 82 health remaining.",7.206053256988525,1351,0.01609,True,,8.000417947769165,8.000414848327637,-11.023532064084165,2025-11-25T11:06:13.120193
+SlayTheSpire_Silent_vs_Exploders_Act2_Combat.png,gaming,True,a game of magic,0.743826150894165,True,,"This image is a screenshot from the game ""Slay the Spire"". It displays a combat scene where the player, identified as ""tvswanderer the Silent,"" is battling three slime-like enemies. The player has 36 out of 70 health points remaining and 3 energy points available.
+
+On the bottom, a set of playable cards is shown: ""Shiv,"" ""Defend"" (three copies), ""Survivor,"" and ""Poisoned Stab."" Each card costs 1 energy, except for ""Shiv,"" which is free.
+
+The enemies have the following stats: 
+- The left enemy has 14/14 health and will attack for 5 damage.
+- The middle enemy has 1/12 health and isn't posing an immediate threat.
+- The right enemy has 6/14 health and is affected by 2 poison.
+
+The option to ""End Turn"" is visible to the right. The player is currently on the 4th floor of their run.",9.297130107879639,1424,0.01828,True,,9.30669903755188,0.7941398620605469,91.45822578746655,2025-11-25T11:06:22.122204
+SlayTheSpire_Watcher_vs_Cultist_LargeWolf_Act3.png,gaming,True,a game of magic,3.3673717975616455,True,,"This image is a screenshot from a card-based strategy game. The player, identified as ""tckmn"" and playing as ""the Watcher,"" is in the center with 45/79 health. 
+
+In front of the player are two enemies: a humanoid figure on the right with 40/53 health and a blue wolf-like creature on the far right with 320/320 health.
+
+The player has a hand of four cards shown at the bottom: ""Scrawl,"" ""Empty Mind,"" ""Inner Peace,"" and ""Strike."" Each card has a blue or purple glow, indicating they are skills or attacks.
+
+There are various icons at the top representing items or buffs. The interface also displays energy (2/4), indicating how many actions can be taken on this turn. The enemies have intentions shown: the humanoid plans to attack for 6 damage, and the wolf plans to attack with a combination (8x4 damage). 
+
+""End Turn"" is an option on the right side.",11.12139105796814,1426,0.01834,True,,11.13788104057312,3.549093008041382,68.08768804601503,2025-11-25T11:06:32.430124
+StardewValley_StardewValleyFair_Festival.png,gaming,True,a small town in the middle of a forest,1.0631320476531982,True,,"The image is a pixel art scene from a video game, depicting a lively fairground. There are three red and white striped tents with different vendors inside. The ground is cobblestone, and there are a few people walking around, interacting, and observing. 
+
+In the top right, there are stalls with various goods like fruits, vegetables, and artisan items. Trees with autumn leaves and barrels are scattered around the area. 
+
+The Stardrop Saloon is located on the far right, with the sign ""Food & Spirits."" In the center, there is a circular brick pattern on the ground. The atmosphere is festive and colorful.",6.143641948699951,1349,0.01603,True,,6.161630868911743,1.1154909133911133,81.84316529665013,2025-11-25T11:06:44.570187
+StardewValley_TownSquare_VillageCenter.png,gaming,True,a small town with a few houses and a church,1.0553600788116455,True,,"The image shows a top-down view of a village scene from the game ""Stardew Valley."" There is a central square with a circular stone pattern in the middle, surrounded by cobblestone paths. 
+
+To the left, there's a blue house with a purple roof. Adjacent to it on the right is a small red-roofed house. On the far right side, there's another building with a black roof, possibly a shop or community building.
+
+Near the top right, a building labeled ""The Stardrop Saloon"" is visible. There are trees, bushes, and fences throughout the area, with a small section of a river visible at the bottom left. A character is walking in the center of the image.",8.294094800949097,1368,0.0166,True,,8.313215970993042,1.0912659168243408,86.84285696011737,2025-11-25T11:06:51.734145
+StardewValley_Winter_IceFishingContest.png,gaming,True,a game of fishing,0.7173309326171875,True,,"The image is a screenshot from the game ""Stardew Valley."" It shows a group of characters fishing by a river. On the right side, there are three characters fishing from the riverbank, while another character is fishing at the bottom near a tree.
+
+On the left, the player's inventory is visible, showing tools like a pickaxe and a sword. In the top right corner, there's a time and date display: ""Sat. 20, 1:00 pm,"" with an in-game currency amount of ""10,250"" below it. The background includes grassy areas and some trees.",4.407007217407227,663,0.009049999999999999,True,,4.423107147216797,0.748762845993042,83.00972045075157,2025-11-25T11:07:01.049717
+four_in_a_row-opp_move_1.png,gaming,True,a square with a red dot on it,0.9163937568664551,True,,"The image shows a Connect Four game board. There are two pieces placed towards the bottom right corner: a red piece on top and a green piece underneath it, both in the bottom row. The rest of the board is empty with dark circles indicating unoccupied slots.",2.877397060394287,935,0.010409999999999999,True,,2.891312837600708,1.0258219242095947,64.34896183326791,2025-11-25T11:07:06.474683
+four_in_a_row-opp_move_4.png,gaming,True,a game of connect the dots,0.8249011039733887,True,,"The image shows a Connect Four game grid. It has a vertical sequence of discs filled in one column from the bottom to the top:
+
+- The bottom four discs form a vertical line: three are green (second, third, and fifth positions), and one is red (third position from the bottom).
+
+- Additionally, there is a red disc on the sixth spot up (top position) in the same column.
+
+This setup suggests that either player has yet to win, but the game is in progress.",4.471273899078369,982,0.01182,True,,4.488445043563843,0.9114789962768555,79.61478055583372,2025-11-25T11:07:10.367358
+four_in_a_row-opp_won.png,gaming,True,a square board with dots,0.7732501029968262,True,,"This is an image of a Connect Four game board. It shows a completed row of four red discs with stars on them, positioned horizontally along the bottom from the left. Next to these, on the same row, are three green discs on the far right. The discs are placed in a grid of circular slots, which are mostly empty except for these seven filled positions.",3.73325514793396,956,0.01104,True,,3.746861219406128,0.8594870567321777,76.97754311789188,2025-11-25T11:07:15.857575
+tic_tac_toe-opp_move_1.png,gaming,True,a tic tac toe board,0.8313441276550293,True,,"This image is of a tic-tac-toe game. The grid is composed of three rows and three columns. In the center position, there is an ""O"", and in the bottom right corner, there is an ""X"". The rest of the spaces are empty.",5.393790006637573,937,0.01047,True,,5.409105062484741,0.8991391658782959,83.3301043464462,2025-11-25T11:07:20.607221
+tic_tac_toe-opp_move_2.png,gaming,True,a tic tac toe board,3.6466729640960693,True,,"This image depicts a game of tic-tac-toe. The grid is 3x3:
+
+- Top-left: Empty
+- Top-center: Empty
+- Top-right: Empty
+- Middle-left: Circle (O)
+- Middle-center: Circle (O)
+- Middle-right: Cross (X)
+- Bottom-left: Circle (O)
+- Bottom-center: Empty
+- Bottom-right: Cross (X)
+
+The current state shows that ""O"" would win with a vertical line in the left column.",5.733942031860352,985,0.01191,True,,5.796133756637573,3.7683629989624023,34.279715804176455,2025-11-25T11:07:27.020544
+tic_tac_toe-user_won.png,gaming,True,a tic tac toe board,0.8146278858184814,True,,"The image shows a tic-tac-toe grid. 
+
+- The top row: empty, ""X"" on the right.
+- The middle row: ""O"" in the center, ""X"" on the right.
+- The bottom row: ""O"" on the left, ""X"" on the right.
+
+There are three ""X""s vertically aligned on the right column, indicating that ""X"" has won.",4.9181787967681885,967,0.01137,True,,4.931877851486206,0.8808810710906982,82.08928329995773,2025-11-25T11:07:33.819408
+INDOOR_Navigation_AccessibilityRamp_EntryDoor_BrickFacade.jpg,indoor,True,,0.5198757648468018,True,,"This image shows the entrance to a building with a white door centered in the frame. The door is set within a red brick wall. In front of the door, there is a black rubber ramp that tapers down to the grey pavement, providing a smooth transition from the ground to the doorway. The area appears to be a front or back entryway, designed for accessibility.",3.2899630069732666,957,0.01107,True,,3.3041141033172607,0.5433800220489502,83.48370419675769,2025-11-25T11:07:39.753395
+INDOOR_Navigation_ArchwayEntrance_Staircase_Wayfinding.jpg,indoor,True,"The hallway is a long, narrow space with a large archway leading to the stairs. The stairs are in the center of the room, and the stairs are painted white. The stairs are painted white, and the walls are painted white. The walls",4.3592798709869385,True,,"The image shows an elegant hallway with hardwood floors. On the left, there's a staircase with white railings and wooden steps leading up to the next level. Near the base of the staircase, there's a small wooden cabinet with a houseplant on top. To the right, there's a built-in white cabinet with glass doors displaying a few decorative items. The walls are painted a light, neutral color, and there's an archway leading from the entry area into the rest of the space. A ceiling light fixture hangs above, casting a warm glow.",4.403815031051636,1330,0.01546,True,,4.423723936080933,4.407076120376587,-0.07405145997179677,2025-11-25T11:07:44.059374
+INDOOR_Navigation_BlindManWithCane_TactileSignage_Hallway.jpg,indoor,True,a man with a cane walking down a hallway,1.758842945098877,True,,"The image shows a person walking down a hallway towards the viewer. The person is holding a white cane, suggesting they may be visually impaired, and appears to be using a device in their other hand. The hallway is long, with blue carpeting and beige walls. There’s a door on the right side with signage, and a colored sign is visible next to it. The corridor is well-lit with ceiling lights, and there's an exit sign visible in the distance.",4.7146522998809814,974,0.01158,True,,4.729964017868042,1.7955000400543213,61.91659690154356,2025-11-25T11:07:49.484787
+INDOOR_Navigation_CurvingStaircase_FoyerAccess_HardwoodFloor.jpg,indoor,True,"The stairs are in the center of the room, and the hallway is to the right.",1.5401742458343506,True,,"The image shows a spacious, elegant foyer with a curved staircase. The staircase is on the left side, featuring white risers and dark wood banisters. The wooden floor extends throughout the space, complemented by light-colored walls. To the right, there's a small wooden table with a round mirror above it, decorated with a vase of flowers. The area feels open and well-lit, with a glimpse of additional rooms beyond the entrance.",3.4194350242614746,458,0.0063,True,,3.434528112411499,1.5626699924468994,54.300345485160875,2025-11-25T11:07:55.216615
+INDOOR_Navigation_ElevatorLobby_LongHallway_MarbleFlooring.jpg,indoor,True,"The hallway is empty, but the lights are on.",1.176941156387329,True,,"The image shows a well-lit hallway with a polished floor and four elevator doors, two on each side. Large ceiling lights illuminate the space. At the end of the hallway, there's a wall with a metal pattern, and above it, an ""EXIT"" sign is visible. The walls are lined with a combination of marble and darker panels, contributing to an elegant ambiance.",3.4139978885650635,446,0.00594,True,,3.4344661235809326,1.2012979984283447,64.81257348014172,2025-11-25T11:07:59.655907
+INDOOR_Navigation_LivingRoom_HallwayEntrance_MAINSTSign.jpg,indoor,True,"a living room with a large window, a couch, a rug, a coffee table, a plant, and a few books",2.1166880130767822,True,,"The image shows a spacious, well-lit living room with a mix of modern and rustic decor. On the right, there's a large window with sheer white curtains, allowing natural light to flood the room. In front of the window, there's a dark green sofa adorned with white and green throw pillows, and a wooden coffee table with decorative items.
+
+To the left of the sofa is a wooden armchair with a white cushion. On the far right, a wooden console table holds folded blankets. The floor is polished hardwood, partly covered by a patterned area rug beneath the seating area.
+
+Along the left wall, there's a white cabinet with decorative items on top, such as vases and framed pictures. There's also a basket placed on the floor near the wall with a ""Main St."" sign above it.
+
+The room is decorated with several plants, adding freshness and color throughout the space. The overall ambiance is cozy and inviting.",6.93303918838501,1065,0.01431,True,,6.9451892375946045,2.1390750408172607,69.14664719621267,2025-11-25T11:08:04.091562
+INDOOR_Navigation_LongHallway_AccessPoints_ModernDesign.jpg,indoor,True,"The hallway is a long, narrow space with a wooden floor and white walls.",2.897830009460449,True,,"The image shows a modern, narrow hallway with light-colored walls and wooden flooring. On the left side, there's a closed door with a handle and a light switch nearby. On the right, there is a wall light fixture. The hallway is lit by recessed ceiling lights. At the end of the hallway, there’s another closed door. The overall ambiance is minimalistic and clean.",4.486384868621826,1298,0.014499999999999999,True,,4.501711130142212,3.3005292415618896,26.43232049381042,2025-11-25T11:08:12.038922
+INDOOR_Navigation_OfficeLobby_HRSignage_GlassWalledHallway.jpg,indoor,True,a modern office with a large glass wall and a large wooden desk,1.2713210582733154,True,,"The image shows the interior of an office space with a modern and clean design. On the right is a waiting area with two black armchairs, a coffee table, and a plant. The wall behind it features the logo and name ""Sunrise Financial."" Several pendant lights hang from the ceiling.
+
+To the left, there is a long hallway with glass-walled office spaces lining the side. Near the viewer on the left, there is a door labeled ""Human Resources."" The floor is wooden, and the overall color scheme is neutral with wood and white tones.",4.701103925704956,994,0.01218,True,,4.715865135192871,1.3001980781555176,72.34270718742842,2025-11-25T11:08:17.542676
+INDOOR_Navigation_SensoryPath_HospitalClinic_FloorDecals.jpg,indoor,True,a hallway with a lot of colorful toys,3.052502155303955,True,,"This image shows a colorful, interactive play area in a hallway designed for children. On the floor, there are various playful markings, such as yellow animal paw prints, green lily pads labeled ""LEAP,"" and blue footprints with the word ""JUMP."" These suggest different actions for children to follow. Pink handprints and stars are adhered to the left wall.
+
+There are several interactive features attached to the walls, including a blue liquid-filled sensory board on the left, and colorful horizontal tubes with a star design on the upper left. To the right, there is a series of three shiny circular mirrors. In the distance, the hallway leads to a small sitting area with brightly colored cushions. The layout encourages movement and play.",6.269435882568359,1026,0.013139999999999999,True,,6.28633713722229,3.092299222946167,50.67659545663358,2025-11-25T11:08:23.260424
+INDOOR_Navigation_SlatPartition_GlassDoors_EntranceExit.jpg,indoor,True,The main scene is a hallway with a sliding door and a chair. The key objects are a sliding door and a chair. The immediate context is a brick wall and a wooden floor.,4.202467918395996,True,,"The image shows a modern interior space with a minimalist design. On the left side, there is a sleek black chair with a curved design. In the center, there is a large glass door with a black frame leading to an outside area with a brick wall visible. To the right, a wooden partition with vertical slats extends from the ceiling, adding a decorative element. The floor is light wood, and there is a simple black and gold ceiling light above. The overall aesthetic is clean and contemporary.",4.735836982727051,1322,0.015220000000000001,True,,4.756307125091553,4.35901403427124,7.95683951601779,2025-11-25T11:08:30.549633
+OUTDOOR_EmptyParkingLot_Night_BlueStreetlights_HighContrast.png,outdoor,True,A parking lot at night,1.4746119976043701,True,,"The image shows an empty parking lot at night, illuminated by bright overhead lights. The lights are symmetrically arranged in two rows, one on the left and one on the right, creating a well-lit path down the center. The ground is marked with yellow lines indicating parking spaces. The background is dark, with silhouettes of leafless trees visible along the sides. The scene is quiet and still.",5.304204225540161,622,0.00782,True,,5.31872296333313,1.5039172172546387,71.6466947103364,2025-11-25T11:08:36.308802
+OUTDOOR_Navigation_ResidentialEntrance_StairsAndRailing_HouseNumber.png,outdoor,True,A two story house with a front porch and stairs,1.0554890632629395,True,,"The image shows the front entrance of a house. A set of wooden stairs with metal railings leads up to a small porch with an overhang. The house has light gray siding and white-framed windows with blinds. There is a patch of grass on the right, with a small amount of snow on it. To the left of the stairs, a paved area with a pair of black chairs is visible. Bushes or plants are along the side of the house. Another house is closely adjacent on the right.",4.611509799957275,985,0.01191,True,,4.62788987159729,1.1043298244476318,76.05274904852499,2025-11-25T11:08:42.630164
+OUTDOOR_Navigation_StreetsideBikeRack_TrafficBarrier_UrbanStreet.png,outdoor,True,A row of bicycles parked on a sidewalk,1.291018009185791,True,,"The image shows a bike parking area on a roadside, surrounded by yellow poles and chain-link barriers. The bikes are parked perpendicularly to the curb. Several cars are traveling on the road to the right of the bike parking area. There are storefronts on the left side of the image, with a sidewalk running adjacent to the bike parking. The road is moderately busy with some vehicular activity.",2.9139797687530518,452,0.0061200000000000004,True,,2.929953098297119,1.314817190170288,54.878987003642656,2025-11-25T11:08:48.260836
+OUTDOOR_CityCrosswalk_OverheadView_CrowdCrossing_Taxis.jpg,outdoor,True,a busy city street with people crossing the street,0.9727170467376709,True,,"This is an aerial view of a busy crosswalk featuring people crossing in different directions. The crosswalk has wide white stripes and is situated in an urban setting. There are two yellow taxis at the top waiting for pedestrians to clear. The scene is crowded, with groups of people wearing various colored clothing visible on both sides of the street. The crosswalk runs vertically along the image, and the pedestrians are spread across it, with many gathered at the edges.",3.658115863800049,633,0.008150000000000001,True,,3.6732659339904785,0.9918930530548096,72.88513841591579,2025-11-25T11:08:52.192879
+OUTDOOR_CrowdedStreetMarket_ClothingVendors_UrbanSetting_Daylight.jpg,outdoor,True,a street market in barcelona,0.8017590045928955,True,,"The image shows a bustling outdoor market scene on a tree-lined street. There are numerous stalls on both sides selling clothes and textiles. Colorful clothing items, including dresses and shirts, are displayed and hanging from racks. A large crowd of people is walking through the market, creating a lively and busy atmosphere. The trees provide shade over the market area, and there are buildings visible in the background. The overall scene is vibrant and active.",6.045665740966797,969,0.01143,True,,6.058665037155151,0.8330450057983398,86.22078954591488,2025-11-25T11:08:56.868341
+OUTDOOR_Navigation_ComplexIntersection_BikeLane_PedestrianCrossing.jpg,outdoor,True,a street with traffic signals,0.7562940120697021,True,,"The image shows a bike pathway and pedestrian area at an intersection in Ottawa, ON. There are several traffic signs and markings visible:
+
+- In the foreground, a bike lane curves to the left, indicated by pavement markings and a sign with a bike symbol and arrow.
+- There are two black and yellow hazard signs on posts, marking the separation between the pedestrian area and the bike lane.
+- To the right is a pedestrian sidewalk with white directional arrows painted on it.
+- A separate sign on the right reads ""Yield to Aux,"" indicating bike traffic should yield.
+- The street name sign reads ""Donald St.""
+- Traffic lights and road markings are visible at the intersection, and green paint designates biking areas.
+
+Trees and buildings line the street in the background, and the sky appears overcast.",6.052890062332153,1041,0.01359,True,,6.065460920333862,0.7797718048095703,87.11736382489116,2025-11-25T11:09:03.929688
+OUTDOOR_Navigation_ConcreteSidewalk_UtilityPoles_ResidentialStreet.jpg,outdoor,True,,0.7652060985565186,True,,The image shows a sidewalk running parallel to a road on the left side. There are several utility poles located on the grassy strip between the road and the sidewalk. The sidewalk is clear and continues straight ahead. A few cars are parked on the road. Trees and grassy areas are visible on the right side of the sidewalk. There are no obstacles directly on the sidewalk.,3.742361307144165,445,0.00591,True,,3.7545769214630127,0.7801859378814697,79.15257577102201,2025-11-25T11:09:10.998031
+OUTDOOR_Navigation_ModularAccessibilityRamp_Stairs_CommercialBuilding.jpg,outdoor,True,,0.5806739330291748,True,,"The image shows a beige building with a double door entrance in the center. In front of the entrance, there is an aluminum accessibility ramp on the left and a set of stairs on the right, both leading up to a landing platform at the door. The ramp and stairs have handrails on both sides. The structure is designed for wheelchair access, with the ramp providing an alternative to the stairs.",3.9433300495147705,1301,0.01459,True,,3.961592197418213,0.631295919418335,83.99079175490228,2025-11-25T11:09:15.755708
+OUTDOOR_Navigation_PedestrianCrosswalk_SuburbanStreet_PersonCrossing.jpg,outdoor,True,A woman crossing the street,0.7772200107574463,True,,"The image shows a person with a light blue backpack walking across a zebra crossing. They are heading away from the viewer, towards the right side of the image. The crossing is on a residential street, with several parked cars on the right and trees on the left. The street is quiet with no visible traffic.",3.9021289348602295,1284,0.01408,True,,3.9147160053253174,0.8495759963989258,78.2278850704005,2025-11-25T11:09:20.719116
+OUTDOOR_Navigation_StonePatio_CurvedStairs_MultiLevelAccess.jpg,outdoor,True,The steps leading up to the house are made of stone and lead to a patio with a fire pit.,4.089081048965454,True,,"This image depicts a landscaped backyard patio area. In the center, there are semi-circular stone steps leading up to a raised section. On this upper level, there is a small metal patio table with chairs that have red cushions, situated near the house's siding. 
+
+The left side of the image features a built-in grill and stone counter along a wall. Plants and greenery are visible, providing a lush atmosphere, with a garden area to the left containing more chairs around a square fire pit. The patio is surrounded by a stone wall, and the area is mainly paved with large stone slabs. Nearby houses and additional greenery can be seen in the background.",6.146405935287476,1353,0.01615,True,,6.158242225646973,4.135639190673828,32.71451260759596,2025-11-25T11:09:25.636020
+TEXT_AccessRules_PoolGateSign_RegulatoryText_ApartmentComplex.jpg,text,True,,0.5698277950286865,True,,"This image shows a pool entrance gate in a residential area. The left side of the gate has a sign displaying pool and spa hours, 8 a.m. to 10 p.m. It indicates that only residents and their guests are allowed, guests must be accompanied by a resident, and there is a limit of two guests per apartment. It also advises keeping the gate locked for safety. 
+
+The background includes a multi-story building with balconies and a pool area with chairs and umbrellas. The setting is clean and modern, with glass and metal elements.",4.992612838745117,1332,0.015519999999999999,True,,5.001285076141357,0.6218781471252441,87.54403421192275,2025-11-25T11:09:32.795949
+TEXT_CarDashboard_InstrumentCluster_WarningLights_ActiveDisplay.jpg,text,True,The dashboard of a car,1.3739640712738037,True,,"The image shows a car dashboard with various illuminated warning and indicator lights. 
+
+1. **Center**: 
+   - Speedometer (up to 260 km/h) and tachometer (up to 7,000 rpm).
+   - A prominent lane departure indicator with a car symbol, suggesting active lane-keeping assistance.
+   - Green indicator for the left turn signal.
+
+2. **Left Side**:
+   - Low tire pressure warning light.
+   - Fog light indicator.
+   - Other cautionary symbols.
+
+3. **Right Side**:
+   - ABS warning is lit, indicating a potential issue with the anti-lock braking system.
+   - Brake warning light.
+   - Check engine light.
+   - Other warning signals.
+
+4. **Bottom Left Gauge**: Fuel level indicator.
+
+5. **Bottom Right Gauge**: Engine temperature gauge.
+
+These alerts suggest multiple issues that may need attention, such as tire pressure, braking, and engine system concerns. It's advisable to check and address these warnings promptly.",6.755515098571777,1424,0.01828,True,,6.767590761184692,1.4341659545898438,78.77044261372387,2025-11-25T11:09:38.806605
+TEXT_ChalkboardMenu_HandwrittenCoffeePrices_CafeDrinks.jpg,text,True,coffee and tea,0.7006309032440186,True,,"The image shows a blackboard menu titled ""Coffee and Hot Drinks."" It lists various beverages with their prices:
+
+**Coffee:**
+- Flat White: $4.00 / $4.50
+- Cappuccino: $4.00 / $4.50
+- Latte: $4.00 / $4.50
+- Macchiato: $4.50 / $5.00
+- Long Black: $3.50 / $4.00
+- Mocha: $4.00 / $4.50
+- Espresso: $3.50 / $4.00
+
+**Other Hot Drinks:**
+- Hot Chocolate: $4.00 / $4.50
+- Homemade Chai Latte: $4.00 / $4.50
+- Turmeric Latte: $4.50 / $5.00
+- Matcha Latte: $4.50 / $5.00
+- Tea Assorted: $3.50 / $4.00
+
+Additional options:
+- Syrups: Vanilla, Caramel, Hazelnut for $0.50
+- Milk: Soy, Almond, Lactose-Free for $0.50
+
+Decorative elements include elegant lettering and a small graphic of a coffee cup with a heartbeat line at the bottom.",13.333751916885376,1145,0.01671,True,,13.34943699836731,0.7509610652923584,94.36796882097852,2025-11-25T11:09:46.581297
+TEXT_MenuBoard_RestaurantPricing_MultipleSections_MountedSign.jpg,text,True,a menu board,0.7309949398040771,True,,"The image shows a restaurant menu on wooden boards. Here’s a breakdown:
+
+**Left Board: Outlaw Burritos**
+- Options include California, Gold Rush, Bank Heist, Veggie, Bangin' Baja Fish, and Boomtown Breakfast Burrito.
+- Prices range from $11.00 to $12.00.
+
+**Middle Board: Tacos and Salads**
+- Tacos include Carne Asada, Chicken, Pulled Pork, and Fish Taco, priced from $5.50 to $5.75.
+- A salad option named Texas Tumbleweed is available for $12.50.
+
+**Right Board: Wild Loaded Tots and Sides**
+- Tots options include Locked & Loaded, Santa Fe, BBQ Tots, Sod Buster, Card Shark, and Pony Express, priced at $11.00.
+- Sides and kids' meals are listed under ""Sides & Stuff,"" including Little Outlaws for $8.00 and various sides and beverages.
+
+The menu emphasizes burritos, tacos, and tots with various fillings and ingredients.",12.200910091400146,1437,0.01867,True,,12.21210503578186,0.7724030017852783,93.66930010959011,2025-11-25T11:10:00.931887
+TEXT_Navigation_SupermarketEntrance_KrogerFacade_WayfindingSign.jpg,text,True,kroger,0.6877648830413818,True,,"The image shows the entrance of a Kroger grocery store. The building is white with an archway above the main entrance. ""Kroger"" is written in large blue letters, next to a blue shopping cart logo. There are double glass doors at the center of the entrance with a small step leading up to them. The area is well-lit with some plants near the sides of the entrance.",4.3874711990356445,621,0.00779,True,,4.405927896499634,0.7204310894012451,83.57981040286728,2025-11-25T11:10:14.145776
+TEXT_OpenBook_PrintedParagraphs_YellowedPaper_SpineCurvature.jpg,text,True,The book is open to a page with a quote from the book of mormon,1.3505909442901611,True,,"This is a close-up image of an open book, showing two pages filled with printed text. The pages are yellowish, indicating the book may be aged or the paper type gives it that hue. The text is in a serif font and appears to discuss topics related to personal growth or professional experiences. The focus is mostly on the right page, while the left page is partially visible. There is no imagery or illustrations, just text throughout. The lighting casts a subtle shadow along the center, where the pages meet.",6.247167110443115,1325,0.01531,True,,6.26163125038147,1.4884698390960693,76.1736830025267,2025-11-25T11:10:19.554333
+TEXT_RetailShelf_CandyBarProducts_PricingLabels_DenseDisplay.jpg,text,True,,2.564786911010742,True,,"The image shows a shelf in a store with an assortment of chocolate bars. On the top row from left to right, there are ""Eat-More,"" ""Bounty,"" and ""Twix"" bars. The bottom row includes ""Kit Kat Chunky,"" ""Skor,"" and ""Mr. Big"" bars. Prices are displayed on labels below each product, most priced at $0.89 and one at $0.99. The shelf labels are green.",4.1276328563690186,636,0.00824,True,,4.13888692855835,2.58555006980896,37.35997944149986,2025-11-25T11:10:26.817435
+TEXT_TimesSquare_DigitalBillboards_Night_AdvertisingDensity.jpg,text,True,"Times Square, New York, USA",0.9796481132507324,True,,"The image shows a vibrant and busy urban scene with large digital billboards. On the left, there's a prominent ad for ""Bill Burr: Drop Dead Years"" streaming on Hulu, featuring an image of a person lying on the ground. Next to it on the right is a bright display with a selfie of two people. Below these, there are various smaller signs and advertisements, including one for ""Pele Soccer."" The scene is likely part of a bustling city area with a lot of illuminated signs and activity.",3.991689920425415,644,0.00848,True,,4.003727197647095,1.0020372867584229,74.89691567396021,2025-11-25T11:10:31.957477
+TEXT_WeatheredWarningSign_NoParking_Roadside_FadingPrint.jpg,text,True,no parking sign,1.558053970336914,True,,"The image shows two ""NO PARKING"" signs along the side of a road. The sign in the foreground is more visible, mounted on a metal post with bold pink letters on a black background. Another similar sign is visible further down the road. The surroundings include grass and trees with autumn leaves scattered around, suggesting a rural or semi-rural area.",3.531738042831421,953,0.01095,True,,3.5484421253204346,1.589181900024414,55.00283767506281,2025-11-25T11:10:36.963141
+TEXT_WoodenCrate_StencilText_BAKERAndCo_VintageCocoa.jpg,text,True,A rustic breakfast crate with a candle and a jar of cocoa,1.3150913715362549,True,,"The image shows a wooden crate labeled ""BAKER & CO. LTD BREAKFAST COCOA"" in large black lettering. It has a handle cut-out near the top. To the right of the crate, there is a glass jar containing long white candles, secured with a metal handle. The items are placed on a wooden surface. In the background, there appears to be another wooden crate and some dried flowers. The overall setting has a rustic, vintage feel.",3.898714065551758,635,0.00821,True,,3.910867929458618,1.3395910263061523,65.6401827940524,2025-11-25T11:10:41.513690

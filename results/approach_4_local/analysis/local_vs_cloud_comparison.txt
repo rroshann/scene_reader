@@ -1,0 +1,24 @@
+Approach 4 (Local Models) vs Approach 1 (Pure VLMs) Comparison
+============================================================
+
+Approach 4 - Local Models:
+  Mean latency: 35.401s
+  Mean response length: 34.3 words
+  Count: 42
+  Cost: $0.00 (local models, no API calls)
+
+Local Models Breakdown:
+  BLIP2:
+    Mean latency: 35.401s
+    Mean response length: 34.3 words
+    Count: 42
+
+Approach 1 - Pure VLMs (Cloud):
+  Mean response length: 93.1 words
+  Count: 126
+  Cost: ~$0.013 per query (average across models)
+
+  Response length difference: -58.8 words
+  Cost difference: $0.00 vs ~$0.013 per query (100% savings with local)
+  Privacy: Local models keep data on-device, cloud models send to API
+  Offline capability: Local models work offline, cloud requires internet

@@ -1,0 +1,16 @@
+Approach 2 (YOLO+LLM) vs Approach 1 (Pure VLMs) Comparison
+============================================================
+
+Latency Comparison:
+  Approach 1 Mean: 5.488s
+  Approach 2 Mean: 3.734s
+  Speedup: 1.47x
+
+Cost Comparison:
+  Approach 1: $0.013167 per query
+  Approach 2: $0.001125 per query
+  Cost Savings: 91.5%
+
+Approach 2 Breakdown:
+  Detection: 0.212s
+  Generation: 3.421s

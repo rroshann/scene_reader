@@ -1,0 +1,123 @@
+filename,category,model,description,hazards_mentioned,hazards_detected_count,false_negative,safety_score,notes
+INDOOR_Navigation_AccessibilityRamp_EntryDoor_BrickFacade.jpg,indoor,GPT-4V,"The image shows a white door centered at the end of a short black ramp. The ramp leads up to the door, and the area is surrounded by red brick walls. The ground is paved with large gray tiles. The sce...","door, wall, entrance",3,N,5,
+INDOOR_Navigation_AccessibilityRamp_EntryDoor_BrickFacade.jpg,indoor,Gemini,"You are facing a closed white door with a black, ribbed rubber accessibility ramp extending about 3-4 feet directly in front of you, leading up to the door's threshold. The ramp provides a smooth, non...",door,1,N,2,
+INDOOR_Navigation_AccessibilityRamp_EntryDoor_BrickFacade.jpg,indoor,Claude,"Here's a description focusing on spatial layout and critical details:
+
+A white door is centered in a red brick wall. In front of the door is a large black rubber mat, approximately 3 feet wide, coveri...","door, wall, table",3,N,5,
+INDOOR_Navigation_ArchwayEntrance_Staircase_Wayfinding.jpg,indoor,GPT-4V,"The image shows a well-lit interior hallway with a staircase on the left leading upstairs. The stairs have wooden steps and white railings. Below the stairs, there is a small wooden cabinet with a dec...","stairs, steps, door, wall, cabinet",5,N,5,
+INDOOR_Navigation_ArchwayEntrance_Staircase_Wayfinding.jpg,indoor,Gemini,"You are in an entryway. To your immediate left is a closed wooden entry door. Ahead of you, a staircase with wooden steps and a white railing ascends to the right. A low white radiator cover is near t...","stairs, steps, door, cabinet",4,N,5,
+INDOOR_Navigation_ArchwayEntrance_Staircase_Wayfinding.jpg,indoor,Claude,"Here's a description of the interior space:
+
+Spatial Layout:
+- White wooden staircase curves slightly to the right, ascending from the bottom left of the image
+- Wooden floor with warm brown tones ext...","stairs, obstacle, door, wall, cabinet",5,N,5,
+INDOOR_Navigation_BlindManWithCane_TactileSignage_Hallway.jpg,indoor,GPT-4V,"The image shows a person walking down a hallway toward the camera. They are holding a white cane in their left hand. The hallway is long, with beige walls and a blue carpet. On the right wall, there i...","door, wall, exit, person",4,N,5,
+INDOOR_Navigation_BlindManWithCane_TactileSignage_Hallway.jpg,indoor,Gemini,A man is walking towards you in a carpeted hallway. He is holding a white cane in his left hand and a small black device in his raised right hand. Immediately to your right is a closed door. Further a...,"door, wall",2,N,4,
+INDOOR_Navigation_BlindManWithCane_TactileSignage_Hallway.jpg,indoor,Claude,"This image shows an interior office hallway with a blue carpeted floor and beige walls. On the left side of the hallway, there is a window. A person is walking in the hallway, holding a long white can...","door, wall, exit, person",4,N,5,
+INDOOR_Navigation_CurvingStaircase_FoyerAccess_HardwoodFloor.jpg,indoor,GPT-4V,"The image shows a spacious, well-lit foyer with a wooden staircase. The staircase is on the left, curving upwards with white risers and dark wooden handrails. To the right, there’s a wooden console ta...","wall, table",2,Y,4,Missed door
+INDOOR_Navigation_CurvingStaircase_FoyerAccess_HardwoodFloor.jpg,indoor,Gemini,"**Staircase directly ahead and slightly left, curving right, with light wooden treads and white risers. A wooden handrail runs up the right side of the stairs. To your right, a clear hardwood floor le...","stairs, table",2,Y,4,Missed door
+INDOOR_Navigation_CurvingStaircase_FoyerAccess_HardwoodFloor.jpg,indoor,Claude,"This is an interior image of a home's entryway and staircase. The stairs are white with dark wooden railings and are centrally located, ascending at a slight angle to the left from the viewer's perspe...","stairs, door, wall, table",4,N,5,
+INDOOR_Navigation_ElevatorLobby_LongHallway_MarbleFlooring.jpg,indoor,GPT-4V,"The image shows a symmetrical hallway with an Art Deco design. It features four elevator doors along each side. The walls and floor have decorative patterns, with the floor displaying geometric lines....","door, wall, exit",3,N,3,
+INDOOR_Navigation_ElevatorLobby_LongHallway_MarbleFlooring.jpg,indoor,Gemini,"You are at the start of a long, well-lit hallway. Elevators are directly to your left and right. Further ahead on your left, an illuminated red ""EXIT"" sign indicates an exit route. The floor is smooth...","obstacle, exit",2,Y,4,Missed door
+INDOOR_Navigation_ElevatorLobby_LongHallway_MarbleFlooring.jpg,indoor,Claude,"This is an interior hallway, likely in an office building or institutional setting:
+
+Spatial Layout:
+- Long, symmetrical corridor with polished tile floor
+- Three large white dome light fixtures suspe...","obstacle, door, wall, exit",4,N,5,
+INDOOR_Navigation_LivingRoom_HallwayEntrance_MAINSTSign.jpg,indoor,GPT-4V,"The image depicts a spacious and well-lit living room with a combination of modern and rustic decor. 
+
+- **Layout and Furniture**: In the center, there's a dark green sofa with white and green pillows...","wall, furniture, cabinet, table",4,Y,5,Missed door
+INDOOR_Navigation_LivingRoom_HallwayEntrance_MAINSTSign.jpg,indoor,Gemini,"You are in a large, well-lit living room with shiny wood floors. Immediately in front of you, the floor is clear. Further ahead, a dark green sofa is centered on a patterned rug, with a light-colored ...","obstacle, door, wall, table",4,N,5,
+INDOOR_Navigation_LivingRoom_HallwayEntrance_MAINSTSign.jpg,indoor,Claude,"This is a bright, airy living room with warm wood floors and a natural, modern farmhouse style. Key features:
+
+Spatial Layout:
+- Large room with open floor plan
+- Wooden floors running horizontally
+- ...","wall, furniture, cabinet, table",4,Y,5,Missed door
+INDOOR_Navigation_LongHallway_AccessPoints_ModernDesign.jpg,indoor,GPT-4V,"The image shows a modern, minimalist hallway with a wooden floor. The hallway is long and narrow, extending away from the viewer. There are three recessed ceiling lights illuminating the space. On the...","door, wall",2,N,4,
+INDOOR_Navigation_LongHallway_AccessPoints_ModernDesign.jpg,indoor,Gemini,"You are in a well-lit, straight hallway with light wood flooring. On your immediate left, there's a flush-mounted door with a silver handle, and below it, a black light switch. Further down the left w...","door, wall",2,N,4,
+INDOOR_Navigation_LongHallway_AccessPoints_ModernDesign.jpg,indoor,Claude,"This image depicts a minimalist, modern hallway or corridor:
+
+Spatial Layout:
+- Long, narrow hallway with light wood flooring
+- White walls on both sides
+- Straight path leading to a white door at the...","obstacle, door, wall, exit",4,N,3,
+INDOOR_Navigation_OfficeLobby_HRSignage_GlassWalledHallway.jpg,indoor,GPT-4V,"The image shows a modern office space with a bright, welcoming atmosphere. On the right side, there is a waiting area with the logo ""Sunrise Financial"" on the wall. The waiting area includes two black...","door, wall, table",3,N,5,
+INDOOR_Navigation_OfficeLobby_HRSignage_GlassWalledHallway.jpg,indoor,Gemini,"You are in a modern office lobby. To your immediate left, a sign reads ""HUMAN RESOURCES"" on a wooden wall, next to a long hallway lined with glass-paneled offices extending straight ahead. To your rig...",wall,1,Y,2,Missed door
+INDOOR_Navigation_OfficeLobby_HRSignage_GlassWalledHallway.jpg,indoor,Claude,"Image description:
+
+This is an interior office space for Sunrise Financial. Key details:
+
+Spatial Layout:
+- Long hallway with glass and wood-paneled walls on the left
+- Reception/waiting area on the r...",wall,1,Y,2,Missed door
+INDOOR_Navigation_SensoryPath_HospitalClinic_FloorDecals.jpg,indoor,GPT-4V,"The image shows a brightly decorated children's hallway, designed as an interactive and engaging path. 
+
+On the floor, there are colorful stickers and markers including footprints, lily pads, the word...",wall,1,Y,2,Missed door
+INDOOR_Navigation_SensoryPath_HospitalClinic_FloorDecals.jpg,indoor,Gemini,"You are in a brightly lit corridor with interactive elements on the walls and floor.
+
+**Spatial Layout & Path:**
+*   A clear path is open straight ahead.
+*   The floor has a double yellow line running...","obstacle, wall",2,Y,4,Missed door
+INDOOR_Navigation_SensoryPath_HospitalClinic_FloorDecals.jpg,indoor,Claude,"This image shows a colorful, playful hallway that appears to be in a school or daycare setting. The floor is designed like an interactive path with various shapes and words:
+
+Spatial Layout:
+- A long ...","door, wall",2,N,4,
+INDOOR_Navigation_SlatPartition_GlassDoors_EntranceExit.jpg,indoor,GPT-4V,"The image depicts a modern interior with a wooden floor and a minimalist design. On the left, there is a sleek black chair with a sculptural form. In the center, a glass door with a black frame opens ...","door, wall",2,N,4,
+INDOOR_Navigation_SlatPartition_GlassDoors_EntranceExit.jpg,indoor,Gemini,"Ahead and slightly right, one of the double glass doors to the outside is ajar, revealing a brick patio. Be aware of a black, S-shaped chair about 4 feet to your left against the wall. A wooden slat p...","door, wall",2,N,4,
+INDOOR_Navigation_SlatPartition_GlassDoors_EntranceExit.jpg,indoor,Claude,"Here's a description of the interior space:
+
+Spatial Layout:
+- Large floor-to-ceiling glass doors on the right side, leading to a brick exterior wall
+- A black curved chair sits on the left side of th...","door, wall, furniture",3,N,5,
+OUTDOOR_EmptyParkingLot_Night_BlueStreetlights_HighContrast.png,outdoor,GPT-4V,"The image shows a large, empty parking lot at night, illuminated by tall streetlights. The lights are evenly spaced along the left and right sides, creating a symmetrical layout. The ground features c...","vehicle, light",2,N,4,
+OUTDOOR_EmptyParkingLot_Night_BlueStreetlights_HighContrast.png,outdoor,Gemini,"You are in a large, empty parking lot at night. A clear central path marked by a double yellow line stretches straight ahead, flanked by empty parking spaces on both the left and right. Numerous stree...","vehicle, obstacle, light",3,N,5,
+OUTDOOR_EmptyParkingLot_Night_BlueStreetlights_HighContrast.png,outdoor,Claude,"This image depicts an empty parking lot at night, illuminated by a symmetrical row of bright blue-white LED streetlights on both sides. The streetlights create a strong, linear perspective leading int...",light,1,N,2,
+OUTDOOR_Navigation_ResidentialEntrance_StairsAndRailing_HouseNumber.png,outdoor,GPT-4V,The image depicts the front of a house with light gray siding. Central to the image is a set of wooden steps with gray railings leading up to an elevated porch area. An orange door is visible at the t...,light,1,N,2,
+OUTDOOR_Navigation_ResidentialEntrance_StairsAndRailing_HouseNumber.png,outdoor,Gemini,"Ahead and slightly left, wooden stairs with metal handrails lead up to house number 151, which has an orange-brown front door. To the immediate left of the stairs is a clear, paved patio. To the right...",light,1,N,2,
+OUTDOOR_Navigation_ResidentialEntrance_StairsAndRailing_HouseNumber.png,outdoor,Claude,"This image shows the exterior of a two-story house with gray siding, featuring a raised wooden deck with gray metal railings and stairs leading to the front entrance. The house number 151 is visible n...",light,1,N,2,
+OUTDOOR_Navigation_StreetsideBikeRack_TrafficBarrier_UrbanStreet.png,outdoor,GPT-4V,The image shows a row of parked bicycles on the right side of a city street. The bikes are secured within a designated area marked by yellow bollards and a yellow base. This area occupies a space typi...,"car, pedestrian, sidewalk, sign, bike",5,N,5,
+OUTDOOR_Navigation_StreetsideBikeRack_TrafficBarrier_UrbanStreet.png,outdoor,Gemini,"Immediately to your right, a long temporary bike rack, marked by yellow posts, is full of bicycles and runs parallel to a busy street. A white car is passing close by the right side of the rack, movin...","traffic, car, sidewalk, bike, post",5,N,5,
+OUTDOOR_Navigation_StreetsideBikeRack_TrafficBarrier_UrbanStreet.png,outdoor,Claude,This image shows a bike parking area on a city street. Several bicycles are locked to yellow vertical poles in a designated parking zone. The parking area is bordered by yellow posts and a concrete ba...,"car, sign, light, bike, post",5,N,5,
+OUTDOOR_CityCrosswalk_OverheadView_CrowdCrossing_Taxis.jpg,outdoor,GPT-4V,The image shows an aerial view of a crosswalk with many pedestrians walking in various directions. The crosswalk has multiple white stripes and is busy with people scattered throughout. At the top of ...,"crosswalk, pedestrian",2,N,3,
+OUTDOOR_CityCrosswalk_OverheadView_CrowdCrossing_Taxis.jpg,outdoor,Gemini,"You are looking down at a busy street crosswalk. Vehicles are stopped at the top, just before the crosswalk. Numerous pedestrians are actively crossing from left to right and right to left on the stri...","crosswalk, traffic, vehicle, pedestrian, sidewalk",5,N,5,
+OUTDOOR_CityCrosswalk_OverheadView_CrowdCrossing_Taxis.jpg,outdoor,Claude,"Bird's-eye view of a busy pedestrian crosswalk:
+- Large zebra crossing with white stripes spanning the full street width
+- Multiple vehicles at the top of the image (yellow and dark-colored taxi/cars)...","crosswalk, traffic, vehicle, car, pedestrian",6,N,5,
+OUTDOOR_CrowdedStreetMarket_ClothingVendors_UrbanSetting_Daylight.jpg,outdoor,GPT-4V,"The image shows a bustling outdoor market in a tree-lined street. Stalls are set up on both sides, displaying various clothing items like shirts, dresses, and bags. The street is crowded with people w...",,0,N,1,
+OUTDOOR_CrowdedStreetMarket_ClothingVendors_UrbanSetting_Daylight.jpg,outdoor,Gemini,"You are in a very crowded outdoor street market, walking amidst a dense throng of people. Clothing stalls line both your immediate left and right, with racks extending close to the walking path. Expec...",,0,N,2,
+OUTDOOR_CrowdedStreetMarket_ClothingVendors_UrbanSetting_Daylight.jpg,outdoor,Claude,"This is a bustling outdoor market street lined with large trees, creating a green canopy overhead. The scene is crowded with people browsing clothing racks on both sides of the walkway. Clothing stall...",light,1,N,2,
+OUTDOOR_Navigation_ComplexIntersection_BikeLane_PedestrianCrossing.jpg,outdoor,GPT-4V,"The image shows an intersection in Ottawa, ON. In the foreground, a pathway splits to the left and right, with marked lanes for bicycles. The path is bordered by a sidewalk with directional arrows ind...","traffic, pedestrian, road, sidewalk, sign",7,N,5,
+OUTDOOR_Navigation_ComplexIntersection_BikeLane_PedestrianCrossing.jpg,outdoor,Gemini,"You are at a paved pathway intersection in Ottawa, ON, designed for both pedestrians and cyclists.
+
+**Spatial Layout**:
+*   To your immediate right, there's a concrete sidewalk.
+*   The paved path you...","crosswalk, traffic, pedestrian, sidewalk, sign",8,N,5,
+OUTDOOR_Navigation_ComplexIntersection_BikeLane_PedestrianCrossing.jpg,outdoor,Claude,"This image shows a street intersection in Ottawa, Ontario, with a focus on bicycle infrastructure. Key details:
+
+1. Spatial Layout:
+- Green-painted bike lanes on the right side of the street
+- Traffic...","traffic, road, sidewalk, sign, light",6,Y,5,Missed pedestrian
+OUTDOOR_Navigation_ConcreteSidewalk_UtilityPoles_ResidentialStreet.jpg,outdoor,GPT-4V,"The image shows a sidewalk running parallel to a road. On the left, there are utility poles positioned next to the road. A car is partially visible behind one of the poles. The sidewalk is on the righ...","car, road, sidewalk, obstacle",4,N,5,
+OUTDOOR_Navigation_ConcreteSidewalk_UtilityPoles_ResidentialStreet.jpg,outdoor,Gemini,"**Right ahead, a clear concrete sidewalk leads forward.** To your immediate left, a series of wooden utility poles separate the sidewalk from an asphalt road. A dark parked car is visible on the road ...","car, road, sidewalk",3,N,5,
+OUTDOOR_Navigation_ConcreteSidewalk_UtilityPoles_ResidentialStreet.jpg,outdoor,Claude,"The image shows a paved road with a concrete sidewalk running parallel to it. On the left side, a wooden utility pole stands close to the road's edge. The sidewalk is on the right side of the image, b...","pedestrian, road, sidewalk, sign",4,N,5,
+OUTDOOR_Navigation_ModularAccessibilityRamp_Stairs_CommercialBuilding.jpg,outdoor,GPT-4V,"The image shows an accessibility ramp and stair setup leading to a pair of double doors on the side of a beige building. To the left, there is a gradual aluminum ramp with railings, featuring a switch...",sign,1,N,2,
+OUTDOOR_Navigation_ModularAccessibilityRamp_Stairs_CommercialBuilding.jpg,outdoor,Gemini,"You are facing a tan building with two entry options to a raised landing in front of a double door:
+
+1.  **Left:** A metal access ramp begins approximately 10 feet in front of you, leads left, then tu...",,0,N,2,
+OUTDOOR_Navigation_ModularAccessibilityRamp_Stairs_CommercialBuilding.jpg,outdoor,Claude,"The image shows two aluminum wheelchair ramps with handrails, positioned in front of a beige metal-sided building. The ramps have flat, non-slip surfaces and vertical safety railings. They lead to a g...","sign, light",2,N,3,
+OUTDOOR_Navigation_PedestrianCrosswalk_SuburbanStreet_PersonCrossing.jpg,outdoor,GPT-4V,"A person with a light blue backpack is walking across a crosswalk from left to right. The crosswalk is at an intersection in a residential area. Cars are parked along the street on the right, and ther...","crosswalk, traffic, car, sidewalk, obstacle",7,N,5,
+OUTDOOR_Navigation_PedestrianCrosswalk_SuburbanStreet_PersonCrossing.jpg,outdoor,Gemini,"You are at a street corner with a marked crosswalk directly in front of you. A person with a light blue backpack is walking across it from left to right, about 10 feet ahead. A yellow tactile mat mark...","crosswalk, traffic, car, curb, light",6,N,5,
+OUTDOOR_Navigation_PedestrianCrosswalk_SuburbanStreet_PersonCrossing.jpg,outdoor,Claude,"Here's a street scene with a critical safety focus:
+
+Spatial Layout:
+- A crosswalk with white striped markings crosses a residential street
+- A person with a light blue backpack is walking across the ...","crosswalk, traffic, vehicle, car, pedestrian",8,N,5,
+OUTDOOR_Navigation_StonePatio_CurvedStairs_MultiLevelAccess.jpg,outdoor,GPT-4V,"This image shows a well-designed backyard patio area. In the center, there are curved stone steps leading up to a raised patio section near the house. The house has light-colored siding with large win...","sign, light",2,N,4,
+OUTDOOR_Navigation_StonePatio_CurvedStairs_MultiLevelAccess.jpg,outdoor,Gemini,"You are on a multi-level stone patio, looking down. Directly in front, wide, curved stone steps descend. To your left, a stone wall runs along the steps, featuring a grill on top near the house and a ...",,0,N,2,
+OUTDOOR_Navigation_StonePatio_CurvedStairs_MultiLevelAccess.jpg,outdoor,Claude,"Here's a detailed description of the outdoor space:
+
+Layout:
+- Stone-built multi-level patio area with curved stone steps
+- Connected to a light-colored vinyl-sided house
+- Stone walls and stone-paved...",light,1,N,2,

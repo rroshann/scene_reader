@@ -1,0 +1,87 @@
+================================================================================
+APPROACH 3.5: OPTIMIZED SPECIALIZED MULTI-MODEL SYSTEM - ANALYSIS
+================================================================================
+
+Analysis Date: 2025-11-24 16:34:35
+
+OVERALL STATISTICS
+--------------------------------------------------------------------------------
+Total tests: 60
+Successful: 40 (66.7%)
+Failed: 20 (33.3%)
+
+OVERALL LATENCY STATISTICS
+--------------------------------------------------------------------------------
+Count: 40
+Mean: 2.46s
+Median: 2.03s
+P75: 2.88s
+P90: 4.35s
+P95: 5.09s
+Min: 0.88s
+Max: 7.17s
+Stdev: 1.43s
+
+COMPONENT LATENCY BREAKDOWN
+--------------------------------------------------------------------------------
+Detection:
+  Mean: 0.084s
+  Median: 0.081s
+  Min: 0.061s
+  Max: 0.157s
+  Stdev: 0.018s
+  Count: 40
+
+Depth:
+  Mean: 0.244s
+  Median: 0.219s
+  Min: 0.099s
+  Max: 0.695s
+  Stdev: 0.119s
+  Count: 40
+
+Generation:
+  Mean: 2.192s
+  Median: 1.728s
+  Min: 0.696s
+  Max: 7.047s
+  Stdev: 1.450s
+  Count: 40
+
+COMPLEXITY DISTRIBUTION
+--------------------------------------------------------------------------------
+simple: 12 (30.0%)
+medium: 6 (15.0%)
+complex: 2 (5.0%)
+
+MODE-SPECIFIC ANALYSIS
+--------------------------------------------------------------------------------
+DEPTH Mode:
+  Total tests: 40
+  Successful: 40 (100.0%)
+  Mean latency: 2.46s
+
+CONFIGURATION COMPARISON
+--------------------------------------------------------------------------------
+YOLOv8N+Depth-Anything+gpt-3.5-turbo+Cache+Adaptive:
+  Mean latency: 1.50s
+  Mean generation: 1.20s
+  Cache hits: 0
+
+YOLOv8N+Depth-Anything+gpt-4o-mini:
+  Mean latency: 3.41s
+  Mean generation: 3.18s
+  Cache hits: 0
+
+RESPONSE LENGTH STATISTICS
+--------------------------------------------------------------------------------
+Word Count:
+  Mean: 82.5
+  Median: 80.0
+  Min: 29
+  Max: 196
+  Stdev: 36.3
+
+TARGET ANALYSIS (<2 SECONDS)
+--------------------------------------------------------------------------------
+Under 2s: 20/40 (50.0%)

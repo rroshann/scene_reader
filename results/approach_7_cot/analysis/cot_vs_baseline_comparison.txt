@@ -1,0 +1,16 @@
+CoT vs Baseline GPT-4V Comparison
+============================================================
+
+Common Images: 42
+
+Latency:
+  Mean Difference: +0.25s
+  Percent Change: +4.5%
+
+Response Length:
+  Mean Difference: +99.5 words
+  Percent Change: +115.1%
+
+Token Usage:
+  Mean Difference: +335 tokens
+  Percent Change: +33.3%

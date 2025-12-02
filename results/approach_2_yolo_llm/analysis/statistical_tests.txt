@@ -1,0 +1,34 @@
+Statistical Significance Tests - Approach 2 (YOLO+LLM)
+============================================================
+
+2. Detection Latency Across YOLO Variants (One-Way ANOVA)
+   F-statistic: 373.33
+   p-value: 0.000000
+   Result: Significant difference (p < 0.05)
+
+3. Generation Latency Between LLM Models (Paired T-Test)
+   GPT-4o-mini mean: 3.293s
+   Claude Haiku mean: 3.549s
+   Mean difference: -0.256s
+   t-statistic: -1.56
+   p-value: 0.125298
+   Result: No significant difference (p < 0.05)
+
+4.1.1 YOLOv8N vs YOLOv8M (Independent T-Test)
+   Mean difference: -0.107s
+   t-statistic: -21.22
+   p-value: 0.000000
+   Result: Significant difference (p < 0.05)
+
+4.1.2 YOLOv8N vs YOLOv8X (Independent T-Test)
+   Mean difference: -0.315s
+   t-statistic: -22.85
+   p-value: 0.000000
+   Result: Significant difference (p < 0.05)
+
+4.2.2 YOLOv8M vs YOLOv8X (Independent T-Test)
+   Mean difference: -0.208s
+   t-statistic: -14.84
+   p-value: 0.000000
+   Result: Significant difference (p < 0.05)
+

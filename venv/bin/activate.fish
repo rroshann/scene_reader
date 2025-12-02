@@ -30,7 +30,7 @@ end
 # Unset irrelevant variables.
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV "/Users/roshansiddartha/Documents/classes/3rd sem/genAI/scene_reader/venv"
+set -gx VIRTUAL_ENV "/Users/roshansiddartha/Documents/classes/3rd sem/genAI/github/scene_reader/venv"
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/bin" $PATH

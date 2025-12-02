@@ -1,0 +1,272 @@
+filename,category,mode,yolo_model,llm_model,configuration,success,total_latency,detection_latency,ocr_latency,depth_latency,generation_latency,num_objects,word_count,tokens_used,description,ocr_text,ocr_num_texts,ocr_engine,cache_hit,complexity,max_tokens_used,approach_version,error,timestamp
+TEXT_AccessRules_PoolGateSign_RegulatoryText_ApartmentComplex.jpg,text,ocr,yolov8n,gpt-3.5-turbo,YOLOv8N+PaddleOCR+gpt-3.5-turbo+Cache+Adaptive,False,0.11382627487182617,,,,,0,0,,,,,,False,,,3.5,"No OCR engine available. Install PaddleOCR: pip install paddleocr
+Or install EasyOCR: pip install easyocr",2025-11-24T16:30:55.414343
+TEXT_CarDashboard_InstrumentCluster_WarningLights_ActiveDisplay.jpg,text,ocr,yolov8n,gpt-3.5-turbo,YOLOv8N+PaddleOCR+gpt-3.5-turbo+Cache+Adaptive,False,0.12325620651245117,,,,,0,0,,,,,,False,,,3.5,"No OCR engine available. Install PaddleOCR: pip install paddleocr
+Or install EasyOCR: pip install easyocr",2025-11-24T16:30:55.538493
+TEXT_ChalkboardMenu_HandwrittenCoffeePrices_CafeDrinks.jpg,text,ocr,yolov8n,gpt-3.5-turbo,YOLOv8N+PaddleOCR+gpt-3.5-turbo+Cache+Adaptive,False,0.11086487770080566,,,,,0,0,,,,,,False,,,3.5,"No OCR engine available. Install PaddleOCR: pip install paddleocr
+Or install EasyOCR: pip install easyocr",2025-11-24T16:30:55.649854
+TEXT_MenuBoard_RestaurantPricing_MultipleSections_MountedSign.jpg,text,ocr,yolov8n,gpt-3.5-turbo,YOLOv8N+PaddleOCR+gpt-3.5-turbo+Cache+Adaptive,False,0.12175798416137695,,,,,0,0,,,,,,False,,,3.5,"No OCR engine available. Install PaddleOCR: pip install paddleocr
+Or install EasyOCR: pip install easyocr",2025-11-24T16:30:55.774877
+TEXT_Navigation_SupermarketEntrance_KrogerFacade_WayfindingSign.jpg,text,ocr,yolov8n,gpt-3.5-turbo,YOLOv8N+PaddleOCR+gpt-3.5-turbo+Cache+Adaptive,False,0.11965489387512207,,,,,0,0,,,,,,False,,,3.5,"No OCR engine available. Install PaddleOCR: pip install paddleocr
+Or install EasyOCR: pip install easyocr",2025-11-24T16:30:55.895287
+TEXT_OpenBook_PrintedParagraphs_YellowedPaper_SpineCurvature.jpg,text,ocr,yolov8n,gpt-3.5-turbo,YOLOv8N+PaddleOCR+gpt-3.5-turbo+Cache+Adaptive,False,0.11617088317871094,,,,,0,0,,,,,,False,,,3.5,"No OCR engine available. Install PaddleOCR: pip install paddleocr
+Or install EasyOCR: pip install easyocr",2025-11-24T16:30:56.014842
+TEXT_RetailShelf_CandyBarProducts_PricingLabels_DenseDisplay.jpg,text,ocr,yolov8n,gpt-3.5-turbo,YOLOv8N+PaddleOCR+gpt-3.5-turbo+Cache+Adaptive,False,0.1095120906829834,,,,,0,0,,,,,,False,,,3.5,"No OCR engine available. Install PaddleOCR: pip install paddleocr
+Or install EasyOCR: pip install easyocr",2025-11-24T16:30:56.124898
+TEXT_TimesSquare_DigitalBillboards_Night_AdvertisingDensity.jpg,text,ocr,yolov8n,gpt-3.5-turbo,YOLOv8N+PaddleOCR+gpt-3.5-turbo+Cache+Adaptive,False,0.11462807655334473,,,,,0,0,,,,,,False,,,3.5,"No OCR engine available. Install PaddleOCR: pip install paddleocr
+Or install EasyOCR: pip install easyocr",2025-11-24T16:30:56.240628
+TEXT_WeatheredWarningSign_NoParking_Roadside_FadingPrint.jpg,text,ocr,yolov8n,gpt-3.5-turbo,YOLOv8N+PaddleOCR+gpt-3.5-turbo+Cache+Adaptive,False,0.12578296661376953,,,,,0,0,,,,,,False,,,3.5,"No OCR engine available. Install PaddleOCR: pip install paddleocr
+Or install EasyOCR: pip install easyocr",2025-11-24T16:30:56.367669
+TEXT_WoodenCrate_StencilText_BAKERAndCo_VintageCocoa.jpg,text,ocr,yolov8n,gpt-3.5-turbo,YOLOv8N+PaddleOCR+gpt-3.5-turbo+Cache+Adaptive,False,0.11698412895202637,,,,,0,0,,,,,,False,,,3.5,"No OCR engine available. Install PaddleOCR: pip install paddleocr
+Or install EasyOCR: pip install easyocr",2025-11-24T16:30:56.486150
+INDOOR_Navigation_AccessibilityRamp_EntryDoor_BrickFacade.jpg,indoor,depth,yolov8n,gpt-3.5-turbo,YOLOv8N+Depth-Anything+gpt-3.5-turbo+Cache+Adaptive,True,2.358035087585449,0.0953059196472168,,0.6953670978546143,1.177152156829834,1,44,191,There is a dining table located at the center bottom of the scene at a distance of approximately 1.19 meters. The depth data indicates a mean distance of 68.2 with a range from 0.0 to 255.0. No other objects are detected in the scene.,,,,False,simple,100,3.5,,2025-11-24T16:30:58.845469
+INDOOR_Navigation_ArchwayEntrance_Staircase_Wayfinding.jpg,indoor,depth,yolov8n,gpt-3.5-turbo,YOLOv8N+Depth-Anything+gpt-3.5-turbo+Cache+Adaptive,True,1.839669942855835,0.07795214653015137,,0.41239500045776367,1.417968988418579,2,69,253,"There are two objects detected in the scene:
+
+1. A chair is located at the left center, approximately 14.0 units away.
+2. A potted plant is at the center, around 31.0 units away.
+
+Based on the depth data provided, the mean distance in the scene is 113.2 units, with a range from 0.0 to 255.0 units. 
+
+For navigation assistance:
+- The chair is approximately 14.0 units to your left",,,,False,simple,100,3.5,,2025-11-24T16:31:00.686397
+INDOOR_Navigation_BlindManWithCane_TactileSignage_Hallway.jpg,indoor,depth,yolov8n,gpt-3.5-turbo,YOLOv8N+Depth-Anything+gpt-3.5-turbo+Cache+Adaptive,True,1.2214059829711914,0.07465195655822754,,0.2341442108154297,0.9809451103210449,1,50,211,"There is a person located at the left center of the scene, approximately 92.0 units away. The person is a safety-critical element and is estimated to be about 92.0 units away from the current position. Please be cautious of the person at the left center as you navigate the area.",,,,False,simple,100,3.5,,2025-11-24T16:31:01.909132
+INDOOR_Navigation_CurvingStaircase_FoyerAccess_HardwoodFloor.jpg,indoor,depth,yolov8n,gpt-3.5-turbo,YOLOv8N+Depth-Anything+gpt-3.5-turbo+Cache+Adaptive,True,1.2764050960540771,0.060933828353881836,,0.13977479934692383,1.1308619976043701,3,62,254,"There are three objects in the scene:
+1. A dining table is located at the bottom right approximately 1.66 meters away.
+2. A potted plant is in the center right about 1.37 meters away.
+3. A vase is also in the center right around 1.40 meters away.
+
+Please be cautious of the objects in your path as you navigate through the space.",,,,False,medium,150,3.5,,2025-11-24T16:31:03.186742
+INDOOR_Navigation_ElevatorLobby_LongHallway_MarbleFlooring.jpg,indoor,depth,yolov8n,gpt-3.5-turbo,YOLOv8N+Depth-Anything+gpt-3.5-turbo+Cache+Adaptive,True,1.08198881149292,0.08412599563598633,,0.15121197700500488,0.925570011138916,0,37,160,"The area is clear of any obstacles. The average distance in the scene is 120.4 units, with the closest point being at 0.0 units and the farthest point at 255.0 units. It is safe to move forward.",,,,False,simple,100,3.5,,2025-11-24T16:31:04.270165
+INDOOR_Navigation_LivingRoom_HallwayEntrance_MAINSTSign.jpg,indoor,depth,yolov8n,gpt-3.5-turbo,YOLOv8N+Depth-Anything+gpt-3.5-turbo+Cache+Adaptive,True,1.6319119930267334,0.08536195755004883,,0.21236610412597656,1.4124038219451904,10,110,407,"Navigating the scene:
+- There is a bowl 166.0 units away at the right center.
+- Two chairs are located at the center bottom and are 64.0 units away.
+- A couch is situated at the center and is 61.0 units away.
+- A dining table is at the right bottom and is 208.0 units away.
+- There are five potted plants at various distances: 27.0 units away at the left center, two at 64.0 units away at the right center, and two at 61.0 units away at the center.
+
+Please be cautious of the objects in your path, especially the chairs and the couch, which are closer to you.",,,,False,complex,200,3.5,,2025-11-24T16:31:05.903627
+INDOOR_Navigation_LongHallway_AccessPoints_ModernDesign.jpg,indoor,depth,yolov8n,gpt-3.5-turbo,YOLOv8N+Depth-Anything+gpt-3.5-turbo+Cache+Adaptive,True,1.432197093963623,0.15671896934509277,,0.512315034866333,0.9064140319824219,0,36,159,"The area ahead is clear with no objects detected. The depth data indicates a mean distance of 115.6, ranging from 0.0 to 255.0. It is a spacious environment with no immediate obstacles. Please proceed with caution.",,,,False,simple,100,3.5,,2025-11-24T16:31:07.337622
+INDOOR_Navigation_OfficeLobby_HRSignage_GlassWalledHallway.jpg,indoor,depth,yolov8n,gpt-3.5-turbo,YOLOv8N+Depth-Anything+gpt-3.5-turbo+Cache+Adaptive,True,1.4295029640197754,0.08972501754760742,,0.19919085502624512,1.2226710319519043,5,85,337,"There are 2 couches approximately 40.0 units away at the right center, with one having a confidence of 0.55 and the other 0.27. A chair is also present at the right center, around 41.0 units away with a confidence of 0.27. In the center, there is a potted plant about 29.0 units away with a confidence of 0.69, and a vase approximately 27.0 units away with a confidence of 0.26. The mean depth in the scene is 80.8 units, ranging from 0.0 to 255.0 units.",,,,False,medium,150,3.5,,2025-11-24T16:31:08.771419
+INDOOR_Navigation_SensoryPath_HospitalClinic_FloorDecals.jpg,indoor,depth,yolov8n,gpt-3.5-turbo,YOLOv8N+Depth-Anything+gpt-3.5-turbo+Cache+Adaptive,True,1.0231590270996094,0.11047697067260742,,0.20402216911315918,0.8127210140228271,0,41,165,"The area is clear of any obstacles. The average distance is 112.0 units, with the closest point at a distance of 0.0 units and the farthest point at 255.0 units. You are currently in an open space with no immediate obstructions.",,,,False,simple,100,3.5,,2025-11-24T16:31:09.796652
+INDOOR_Navigation_SlatPartition_GlassDoors_EntranceExit.jpg,indoor,depth,yolov8n,gpt-3.5-turbo,YOLOv8N+Depth-Anything+gpt-3.5-turbo+Cache+Adaptive,True,1.4300408363342285,0.09064102172851562,,0.2840251922607422,1.1364459991455078,1,57,207,"There is a chair located at the left bottom with a distance of approximately 72.0 units. There are no other objects detected in the scene. The mean depth in the scene is 100.8 units, with a range from 0.0 to 255.0 units. Please be cautious of the chair at a distance of 72.0 units to your left.",,,,False,simple,100,3.5,,2025-11-24T16:31:11.230824
+OUTDOOR_EmptyParkingLot_Night_BlueStreetlights_HighContrast.png,outdoor,depth,yolov8n,gpt-3.5-turbo,YOLOv8N+Depth-Anything+gpt-3.5-turbo+Cache+Adaptive,True,1.53336501121521,0.06626105308532715,,0.1179819107055664,1.4102058410644531,0,75,209,"The scene is clear with no objects detected. The average depth in the scene is 68.1 units, ranging from 0.0 to 255.0 units.
+
+Moving forward, there are no obstacles detected, so it is safe to proceed. The area directly ahead is clear and approximately 68.1 units away.
+
+To the left, there are no obstacles within the immediate vicinity. The area to the left is clear and the distance is approximately 68.1 units.
+
+To the right",,,,False,simple,100,3.5,,2025-11-24T16:31:12.766568
+OUTDOOR_Navigation_ResidentialEntrance_StairsAndRailing_HouseNumber.png,outdoor,depth,yolov8n,gpt-3.5-turbo,YOLOv8N+Depth-Anything+gpt-3.5-turbo+Cache+Adaptive,True,1.2250041961669922,0.0925140380859375,,0.2254929542541504,0.9924521446228027,2,56,220,"There are two objects detected in the scene. 
+- A bench is located at the left bottom with a confidence of 51%. It is approximately 1.29 meters away.
+- A chair is also at the left bottom with a confidence of 35%. It is also approximately 1.29 meters away.
+
+Please be cautious while navigating this area.",,,,False,simple,100,3.5,,2025-11-24T16:31:13.994324
+OUTDOOR_Navigation_StreetsideBikeRack_TrafficBarrier_UrbanStreet.png,outdoor,depth,yolov8n,gpt-3.5-turbo,YOLOv8N+Depth-Anything+gpt-3.5-turbo+Cache+Adaptive,True,2.2507309913635254,0.08196210861206055,,0.1454620361328125,2.0995867252349854,9,107,504,"In the scene, there are 9 objects detected, including 3 bicycles, 4 cars, and 2 persons. The safety-critical elements identified are:
+
+1. A bicycle is detected at the center center with a confidence of 0.86.
+2. A car is detected at the right center with a confidence of 0.85.
+3. A car is detected at the center top with a confidence of 0.53.
+4. A person is detected at the right top with a confidence of 0.46.
+5. A bicycle is detected at the left center with a confidence of 0.44.
+6. A bicycle is detected at the left center with a confidence of 0.40.
+7. A",,,,False,medium,150,3.5,,2025-11-24T16:31:16.246767
+OUTDOOR_CityCrosswalk_OverheadView_CrowdCrossing_Taxis.jpg,outdoor,depth,yolov8n,gpt-3.5-turbo,YOLOv8N+Depth-Anything+gpt-3.5-turbo+Cache+Adaptive,True,1.2277047634124756,0.07954907417297363,,0.19995617866516113,1.0204238891601562,1,50,204,"There is a cell phone detected at the center top of the scene, approximately 2.28 meters away. The mean depth of the scene is 29.1, with a range from 0.0 to 255.0. No other objects are detected. Stay alert to the cell phone's presence at 2.28 meters ahead for safety.",,,,False,simple,100,3.5,,2025-11-24T16:31:17.476685
+OUTDOOR_CrowdedStreetMarket_ClothingVendors_UrbanSetting_Daylight.jpg,outdoor,depth,yolov8n,gpt-3.5-turbo,YOLOv8N+Depth-Anything+gpt-3.5-turbo+Cache+Adaptive,True,2.11509108543396,0.07728314399719238,,0.32358598709106445,1.7833731174468994,14,116,577,"Navigating the scene, there are multiple people detected in various locations. The most critical ones are a person at the center bottom with a confidence of 0.83 and a person at the left bottom with a confidence of 0.77, both in close proximity.
+
+Based on depth data, the mean depth in the scene is approximately 76.7 units, with a range from 0.0 to 255.0 units. The closest person is estimated to be around 76.0 units away.
+
+For safer navigation, please be cautious of the person at the center bottom who is the closest, likely around 76 units away. Additional individuals are spread out in the scene, with varying distances and confidence levels. It's crucial to navigate",,,,False,medium,150,3.5,,2025-11-24T16:31:19.593565
+OUTDOOR_Navigation_ComplexIntersection_BikeLane_PedestrianCrossing.jpg,outdoor,depth,yolov8n,gpt-3.5-turbo,YOLOv8N+Depth-Anything+gpt-3.5-turbo+Cache+Adaptive,True,1.9274752140045166,0.08379912376403809,,0.2032771110534668,1.7173082828521729,8,98,471,"Safety-critical elements detected:
+
+1. A car is at 27.0 meters to the right with a confidence of 0.77.
+2. A traffic light is at 81.0 meters directly ahead with a confidence of 0.66.
+3. Another traffic light is at 81.0 meters to the left and slightly above with a confidence of 0.61.
+4. A car is at 27.0 meters to the left with a confidence of 0.59.
+5. A car is at 27.0 meters to the right with a confidence of 0.39.
+6. A car is at 27.0 meters to the left with a confidence of 0.35.
+7.",,,,False,medium,150,3.5,,2025-11-24T16:31:21.523853
+OUTDOOR_Navigation_ConcreteSidewalk_UtilityPoles_ResidentialStreet.jpg,outdoor,depth,yolov8n,gpt-3.5-turbo,YOLOv8N+Depth-Anything+gpt-3.5-turbo+Cache+Adaptive,True,0.8801379203796387,0.08299994468688965,,0.12637710571289062,0.7471601963043213,1,41,197,There is a car detected at the center of the scene at a distance of approximately 58.0 units. This corresponds to a spatial distance of about 8 meters. Please be cautious as the car is in the center of your path.,,,,False,simple,100,3.5,,2025-11-24T16:31:22.406347
+OUTDOOR_Navigation_ModularAccessibilityRamp_Stairs_CommercialBuilding.jpg,outdoor,depth,yolov8n,gpt-3.5-turbo,YOLOv8N+Depth-Anything+gpt-3.5-turbo+Cache+Adaptive,True,1.0724050998687744,0.0731668472290039,,0.36963987350463867,0.6959748268127441,0,29,145,"The area ahead is clear with no objects detected. The mean depth is 130.1, indicating an open space in front of you. Proceed straight ahead for a safe path.",,,,False,simple,100,3.5,,2025-11-24T16:31:23.481164
+OUTDOOR_Navigation_PedestrianCrosswalk_SuburbanStreet_PersonCrossing.jpg,outdoor,depth,yolov8n,gpt-3.5-turbo,YOLOv8N+Depth-Anything+gpt-3.5-turbo+Cache+Adaptive,True,1.5450170040130615,0.08396291732788086,,0.2386009693145752,1.297541856765747,11,84,524,"There is a person directly ahead at around 138.0 units away, approximately 1.4 meters. Be cautious as there are several cars in various directions: one at 37.0 units (0.37 meters) directly ahead, another at 38.0 units (0.38 meters) to the right, and three cars to the left at 37.0 units (0.37 meters), 38.0 units (0.38 meters), and 39.0 units (0.39 meters) away. Additionally, there is a truck to the right at a distance of 38.0 units (0.38 meters). Please navigate carefully to avoid collisions.",,,,False,complex,200,3.5,,2025-11-24T16:31:25.028428
+OUTDOOR_Navigation_StonePatio_CurvedStairs_MultiLevelAccess.jpg,outdoor,depth,yolov8n,gpt-3.5-turbo,YOLOv8N+Depth-Anything+gpt-3.5-turbo+Cache+Adaptive,True,1.4513790607452393,0.08256912231445312,,0.24516677856445312,1.198065996170044,7,99,359,"There are 7 objects detected in the scene. The chair is at a distance of 53.0 units, the potted plants are at a distance of 42.0 units, and the bench is at a distance of 52.0 units. 
+
+Based on the depth data provided:
+- The bench is approximately 2m ahead.
+- The chair is approximately 2.5m ahead.
+- The potted plants are distributed around the scene: 
+  - 1 potted plant is about 4m to the right.
+  - 1 potted plant is about 4.5m to the top right.
+  - 1 potted plant is about 3.8m to the bottom left.
+  -",,,,False,medium,150,3.5,,2025-11-24T16:31:26.490717
+TEXT_AccessRules_PoolGateSign_RegulatoryText_ApartmentComplex.jpg,text,ocr,yolov8n,gpt-4o-mini,YOLOv8N+PaddleOCR+gpt-4o-mini,False,0.20622706413269043,,,,,0,0,,,,,,False,,,3.5,"No OCR engine available. Install PaddleOCR: pip install paddleocr
+Or install EasyOCR: pip install easyocr",2025-11-24T16:31:26.697905
+TEXT_CarDashboard_InstrumentCluster_WarningLights_ActiveDisplay.jpg,text,ocr,yolov8n,gpt-4o-mini,YOLOv8N+PaddleOCR+gpt-4o-mini,False,0.17545485496520996,,,,,0,0,,,,,,False,,,3.5,"No OCR engine available. Install PaddleOCR: pip install paddleocr
+Or install EasyOCR: pip install easyocr",2025-11-24T16:31:26.874814
+TEXT_ChalkboardMenu_HandwrittenCoffeePrices_CafeDrinks.jpg,text,ocr,yolov8n,gpt-4o-mini,YOLOv8N+PaddleOCR+gpt-4o-mini,False,0.1609961986541748,,,,,0,0,,,,,,False,,,3.5,"No OCR engine available. Install PaddleOCR: pip install paddleocr
+Or install EasyOCR: pip install easyocr",2025-11-24T16:31:27.036239
+TEXT_MenuBoard_RestaurantPricing_MultipleSections_MountedSign.jpg,text,ocr,yolov8n,gpt-4o-mini,YOLOv8N+PaddleOCR+gpt-4o-mini,False,0.12901091575622559,,,,,0,0,,,,,,False,,,3.5,"No OCR engine available. Install PaddleOCR: pip install paddleocr
+Or install EasyOCR: pip install easyocr",2025-11-24T16:31:27.165933
+TEXT_Navigation_SupermarketEntrance_KrogerFacade_WayfindingSign.jpg,text,ocr,yolov8n,gpt-4o-mini,YOLOv8N+PaddleOCR+gpt-4o-mini,False,0.11638498306274414,,,,,0,0,,,,,,False,,,3.5,"No OCR engine available. Install PaddleOCR: pip install paddleocr
+Or install EasyOCR: pip install easyocr",2025-11-24T16:31:27.283544
+TEXT_OpenBook_PrintedParagraphs_YellowedPaper_SpineCurvature.jpg,text,ocr,yolov8n,gpt-4o-mini,YOLOv8N+PaddleOCR+gpt-4o-mini,False,0.12099480628967285,,,,,0,0,,,,,,False,,,3.5,"No OCR engine available. Install PaddleOCR: pip install paddleocr
+Or install EasyOCR: pip install easyocr",2025-11-24T16:31:27.406032
+TEXT_RetailShelf_CandyBarProducts_PricingLabels_DenseDisplay.jpg,text,ocr,yolov8n,gpt-4o-mini,YOLOv8N+PaddleOCR+gpt-4o-mini,False,0.10650396347045898,,,,,0,0,,,,,,False,,,3.5,"No OCR engine available. Install PaddleOCR: pip install paddleocr
+Or install EasyOCR: pip install easyocr",2025-11-24T16:31:27.513726
+TEXT_TimesSquare_DigitalBillboards_Night_AdvertisingDensity.jpg,text,ocr,yolov8n,gpt-4o-mini,YOLOv8N+PaddleOCR+gpt-4o-mini,False,0.10146617889404297,,,,,0,0,,,,,,False,,,3.5,"No OCR engine available. Install PaddleOCR: pip install paddleocr
+Or install EasyOCR: pip install easyocr",2025-11-24T16:31:27.615428
+TEXT_WeatheredWarningSign_NoParking_Roadside_FadingPrint.jpg,text,ocr,yolov8n,gpt-4o-mini,YOLOv8N+PaddleOCR+gpt-4o-mini,False,0.10761404037475586,,,,,0,0,,,,,,False,,,3.5,"No OCR engine available. Install PaddleOCR: pip install paddleocr
+Or install EasyOCR: pip install easyocr",2025-11-24T16:31:27.723229
+TEXT_WoodenCrate_StencilText_BAKERAndCo_VintageCocoa.jpg,text,ocr,yolov8n,gpt-4o-mini,YOLOv8N+PaddleOCR+gpt-4o-mini,False,0.11353492736816406,,,,,0,0,,,,,,False,,,3.5,"No OCR engine available. Install PaddleOCR: pip install paddleocr
+Or install EasyOCR: pip install easyocr",2025-11-24T16:31:27.837188
+INDOOR_Navigation_AccessibilityRamp_EntryDoor_BrickFacade.jpg,indoor,depth,yolov8n,gpt-4o-mini,YOLOv8N+Depth-Anything+gpt-4o-mini,True,2.848160982131958,0.07579183578491211,,0.2357621192932129,2.6034018993377686,1,59,200,"In the current scene, there is a dining table detected at the center bottom of your view. Based on the depth data, the table is approximately 1.19 meters ahead of you. 
+
+Please be cautious as you navigate in this area, as the dining table is relatively close. Ensure you maintain awareness of your surroundings to avoid any potential collisions.",,,,False,,300,3.5,,2025-11-24T16:31:30.686491
+INDOOR_Navigation_ArchwayEntrance_Staircase_Wayfinding.jpg,indoor,depth,yolov8n,gpt-4o-mini,YOLOv8N+Depth-Anything+gpt-4o-mini,True,2.8626511096954346,0.0821530818939209,,0.30272698402404785,2.551923990249634,2,56,237,"In your environment, there are two objects detected:
+
+1. **Chair**: Located approximately **1.4 meters (14.0 units)** to your left center.
+2. **Potted plant**: Located approximately **3.1 meters (31.0 units)** directly ahead of you.
+
+Please be cautious of the chair on your left as you navigate, and be aware of the potted plant in front of you.",,,,False,,300,3.5,,2025-11-24T16:31:33.550045
+INDOOR_Navigation_BlindManWithCane_TactileSignage_Hallway.jpg,indoor,depth,yolov8n,gpt-4o-mini,YOLOv8N+Depth-Anything+gpt-4o-mini,True,1.4184751510620117,0.07914280891418457,,0.20606398582458496,1.2045209407806396,1,46,200,"There is a person detected at approximately 1.3 meters to your left, near the center of your field of view. Please exercise caution as you navigate in that direction. The surroundings appear clear beyond this individual, but remain vigilant for any potential changes in the scene.",,,,False,,300,3.5,,2025-11-24T16:31:34.971163
+INDOOR_Navigation_CurvingStaircase_FoyerAccess_HardwoodFloor.jpg,indoor,depth,yolov8n,gpt-4o-mini,YOLOv8N+Depth-Anything+gpt-4o-mini,True,3.2901132106781006,0.06502509117126465,,0.09856319427490234,3.186300039291382,3,79,296,"In your vicinity, there are three objects detected:
+
+1. **Potted Plant**: Located approximately **1.4m (140 cm) ahead** at the right center of your view.
+2. **Vase**: Also located around **1.4m (140 cm) ahead**, slightly to the right of the potted plant.
+3. **Dining Table**: Positioned at about **1.7m (166 cm) ahead**, toward the right bottom corner of your view.
+
+Please be cautious as you navigate; the potted plant and vase are closer, while the dining table is further ahead.",,,,False,,300,3.5,,2025-11-24T16:31:38.261878
+INDOOR_Navigation_ElevatorLobby_LongHallway_MarbleFlooring.jpg,indoor,depth,yolov8n,gpt-4o-mini,YOLOv8N+Depth-Anything+gpt-4o-mini,True,2.8479480743408203,0.08526420593261719,,0.1595141887664795,2.682227849960327,0,90,223,"The scene is clear of any detected objects. The mean depth is approximately 120.4 cm (or about 1.2 meters), indicating that there are no significant obstacles or features within this distance. 
+
+Given the depth range of 0.0 to 255.0 cm, you are likely in an open area with no immediate hazards. You can proceed safely, but remain aware of your surroundings as there are no specific objects to navigate around. 
+
+Continue forward with caution, as the absence of detected objects does not guarantee complete safety; be mindful of your environment.",,,,False,,300,3.5,,2025-11-24T16:31:41.110686
+INDOOR_Navigation_LivingRoom_HallwayEntrance_MAINSTSign.jpg,indoor,depth,yolov8n,gpt-4o-mini,YOLOv8N+Depth-Anything+gpt-4o-mini,True,4.729661226272583,0.07758212089538574,,0.22404098510742188,4.4971442222595215,10,165,508,"In the scene, you have several objects detected with the following distance estimates:
+
+- **Potted plants**: There are five potted plants detected. The nearest one is about **2.7 meters to your left** (left center). The other potted plants are also located around **2.7 meters** to the right center and **2.7 meters** to the center center.
+
+- **Chairs**: There are two chairs located at the center bottom, both approximately **6.4 meters ahead**.
+
+- **Couch**: The couch is positioned at the center center, roughly **6.1 meters ahead**.
+
+- **Bowl**: The bowl is located at the right center, about **16.6 meters ahead**.
+
+- **Dining table**: The dining table is positioned at the right bottom, approximately **20.8 meters ahead**.
+
+To summarize, be cautious as you navigate: the closest objects are the potted plants at about **2.7 meters** to your left, followed by the chairs and couch at **6.1 to 6.4 meters ahead**. Maintain awareness of the further objects like the bowl and dining table, which are significantly farther away.",,,,False,,300,3.5,,2025-11-24T16:31:45.841015
+INDOOR_Navigation_LongHallway_AccessPoints_ModernDesign.jpg,indoor,depth,yolov8n,gpt-4o-mini,YOLOv8N+Depth-Anything+gpt-4o-mini,True,4.302561044692993,0.1349649429321289,,0.4579441547393799,3.831554889678955,0,104,232,"The scene appears to be clear of any detected objects. The mean depth reading is approximately 1.16 meters, suggesting that the closest points in the environment are around this distance. 
+
+Given that no specific objects are present, you should remain cautious and attentive to your surroundings. The immediate area appears to be unobstructed within a range of up to approximately 2.5 meters ahead, but always be mindful of potential hazards or obstacles that may not have been detected. 
+
+If you are moving forward, maintain awareness of your distance from walls or edges, as there may be variations in depth that are not visually represented.",,,,False,,300,3.5,,2025-11-24T16:31:50.144456
+INDOOR_Navigation_OfficeLobby_HRSignage_GlassWalledHallway.jpg,indoor,depth,yolov8n,gpt-4o-mini,YOLOv8N+Depth-Anything+gpt-4o-mini,True,2.8655898571014404,0.09031796455383301,,0.2652251720428467,2.5926430225372314,5,112,374,"In your current environment, here are the key objects and their distances:
+
+- **Potted plant**: Approximately **2.9 meters ahead** (center center).
+- **Vase**: Approximately **2.7 meters ahead** (center center, slightly to the left of the potted plant).
+- **Couch**: Approximately **4.0 meters to your right** (right center).
+- **Chair**: Approximately **4.1 meters to your right** (right center, near the couch).
+- **Couch**: Another couch is also located **4.0 meters to your right** (right center, adjacent to the first couch).
+
+Please be cautious of the chairs and couches on your right as they are relatively close. The plant and vase are in front of you, so navigate carefully to avoid bumping into them.",,,,False,,300,3.5,,2025-11-24T16:31:53.012512
+INDOOR_Navigation_SensoryPath_HospitalClinic_FloorDecals.jpg,indoor,depth,yolov8n,gpt-4o-mini,YOLOv8N+Depth-Anything+gpt-4o-mini,True,3.473454713821411,0.09764695167541504,,0.17692017555236816,3.289341926574707,0,108,245,"There are no objects detected in the scene. The depth data indicates a mean distance of approximately 112 cm (or 1.12 meters). Given that the range of depth data extends from 0.0 to 255.0 cm, it suggests a clear area in front of you within that distance.
+
+- **1.12m ahead**: The area directly in front of you is clear, but be cautious as there might be obstacles that are not detected.
+- **No objects detected**: Ensure to maintain awareness of your surroundings as there may be elements outside the detection range.
+
+Please proceed with caution, as the absence of detected objects does not guarantee a completely clear path.",,,,False,,300,3.5,,2025-11-24T16:31:56.488050
+INDOOR_Navigation_SlatPartition_GlassDoors_EntranceExit.jpg,indoor,depth,yolov8n,gpt-4o-mini,YOLOv8N+Depth-Anything+gpt-4o-mini,True,2.3570988178253174,0.09277796745300293,,0.31417107582092285,2.0326249599456787,1,62,207,"In the scene, there is one detected object:
+
+- A chair is located approximately 1.5 meters to your left (72.0 cm from your position). 
+
+Ensure to navigate carefully around this chair to avoid any collisions. The overall depth data indicates that the area extends up to about 2.5 meters ahead of you, so continue to pay attention to your surroundings. Stay safe!",,,,False,,300,3.5,,2025-11-24T16:31:58.846339
+OUTDOOR_EmptyParkingLot_Night_BlueStreetlights_HighContrast.png,outdoor,depth,yolov8n,gpt-4o-mini,YOLOv8N+Depth-Anything+gpt-4o-mini,True,2.939141035079956,0.06530308723449707,,0.11334490776062012,2.819851875305176,0,108,238,"The scene appears to be clear of any detected objects. The average depth is approximately 68.1 cm, indicating that the area immediately around you is relatively close. 
+
+Since no objects are detected, be aware of the following:
+
+- There may be no obstacles directly in front of you, but the mean depth suggests a space of about 0.7m ahead.
+- Ensure to move cautiously as there may be unobserved objects or surfaces within that range, especially if you are navigating in a crowded or cluttered environment.
+- Keep an eye on your surroundings in case objects appear suddenly within close proximity.
+
+Stay safe as you navigate this area!",,,,False,,300,3.5,,2025-11-24T16:32:01.787722
+OUTDOOR_Navigation_ResidentialEntrance_StairsAndRailing_HouseNumber.png,outdoor,depth,yolov8n,gpt-4o-mini,YOLOv8N+Depth-Anything+gpt-4o-mini,True,2.6850390434265137,0.09297895431518555,,0.21444916725158691,2.4636940956115723,2,81,260,"In the current scene, there are two detected objects:
+
+1. **Bench**: Located approximately 1.3 meters (or 130 cm) to your left and slightly ahead.
+2. **Chair**: Also located about 1.3 meters (or 130 cm) to your left and slightly ahead.
+
+Both objects are positioned close to each other, so be cautious while navigating in this area. The distance to these objects is around 1.3 meters, which is within a safe range, but be mindful of their presence as you move forward.",,,,False,,300,3.5,,2025-11-24T16:32:04.475919
+OUTDOOR_Navigation_StreetsideBikeRack_TrafficBarrier_UrbanStreet.png,outdoor,depth,yolov8n,gpt-4o-mini,YOLOv8N+Depth-Anything+gpt-4o-mini,True,7.168593168258667,0.08041810989379883,,0.1157219409942627,7.0465168952941895,9,196,654,"In your immediate surroundings, here are the safety-critical elements detected along with their estimated distances:
+
+- **Bicycle** at center center: approximately **2m ahead**. This bicycle is the most confidently detected object (confidence: 0.86), so be cautious as you approach.
+  
+- **Car** at right center: approximately **3m ahead**, on your right side. It has a high confidence level (0.85), indicating that it's a significant presence in your path.
+  
+- **Car** at center top: approximately **4m ahead**, directly in front of you. This car has a moderate confidence (0.53), so be aware of its proximity as you navigate.
+  
+- **Person** at right top: approximately **4.5m ahead**, on your right side. The confidence level is 0.46, so exercise caution as they may move unexpectedly.
+  
+- **Bicycle** at left center: approximately **3m to your left**. With a confidence level of 0.44, it's worth noting as you pass through this area.
+  
+- **Bicycle** at left center (lower confidence): approximately **3m to your left** as well, but with a confidence of 0.40, it’s less certain.
+  
+- **Car** at left top: approximately **4m to your left**. The confidence level is lower (0.37), so be observant as you move in that direction.
+  
+- **",,,,False,,300,3.5,,2025-11-24T16:32:11.645715
+OUTDOOR_CityCrosswalk_OverheadView_CrowdCrossing_Taxis.jpg,outdoor,depth,yolov8n,gpt-4o-mini,YOLOv8N+Depth-Anything+gpt-4o-mini,True,1.942915678024292,0.07765507698059082,,0.19800114631652832,1.737879991531372,1,59,203,"You have a cell phone detected directly in front of you, approximately 2.3 meters ahead (228 cm). The confidence of this detection is relatively low (0.29), so be cautious as the object may not be accurately identified. 
+
+Ensure you navigate carefully, as there are no other significant objects detected within your immediate vicinity based on the current depth data.",,,,False,,300,3.5,,2025-11-24T16:32:13.589587
+OUTDOOR_CrowdedStreetMarket_ClothingVendors_UrbanSetting_Daylight.jpg,outdoor,depth,yolov8n,gpt-4o-mini,YOLOv8N+Depth-Anything+gpt-4o-mini,True,3.275192975997925,0.08090901374816895,,0.2516932487487793,3.0141818523406982,14,115,572,"The scene contains multiple individuals detected in the vicinity. Here are the key observations regarding their positions and estimated distances:
+
+1. **Center Bottom**: There are several persons detected at the center bottom, with the closest individual estimated to be approximately **76 meters ahead**. This is the most significant safety-critical position.
+
+2. **Left Bottom**: Multiple individuals are also located at the left bottom. The closest person is approximately **76 meters to the left**. 
+
+3. **Right Bottom**: There is one person detected at the right bottom, approximately **76 meters to the right**.
+
+Given the proximity of these individuals, please navigate with caution, especially as there are multiple persons clustered at both the center and left bottom areas.",,,,False,,300,3.5,,2025-11-24T16:32:16.865651
+OUTDOOR_Navigation_ComplexIntersection_BikeLane_PedestrianCrossing.jpg,outdoor,depth,yolov8n,gpt-4o-mini,YOLOv8N+Depth-Anything+gpt-4o-mini,True,5.029561996459961,0.07922983169555664,,0.2011709213256836,4.821217775344849,8,111,515,"In your current environment, there are multiple objects detected that are critical for your safety:
+
+1. **Traffic Light** at **center center**: Approximately **8.1m ahead**. 
+2. **Traffic Light** at **left top**: Approximately **8.1m ahead and 5m left**.
+3. **Car** at **right center**: Approximately **8.8m ahead**.
+4. **Car** at **left center**: Approximately **8.8m ahead and 5m left**.
+5. **Car** at **center center**: Approximately **8.8m ahead**.
+6. **Additional Cars** at **right center** and **left center**: These are also around **8.8m ahead**.
+
+Please be cautious of the traffic lights and vehicles in close proximity. The traffic lights may be indicating signals that affect your navigation, while the cars are potential hazards as you move forward.",,,,False,,300,3.5,,2025-11-24T16:32:21.897538
+OUTDOOR_Navigation_ConcreteSidewalk_UtilityPoles_ResidentialStreet.jpg,outdoor,depth,yolov8n,gpt-4o-mini,YOLOv8N+Depth-Anything+gpt-4o-mini,True,1.8443288803100586,0.07542610168457031,,0.1281299591064453,1.7100107669830322,1,65,221,"There is a car detected directly in front of you at a distance of approximately 58 meters. This is a safety-critical element, so please be cautious as you navigate the area. The overall depth of the scene indicates that the nearest objects are about 0 meters, stretching to a maximum of 255 meters. Be aware of the car at the center as you move forward.",,,,False,,300,3.5,,2025-11-24T16:32:23.742826
+OUTDOOR_Navigation_ModularAccessibilityRamp_Stairs_CommercialBuilding.jpg,outdoor,depth,yolov8n,gpt-4o-mini,YOLOv8N+Depth-Anything+gpt-4o-mini,True,2.2909512519836426,0.0654149055480957,,0.34928011894226074,1.9354989528656006,0,81,208,"The scene appears to be clear with no objects detected. The average depth measurement is approximately 130.1 cm, which translates to about 1.3 meters.
+
+Given this depth data, here are the relevant distance estimates:
+
+- There are no obstacles or objects detected in the immediate vicinity.
+- The nearest potential obstacles are approximately 1.3 meters ahead of you.
+
+Since there are no objects present, it seems to be a clear path ahead. Please proceed with caution as the environment may change.",,,,False,,300,3.5,,2025-11-24T16:32:26.034600
+OUTDOOR_Navigation_PedestrianCrosswalk_SuburbanStreet_PersonCrossing.jpg,outdoor,depth,yolov8n,gpt-4o-mini,YOLOv8N+Depth-Anything+gpt-4o-mini,True,6.1925129890441895,0.07114005088806152,,0.2660059928894043,5.9153358936309814,11,137,617,"In your immediate vicinity, there are several safety-critical elements to be aware of:
+
+1. **Person**: Approximately 1.4 meters ahead (center center).
+2. **Cars**: There are multiple cars detected:
+   - The closest car is about **3.7 meters ahead** (center top).
+   - Another car is also **3.7 meters ahead** (center top).
+   - A third car is around **3.9 meters ahead** (center top).
+   - Additionally, there are cars located:
+     - **4.1 meters ahead** (left top).
+     - **4.3 meters ahead** (left top).
+     - **4.6 meters ahead** (left top).
+     - **4.9 meters ahead** (right top).
+     - **5.0 meters ahead** (right top).
+
+3. **Truck**: Located at about **3.8 meters ahead** (right top).
+
+4. **Backpack and Handbag**: Both are further away at about **1.4 meters ahead** (center center).
+
+Please maintain caution as you navigate, especially with the person and multiple cars in close proximity.",,,,False,,300,3.5,,2025-11-24T16:32:32.227956
+OUTDOOR_Navigation_StonePatio_CurvedStairs_MultiLevelAccess.jpg,outdoor,depth,yolov8n,gpt-4o-mini,YOLOv8N+Depth-Anything+gpt-4o-mini,True,3.888712167739868,0.07611918449401855,,0.23865199089050293,3.6416420936584473,7,118,380,"In your current environment, the following objects are detected:
+
+- **Chair**: Located approximately **2m ahead** at the center. 
+- **Bench**: Also positioned about **2m ahead** at the center, slightly overlapping with the chair.
+- **Potted Plants**: 
+  - One is located **1.5m to the right** at the right center.
+  - Another is about **1.5m to the right and slightly ahead** at the right top.
+  - There are two more potted plants at the left, one is **1m to the left and slightly ahead** (left center) and another is **2m to the left and slightly ahead** (left bottom).
+  
+Please be cautious as you navigate; the chair and bench are very close together, which may require careful movement to avoid collisions.",,,,False,,300,3.5,,2025-11-24T16:32:36.117714

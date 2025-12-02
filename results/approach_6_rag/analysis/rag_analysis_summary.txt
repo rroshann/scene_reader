@@ -1,0 +1,37 @@
+RAG-Enhanced Vision Analysis Summary
+============================================================
+
+Total Results: 72
+Successful: 72/72 (100.0%)
+
+Overall Total Latency:
+  Mean: 10.601s
+  Median: 10.242s
+  Std Dev: 6.911s
+
+Latency: Base vs RAG-Enhanced
+
+Latency by VLM Model:
+  gpt-4o: 8.553s mean
+  gemini-2.5-flash: 13.222s mean
+  claude-3-5-haiku: 10.028s mean
+
+Stage Latencies (RAG-Enhanced):
+  base: 6.772s mean
+  entity_extraction: 0.000s mean
+  retrieval: 0.138s mean
+  enhancement: 7.807s mean
+
+Cost Analysis:
+  Total Cost: $0.2226
+  Cost per Query: $0.003092
+  Cost per 1000 Queries: $3.09
+
+Retrieval Statistics:
+  Avg Chunks Retrieved: 2.2
+  Avg Retrieval Latency: 0.138s
+
+Response Lengths:
+  Base Mean: 95.2 words
+  Enhanced Mean: 186.5 words
+  Increase: 96.0%

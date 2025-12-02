@@ -1,0 +1,38 @@
+STATISTICAL COMPARISON: CoT vs Baseline GPT-4V
+============================================================
+
+Common Images: 42
+
+Latency (seconds):
+  Sample size (n): 41
+  CoT mean: 5.86
+  Baseline mean: 3.01
+  Mean difference: +2.85
+  Percent change: +94.5%
+  t-statistic: 18.6369
+  p-value: 0.000000
+  Significant (p < 0.05): True
+  Cohen's d: 2.250 (large effect)
+
+Response Length (words):
+  Sample size (n): 42
+  CoT mean: 185.95
+  Baseline mean: 86.45
+  Mean difference: +99.50
+  Percent change: +115.1%
+  t-statistic: 22.7642
+  p-value: 0.000000
+  Significant (p < 0.05): True
+  Cohen's d: 3.354 (large effect)
+
+Token Usage:
+  Sample size (n): 42
+  CoT mean: 1342.17
+  Baseline mean: 1006.81
+  Mean difference: +335.36
+  Percent change: +33.3%
+  t-statistic: 64.7126
+  p-value: 0.000000
+  Significant (p < 0.05): True
+  Cohen's d: 1.088 (large effect)
+
