@@ -62,6 +62,12 @@ This file tracks latency measurements from real-time demo runs for the top 3 app
 
 | Date | Mode | Latency (s) | Notes |
 |------|------|-------------|-------|
+
+| Date | Mode | Latency (s) | Notes |
+|------|------|-------------|-------|
+
+| Date | Mode | Latency (s) | Notes |
+|------|------|-------------|-------|
 | 2025-12-04 13:14:23 | gaming | 1.38 | - |
 
 | 2025-12-04 17:16:08 | gaming | 3.13 | - |
@@ -100,11 +106,15 @@ This file tracks latency measurements from real-time demo runs for the top 3 app
 
 | 2025-12-04 18:36:50 | real_world | 1.55 | - |
 
+| 2025-12-04 19:00:24 | real_world | 2.67 | - |
+
+| 2025-12-04 19:01:56 | real_world | 3.29 | - |
+
 ### Statistics
-- **Total measurements:** 19
-- **Average latency:** 1.85 s
+- **Total measurements:** 21
+- **Average latency:** 1.96 s
 - **Min latency:** 1.31 s
-- **Max latency:** 3.24 s
+- **Max latency:** 3.29 s
 
 ---
 

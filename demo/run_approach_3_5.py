@@ -632,16 +632,7 @@ class Approach35ScreenReader:
     def run(self):
         """Run the screen reader"""
         mode_label = "GAMING" if self.prompt_mode == 'gaming' else "TEXT/SPATIAL"
-        print("\n" + "="*70)
         print(f"APPROACH 3.5: OPTIMIZED SPECIALIZED MULTI-MODEL SYSTEM ({mode_label} MODE)")
-        print("="*70)
-        print("Latency: ~1.5s | Architecture: OCR/Depth + YOLO + GPT-3.5-turbo")
-        if self.prompt_mode == 'gaming':
-            print("Best for: Gaming screens with text, game UI analysis")
-            print("Strengths: Reads game text + analyzes game board layout simultaneously")
-        else:
-            print("Best for: Text-heavy scenes, documents, signs, spatial understanding")
-            print("Strengths: Reads text (OCR) + understands 3D layout (Depth) simultaneously")
         print("\nPress 'D' key anywhere to analyze what's on screen")
         print("Press Ctrl+C to exit\n")
         

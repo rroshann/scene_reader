@@ -1,0 +1,6 @@
+Mode-Specific Comparison Statistics: REAL_WORLD
+================================================================================
+
+Approach 1.5: Mean=1.62s, Median=1.55s, StdDev=0.48s
+Approach 2.5: Mean=0.54s, Median=0.64s, StdDev=0.35s
+Approach 3.5: Mean=0.93s, Median=1.09s, StdDev=0.52s

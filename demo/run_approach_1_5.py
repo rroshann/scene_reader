@@ -680,18 +680,7 @@ class Approach1_5ScreenReader:
     def run(self):
         """Run the screen reader"""
         mode_label = "GAMING" if self.prompt_mode == 'gaming' else "REAL-WORLD"
-        print("\n" + "="*70)
         print(f"APPROACH 1.5: OPTIMIZED PURE VLM ({mode_label} MODE)")
-        print("="*70)
-        print("Latency: ~1.5-2.0s | Architecture: GPT-4V only (no local models)")
-        if self.prompt_mode == 'gaming':
-            print("Best for: Gaming, interactive scenarios, game UI analysis")
-            print("Strengths: Game-focused prompts, instant feedback, understands game states")
-            print("Optimized for: Win/loss detection, player status, game board analysis")
-        else:
-            print("Best for: Real-world navigation, outdoor/indoor scenes")
-            print("Strengths: Instant feedback, safety-focused descriptions")
-            print("Optimized for: Obstacle detection, spatial layout, navigation cues")
         print("\nPress 'D' key anywhere to analyze what's on screen")
         print("Press Ctrl+C to exit\n")
         

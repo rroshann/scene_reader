@@ -40,46 +40,6 @@
       "llm_model": "gpt-3.5-turbo",
       "cached_at": 1764056028.689437
     },
-    "c6fbb81ed6e49ff4ffea02a42246ddba59e4f2e119e4f872699ecc8be581d523": {
-      "description": "There is a dining table 119 meters ahead at the center bottom. Please proceed with caution to avoid any obstacles.",
-      "generation_latency": 1.0409319400787354,
-      "tokens_used": 100,
-      "yolo_model": "yolov8n",
-      "llm_model": "gpt-3.5-turbo",
-      "cached_at": 1764056030.6176682
-    },
-    "cc680e9d6c8f194ace33f90756969ee90db2e9dc8d13fc65dd55038e85141c36": {
-      "description": "There is a chair located 14 meters to your left. Additionally, there is a potted plant 31 meters directly ahead of you. Please proceed with caution to avoid any obstacles.",
-      "generation_latency": 1.264397144317627,
-      "tokens_used": 132,
-      "yolo_model": "yolov8n",
-      "llm_model": "gpt-3.5-turbo",
-      "cached_at": 1764056032.171629
-    },
-    "b7285c67611ed00da289c8f3153b70183a9d498c7e63e38c4a6124b987536bb8": {
-      "description": "There is a person located 92 meters ahead at the left center with a confidence level of 0.92. It is important to maintain a safe distance and proceed with caution.",
-      "generation_latency": 0.5876150131225586,
-      "tokens_used": 130,
-      "yolo_model": "yolov8n",
-      "llm_model": "gpt-3.5-turbo",
-      "cached_at": 1764056032.991912
-    },
-    "063628fec645a99f5a30a1bc1deff05f0b723dc17b71f7a01da33f19be61ce18": {
-      "description": "There are three objects detected in the environment:\n\n1. A dining table is located 1.66 meters ahead to the right.\n2. A potted plant is located 1.37 meters ahead to the right.\n3. A vase is located 1.40 meters ahead to the right.\n\nPlease proceed with caution to avoid any collisions with the detected objects.",
-      "generation_latency": 0.6844260692596436,
-      "tokens_used": 187,
-      "yolo_model": "yolov8n",
-      "llm_model": "gpt-3.5-turbo",
-      "cached_at": 1764056033.8464482
-    },
-    "e1ffd8d82a360395644c9df503c5514d139255b6c11d963326a8ec0ebe1ac1c7": {
-      "description": "You are currently 120 meters away from any objects or obstacles. It appears to be a clear path ahead. Please continue to proceed with caution and prioritize safety.",
-      "generation_latency": 0.43965888023376465,
-      "tokens_used": 88,
-      "yolo_model": "yolov8n",
-      "llm_model": "gpt-3.5-turbo",
-      "cached_at": 1764056034.4405272
-    },
     "4769e20685fc5a73260e437ec9a763a7dbd48d5226a2ab70b2e056eb4d4a6eb1": {
       "description": "It appears that there are no objects detected in the image. The depth is 187 units.",
       "generation_latency": 0.8853271007537842,
@@ -311,13 +271,317 @@
       "yolo_model": "yolov8n",
       "llm_model": "gpt-3.5-turbo",
       "cached_at": 1764891169.1156101
+    },
+    "c6fbb81ed6e49ff4ffea02a42246ddba59e4f2e119e4f872699ecc8be581d523": {
+      "description": "There is a dining table 119 meters ahead at the center bottom. Please proceed with caution to avoid any obstacles.",
+      "generation_latency": 1.0409319400787354,
+      "tokens_used": 100,
+      "yolo_model": "yolov8n",
+      "llm_model": "gpt-3.5-turbo",
+      "cached_at": 1764056030.6176682
+    },
+    "2beaedb35c4854e4b0142680f01fb3d4b89b5ddd90a82963c1d62eae9b27ee35": {
+      "description": "Ahead, there's a potted plant in the center, slightly to the right. Be cautious of the chair also on the right.",
+      "generation_latency": 0.9285192489624023,
+      "tokens_used": 472,
+      "yolo_model": "yolov8n",
+      "llm_model": "gpt-3.5-turbo",
+      "cached_at": 1764898196.579772
+    },
+    "9ed4037afa920e22bdd8693aa03620ae5b4e5b513322d6cbb0fd4261d9fb6771": {
+      "description": "Safe path ahead with clear walkway. Building on the left side farther away. Keep walking straight, no obstacles in front.",
+      "generation_latency": 0.73934006690979,
+      "tokens_used": 373,
+      "yolo_model": "yolov8n",
+      "llm_model": "gpt-3.5-turbo",
+      "cached_at": 1764898199.4809458
+    },
+    "0996711c175d13217eb54d064b59d83b4a2d2ce051f669b68e12930e3e9827a1": {
+      "description": "Hey there! Watch out for 6 cars ahead - alternating between left and right. Closer car on the right side. 2 traffic lights further away. Stay safe and keep going straight.",
+      "generation_latency": 0.8764598369598389,
+      "tokens_used": 465,
+      "yolo_model": "yolov8n",
+      "llm_model": "gpt-3.5-turbo",
+      "cached_at": 1764898202.617822
+    },
+    "03127575b979785d82ec8b3ce792d8647e45466d3a312159a83725891a53298a": {
+      "description": "Hey there! There's a clear path ahead, so walk forward confidently. The area is empty, so you're all set. Just keep moving straight ahead, and you're good to go!",
+      "generation_latency": 0.9958410263061523,
+      "tokens_used": 387,
+      "yolo_model": "yolov8n",
+      "llm_model": "gpt-3.5-turbo",
+      "cached_at": 1764898206.197821
+    },
+    "cc680e9d6c8f194ace33f90756969ee90db2e9dc8d13fc65dd55038e85141c36": {
+      "description": "There is a chair located 14 meters to your left. Additionally, there is a potted plant 31 meters directly ahead of you. Please proceed with caution to avoid any obstacles.",
+      "generation_latency": 1.264397144317627,
+      "tokens_used": 132,
+      "yolo_model": "yolov8n",
+      "llm_model": "gpt-3.5-turbo",
+      "cached_at": 1764056032.171629
+    },
+    "20bc530757b8d203fcc49236a9d30084013de3fecd97aae39851e0d54870601a": {
+      "description": "Hey there! In front of you, there's a person standing right ahead. Further away, there are 7 cars scattered around. The person is closest to you, so be careful and mind their presence as you navigate.",
+      "generation_latency": 1.010972261428833,
+      "tokens_used": 482,
+      "yolo_model": "yolov8n",
+      "llm_model": "gpt-3.5-turbo",
+      "cached_at": 1764898212.402551
+    },
+    "1ac602cab0ec880b835f73aa02b04f1eadc59785b0bd88ade5e23f0ef8f03e8c": {
+      "description": "Hey there! There's a chair close by on your left. Watch out for it as you move ahead. It's the most important thing for you to be cautious of at the moment.",
+      "generation_latency": 0.9240031242370605,
+      "tokens_used": 405,
+      "yolo_model": "yolov8n",
+      "llm_model": "gpt-3.5-turbo",
+      "cached_at": 1764898216.070936
+    },
+    "063628fec645a99f5a30a1bc1deff05f0b723dc17b71f7a01da33f19be61ce18": {
+      "description": "There are three objects detected in the environment:\n\n1. A dining table is located 1.66 meters ahead to the right.\n2. A potted plant is located 1.37 meters ahead to the right.\n3. A vase is located 1.40 meters ahead to the right.\n\nPlease proceed with caution to avoid any collisions with the detected objects.",
+      "generation_latency": 0.6844260692596436,
+      "tokens_used": 187,
+      "yolo_model": "yolov8n",
+      "llm_model": "gpt-3.5-turbo",
+      "cached_at": 1764056033.8464482
+    },
+    "5e60ecaf5c64daacb23aaded3ee57b989de3b5478212276c61a7a1d5e325631d": {
+      "description": "Ahead are two books on the left and center. Be careful. Sign on the right says \"Library Entrance.\" Safe path is straight.",
+      "generation_latency": 0.6155009269714355,
+      "tokens_used": 436,
+      "yolo_model": "yolov8n",
+      "llm_model": "gpt-3.5-turbo",
+      "cached_at": 1764898224.630965
+    },
+    "e1ffd8d82a360395644c9df503c5514d139255b6c11d963326a8ec0ebe1ac1c7": {
+      "description": "You are currently 120 meters away from any objects or obstacles. It appears to be a clear path ahead. Please continue to proceed with caution and prioritize safety.",
+      "generation_latency": 0.43965888023376465,
+      "tokens_used": 88,
+      "yolo_model": "yolov8n",
+      "llm_model": "gpt-3.5-turbo",
+      "cached_at": 1764056034.4405272
+    },
+    "b7285c67611ed00da289c8f3153b70183a9d498c7e63e38c4a6124b987536bb8": {
+      "description": "There is a person located 92 meters ahead at the left center with a confidence level of 0.92. It is important to maintain a safe distance and proceed with caution.",
+      "generation_latency": 0.5876150131225586,
+      "tokens_used": 130,
+      "yolo_model": "yolov8n",
+      "llm_model": "gpt-3.5-turbo",
+      "cached_at": 1764056032.991912
+    },
+    "94f54512ee48a66e8b6d0fabff80434e4b35d44fb7ef4b32a8823725f453e499": {
+      "description": "Watch out for a group of six people in front - one close by, another to the right, and more spread out ahead. You're on Main Street. Stay on the sidewalk; it's clear for walking.",
+      "generation_latency": 0.9737610816955566,
+      "tokens_used": 491,
+      "yolo_model": "yolov8n",
+      "llm_model": "gpt-3.5-turbo",
+      "cached_at": 1764898232.8808398
+    },
+    "2a5eaab55291eddc6afc2945623b1ee12cfc592dbd8cdae06b06058cd83e6a4d": {
+      "description": "Hey there! It looks like you're in an open area with no objects nearby, just a bit of distance ahead. Take a few steps forward and you should reach the next point of interest. Keep going!",
+      "generation_latency": 0.7233350276947021,
+      "tokens_used": 390,
+      "yolo_model": "yolov8n",
+      "llm_model": "gpt-3.5-turbo",
+      "cached_at": 1764898235.8379478
+    },
+    "db0f69d86b48055ca76dd35fb9ca079c66ca0ff62da0ce2e6bd57f9410c4108b": {
+      "description": "Hey there! It looks like there are no objects close by in front of you. You're in a clear area. If you keep going straight, there's nothing directly in your path. Just keep moving ahead safely!",
+      "generation_latency": 0.9050328731536865,
+      "tokens_used": 392,
+      "yolo_model": "yolov8n",
+      "llm_model": "gpt-3.5-turbo",
+      "cached_at": 1764898237.967993
+    },
+    "e6e3b99af2bdad32adaa4d6a05db94564f44729d668bf8d87b2119772d48ad36": {
+      "description": "Hey there! There's a bench straight ahead, a chair slightly to the right, and several potted plants scattered around. The bench is the closest, followed by the chair and the plants.",
+      "generation_latency": 0.8900070190429688,
+      "tokens_used": 461,
+      "yolo_model": "yolov8n",
+      "llm_model": "gpt-3.5-turbo",
+      "cached_at": 1764898241.665681
+    },
+    "f25fbcba0a91c56873fe3655d85c2cea96b828fbbed6dcb726f5f6b7fa8a43fc": {
+      "description": "Watch out for a car directly ahead, it's closer than other objects. Be careful as you move forward. No other immediate obstacles nearby.",
+      "generation_latency": 0.6174888610839844,
+      "tokens_used": 414,
+      "yolo_model": "yolov8n",
+      "llm_model": "gpt-3.5-turbo",
+      "cached_at": 1764898244.327774
+    },
+    "44440ab5dcbd19210d1700545e7ee56e8691326581cfb73ac0a3bc3a1fba1909": {
+      "description": "Clock straight ahead. Safe path to the left. Let's go left.",
+      "generation_latency": 0.48039793968200684,
+      "tokens_used": 411,
+      "yolo_model": "yolov8n",
+      "llm_model": "gpt-3.5-turbo",
+      "cached_at": 1764898248.662356
+    },
+    "5f6519062052563445a1e2f94c2a9397872fd80fb6c4bf4d96c6aa3a1a0c8984": {
+      "description": "Truck directly to your left - be cautious. Clock in front of you. Watch out for the truck.",
+      "generation_latency": 0.47890710830688477,
+      "tokens_used": 450,
+      "yolo_model": "yolov8n",
+      "llm_model": "gpt-3.5-turbo",
+      "cached_at": 1764898253.292562
+    },
+    "158be21bdcde1f6b66e6af10c46e28bd893dbbe393c2e4e8d5a767d760016fba": {
+      "description": "Ahead, there are bicycles in front and to the left, closer than cars further to the right and top. Watch out for the cars on the right.",
+      "generation_latency": 1.06697416305542,
+      "tokens_used": 485,
+      "yolo_model": "yolov8n",
+      "llm_model": "gpt-3.5-turbo",
+      "cached_at": 1764898256.415257
+    },
+    "9961dcb3968c078b4b3bf1cc5f3318519f0114b47b1bc457cc75fdec9fc48d07": {
+      "description": "Safe path ahead. Sign reads \"Pedestrian Crossing.\" Another sign says \"Watch for Cars.\" Street sign says \"Maple Avenue.\" No obstacles in sight. You're good to keep walking straight.",
+      "generation_latency": 0.9372289180755615,
+      "tokens_used": 424,
+      "yolo_model": "yolov8n",
+      "llm_model": "gpt-3.5-turbo",
+      "cached_at": 1764898221.231288
+    },
+    "54d8174372609c3569ce8533003a07e6af1b25b29ac480bedf56162285c3ca8e": {
+      "description": "Hey there! Watch out for a bench on your left side, it's closer to you. There's also a chair on the left, a bit farther away. Take care as you continue walking, you're doing great!",
+      "generation_latency": 0.7664949893951416,
+      "tokens_used": 429,
+      "yolo_model": "yolov8n",
+      "llm_model": "gpt-3.5-turbo",
+      "cached_at": 1764898263.442135
+    },
+    "a74ffe2464716b53ca8ee5e4db0e2961e99085c705f390207ac2372d77c69bfe": {
+      "description": "Watch out for the 14 people ahead - they're closest and in different directions. Be cautious as you navigate around them. Stay alert and be careful as you move forward.",
+      "generation_latency": 0.9187378883361816,
+      "tokens_used": 428,
+      "yolo_model": "yolov8n",
+      "llm_model": "gpt-3.5-turbo",
+      "cached_at": 1764898267.430231
+    },
+    "a0ce756565b55db6f75095830019c5198ddc5ecfc7cb440458b4530e78cf995c": {
+      "description": "Hey there! Ahead of you, there's a cozy couch at the center. To your right, there's a bowl. Closer to you are two chairs at the bottom. Watch out for the furniture around you as you move. Take care!",
+      "generation_latency": 0.8003683090209961,
+      "tokens_used": 469,
+      "yolo_model": "yolov8n",
+      "llm_model": "gpt-3.5-turbo",
+      "cached_at": 1764898271.3169541
+    },
+    "5374a365b86d545928e45e10ef72909242c26c993284630cfb05911e8dcbcbc6": {
+      "description": "Hey there! Ahead of you, there's a cell phone closer to you. Watch out for it as you move forward. Keep going safely and be mindful of the phone in front of you.",
+      "generation_latency": 2.1545419692993164,
+      "tokens_used": 408,
+      "yolo_model": "yolov8n",
+      "llm_model": "gpt-3.5-turbo",
+      "cached_at": 1764898276.752574
+    },
+    "2b1c833a45ad6da39e5db3d9151824c5b8973532bb63201cb8e7d45032454233": {
+      "description": "Watch out for the two books on the ground ahead. Street sign says \"Elm Street\". Safe path is straight ahead.",
+      "generation_latency": 0.5372319221496582,
+      "tokens_used": 434,
+      "yolo_model": "yolov8n",
+      "llm_model": "gpt-3.5-turbo",
+      "cached_at": 1764898281.189513
+    },
+    "59eece60d6af7cfdde9545eaefc904c229df3a47a29d6fa3cfd3070364b55e92": {
+      "description": "No objects detected. Kindly share the game status or describe the scene for assistance.",
+      "generation_latency": 0.6426870822906494,
+      "tokens_used": 204,
+      "yolo_model": "yolov8n",
+      "llm_model": "gpt-3.5-turbo",
+      "cached_at": 1764898283.818649
+    },
+    "74929a4c492fee641496781e03240b35f6ca29437ac1e62f283ce67878ad67c8": {
+      "description": "Your turn. X in top right, O in bottom row. Empty squares: 1, 4, 5, 7, 8.",
+      "generation_latency": 0.6425909996032715,
+      "tokens_used": 218,
+      "yolo_model": "yolov8n",
+      "llm_model": "gpt-3.5-turbo",
+      "cached_at": 1764898286.1738381
+    },
+    "0261352346c87b022757f4dff1361d0d262ec8c976ff517105dcdff5a8a20cb3": {
+      "description": "You won! Great job! Your airplane is at the right bottom. Scissors are also there.",
+      "generation_latency": 0.684011697769165,
+      "tokens_used": 245,
+      "yolo_model": "yolov8n",
+      "llm_model": "gpt-3.5-turbo",
+      "cached_at": 1764898289.044561
+    },
+    "4830091938f7132f622fa60234e50c7f7e457635a056a7db21f0292da32112ea": {
+      "description": "Your turn. Both X and O at the center. Empty squares: 1, 4, 6, 7, 8, 9.",
+      "generation_latency": 0.8261120319366455,
+      "tokens_used": 290,
+      "yolo_model": "yolov8n",
+      "llm_model": "gpt-3.5-turbo",
+      "cached_at": 1764898292.625393
+    },
+    "29ec532754731a9028094d48cb048f89fffe0fadba08fc0db0bab077dae785ef": {
+      "description": "You won! Great job!",
+      "generation_latency": 0.9601049423217773,
+      "tokens_used": 212,
+      "yolo_model": "yolov8n",
+      "llm_model": "gpt-3.5-turbo",
+      "cached_at": 1764898296.5161788
+    },
+    "57a6ca847025f871d8a6f29ca0a9992a9079b4e3ba91ad00e496791e7f9f51f0": {
+      "description": "You lost. Clock at center bottom. Start a new game or try again!",
+      "generation_latency": 0.5815567970275879,
+      "tokens_used": 222,
+      "yolo_model": "yolov8n",
+      "llm_model": "gpt-3.5-turbo",
+      "cached_at": 1764898300.107689
+    },
+    "fdcde3382b496b0239d5d9e6035af9186850cbc1bf6e7470f5678076df3b3b91": {
+      "description": "No game information was provided.",
+      "generation_latency": 0.47870492935180664,
+      "tokens_used": 231,
+      "yolo_model": "yolov8n",
+      "llm_model": "gpt-3.5-turbo",
+      "cached_at": 1764898303.7283862
+    },
+    "8d8c2d54030a2fcedcded26d4df67bd71c3e9575ec0cf3c665430e2e6b993091": {
+      "description": "Game state unclear. Please provide description of the tic-tac-toe board with Xs and Os.",
+      "generation_latency": 0.4627993106842041,
+      "tokens_used": 275,
+      "yolo_model": "yolov8n",
+      "llm_model": "gpt-3.5-turbo",
+      "cached_at": 1764898307.529376
+    },
+    "9e0058cb93561054f2f9597134ae757bcc10d49b651d92a72a51351440ea43a9": {
+      "description": "You won! There are two airplanes at the bottom right and top right. Great job!",
+      "generation_latency": 0.42778587341308594,
+      "tokens_used": 238,
+      "yolo_model": "yolov8n",
+      "llm_model": "gpt-3.5-turbo",
+      "cached_at": 1764898309.9400132
+    },
+    "17b7d515acb6f2ae01230dd4ecb192d3a119b1e1cdf7a4a1a193980614e49d64": {
+      "description": "Opponent won. X in top left, center, and bottom right. You have O in bottom left and top right.",
+      "generation_latency": 0.7562501430511475,
+      "tokens_used": 212,
+      "yolo_model": "yolov8n",
+      "llm_model": "gpt-3.5-turbo",
+      "cached_at": 1764898313.008306
+    },
+    "87cb8460151df554bb6b8ea1b202ad38018d001bf4968e8c4a23fbe9fc416399": {
+      "description": "No game objects detected. Please provide a description or image so I can assist you.",
+      "generation_latency": 0.5584566593170166,
+      "tokens_used": 204,
+      "yolo_model": "yolov8n",
+      "llm_model": "gpt-3.5-turbo",
+      "cached_at": 1764898315.1880991
+    },
+    "67b4d0f8e7dcdbf6b66f1ab98dad7e50cd172a2ea180cc904296d6cc89c6233f": {
+      "description": "You won! The airplanes are in right bottom and right center. Great job!",
+      "generation_latency": 0.6290450096130371,
+      "tokens_used": 236,
+      "yolo_model": "yolov8n",
+      "llm_model": "gpt-3.5-turbo",
+      "cached_at": 1764898318.039259
     }
   },
   "stats": {
-    "hits": 20,
-    "misses": 95,
+    "hits": 29,
+    "misses": 128,
     "evictions": 0,
-    "loads": 19,
-    "saves": 75
+    "loads": 20,
+    "saves": 107
   }
 }

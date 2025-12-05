@@ -1,0 +1,6 @@
+Mode-Specific Comparison Statistics: GAMING
+================================================================================
+
+Approach 1.5: Mean=1.46s, Median=1.46s, StdDev=0.28s
+Approach 2.5: Mean=0.56s, Median=0.69s, StdDev=0.34s
+Approach 3.5: Mean=1.05s, Median=0.93s, StdDev=0.26s

@@ -724,16 +724,7 @@ class Approach25ScreenReader:
     def run(self):
         """Run the screen reader"""
         mode_label = "GAMING" if self.prompt_mode == 'gaming' else "REAL-WORLD NAVIGATION"
-        print("\n" + "="*70)
         print(f"APPROACH 2.5: OPTIMIZED YOLO+LLM PIPELINE ({mode_label} MODE)")
-        print("="*70)
-        print("Latency: ~1.1s | Architecture: YOLOv8n + GPT-3.5-turbo + Caching")
-        if self.prompt_mode == 'gaming':
-            print("Best for: Gaming screens, game UI analysis")
-            print("Strengths: Detects game objects, analyzes game state, win/loss detection")
-        else:
-            print("Best for: Real-world scenes, outdoor navigation, object detection")
-            print("Strengths: Detects people, cars, obstacles, hazards, crosswalks")
         print("\nPress 'D' key anywhere to analyze what's on screen")
         print("Press Ctrl+C to exit\n")
         
