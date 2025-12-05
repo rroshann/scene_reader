@@ -249,8 +249,6 @@ Hyper:   τ ∈ (0, ∞), temperature
 
 #### Algorithm 7: Vision Transformer Patch Embedding (ViT)
 
-**In simple terms:** The input is an image and the output is a sequence of patch embeddings that represent the image as a series of visual tokens.
-
 ```
 ViTPatchEmbed(I | W_patch, W_pos)
 ─────────────────────────────────────────────────────────
@@ -271,13 +269,13 @@ Hyper:   P, patch size (typically 14 or 16)
 8  return Z
 ```
 
+**In simple terms:** The input is an image and the output is a sequence of patch embeddings that represent the image as a series of visual tokens.
+
 ---
 
 #### Algorithm 8: YOLO Object Detection
 
 **YOLO (You Only Look Once)** is a real-time object detection system that identifies and localizes objects in images in a single forward pass. Unlike traditional two-stage detectors, YOLO processes the entire image at once, making it significantly faster while maintaining good accuracy. We use **YOLOv8n** (nano variant), a lightweight version with 3.2M parameters, trained on the COCO dataset to detect 80 object classes.
-
-**In simple terms:** The input is an image and the output is a list of detected objects with their classes, confidence scores, and bounding box coordinates.
 
 ```
 YOLODetect(I | θ_yolo)
@@ -302,13 +300,13 @@ Hyper:   conf_thresh = 0.25, iou_thresh = 0.45
 12 return D
 ```
 
+**In simple terms:** The input is an image and the output is a list of detected objects with their classes, confidence scores, and bounding box coordinates.
+
 ---
 
 ### 2.4 Our Scene Reader Algorithms
 
 #### Algorithm 9: Approach 2.5 - Optimized Hybrid Pipeline (Fastest)
-
-**In simple terms:** The input is an image and a mode (gaming or real_world), and the output is a scene description string with latency, cost, and cache hit metadata.
 
 ```
 HybridPipeline(I, mode | θ_yolo, θ_llm, cache)
@@ -352,11 +350,11 @@ Hyper:   max_tokens = 100-200 (adaptive)
 
 **Complexity:** O(H·W) for detection + O(ℓ²) for generation
 
+**In simple terms:** The input is an image and a mode (gaming or real_world), and the output is a scene description string with latency, cost, and cache hit metadata.
+
 ---
 
 #### Algorithm 10: Approach 3.5 - Specialized Multi-Model Pipeline
-
-**In simple terms:** The input is an image and a mode (gaming or real_world), and the output is a scene description string that incorporates text and depth information when available.
 
 ```
 SpecializedPipeline(I, mode | θ_yolo, θ_ocr, θ_depth, θ_llm, cache)
@@ -401,11 +399,11 @@ Hyper:   ocr_thresh = 0.5, depth_enabled = true
 31 return S
 ```
 
+**In simple terms:** The input is an image and a mode (gaming or real_world), and the output is a scene description string that incorporates text and depth information when available.
+
 ---
 
 #### Algorithm 11: Approach 1.5 - Progressive Disclosure VLM
-
-**In simple terms:** The input is an image and a mode (gaming or real_world), and the output is a quick preview description (Tier 1) and a detailed description (Tier 2).
 
 ```
 ProgressiveVLM(I, mode | θ_blip, θ_gpt4v)
@@ -448,11 +446,11 @@ Hyper:   max_tokens_quick = 50, max_tokens_full = 150
 - Tier 1 (BLIP-2): ~1.7s (local, optional)
 - Tier 2 (GPT-4V): ~1.6s (cloud, optimized prompts)
 
+**In simple terms:** The input is an image and a mode (gaming or real_world), and the output is a quick preview description (Tier 1) and a detailed description (Tier 2).
+
 ---
 
 #### Algorithm 12: Cache with Semantic Hashing
-
-**In simple terms:** The input is detected objects, context, and mode (for hash computation) or a cache key (for lookup/store), and the output is a hash key, a cache hit/miss result with cached value, or void (for store operations).
 
 ```
 SemanticCache operations
@@ -480,6 +478,8 @@ cache_store(key, value):
 
 **Cache Hit Rate:** 40-60% in repeated-scene scenarios
 **Speedup on Hit:** ~15x (0.08s vs 1.2s)
+
+**In simple terms:** The input is detected objects, context, and mode (for hash computation) or a cache key (for lookup/store), and the output is a hash key, a cache hit/miss result with cached value, or void (for store operations).
 
 ---
 
