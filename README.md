@@ -524,8 +524,6 @@ Output:  L ∈ ℝ, cross-entropy loss
 ```
 scene-reader/
 ├── README.md                      # This file
-├── PROJECT.md                     # Full technical documentation
-├── FINDINGS.md                    # Detailed analysis
 ├── code/
 │   ├── approach_2_5_optimized/    # Algorithm 9 implementation
 │   │   ├── hybrid_pipeline_optimized.py
@@ -840,13 +838,9 @@ All differences are **statistically significant** (p < 0.001):
 | File | Description |
 |------|-------------|
 | [README.md](README.md) | This file - algorithms and overview |
-| [PROJECT.md](PROJECT.md) | Full technical documentation |
-| [FINDINGS.md](FINDINGS.md) | Detailed analysis |
 
 ### Additional Documentation
 
-- **[PROJECT.md](PROJECT.md)** - Full technical documentation and architecture details
-- **[FINDINGS.md](FINDINGS.md)** - Detailed analysis and evaluation results
 - **[demo/APPROACH_DEMOS_README.md](demo/APPROACH_DEMOS_README.md)** - Demo scripts and usage guide
 
 ---
