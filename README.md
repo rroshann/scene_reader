@@ -12,6 +12,25 @@
 
 ---
 
+## Table of Contents
+
+- [1. Problem Statement & Overview](#1-problem-statement--overview)
+- [2. Methodology](#2-methodology)
+  - [2.1 Notation](#21-notation)
+  - [2.2 Foundational Transformer Components](#22-foundational-transformer-components)
+  - [2.3 Vision Encoder Components](#23-vision-encoder-components)
+  - [2.4 Our Scene Reader Algorithms](#24-our-scene-reader-algorithms)
+  - [2.5 Training and Loss Functions](#25-training-and-loss-functions)
+  - [2.6 Test Scenarios](#26-test-scenarios)
+- [3. Implementation & Demo](#3-implementation--demo)
+- [4. Assessment & Evaluation](#4-assessment--evaluation)
+- [5. Model & Data Cards](#5-model--data-cards)
+- [6. Critical Analysis](#6-critical-analysis)
+- [7. Documentation & Resource Links](#7-documentation--resource-links)
+- [8. References](#8-references)
+
+---
+
 ## 1. Problem Statement & Overview
 
 ### The Accessibility Challenge
@@ -27,6 +46,27 @@ We targeted **sub-2-second latency** as our threshold for practical usability, g
 ### Proposed Solution
 
 **Scene Reader** systematically evaluates **9 different transformer-based vision AI approaches** for providing real-time visual assistance, identifying optimal architectures for different use cases including gaming accessibility, indoor/outdoor navigation, and text reading.
+
+### The 9 Approaches
+
+We tested **9 distinct approaches** organized into baseline implementations and their optimized variants:
+
+**Baseline Approaches:**
+- **Approach 1 (Pure VLM):** End-to-end vision-language models (GPT-4V, Claude, Gemini) - baseline for quality
+- **Approach 2 (Hybrid):** YOLO object detection + LLM generation - baseline hybrid pipeline
+- **Approach 3 (Specialized):** Multi-model system with YOLO + OCR + Depth estimation - baseline specialized
+
+**Optimized Variants:**
+- **Approach 1.5:** Pure VLM + progressive disclosure (BLIP-2 quick preview + GPT-4V detailed) - **Algorithm 11**
+- **Approach 2.5:** Hybrid + caching + GPT-3.5-turbo optimization - **Algorithm 9** (fastest: 0.54s)
+- **Approach 3.5:** Specialized + complexity-based routing + optimizations - **Algorithm 10** (0.93s)
+
+**Alternative Architectures:**
+- **Approach 4 (Local):** BLIP-2 running entirely offline - zero API cost, slower (35.4s)
+- **Approach 6 (RAG):** VLM + Retrieval-Augmented Generation with game knowledge base
+- **Approach 7 (CoT):** VLM + Chain-of-Thought reasoning for improved safety detection
+
+**Key Pattern:** Approaches 1.5, 2.5, and 3.5 represent optimized versions of their baseline counterparts (1, 2, 3), achieving 2-3x speedup through prompt optimization, caching, and model selection.
 
 ### Key Achievement
 
@@ -489,30 +529,111 @@ scene-reader/
     └── comprehensive_comparison/
 ```
 
-### Quick Start
+### Setup Instructions
 
+#### Prerequisites
+
+- **Python 3.10+** (tested on Python 3.10, 3.11)
+- **Operating System**: macOS, Linux, or Windows (WSL recommended)
+- **API Keys**: OpenAI API key (required for top approaches)
+- **Hardware**: 
+  - Minimum: 4GB RAM, CPU-only (for API-based approaches)
+  - Recommended: 8GB+ RAM, GPU optional (for local BLIP-2)
+
+#### Installation Steps
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/rroshann/scene_reader.git
+   cd scene_reader
+   ```
+
+2. **Create and activate virtual environment**
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   ```
+
+3. **Install dependencies**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. **Configure API keys**
+   
+   Create a `.env` file in the project root:
+   ```bash
+   touch .env
+   ```
+   
+   Add your API keys to `.env`:
+   ```bash
+   OPENAI_API_KEY=sk-your-key-here
+   # Optional for other approaches:
+   # GOOGLE_API_KEY=your-key-here
+   # ANTHROPIC_API_KEY=sk-ant-your-key-here
+   ```
+   
+   **Getting API Keys:**
+   - **OpenAI**: https://platform.openai.com/api-keys (requires payment method, ~$10-15 recommended)
+   - **Google Gemini**: https://aistudio.google.com/ (free tier available)
+   - **Anthropic Claude**: https://console.anthropic.com/ ($5 minimum)
+
+5. **Verify installation**
+   ```bash
+   python -c "import torch; import ultralytics; print('✓ Dependencies installed')"
+   ```
+
+#### Running the Code
+
+**Quick Test (Approach 2.5 - Fastest)**
 ```bash
-# Clone and setup
-git clone https://github.com/rroshann/scene_reader.git
-cd scene_reader
-python -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
-
-# Configure API keys
-cp .env.example .env
-# Edit .env with: OPENAI_API_KEY
-
-# Run Algorithm 9 (Fastest Approach)
 cd code/approach_2_5_optimized
 python -c "
 from hybrid_pipeline_optimized import HybridPipelineOptimized
 pipeline = HybridPipelineOptimized()
-result = pipeline.describe_image('../../data/images/gaming/game_01.png')
+result = pipeline.describe_image('../../data/images/gaming/game_01.png', mode='gaming')
 print(f'Description: {result[\"description\"]}')
 print(f'Latency: {result[\"total_latency\"]:.2f}s')
 "
 ```
+
+**Run Full Demo Scripts**
+```bash
+# Approach 2.5 (Fastest)
+python demo/run_approach_2_5.py
+
+# Approach 3.5 (Specialized)
+python demo/run_approach_3_5.py
+
+# Approach 1.5 (Progressive)
+python demo/run_approach_1_5.py
+```
+
+#### Troubleshooting
+
+**Common Issues:**
+
+1. **Import errors**: Ensure virtual environment is activated and dependencies are installed
+   ```bash
+   pip install -r requirements.txt --upgrade
+   ```
+
+2. **API key not found**: Verify `.env` file exists in project root and contains `OPENAI_API_KEY=...`
+
+3. **CUDA/GPU errors**: Most approaches work CPU-only. For local BLIP-2, ensure PyTorch with CUDA is installed
+
+4. **YOLO model download**: First run will download YOLOv8n weights (~6MB) automatically
+
+5. **Memory issues**: For local BLIP-2, ensure 8GB+ RAM available
+
+**System Requirements by Approach:**
+
+| Approach | API Required | Local Models | RAM Needed |
+|----------|--------------|--------------|------------|
+| Approach 2.5 | OpenAI | YOLOv8n | 2GB |
+| Approach 3.5 | OpenAI | YOLOv8n, EasyOCR, MiDaS | 4GB |
+| Approach 1.5 | OpenAI | BLIP-2 (optional) | 8GB+ |
 
 ---
 
@@ -586,6 +707,28 @@ All differences are **statistically significant** (p < 0.001):
 | 8 | Approach 7 (CoT) | 8.48s | $0.015 | 5/5 | Best safety |
 | 9 | Approach 6 (RAG) | 10.60s | $0.020 | 4/5 | Game knowledge |
 | 10 | Approach 4 (BLIP-2) | 35.40s | $0.000 | 3/5 | Zero cost, offline |
+
+---
+
+## Key Findings Summary
+
+<div style="border: 2px solid #4CAF50; padding: 15px; border-radius: 5px; background-color: #f0f8f0; margin: 20px 0;">
+
+**🏆 Top 3 Approaches Achieve Sub-2-Second Latency**
+
+| Rank | Approach | Mean Latency | Key Innovation |
+|------|----------|--------------|----------------|
+| 🥇 **1st** | **Approach 2.5** (Alg. 9) | **0.54s** | Hybrid: YOLO + GPT-3.5 + Cache |
+| 🥈 **2nd** | **Approach 3.5** (Alg. 10) | **0.93s** | Specialized: Multi-model routing |
+| 🥉 **3rd** | **Approach 1.5** (Alg. 11) | **1.62s** | Progressive: BLIP-2 + GPT-4V |
+
+**Key Insights:**
+- ✅ **3x speedup** achieved: Hybrid pipelines outperform pure VLMs
+- ✅ **Cost-effective**: $0.005/query enables large-scale deployment
+- ✅ **Caching transformative**: 15x speedup on cache hits (Algorithm 12)
+- ✅ **Architectural choice > model size**: GPT-3.5 + YOLO beats GPT-4V alone
+
+</div>
 
 ---
 
@@ -686,12 +829,11 @@ All differences are **statistically significant** (p < 0.001):
 | [PROJECT.md](PROJECT.md) | Full technical documentation |
 | [FINDINGS.md](FINDINGS.md) | Detailed analysis |
 
-### Setup Instructions
+### Additional Documentation
 
-1. `git clone https://github.com/rroshann/scene_reader.git`
-2. `python -m venv venv && source venv/bin/activate`
-3. `pip install -r requirements.txt`
-4. Add API keys to `.env`
+- **[PROJECT.md](PROJECT.md)** - Full technical documentation and architecture details
+- **[FINDINGS.md](FINDINGS.md)** - Detailed analysis and evaluation results
+- **[demo/APPROACH_DEMOS_README.md](demo/APPROACH_DEMOS_README.md)** - Demo scripts and usage guide
 
 ---
 
@@ -699,27 +841,53 @@ All differences are **statistically significant** (p < 0.001):
 
 ### Foundational Papers
 
-1. **Phuong, M. & Hutter, M.** (2022). "Formal Algorithms for Transformers." *arXiv:2207.09238*. DeepMind. — Primary reference for algorithm structure and notation.
+1. **Phuong, M. & Hutter, M.** (2022). "Formal Algorithms for Transformers." *arXiv preprint arXiv:2207.09238*. DeepMind.  
+   DOI: [arXiv:2207.09238](https://arxiv.org/abs/2207.09238)  
+   — Primary reference for algorithm structure and notation.
 
-2. **Vaswani, A. et al.** (2017). "Attention Is All You Need." *NeurIPS*. — Original transformer architecture.
+2. **Vaswani, A. et al.** (2017). "Attention Is All You Need." *Advances in Neural Information Processing Systems*, 30.  
+   Paper: [NeurIPS 2017](https://proceedings.neurips.cc/paper/2017/hash/3f5ee243547dee91fbd053c1c4a845aa-Abstract.html)  
+   — Original transformer architecture.
 
-3. **Dosovitskiy, A. et al.** (2020). "An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale." *ICLR*. — Vision Transformer (ViT).
+3. **Dosovitskiy, A. et al.** (2020). "An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale." *International Conference on Learning Representations (ICLR)*.  
+   DOI: [arXiv:2010.11929](https://arxiv.org/abs/2010.11929)  
+   — Vision Transformer (ViT).
 
-4. **Radford, A. et al.** (2021). "Learning Transferable Visual Models From Natural Language Supervision." *OpenAI*. — CLIP for vision-language alignment.
+4. **Radford, A. et al.** (2021). "Learning Transferable Visual Models From Natural Language Supervision." *International Conference on Machine Learning (ICML)*.  
+   Paper: [OpenAI CLIP](https://openai.com/research/clip)  
+   DOI: [arXiv:2103.00020](https://arxiv.org/abs/2103.00020)  
+   — CLIP for vision-language alignment.
 
-5. **Li, J. et al.** (2023). "BLIP-2: Bootstrapping Language-Image Pre-training with Frozen Image Encoders and Large Language Models." *ICML*. — BLIP-2 architecture.
+5. **Li, J. et al.** (2023). "BLIP-2: Bootstrapping Language-Image Pre-training with Frozen Image Encoders and Large Language Models." *International Conference on Machine Learning (ICML)*.  
+   DOI: [arXiv:2301.12597](https://arxiv.org/abs/2301.12597)  
+   — BLIP-2 architecture.
 
-6. **Jocher, G. et al.** (2023). "YOLOv8." *Ultralytics*. — Object detection.
+6. **Jocher, G. et al.** (2023). "YOLOv8." *Ultralytics*.  
+   Documentation: [Ultralytics YOLOv8](https://docs.ultralytics.com/)  
+   GitHub: [ultralytics/ultralytics](https://github.com/ultralytics/ultralytics)  
+   — Object detection.
 
-7. **Ranftl, R. et al.** (2020). "Towards Robust Monocular Depth Estimation." *TPAMI*. — MiDaS depth estimation.
+7. **Ranftl, R. et al.** (2020). "Towards Robust Monocular Depth Estimation: Mixing Datasets for Zero-Shot Cross-Dataset Transfer." *IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)*.  
+   DOI: [arXiv:1907.01341](https://arxiv.org/abs/1907.01341)  
+   — MiDaS depth estimation.
 
-### Model Documentation
+### Model Documentation & Codebases
 
-- [OpenAI API](https://platform.openai.com/docs)
-- [Ultralytics YOLOv8](https://docs.ultralytics.com/)
-- [Hugging Face BLIP-2](https://huggingface.co/docs/transformers/model_doc/blip-2)
-- [EasyOCR](https://github.com/JaidedAI/EasyOCR)
-- [MiDaS](https://github.com/isl-org/MiDaS)
+**API Documentation:**
+- [OpenAI API Documentation](https://platform.openai.com/docs) - GPT-4V, GPT-3.5-turbo
+- [Google AI Studio](https://aistudio.google.com/) - Gemini API
+- [Anthropic API Documentation](https://docs.anthropic.com/) - Claude API
+
+**Open Source Models & Libraries:**
+- [Ultralytics YOLOv8](https://docs.ultralytics.com/) | [GitHub](https://github.com/ultralytics/ultralytics) - Object detection
+- [Hugging Face BLIP-2](https://huggingface.co/docs/transformers/model_doc/blip-2) | [Model Card](https://huggingface.co/Salesforce/blip2-opt-2.7b) - Vision-language model
+- [EasyOCR](https://github.com/JaidedAI/EasyOCR) - OCR library
+- [MiDaS](https://github.com/isl-org/MiDaS) - Monocular depth estimation
+- [Transformers Library](https://huggingface.co/docs/transformers) - Hugging Face transformers
+
+**Related Research:**
+- [Vision-Language Models Survey](https://arxiv.org/abs/2301.12597) - Recent advances in VLM architectures
+- [Object Detection Benchmarks](https://paperswithcode.com/task/object-detection) - COCO dataset and benchmarks
 
 ---
 
