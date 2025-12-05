@@ -273,6 +273,8 @@ Hyper:   P, patch size (typically 14 or 16)
 
 #### Algorithm 8: YOLO Object Detection
 
+**YOLO (You Only Look Once)** is a real-time object detection system that identifies and localizes objects in images in a single forward pass. Unlike traditional two-stage detectors, YOLO processes the entire image at once, making it significantly faster while maintaining good accuracy. We use **YOLOv8n** (nano variant), a lightweight version with 3.2M parameters, trained on the COCO dataset to detect 80 object classes.
+
 ```
 YOLODetect(I | θ_yolo)
 ─────────────────────────────────────────────────────────
