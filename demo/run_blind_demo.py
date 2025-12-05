@@ -30,38 +30,28 @@ from screen_capture import capture_region
 
 def check_dependencies():
     """Check if required dependencies are available"""
-    print("Checking dependencies...")
-    
     missing = []
     
     # Check TTS (macOS 'say' command)
     import shutil
-    if shutil.which('say'):
-        print("✓ macOS 'say' command (text-to-speech)")
-    else:
-        print("✗ macOS 'say' command not found")
+    if not shutil.which('say'):
         missing.append("macOS 'say' command")
     
     # Check screen capture
     try:
         import mss
-        print("✓ mss (screen capture)")
     except ImportError:
         try:
             from PIL import ImageGrab
-            print("✓ Pillow (screen capture)")
         except ImportError:
-            print("✗ mss or Pillow not found")
             missing.append("mss or Pillow")
     
     # Check OpenAI API key
     if not os.getenv("OPENAI_API_KEY"):
-        print("⚠ OPENAI_API_KEY not set - will use fallback board description")
-    else:
-        print("✓ OPENAI_API_KEY configured")
+        pass  # Will use fallback
     
     if missing:
-        print(f"\nMissing dependencies: {', '.join(missing)}")
+        print(f"Missing dependencies: {', '.join(missing)}")
         print("Install with: pip install -r demo/requirements_demo.txt")
         return False
     
@@ -88,7 +78,6 @@ class TTSEngine:
         
         self.thread = threading.Thread(target=self._process_queue, daemon=True)
         self.thread.start()
-        print("✓ TTS engine initialized (using macOS 'say' command)")
     
     
     def _process_queue(self):
@@ -103,8 +92,6 @@ class TTSEngine:
                     self.is_speaking = True
                 
                 try:
-                    print(f"🔊 TTS speaking: {text[:60]}...")
-                    
                     # Preprocess text to fix contractions and common pronunciation issues
                     text = self._fix_pronunciation(text)
                     
@@ -128,10 +115,7 @@ class TTSEngine:
                     # Wait for process to complete
                     self.current_process.wait()
                     
-                    print("✓ TTS finished speaking")
-                    
                 except Exception as e:
-                    print(f"❌ TTS error: {e}")
                     import traceback
                     traceback.print_exc()
                 finally:
@@ -143,27 +127,75 @@ class TTSEngine:
                 
             except queue.Empty:
                 continue
-            except Exception as e:
-                print(f"❌ TTS queue error: {e}")
-                import traceback
-                traceback.print_exc()
+            except Exception:
+                pass
+    
+    def _fix_pronunciation(self, text):
+        """Fix common pronunciation issues in text"""
+        # Fix contractions
+        replacements = {
+            "don't": "do not",
+            "won't": "will not",
+            "can't": "cannot",
+            "isn't": "is not",
+            "aren't": "are not",
+            "wasn't": "was not",
+            "weren't": "were not",
+            "hasn't": "has not",
+            "haven't": "have not",
+            "hadn't": "had not",
+            "doesn't": "does not",
+            "didn't": "did not",
+            "wouldn't": "would not",
+            "couldn't": "could not",
+            "shouldn't": "should not",
+            "mustn't": "must not",
+            "mightn't": "might not",
+            "I'm": "I am",
+            "you're": "you are",
+            "he's": "he is",
+            "she's": "she is",
+            "it's": "it is",
+            "we're": "we are",
+            "they're": "they are",
+            "I've": "I have",
+            "you've": "you have",
+            "we've": "we have",
+            "they've": "they have",
+            "I'll": "I will",
+            "you'll": "you will",
+            "he'll": "he will",
+            "she'll": "she will",
+            "we'll": "we will",
+            "they'll": "they will",
+            "I'd": "I would",
+            "you'd": "you would",
+            "he'd": "he would",
+            "she'd": "she would",
+            "we'd": "we would",
+            "they'd": "they would",
+        }
+        
+        # Replace contractions (case-insensitive)
+        import re
+        for contraction, expansion in replacements.items():
+            # Match whole word only
+            pattern = r'\b' + re.escape(contraction) + r'\b'
+            text = re.sub(pattern, expansion, text, flags=re.IGNORECASE)
+        
+        return text
     
     def speak(self, text):
         """Add text to speech queue"""
         if not text or not text.strip():
-            print("⚠ TTS: Empty text, skipping")
             return
         
         # Check if TTS thread is alive
         if not self.thread.is_alive():
-            print("⚠ TTS thread died! Restarting...")
             self.thread = threading.Thread(target=self._process_queue, daemon=True)
             self.thread.start()
-            print("✓ TTS thread restarted")
         
-        print(f"📝 TTS queueing: {text[:60]}... (queue size: {self.queue.qsize()})")
         self.queue.put(text)
-        print(f"✓ Queued (new size: {self.queue.qsize()})")
     
     def interrupt(self):
         """Interrupt current speech and clear queue immediately"""
@@ -171,28 +203,22 @@ class TTSEngine:
         with self.lock:
             if self.is_speaking and self.current_process:
                 try:
-                    print("✓ TTS interrupted - killing 'say' process")
                     self.current_process.terminate()  # Send SIGTERM
                     try:
                         self.current_process.wait(timeout=0.5)  # Wait briefly
                     except self.subprocess.TimeoutExpired:
                         self.current_process.kill()  # Force kill if needed
                     self.current_process = None
-                except Exception as e:
-                    print(f"⚠ Error stopping TTS: {e}")
+                except Exception:
+                    pass
         
         # Clear all queued items
-        cleared = 0
         while not self.queue.empty():
             try:
                 self.queue.get_nowait()
                 self.queue.task_done()
-                cleared += 1
             except queue.Empty:
                 break
-        
-        if cleared > 0:
-            print(f"✓ Cleared {cleared} queued item(s)")
     
     def shutdown(self):
         """Shut down the TTS engine"""
@@ -203,21 +229,9 @@ class TTSEngine:
 
 def main():
     """Main entry point"""
-    print("="*70)
-    print("Blind-Accessible Tic-Tac-Toe with AI Assistance")
-    print("="*70)
-    print()
-    
     # Check dependencies
     if not check_dependencies():
-        print("\nPlease install missing dependencies and try again.")
         sys.exit(1)
-    
-    print()
-    print("="*70)
-    print("Starting demo...")
-    print("="*70)
-    print()
     
     # Initialize TTS
     tts_engine = TTSEngine()
@@ -248,25 +262,11 @@ def main():
     game.ai_cancel = controller.cancel_ai
     game.voice_command_callback = controller.trigger_voice_command
     
-    print()
-    print("="*70)
-    print("CONTROLS:")
-    print("  1-9  : Place your piece on squares 1-9")
-    print("  D    : Get AI description of the board")
-    print("  V    : Voice command mode (ask specific questions)")
-    print("  R    : Reset the game")
-    print("  H    : Help")
-    print("="*70)
-    print()
-    print("Game window should now be visible.")
-    print("Listen for voice instructions!")
-    print()
-    
     # Run game
     try:
         game.run()
     except KeyboardInterrupt:
-        print("\nShutting down...")
+        pass
     finally:
         tts_engine.shutdown()
 

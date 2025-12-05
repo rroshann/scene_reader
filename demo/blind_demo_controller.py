@@ -84,9 +84,7 @@ class BlindDemoController:
         if VOICE_AVAILABLE:
             try:
                 self.voice_recognizer = VoiceCommandRecognizer(tts_callback=tts_callback)
-                print("✓ Voice command recognizer initialized")
             except Exception as e:
-                print(f"⚠ Voice recognizer initialization failed: {e}")
                 self.voice_recognizer = None
         else:
             self.voice_recognizer = None
@@ -102,13 +100,6 @@ class BlindDemoController:
         
         # Check for messages periodically - start immediately and frequently
         self._check_messages()
-        
-        print("✓ Blind demo controller initialized")
-        print("✓ Press D during gameplay for AI assistance")
-        print("✓ Press 1-9 to place your piece")
-        print("✓ Press R to reset game")
-        if self.voice_recognizer and self.voice_recognizer.is_available():
-            print("✓ Press V for voice command mode")
     
     def _check_messages(self):
         """Check message queue and process (runs in main thread)"""
@@ -120,22 +111,17 @@ class BlindDemoController:
                     message_type, data = self.message_queue.get_nowait()
                     
                     if message_type == 'speak':
-                        print(f"📢 Speaking: {data[:50]}...")
                         # Stop thinking sound before speaking
                         self._stop_thinking_sound()
                         # Call TTS directly - it handles its own queue
                         self.tts(data)
                     elif message_type == 'error':
-                        print(f"❌ Error: {data}")
                         self.tts(f"Error: {data}")
                     
                     self.message_queue.task_done()
                     processed += 1
                 except queue.Empty:
                     break
-            
-            if processed > 0:
-                print(f"✓ Processed {processed} message(s) from queue")
         except Exception as e:
             print(f"Error in _check_messages: {e}")
             import traceback
@@ -163,18 +149,29 @@ class BlindDemoController:
             with open(image_path, "rb") as f:
                 image_data = base64.b64encode(f.read()).decode()
             
-            print("  🤖 Analyzing with GPT-4-vision...")
             start_time = time.time()
             
-            # Build user prompt
-            user_prompt = GAME_USER_PROMPT
+            # Use different prompts based on whether user has a specific question
             if user_question:
-                user_prompt = f"{GAME_USER_PROMPT}\n\nUser's question: {user_question}. Answer this question directly."
+                # When user asks a specific question, prioritize answering it directly
+                system_prompt = """You are analyzing a Tic-Tac-Toe game window. Answer ONLY the user's specific question. Do not provide any additional information.
+
+Squares are numbered 1-9:
+1 2 3
+4 5 6  
+7 8 9
+
+CRITICAL: Answer with ONLY a direct yes/no or brief answer. Do NOT mention other squares, board state, or any other information unless specifically asked."""
+                user_prompt = f"Question: {user_question}\n\nAnswer ONLY this question. Nothing else."
+            else:
+                # Standard board description
+                system_prompt = GAME_SYSTEM_PROMPT
+                user_prompt = GAME_USER_PROMPT
             
             response = client.chat.completions.create(
                 model="gpt-4o",
                 messages=[
-                    {"role": "system", "content": GAME_SYSTEM_PROMPT},
+                    {"role": "system", "content": system_prompt},
                     {
                         "role": "user",
                         "content": [
@@ -183,7 +180,7 @@ class BlindDemoController:
                         ]
                     }
                 ],
-                max_tokens=60  # Slightly more for game outcome descriptions
+                max_tokens=30 if user_question else 60  # Much shorter for questions to force brevity
             )
             
             latency = time.time() - start_time
@@ -202,13 +199,11 @@ class BlindDemoController:
         """Trigger AI analysis of the board (called from main thread)"""
         # Check if already processing using flag (faster than lock check)
         if self.is_processing:
-            print("⚠ Already processing - ignoring duplicate request")
             self.tts("AI is already processing. Please wait.")
             return
         
         # Try to acquire lock
         if not self.processing_lock.acquire(blocking=False):
-            print("⚠ Lock already held - AI is processing")
             self.tts("AI is already processing. Please wait.")
             return
         
@@ -221,7 +216,6 @@ class BlindDemoController:
         self.is_processing = True
         self.cancel_processing = False
         
-        print("✓ Starting AI analysis")
         # Start analysis in background thread
         thread = threading.Thread(target=self._run_ai_analysis, daemon=True, args=(user_question,))
         thread.start()
@@ -259,7 +253,6 @@ class BlindDemoController:
             try:
                 question = self.voice_recognizer.listen_for_command(timeout=5, phrase_time_limit=5)
                 if question:
-                    print(f"✓ Voice command received: {question}")
                     # Play thinking sound instead of TTS
                     self._play_thinking_sound()
                     # Release lock before triggering analysis (it will acquire its own lock)
@@ -280,7 +273,6 @@ class BlindDemoController:
                     except:
                         pass
             except Exception as e:
-                print(f"❌ Voice command error: {e}")
                 try:
                     if self.processing_lock.locked():
                         self.processing_lock.release()
@@ -297,11 +289,9 @@ class BlindDemoController:
         try:
             # Check if cancelled before starting
             if self.cancel_processing:
-                print("⚠ Processing cancelled before starting")
                 return
             
             # Get window bounds (must be done in main thread context)
-            print("📸 Capturing screenshot...")
             bounds = self.game.get_window_bounds()
             
             # Capture screenshot
@@ -315,7 +305,6 @@ class BlindDemoController:
                     screenshot_path
                 )
             except Exception as e:
-                print(f"❌ Screenshot capture failed: {e}")
                 # Fallback to internal state
                 description = self.game.get_board_state_description()
                 self.message_queue.put(('speak', description))
@@ -325,9 +314,37 @@ class BlindDemoController:
             if self.cancel_processing:
                 return
             
-            # Use GPT-4-vision for actual game UI analysis
-            print("🤖 Analyzing with GPT-4-vision...")
-            result, error = self._analyze_with_gpt4_vision(screenshot_path, user_question=user_question)
+            # Try Approach 2.5 first (fastest for gaming: 0.56s mean latency)
+            result = None
+            error = None
+            
+            if APPROACH_2_5_AVAILABLE:
+                try:
+                    from pathlib import Path
+                    approach_2_5_result = run_hybrid_pipeline_optimized(
+                        image_path=Path(screenshot_path),
+                        prompt_mode='gaming',
+                        use_cache=True,
+                        user_question=user_question
+                    )
+                    
+                    # Check if Approach 2.5 succeeded and detected objects
+                    if approach_2_5_result.get('success') and approach_2_5_result.get('num_objects', 0) > 0:
+                        result = {
+                            'success': True,
+                            'description': approach_2_5_result.get('description', "Could not analyze the board."),
+                            'latency': approach_2_5_result.get('total_latency', 0)
+                        }
+                    # If no objects detected, fallback to GPT-4V (YOLO can't detect Tic-Tac-Toe elements)
+                    elif approach_2_5_result.get('num_objects', 0) == 0:
+                        # Fallback to GPT-4V for better Tic-Tac-Toe detection
+                        result, error = self._analyze_with_gpt4_vision(screenshot_path, user_question=user_question)
+                except Exception as e:
+                    # If Approach 2.5 fails, fallback to GPT-4V
+                    result, error = self._analyze_with_gpt4_vision(screenshot_path, user_question=user_question)
+            else:
+                # Approach 2.5 not available, use GPT-4V
+                result, error = self._analyze_with_gpt4_vision(screenshot_path, user_question=user_question)
             
             # Check cancellation before speaking
             if self.cancel_processing:
@@ -337,22 +354,23 @@ class BlindDemoController:
             if result and result.get('success'):
                 description = result.get('description', "Could not analyze the board.")
                 latency = result.get('latency', 0)
-                print(f"✓ AI analysis complete in {latency:.2f}s: {description[:60]}...")
+                
+                # Print minimal output like approach demos
+                if user_question:
+                    print(f"Input: {user_question}")
+                else:
+                    print(f"Input: Looking at the entire screen")
+                print(f"Latency: {latency:.2f}s")
+                print(f"Output: {description}")
             else:
                 # Fallback: use game's internal board state
                 description = self.game.get_board_state_description()
-                print(f"⚠ AI failed, using fallback: {description[:60]}...")
             
             # Send to main thread via queue
             if not self.cancel_processing:
                 self.message_queue.put(('speak', description))
-                print(f"✓ Message queued for TTS")
         
         except Exception as e:
-            print(f"❌ Error during AI analysis: {e}")
-            import traceback
-            traceback.print_exc()
-            
             # Fallback to internal board state
             if not self.cancel_processing:
                 try:
@@ -376,12 +394,10 @@ class BlindDemoController:
                 self.processing_lock.release()
             except:
                 pass  # Lock might already be released
-            print("✓ AI analysis finished, lock released")
     
     def cancel_ai(self):
         """Cancel any ongoing AI processing"""
         if self.is_processing:
-            print("🛑 Cancelling AI processing...")
             self.cancel_processing = True
             self.tts_stop()  # Also interrupt any ongoing speech
             self._stop_thinking_sound()  # Stop thinking sound too
@@ -420,8 +436,8 @@ class BlindDemoController:
                 import sys
                 sys.stdout.write('\a')
                 sys.stdout.flush()
-        except Exception as e:
-            print(f"⚠ Could not play thinking sound: {e}")
+        except Exception:
+            pass
     
     def _stop_thinking_sound(self):
         """Stop the thinking sound"""
