@@ -269,7 +269,7 @@ Hyper:   P, patch size (typically 14 or 16)
 8  return Z
 ```
 
-**In simple terms:** The input is an image and the output is a sequence of patch embeddings that represent the image as a series of visual tokens.
+The input is an image and the output is a sequence of patch embeddings that represent the image as a series of visual tokens.
 
 ---
 
@@ -300,7 +300,7 @@ Hyper:   conf_thresh = 0.25, iou_thresh = 0.45
 12 return D
 ```
 
-**In simple terms:** The input is an image and the output is a list of detected objects with their classes, confidence scores, and bounding box coordinates.
+The input is an image and the output is a list of detected objects with their classes, confidence scores, and bounding box coordinates.
 
 ---
 
@@ -350,7 +350,7 @@ Hyper:   max_tokens = 100-200 (adaptive)
 
 **Complexity:** O(H·W) for detection + O(ℓ²) for generation
 
-**In simple terms:** The input is an image and a mode (gaming or real_world), and the output is a scene description string with latency, cost, and cache hit metadata.
+The input is an image and a mode (gaming or real_world), and the output is a scene description string with latency, cost, and cache hit metadata.
 
 ---
 
@@ -399,7 +399,7 @@ Hyper:   ocr_thresh = 0.5, depth_enabled = true
 31 return S
 ```
 
-**In simple terms:** The input is an image and a mode (gaming or real_world), and the output is a scene description string that incorporates text and depth information when available.
+The input is an image and a mode (gaming or real_world), and the output is a scene description string that incorporates text and depth information when available.
 
 ---
 
@@ -446,7 +446,7 @@ Hyper:   max_tokens_quick = 50, max_tokens_full = 150
 - Tier 1 (BLIP-2): ~1.7s (local, optional)
 - Tier 2 (GPT-4V): ~1.6s (cloud, optimized prompts)
 
-**In simple terms:** The input is an image and a mode (gaming or real_world), and the output is a quick preview description (Tier 1) and a detailed description (Tier 2).
+The input is an image and a mode (gaming or real_world), and the output is a quick preview description (Tier 1) and a detailed description (Tier 2).
 
 ---
 
@@ -479,7 +479,7 @@ cache_store(key, value):
 **Cache Hit Rate:** 40-60% in repeated-scene scenarios
 **Speedup on Hit:** ~15x (0.08s vs 1.2s)
 
-**In simple terms:** The input is detected objects, context, and mode (for hash computation) or a cache key (for lookup/store), and the output is a hash key, a cache hit/miss result with cached value, or void (for store operations).
+The input is detected objects, context, and mode (for hash computation) or a cache key (for lookup/store), and the output is a hash key, a cache hit/miss result with cached value, or void (for store operations).
 
 ---
 
