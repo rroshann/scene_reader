@@ -661,19 +661,19 @@ We tested all approaches with their **actual prompt_mode parameters** (gaming vs
 
 | Rank | Approach | Algorithm | Mean Latency | P95 | Std Dev | Cost/Query |
 |------|----------|-----------|--------------|-----|---------|------------|
-| 1 | **Approach 2.5** | Alg. 9 | **0.54s** | 0.94s | 0.35s | $0.0000* |
-| 2 | **Approach 3.5** | Alg. 10 | **0.93s** | 1.45s | 0.52s | $0.0000* |
+| 1 | **Approach 2.5** | Alg. 9 | **0.54s** | 0.94s | 0.35s | $0.005* |
+| 2 | **Approach 3.5** | Alg. 10 | **0.93s** | 1.45s | 0.52s | $0.006* |
 | 3 | **Approach 1.5** | Alg. 11 | **1.62s** | 2.46s | 0.48s | $0.0101 |
 
 #### Gaming Mode (12 images)
 
 | Rank | Approach | Algorithm | Mean Latency | P95 | Std Dev | Cost/Query |
 |------|----------|-----------|--------------|-----|---------|------------|
-| 1 | **Approach 2.5** | Alg. 9 | **0.56s** | 0.92s | 0.34s | $0.0000* |
-| 2 | **Approach 3.5** | Alg. 10 | **1.05s** | 1.55s | 0.26s | $0.0000* |
+| 1 | **Approach 2.5** | Alg. 9 | **0.56s** | 0.92s | 0.34s | $0.005* |
+| 2 | **Approach 3.5** | Alg. 10 | **1.05s** | 1.55s | 0.26s | $0.006* |
 | 3 | **Approach 1.5** | Alg. 11 | **1.46s** | 1.90s | 0.28s | $0.0098 |
 
-*$0.0000 due to cache hits (Algorithm 12); actual cost without cache: ~$0.005-0.006/query
+*Cost per query without cache. Cache hits (Algorithm 12) reduce cost to $0.0000 with 40-60% hit rate in repeated-scene scenarios.
 
 ### Latency Comparison Visualizations
 
