@@ -13,8 +13,29 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-# Import prompts
-from prompts import SYSTEM_PROMPT, create_user_prompt
+# Import prompts (use absolute import to avoid conflicts with other prompts.py files)
+import sys
+from pathlib import Path
+import importlib.util
+
+# Get the prompts.py file in the same directory as this file
+current_dir = Path(__file__).parent
+prompts_path = current_dir / "prompts.py"
+
+# Use a unique module name to avoid conflicts
+module_name = f"approach_2_yolo_llm_prompts_{id(prompts_path)}"
+
+# Check if already loaded
+if module_name not in sys.modules:
+    spec = importlib.util.spec_from_file_location(module_name, prompts_path)
+    approach_2_prompts = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(approach_2_prompts)
+    sys.modules[module_name] = approach_2_prompts
+else:
+    approach_2_prompts = sys.modules[module_name]
+
+SYSTEM_PROMPT = approach_2_prompts.SYSTEM_PROMPT
+create_user_prompt = approach_2_prompts.create_user_prompt
 
 
 def generate_description_gpt4o_mini(objects_text: str, system_prompt: Optional[str] = None) -> Tuple[Optional[Dict], Optional[str]]:
@@ -149,13 +170,20 @@ def generate_description_claude_haiku(objects_text: str, system_prompt: Optional
         return None, str(e)
 
 
-def generate_description_gpt35_turbo(objects_text: str, system_prompt: Optional[str] = None) -> Tuple[Optional[Dict], Optional[str]]:
+def generate_description_gpt35_turbo(
+    objects_text: str, 
+    system_prompt: Optional[str] = None,
+    max_tokens: Optional[int] = None,
+    temperature: Optional[float] = None
+) -> Tuple[Optional[Dict], Optional[str]]:
     """
     Generate description using OpenAI GPT-3.5-turbo (faster than GPT-4o-mini)
     
     Args:
         objects_text: Formatted text describing detected objects
         system_prompt: Optional custom system prompt (defaults to prompts.SYSTEM_PROMPT)
+        max_tokens: Optional max tokens override (defaults to 100)
+        temperature: Optional temperature override (defaults to 0.9)
     
     Returns:
         Tuple of (result_dict, error_string)
@@ -177,14 +205,18 @@ def generate_description_gpt35_turbo(objects_text: str, system_prompt: Optional[
         print("  📤 Sending request to GPT-3.5-turbo...")
         start_time = time.time()
         
+        # Use overrides if provided, otherwise use defaults
+        api_max_tokens = max_tokens if max_tokens is not None else 100
+        api_temperature = temperature if temperature is not None else 0.9
+        
         response = client.chat.completions.create(
             model="gpt-3.5-turbo",
             messages=[
                 {"role": "system", "content": sys_prompt},
                 {"role": "user", "content": user_prompt}
             ],
-            max_tokens=200,  # Reduced for speed
-            temperature=0.7
+            max_tokens=api_max_tokens,
+            temperature=api_temperature
         )
         
         latency = time.time() - start_time
@@ -311,7 +343,13 @@ def generate_description_gemini_flash(objects_text: str, system_prompt: Optional
         return None, str(e)
 
 
-def generate_description(objects_text: str, llm_model: str = 'gpt-4o-mini', system_prompt: Optional[str] = None) -> Tuple[Optional[Dict], Optional[str]]:
+def generate_description(
+    objects_text: str, 
+    llm_model: str = 'gpt-4o-mini', 
+    system_prompt: Optional[str] = None,
+    max_tokens: Optional[int] = None,
+    temperature: Optional[float] = None
+) -> Tuple[Optional[Dict], Optional[str]]:
     """
     Generate description using specified LLM model
     
@@ -319,6 +357,8 @@ def generate_description(objects_text: str, llm_model: str = 'gpt-4o-mini', syst
         objects_text: Formatted text describing detected objects
         llm_model: 'gpt-4o-mini', 'gpt-3.5-turbo', 'claude-haiku', or 'gemini-flash'
         system_prompt: Optional custom system prompt
+        max_tokens: Optional max tokens override (only used for GPT-3.5-turbo currently)
+        temperature: Optional temperature override (only used for GPT-3.5-turbo currently)
     
     Returns:
         Tuple of (result_dict, error_string)
@@ -328,7 +368,7 @@ def generate_description(objects_text: str, llm_model: str = 'gpt-4o-mini', syst
     if model_lower in ['gpt-4o-mini', 'gpt4o-mini', 'openai']:
         return generate_description_gpt4o_mini(objects_text, system_prompt)
     elif model_lower in ['gpt-3.5-turbo', 'gpt35-turbo', 'gpt-3.5', 'gpt35']:
-        return generate_description_gpt35_turbo(objects_text, system_prompt)
+        return generate_description_gpt35_turbo(objects_text, system_prompt, max_tokens=max_tokens, temperature=temperature)
     elif model_lower in ['claude-haiku', 'claude-haiku-20241022', 'claude', 'anthropic']:
         return generate_description_claude_haiku(objects_text, system_prompt)
     elif model_lower in ['gemini-flash', 'gemini', 'google']:

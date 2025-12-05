@@ -6,21 +6,26 @@ import sys
 from pathlib import Path
 from typing import Dict, Optional
 
-# Add approach_2_yolo_llm to path for imports
+# Add project root to path first
 project_root = Path(__file__).parent.parent.parent
+sys.path.insert(0, str(project_root))
+
+# Import Approach 2 components (code reuse) - use absolute imports
+from code.approach_2_yolo_llm.yolo_detector import detect_objects, format_objects_for_prompt, get_detection_summary
+from code.approach_2_yolo_llm.llm_generator import generate_description
+
+# Keep approach2_dir for later use
 approach2_dir = project_root / "code" / "approach_2_yolo_llm"
-sys.path.insert(0, str(approach2_dir))
 
-# Import Approach 2 components (code reuse)
-from yolo_detector import detect_objects, format_objects_for_prompt, get_detection_summary
-from llm_generator import generate_description
+# Import cache manager (use absolute import)
+from code.approach_2_5_optimized.cache_manager import get_cache_manager
 
-# Import cache manager
-from cache_manager import get_cache_manager
+# Import prompt mode selectors
+from code.approach_2_5_optimized.prompts_optimized import get_system_prompt, get_user_prompt_function
 
 # Import adaptive generator (optional)
 try:
-    from llm_generator_optimized import generate_description_adaptive
+    from code.approach_2_5_optimized.llm_generator_optimized import generate_description_adaptive
     ADAPTIVE_AVAILABLE = True
 except ImportError:
     ADAPTIVE_AVAILABLE = False
@@ -33,7 +38,11 @@ def run_hybrid_pipeline_optimized(
     confidence_threshold: float = 0.25,
         system_prompt: Optional[str] = None,
         use_cache: bool = True,
-        use_adaptive: bool = False
+        use_adaptive: bool = False,
+        prompt_mode: str = 'real_world',  # 'gaming' or 'real_world'
+        max_tokens_override: Optional[int] = None,
+        temperature_override: Optional[float] = None,
+        user_question: Optional[str] = None  # User's specific question to answer
     ) -> Dict:
     """
     Run optimized hybrid pipeline: YOLO detection + LLM generation (GPT-3.5-turbo)
@@ -45,9 +54,10 @@ def run_hybrid_pipeline_optimized(
         yolo_size: 'n' (nano), 'm' (medium), or 'x' (xlarge)
         llm_model: 'gpt-3.5-turbo' (default, optimized) or other models
         confidence_threshold: Minimum confidence for YOLO detections
-        system_prompt: Optional custom system prompt for LLM
+        system_prompt: Optional custom system prompt for LLM (overrides prompt_mode)
         use_cache: Whether to use caching (default: True)
         use_adaptive: Whether to use adaptive max_tokens (default: False)
+        prompt_mode: 'gaming' or 'real_world' (default: 'real_world')
     
     Returns:
         Dict with complete results (same format as Approach 2):
@@ -107,6 +117,13 @@ def run_hybrid_pipeline_optimized(
         # Format objects for LLM prompt (reuse from Approach 2)
         objects_text = format_objects_for_prompt(detections, include_confidence=True)
         
+        # Use mode-specific prompts if system_prompt not provided
+        if system_prompt is None:
+            system_prompt = get_system_prompt(prompt_mode)
+        
+        # Get mode-specific user prompt function
+        create_user_prompt_fn = get_user_prompt_function(prompt_mode)
+        
         # Check cache before LLM generation
         cache_hit = False
         cache_key = None
@@ -159,11 +176,50 @@ def run_hybrid_pipeline_optimized(
                     use_adaptive=True
                 )
             else:
-                llm_result, error = generate_description(
-                    objects_text,
-                    llm_model=llm_model,
-                    system_prompt=system_prompt
-                )
+                # Create user prompt using mode-specific function and temporarily override
+                # the create_user_prompt function in the prompts module that generate_description uses
+                import sys
+                import importlib.util
+                # Find the prompts module that was imported by llm_generator
+                # Use the same approach as llm_generator to avoid conflicts
+                prompts_mod_name = 'approach_2_prompts'
+                prompts_mod = sys.modules.get(prompts_mod_name)
+                if prompts_mod is None:
+                    # Import using the same method as llm_generator
+                    prompts_path = approach2_dir / "prompts.py"
+                    spec = importlib.util.spec_from_file_location(prompts_mod_name, prompts_path)
+                    prompts_mod = importlib.util.module_from_spec(spec)
+                    spec.loader.exec_module(prompts_mod)
+                
+                original_create_user_prompt = prompts_mod.create_user_prompt
+                
+                # Create wrapper that includes user question if provided
+                def create_user_prompt_with_question(objects_text):
+                    base_prompt = create_user_prompt_fn(objects_text)
+                    if user_question:
+                        # Detect if question is about text/reading
+                        text_keywords = ['street', 'sign says', 'what does', 'read', 'label', 'name', 'says']
+                        is_text_question = any(keyword in user_question.lower() for keyword in text_keywords)
+                        
+                        if is_text_question:
+                            return f"{base_prompt}\n\nUser's question: {user_question}. IMPORTANT: This question is about READING TEXT. You can only see OBJECTS (like 'sign', 'car'), but you CANNOT READ TEXT. If the text is not visible in the detected objects, you MUST say 'I cannot read the text' or 'I cannot see the street name' - DO NOT guess. Answer directly based on what you can actually see."
+                        else:
+                            return f"{base_prompt}\n\nUser's question: {user_question}. Please answer this question directly based on what you see in the image. Focus on answering the question, not just describing what's in front."
+                    return base_prompt
+                
+                prompts_mod.create_user_prompt = create_user_prompt_with_question
+                
+                try:
+                    llm_result, error = generate_description(
+                        objects_text,
+                        llm_model=llm_model,
+                        system_prompt=system_prompt,
+                        max_tokens=max_tokens_override,
+                        temperature=temperature_override
+                    )
+                finally:
+                    # Restore original function
+                    prompts_mod.create_user_prompt = original_create_user_prompt
             
             if error:
                 result['error'] = f"LLM generation failed: {error}"

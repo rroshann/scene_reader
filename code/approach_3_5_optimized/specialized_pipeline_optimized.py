@@ -28,17 +28,20 @@ depth_estimator_module = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(depth_estimator_module)
 DepthEstimator = depth_estimator_module.DepthEstimator
 
-# Import Approach 3.5 optimized components
-from cache_manager import get_cache_manager
-from complexity_detector import detect_complexity, get_adaptive_max_tokens
-from prompts_optimized import (
+# Import Approach 3.5 optimized components (use absolute imports)
+from code.approach_3_5_optimized.cache_manager import get_cache_manager
+from code.approach_3_5_optimized.complexity_detector import detect_complexity, get_adaptive_max_tokens
+from code.approach_3_5_optimized.prompts_optimized import (
     OCR_FUSION_SYSTEM_PROMPT,
     DEPTH_FUSION_SYSTEM_PROMPT,
     BASE_SYSTEM_PROMPT,
     create_ocr_fusion_prompt,
-    create_depth_fusion_prompt
+    create_depth_fusion_prompt,
+    get_ocr_system_prompt,
+    get_depth_system_prompt,
+    get_base_system_prompt
 )
-from ocr_processor_optimized import OCRProcessorOptimized
+from code.approach_3_5_optimized.ocr_processor_optimized import OCRProcessorOptimized
 
 # Global model instances for warmup/reuse
 _global_ocr_processor: Optional[OCRProcessorOptimized] = None
@@ -94,14 +97,9 @@ def _generate_description_optimized(
     """
     model_lower = llm_model.lower()
     
-    # Default max_tokens if not provided
+    # Default max_tokens if not provided (increased for Approach 3.5 to leverage OCR/depth)
     if max_tokens is None:
-        if 'gpt-3.5-turbo' in model_lower or 'gpt35' in model_lower:
-            max_tokens = 200
-        elif 'gpt-4o-mini' in model_lower or 'gpt4o-mini' in model_lower:
-            max_tokens = 300
-        else:
-            max_tokens = 200
+        max_tokens = 250  # Allow 40-50 words to include all text (signs) and depth information
     
     if model_lower in ['gpt-3.5-turbo', 'gpt35-turbo', 'gpt-3.5', 'gpt35']:
         return _call_gpt35_turbo_direct(user_prompt, system_prompt, max_tokens, temperature)
@@ -114,7 +112,7 @@ def _generate_description_optimized(
         return _call_gpt35_turbo_direct(user_prompt, system_prompt, max_tokens, temperature)
 
 
-def _call_gpt35_turbo_direct(user_prompt: str, system_prompt: Optional[str] = None, max_tokens: int = 200, temperature: float = 0.4):
+def _call_gpt35_turbo_direct(user_prompt: str, system_prompt: Optional[str] = None, max_tokens: int = 100, temperature: float = 0.9):
     """
     Call GPT-3.5-turbo directly with custom prompt (optimized for speed)
     
@@ -254,7 +252,11 @@ def run_specialized_pipeline_optimized(
     use_adaptive: bool = True,
     quality_mode: Literal['fast', 'balanced', 'quality'] = 'balanced',
     ocr_processor: Optional[OCRProcessorOptimized] = None,
-    depth_estimator: Optional[DepthEstimator] = None
+    depth_estimator: Optional[DepthEstimator] = None,
+    prompt_mode: str = 'real_world',  # 'gaming' or 'real_world'
+    max_tokens_override: Optional[int] = None,
+    temperature_override: Optional[float] = None,
+    user_question: Optional[str] = None  # User's specific question to answer
 ) -> Dict:
     """
     Run optimized specialized pipeline: OCR/Depth + YOLO + LLM (with optimizations)
@@ -266,12 +268,13 @@ def run_specialized_pipeline_optimized(
         yolo_size: 'n' (nano), 'm' (medium), or 'x' (xlarge)
         llm_model: LLM model name (default: 'gpt-3.5-turbo' - optimized)
         confidence_threshold: Minimum confidence for YOLO detections
-        system_prompt: Optional custom system prompt
+        system_prompt: Optional custom system prompt (overrides prompt_mode)
         use_cache: Whether to use caching (default: True)
         use_adaptive: Whether to use adaptive max_tokens (default: True)
         quality_mode: Quality mode ('fast', 'balanced', 'quality') - affects max_tokens and temperature
         ocr_processor: Optional pre-initialized OCR processor (for reuse)
         depth_estimator: Optional pre-initialized depth estimator (for reuse)
+        prompt_mode: 'gaming' or 'real_world' (default: 'real_world')
     
     Returns:
         Dict with complete results (same format as Approach 3, plus new fields):
@@ -347,11 +350,14 @@ def run_specialized_pipeline_optimized(
         # Use global instances if available, otherwise use provided or create new
         global _global_ocr_processor, _global_depth_estimator
         
+        skip_depth_block = False  # Flag to skip depth block if we already processed it
+        
         if mode == 'ocr':
             if ocr_processor is None:
                 ocr_processor = _global_ocr_processor
             if ocr_processor is None:
-                ocr_processor = OCRProcessorOptimized(languages=['en'], use_paddleocr=True)
+                # Use cloud OCR by default (much faster: ~0.5-1s vs 60s local)
+                ocr_processor = OCRProcessorOptimized(languages=['en'], use_cloud=True, use_paddleocr=True)
                 _global_ocr_processor = ocr_processor
         
         if mode == 'depth':
@@ -365,7 +371,7 @@ def run_specialized_pipeline_optimized(
         # For OCR: run in parallel (both always needed)
         # For Depth: run YOLO first, then conditionally run depth (skip if no objects)
         if mode == 'ocr':
-            # OCR mode: run YOLO and OCR in parallel
+            # OCR mode: run YOLO and OCR in parallel with timeout
             with ThreadPoolExecutor(max_workers=2) as executor:
                 yolo_future = executor.submit(
                     detect_objects,
@@ -378,8 +384,38 @@ def run_specialized_pipeline_optimized(
                     image_path
                 )
                 detections, detection_latency, num_objects = yolo_future.result()
-                specialized_result = ocr_future.result()
-        else:  # depth mode
+                
+                # Add timeout for OCR (max 10 seconds - if slower, fallback to depth mode)
+                ocr_too_slow = False
+                try:
+                    specialized_result = ocr_future.result(timeout=10.0)
+                    ocr_latency = specialized_result.get('ocr_latency', 0)
+                    if ocr_latency > 10.0:
+                        print(f"  ⚠️  OCR took {ocr_latency:.2f}s (too slow), falling back to depth mode")
+                        ocr_too_slow = True
+                except Exception as e:
+                    print(f"  ⚠️  OCR timeout or error: {e}, falling back to depth mode")
+                    ocr_too_slow = True
+                
+                # If OCR was too slow, switch to depth mode
+                if ocr_too_slow:
+                    mode = 'depth'
+                    result['mode'] = 'depth'  # Update result mode
+                    # Initialize depth estimator if needed
+                    if depth_estimator is None:
+                        depth_estimator = _global_depth_estimator
+                    if depth_estimator is None:
+                        depth_estimator = DepthEstimator()
+                        _global_depth_estimator = depth_estimator
+                    # Run depth estimation (quick, ~0.5s) - YOLO already done above
+                    print(f"  🔍 Running depth estimation (fallback from slow OCR)...")
+                    specialized_result = depth_estimator.estimate_depth(image_path)
+                    # Skip the depth mode block below since we already have detections and depth
+                    skip_depth_block = True
+                else:
+                    skip_depth_block = False
+        
+        if mode == 'depth' and not skip_depth_block:  # depth mode (original, not fallback)
             # Run YOLO and depth estimation in parallel for better performance
             # Even if num_objects == 0, running in parallel saves time vs sequential
             with ThreadPoolExecutor(max_workers=2) as executor:
@@ -459,9 +495,10 @@ def run_specialized_pipeline_optimized(
             fusion_prompt = create_ocr_fusion_prompt(
                 objects_text, 
                 specialized_result,
-                detections=detections  # Pass detections for smart truncation
+                detections=detections,  # Pass detections for smart truncation
+                mode=prompt_mode  # Pass prompt mode
             )
-            fusion_system_prompt = system_prompt if system_prompt else OCR_FUSION_SYSTEM_PROMPT
+            fusion_system_prompt = system_prompt if system_prompt else get_ocr_system_prompt(prompt_mode)
         else:  # depth mode
             # Analyze spatial relationships
             if depth_estimator and specialized_result.get('depth_map') is not None:
@@ -477,34 +514,73 @@ def run_specialized_pipeline_optimized(
                 objects_text,
                 specialized_result,
                 spatial_info,
-                detections=detections  # Pass detections for smart truncation
+                detections=detections,  # Pass detections for smart truncation
+                mode=prompt_mode  # Pass prompt mode
             )
-            fusion_system_prompt = system_prompt if system_prompt else DEPTH_FUSION_SYSTEM_PROMPT
+            # Append user question to fusion prompt if provided
+            if user_question:
+                fusion_prompt = f"{fusion_prompt}\n\nUser's question: {user_question}. Please answer this question directly based on what you see in the image."
+            fusion_system_prompt = system_prompt if system_prompt else get_depth_system_prompt(prompt_mode)
         
         # Stage 4: LLM Generation with adaptive max_tokens
         print(f"  🤖 Generating description with {llm_model}...")
         
         # Determine max_tokens and temperature adaptively (with quality mode adjustment)
-        temperature = 0.4  # Default optimized temperature
-        if use_adaptive and complexity:
-            base_max_tokens = get_adaptive_max_tokens(complexity)
-            # Apply quality mode multiplier and get temperature
-            try:
-                from performance_optimizer import QualityMode, get_quality_mode_settings
-                quality_enum = QualityMode(quality_mode)
-                settings = get_quality_mode_settings(quality_enum)
-                max_tokens = int(base_max_tokens * settings['max_tokens_multiplier'])
-                temperature = settings.get('temperature', 0.4)  # Use quality mode temperature
-            except Exception as e:
-                # Fallback if performance_optimizer not available
-                max_tokens = base_max_tokens
-                print(f"  ⚠️  Quality mode settings failed: {e}, using defaults")
-        else:
-            # Default based on model
-            if 'gpt-3.5-turbo' in llm_model.lower():
-                max_tokens = 200
+        # Use overrides if provided (for standardized comparison), otherwise use adaptive/defaults
+        if max_tokens_override is not None:
+            max_tokens = max_tokens_override
+            temperature = temperature_override if temperature_override is not None else 0.7
+        elif temperature_override is not None:
+            temperature = temperature_override
+            # Still need to determine max_tokens
+            if use_adaptive and complexity:
+                base_max_tokens = get_adaptive_max_tokens(complexity)
+                if mode == 'ocr':
+                    base_max_tokens = min(base_max_tokens, 250)
+                else:
+                    base_max_tokens = min(base_max_tokens, 200)
+                try:
+                    from performance_optimizer import QualityMode, get_quality_mode_settings
+                    quality_enum = QualityMode(quality_mode)
+                    settings = get_quality_mode_settings(quality_enum)
+                    max_tokens = int(base_max_tokens * settings['max_tokens_multiplier'])
+                except Exception as e:
+                    max_tokens = base_max_tokens
+                    print(f"  ⚠️  Quality mode settings failed: {e}, using defaults")
             else:
-                max_tokens = 300
+                if mode == 'ocr':
+                    max_tokens = 250
+                else:
+                    max_tokens = 200
+        else:
+            # Normal adaptive/default behavior
+            temperature = 0.9  # Higher temperature for more natural, conversational language
+            if use_adaptive and complexity:
+                base_max_tokens = get_adaptive_max_tokens(complexity)
+                # Allow more tokens for Approach 3.5 to leverage OCR/depth (especially for OCR mode with multiple signs)
+                # OCR mode needs more tokens to list all signs and text
+                if mode == 'ocr':
+                    base_max_tokens = min(base_max_tokens, 250)  # More tokens for OCR to list all signs
+                else:
+                    base_max_tokens = min(base_max_tokens, 200)  # Slightly less for depth mode
+                # Apply quality mode multiplier and get temperature
+                try:
+                    from performance_optimizer import QualityMode, get_quality_mode_settings
+                    quality_enum = QualityMode(quality_mode)
+                    settings = get_quality_mode_settings(quality_enum)
+                    max_tokens = int(base_max_tokens * settings['max_tokens_multiplier'])
+                    temperature = 0.9  # Override to 0.9 for natural language
+                except Exception as e:
+                    # Fallback if performance_optimizer not available
+                    max_tokens = base_max_tokens
+                    print(f"  ⚠️  Quality mode settings failed: {e}, using defaults")
+            else:
+                # Increased max_tokens for Approach 3.5 to leverage OCR/depth capabilities
+                # OCR mode needs more tokens to list all signs
+                if mode == 'ocr':
+                    max_tokens = 250  # More tokens for OCR to list all signs and text
+                else:
+                    max_tokens = 200  # Slightly less for depth mode
         
         result['max_tokens_used'] = max_tokens
         result['quality_mode'] = quality_mode

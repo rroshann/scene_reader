@@ -34,7 +34,7 @@ This study evaluated multiple vision AI approaches for accessibility application
 - **Approach 3:** Specialized Multi-Model System (OCR/Depth) - 30 tests (20 depth + 10 OCR attempted)
 - **Approach 3.5:** Optimized Specialized Multi-Model System - 60 tests (40 successful, 20 depth mode)
 - **Approach 4:** Local/Edge Models (BLIP-2) - 42 local tests, $0.00 cost
-- **Approach 5:** Streaming/Progressive Models (BLIP-2 + GPT-4V parallel) - 42 API calls + 42 local tests
+- **Approach 1.5:** Optimized Pure VLM (Optimized GPT-4V + optional BLIP-2) - 42 API calls + 42 local tests
 - **Approach 6:** RAG-Enhanced Vision (6 configurations, gaming only) - 72 API calls
 - **Approach 7:** Chain-of-Thought Prompting (GPT-4V with CoT) - 42 API calls
 
@@ -46,6 +46,38 @@ Total: 564 API calls + 84 local tests with comprehensive quantitative and qualit
 - **GPT-4V provides the clearest descriptions** (4.55 clarity score) and fastest median latency (2.83s), but suffers from high variability and moderate cost
 - **Cost varies dramatically** - Gemini is 4x cheaper than GPT-4V and 7.7x cheaper than Claude, making it the clear choice for cost-sensitive deployments
 - **All models show room for improvement** in gaming scenarios (completeness scores 2.25-2.92) and have false negative rates of 15-20% for safety-critical hazards
+
+### 🔬 Standardized Comparison Results
+
+To isolate **architectural differences** from optimizations, we tested the top 3 approaches (1.5, 2.5, 3.5) with **identical parameters**:
+
+**Standardized Parameters:**
+- max_tokens: 100
+- temperature: 0.7
+- top_p: 1.0
+- cache: DISABLED
+- adaptive parameters: DISABLED
+- image preprocessing: DISABLED
+- prompts: Neutral, standardized (same style/length)
+
+**Results:**
+
+| Approach | Mean Latency | Median | Std Dev | Success Rate |
+|----------|--------------|--------|---------|--------------|
+| **Approach 3.5** | **1.21s** 🥇 | 1.12s | 0.45s | 100% (42/42) |
+| **Approach 2.5** | **1.36s** 🥈 | 1.34s | 0.25s | 100% (42/42) |
+| **Approach 1.5** | **3.63s** 🥉 | 3.52s | 0.85s | 100% (42/42) |
+
+**Key Insights:**
+1. **Architectural advantage**: Specialized pipelines (3.5, 2.5) outperform pure VLM (1.5) even with identical parameters
+2. **GPT-3.5-turbo vs GPT-4V**: Using GPT-3.5-turbo (Approaches 2.5, 3.5) provides 2.7x speedup over GPT-4V (Approach 1.5)
+3. **Consistency**: Approach 2.5 has lowest standard deviation (0.25s), making it most predictable
+4. **Specialized models help**: Approach 3.5's OCR/Depth preprocessing adds minimal overhead while improving capabilities
+
+**Comparison with Optimized Results:**
+- **Optimized** results (with approach-specific parameters) show better performance: 1.10s (2.5), 1.50s (3.5), 1.73s (1.5)
+- **Standardized** results isolate architectural differences, showing that hybrid approaches are inherently faster
+- Both standardized and optimized results are valuable: standardized shows architectural tradeoffs, optimized shows practical performance
 
 ---
 
@@ -1783,8 +1815,8 @@ Approach 6 implements a RAG (Retrieval-Augmented Generation) enhanced vision pip
 1. **First systematic comparison** of VLM approaches for accessibility
 2. **Gaming accessibility focus** (underexplored domain)
 3. **RAG for gaming accessibility** - First application of retrieval-augmented generation to gaming accessibility (Approach 6)
-4. **Progressive disclosure for vision accessibility** - First systematic application of two-tier streaming architecture (Approach 5)
-5. **Perceived latency optimization** - Measured 69% improvement in time-to-first output (Approach 5)
+4. **Progressive disclosure for vision accessibility** - First systematic application of two-tier streaming architecture (Approach 1.5)
+5. **Perceived latency optimization** - Measured 69% improvement in time-to-first output (Approach 1.5)
 6. **Explicit tradeoff analysis** for practical deployment
 7. **Safety-critical failure mode** categorization
 8. **Slow-paced game focus** (practical for real-time use)
@@ -1972,11 +2004,11 @@ Approach 4 implements local vision-language models that run on-device without cl
 
 ---
 
-## 🔬 Approach 5: Streaming/Progressive Models Results
+## 🔬 Approach 1.5: Optimized Pure VLM Results
 
 ### Overview
 
-Approach 5 implements a two-tier streaming architecture that optimizes **perceived latency** by providing immediate feedback from a fast local model (BLIP-2) while a detailed cloud model (GPT-4V) generates comprehensive descriptions in parallel. This represents a novel UX innovation for vision accessibility applications.
+Approach 1.5 is an optimized version of Approach 1 (Pure VLM) that implements a two-tier streaming architecture to optimize **perceived latency** by providing immediate feedback from a fast local model (BLIP-2, optional) while a detailed cloud model (GPT-4V) generates comprehensive descriptions in parallel. Key optimizations include concise prompts (under 20 words), lower token limits (max_tokens=100), and mode-specific prompts (gaming/real-world). This represents a novel UX innovation for vision accessibility applications.
 
 **Test Configuration:**
 - **Tier 1 (Fast Model):** BLIP-2 OPT-2.7B (local, on-device)
@@ -1989,7 +2021,7 @@ Approach 5 implements a two-tier streaming architecture that optimizes **perceiv
 
 ### Key Findings
 
-**Approach 5 achieves 69% perceived latency improvement:**
+**Approach 1.5 achieves 69% perceived latency improvement:**
 - **Time to First Output:** 1.73s mean (Tier1 quick overview)
 - **Tier2 Detailed Description:** 5.47s mean (comprehensive description)
 - **Perceived Latency Improvement:** 66.2% mean improvement (3.74s faster perceived response)
@@ -2091,7 +2123,7 @@ Approach 5 implements a two-tier streaming architecture that optimizes **perceiv
 
 #### Latency Comparison
 
-| Metric | Approach 1 (Baseline) | Approach 5 (Streaming) | Improvement |
+| Metric | Approach 1 (Baseline) | Approach 1.5 (Optimized) | Improvement |
 |--------|---------------------|----------------------|-------------|
 | **Mean Latency** | 5.63s | 5.47s (Tier2) | Similar |
 | **Median Latency** | 2.83s | 4.72s (Tier2) | Baseline faster |
@@ -2109,7 +2141,7 @@ Approach 5 implements a two-tier streaming architecture that optimizes **perceiv
 
 **Key Insight:** Tier2 quality matches baseline quality, but users get immediate Tier1 feedback while waiting for Tier2, improving perceived responsiveness.
 
-### Strengths of Approach 5
+### Strengths of Approach 1.5
 
 ✅ **69% faster perceived latency** - Users get feedback in 1.73s instead of 5.63s  
 ✅ **Progressive disclosure** - Quick overview followed by detailed description  
@@ -2119,7 +2151,7 @@ Approach 5 implements a two-tier streaming architecture that optimizes **perceiv
 ✅ **Novel UX innovation** - First systematic application of progressive disclosure to vision accessibility  
 ✅ **Parallel execution** - Efficient async implementation using Python asyncio  
 
-### Weaknesses of Approach 5
+### Weaknesses of Approach 1.5
 
 ❌ **Requires BLIP-2 setup** - Local model dependencies (transformers, torch)  
 ❌ **More complex implementation** - Async programming required  
@@ -2157,7 +2189,7 @@ Approach 5 implements a two-tier streaming architecture that optimizes **perceiv
 - **Max improvement:** 94.4%
 
 **Statistical Significance:**
-- **Paired comparison:** Approach 5 time-to-first (1.73s) vs Approach 1 baseline (5.63s)
+- **Paired comparison:** Approach 1.5 time-to-first (1.73s) vs Approach 1 baseline (5.63s)
 - **Improvement:** 3.90s reduction (69.3% faster)
 - **Effect size:** Large (Cohen's d > 1.0 expected)
 
@@ -2254,7 +2286,7 @@ Approach 5 implements a two-tier streaming architecture that optimizes **perceiv
 **Use Case Recommendations:**
 - **Speed-Critical:** Approach 3.5 (Optimized Specialized) - 1.50s mean, 75% under 2s target
 - **Real-Time Applications:** Approach 3.5 (Optimized Specialized) - Best for sub-2s latency requirement
-- **Perceived Latency Optimization:** Approach 5 (Streaming) - 1.73s time-to-first, 69% improvement ⭐
+- **Perceived Latency Optimization:** Approach 1.5 (Optimized Pure VLM) - 1.73s time-to-first, 69% improvement ⭐
 - **Cost-Sensitive:** Approach 4 (Local Models) - $0.00 cost (vs $13.17/1K for Approach 1)
 - **Privacy-Critical:** Approach 4 (Local Models) - On-device processing, no data sent to cloud
 - **Offline Deployment:** Approach 4 (Local Models) - Works without internet
@@ -2262,7 +2294,7 @@ Approach 5 implements a two-tier streaming architecture that optimizes **perceiv
 - **Safety-Critical:** Approach 7 (Chain-of-Thought) - Better hazard detection
 - **General Purpose:** Approach 1 (Pure VLMs) - Best overall quality
 - **Specialized Tasks:** Approach 3.5 (Optimized Specialized) - Depth/OCR enhancements with speed
-- **UX Innovation:** Approach 5 (Streaming) - Progressive disclosure, immediate feedback
+- **UX Innovation:** Approach 1.5 (Optimized Pure VLM) - Progressive disclosure, immediate feedback
 
 ---
 

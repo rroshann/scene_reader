@@ -1,0 +1,71 @@
+═══════════════════════════════════════════════════════════════
+  BLIND-ACCESSIBLE TIC-TAC-TOE WITH AI - QUICK START
+═══════════════════════════════════════════════════════════════
+
+🚀 TO RUN THE DEMO:
+───────────────────────────────────────────────────────────────
+  ./run_blind_demo.sh
+
+  OR:
+
+  source venv/bin/activate
+  python demo/run_blind_demo.py
+
+═══════════════════════════════════════════════════════════════
+
+🎮 CONTROLS:
+───────────────────────────────────────────────────────────────
+  Numbers 1-9  →  Place your piece on squares 1-9
+  
+  Square Layout:
+  ┌───┬───┬───┐
+  │ 1 │ 2 │ 3 │  (1 = top-left, 3 = top-right)
+  ├───┼───┼───┤
+  │ 4 │ 5 │ 6 │  (5 = center)
+  ├───┼───┼───┤
+  │ 7 │ 8 │ 9 │  (9 = bottom-right)
+  └───┴───┴───┘
+  
+  D  →  AI board description (~1.5s)
+  R  →  Reset game
+  H  →  Help
+
+═══════════════════════════════════════════════════════════════
+
+🎯 WHAT HAPPENS:
+───────────────────────────────────────────────────────────────
+  1. Game launches with voice welcome message
+  2. You play as X, computer plays as O
+  3. Press numbers to make moves
+  4. Voice confirms each move
+  5. Press D anytime for AI help
+  6. Win, lose, or tie announced by voice
+
+═══════════════════════════════════════════════════════════════
+
+🔊 VOICE FEEDBACK FOR EVERYTHING:
+───────────────────────────────────────────────────────────────
+  ✓ Whose turn it is
+  ✓ Move confirmations  
+  ✓ Error messages
+  ✓ Game outcomes
+  ✓ AI descriptions
+  ✓ Help instructions
+
+═══════════════════════════════════════════════════════════════
+
+⚡ PERFORMANCE:
+───────────────────────────────────────────────────────────────
+  • AI Response: ~1.1 seconds (Approach 2.5)
+  • Total Feedback: ~1.5 seconds
+  • Fast enough for natural gameplay!
+
+═══════════════════════════════════════════════════════════════
+
+📖 FULL DOCS:
+───────────────────────────────────────────────────────────────
+  See: demo/BLIND_DEMO_README.md
+
+═══════════════════════════════════════════════════════════════
+
+

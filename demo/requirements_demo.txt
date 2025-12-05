@@ -1,0 +1,36 @@
+# Demo Dependencies for Scene Reader
+# Install with: pip install -r demo/requirements_demo.txt
+
+# Screen capture
+mss>=9.0.0              # Fast screen capture (preferred)
+Pillow>=10.0.0          # Image handling (fallback for screen capture)
+
+# Text-to-speech
+pyttsx3>=2.90           # Offline TTS (cross-platform)
+
+# Voice recognition
+SpeechRecognition>=3.10 # Voice input library
+pyaudio>=0.2.13         # Microphone access (for speech_recognition)
+# Note: On macOS, you may need: brew install portaudio
+
+# Keyboard listener
+pynput>=1.7.6           # Cross-platform keyboard/mouse listener
+# Alternative: keyboard>=0.13.5 (but pynput preferred)
+
+# Environment variables
+python-dotenv>=1.0.0    # Load .env file for API keys
+
+# Approach 5 (Streaming) dependencies
+transformers>=4.35.0    # For BLIP-2 local model
+accelerate>=0.24.0      # Model acceleration
+huggingface-hub>=0.19.0 # Hugging Face model hub
+
+# Approach 2.5 dependencies (YOLO)
+ultralytics>=8.0.0      # YOLOv8 object detection
+
+# Approach 3.5 dependencies (OCR/Depth)
+google-cloud-vision>=3.0.0  # Fast cloud OCR (primary, ~0.5-1s vs 60s local)
+paddlepaddle>=3.0.0     # Required dependency for PaddleOCR
+paddleocr>=2.7.0        # OCR processing (fallback, local)
+easyocr>=1.7.0          # Alternative OCR (fallback, local)
+

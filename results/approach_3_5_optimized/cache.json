@@ -79,13 +79,245 @@
       "yolo_model": "yolov8n",
       "llm_model": "gpt-3.5-turbo",
       "cached_at": 1764056034.4405272
+    },
+    "4769e20685fc5a73260e437ec9a763a7dbd48d5226a2ab70b2e056eb4d4a6eb1": {
+      "description": "It appears that there are no objects detected in the image. The depth is 187 units.",
+      "generation_latency": 0.8853271007537842,
+      "tokens_used": 102,
+      "yolo_model": "yolov8n",
+      "llm_model": "gpt-3.5-turbo",
+      "cached_at": 1764814197.954286
+    },
+    "275f68ed3fb53a1db8344f4b296e3b7d4aee82e260c02f7a800a0da35b77dbe0": {
+      "description": "There are two laptops detected: \n- One laptop is located at the left center, approximately 8 meters away.\n- The other laptop is in the center, approximately 8 meters away as well.\nPlease proceed with caution to avoid any potential collisions with the laptops.",
+      "generation_latency": 0.9772679805755615,
+      "tokens_used": 141,
+      "yolo_model": "yolov8n",
+      "llm_model": "gpt-3.5-turbo",
+      "cached_at": 1764814206.599115
+    },
+    "f0c5cb3d481a5c6f4480dc1cfd8f26705afa11a8aa36d76380a9ea71c0b213af": {
+      "description": "There are four cars ahead of you. The closest car is 37 meters away.",
+      "generation_latency": 1.3126912117004395,
+      "tokens_used": 225,
+      "yolo_model": "yolov8n",
+      "llm_model": "gpt-3.5-turbo",
+      "cached_at": 1764814240.497653
+    },
+    "6e3e4553a84bbe7df3d4f936be8f1553b610294226332cb96b8eb8bd79421303": {
+      "description": "There are four cars ahead of you. The first car is approximately 2 meters ahead at the center.",
+      "generation_latency": 1.4537630081176758,
+      "tokens_used": 202,
+      "yolo_model": "yolov8n",
+      "llm_model": "gpt-3.5-turbo",
+      "cached_at": 1764814274.901641
+    },
+    "db98dd43a87309b31f437cb512669af21acc3b77f276f51777ee7a5e6716197c": {
+      "description": "No objects are detected in the image. The depth is 114 units. It is a safe and clear path. You can proceed forward 114 units.",
+      "generation_latency": 1.288984775543213,
+      "tokens_used": 87,
+      "yolo_model": "yolov8n",
+      "llm_model": "gpt-3.5-turbo",
+      "cached_at": 1764814319.243099
+    },
+    "fb6a7f52d0fc7472381bcf829a2c27d23c47228f72515d4c1b7b4be62a1c372e": {
+      "description": "There are 2 laptops located 20 meters ahead at the center. Additionally, there are 2 TVs located 7 meters to the right at the center. Please proceed with caution to avoid any potential collisions with the objects.",
+      "generation_latency": 1.5258450508117676,
+      "tokens_used": 163,
+      "yolo_model": "yolov8n",
+      "llm_model": "gpt-3.5-turbo",
+      "cached_at": 1764814342.484633
+    },
+    "45f3af4ceb5049c918c4ac2419dcf4515af6ea886a42db2b4f6dba618b4eaa17": {
+      "description": "There are two laptops located 20 meters ahead at the center. Additionally, there are two TVs located 6 meters to the right at the center. Please proceed with caution to avoid any collisions with these objects.",
+      "generation_latency": 0.9726579189300537,
+      "tokens_used": 160,
+      "yolo_model": "yolov8n",
+      "llm_model": "gpt-3.5-turbo",
+      "cached_at": 1764814346.169939
+    },
+    "9e7bdbe9e5b2b1713f9165b5ccf0681d5d8ae2ecae30fc6af20d6c5fa9d3edf5": {
+      "description": "There are two laptops directly ahead, 20 meters away. Additionally, there are two TVs to the right, 6 meters away. Please proceed with caution to avoid any obstacles.",
+      "generation_latency": 0.6215298175811768,
+      "tokens_used": 154,
+      "yolo_model": "yolov8n",
+      "llm_model": "gpt-3.5-turbo",
+      "cached_at": 1764814347.509908
+    },
+    "4553b5ae345391f0f7ad73b203b712120b88d532642fac87f2636a6b66c7a0f6": {
+      "description": "There is a laptop 9 meters ahead and a TV 8 meters ahead. Please proceed with caution to avoid any collisions.",
+      "generation_latency": 0.6432700157165527,
+      "tokens_used": 117,
+      "yolo_model": "yolov8n",
+      "llm_model": "gpt-3.5-turbo",
+      "cached_at": 1764814369.2099042
+    },
+    "259c548ed329ff82a0e06a8595de0ce3561f9a910dd30aea08a6883934f95d6b": {
+      "description": "There is a laptop located 8 meters ahead at the center and a TV also 8 meters ahead at the center. Please proceed with caution to avoid any collisions with the objects.",
+      "generation_latency": 0.5735569000244141,
+      "tokens_used": 128,
+      "yolo_model": "yolov8n",
+      "llm_model": "gpt-3.5-turbo",
+      "cached_at": 1764814372.821394
+    },
+    "6b2e63e12d59510efe4fd1b42e806e4b2d22af5f869f21fdc859a99d81da65f4": {
+      "description": "There is a laptop located 8 meters ahead at the center and a TV also located 8 meters ahead at the center. Please proceed with caution to avoid any collisions with the objects.",
+      "generation_latency": 0.7485640048980713,
+      "tokens_used": 129,
+      "yolo_model": "yolov8n",
+      "llm_model": "gpt-3.5-turbo",
+      "cached_at": 1764814382.0811782
+    },
+    "2ab3bb54d84b5d2f6265e1cff00826a3d67cf493fbc0ab78954f97d928aad740": {
+      "description": "Four cars ahead, one on the right. Walk left to avoid them.",
+      "generation_latency": 0.8276662826538086,
+      "tokens_used": 320,
+      "yolo_model": "yolov8n",
+      "llm_model": "gpt-3.5-turbo",
+      "cached_at": 1764814522.0623732
+    },
+    "7143834b54e336b0c1fc3c237fc96056cfa37a74df17dde9080882fceacfd638": {
+      "description": "No game information detected. Please share the game state or objects for assistance.",
+      "generation_latency": 0.7383120059967041,
+      "tokens_used": 202,
+      "yolo_model": "yolov8n",
+      "llm_model": "gpt-3.5-turbo",
+      "cached_at": 1764814640.037497
+    },
+    "7953fcab65f42f18f7cfb0e88c0abde2f78591797c33b491a14b7a8c8c9700f5": {
+      "description": "Open path ahead. Stay straight. Safe to walk.",
+      "generation_latency": 0.8363692760467529,
+      "tokens_used": 247,
+      "yolo_model": "yolov8n",
+      "llm_model": "gpt-3.5-turbo",
+      "cached_at": 1764816846.5020669
+    },
+    "21f4a642b597c8469b9773a92e1a22f363561bd6484001baa5a8847e8c16ccd0": {
+      "description": "Be aware, there's a car close on the left and another car farther ahead on the left. In front of you, there are two traffic lights - the one closer to you is ahead.",
+      "generation_latency": 1.5854442119598389,
+      "tokens_used": 456,
+      "yolo_model": "yolov8n",
+      "llm_model": "gpt-3.5-turbo",
+      "cached_at": 1764816966.0991528
+    },
+    "a8573cf2f9d60f43f4e5fa61492b208cd5b3a1257ce1ed140817cd1aee69210a": {
+      "description": "Car approaching from the left - be cautious. Two traffic lights ahead - prepare to cross.",
+      "generation_latency": 2.226478099822998,
+      "tokens_used": 535,
+      "yolo_model": "yolov8n",
+      "llm_model": "gpt-3.5-turbo",
+      "cached_at": 1764817402.323408
+    },
+    "8809d8ee885f6486c6556a954bc6496fa8e40205ca173fa5895bdf9e0977fbf6": {
+      "description": "Traffic light directly ahead is red. Cars on the left. Wait for the light to turn green before crossing. Be cautious.",
+      "generation_latency": 1.346883773803711,
+      "tokens_used": 457,
+      "yolo_model": "yolov8n",
+      "llm_model": "gpt-3.5-turbo",
+      "cached_at": 1764817881.763144
+    },
+    "4fa1128eb58ea7137c76179e34ef8097a03f1f76cb8e86fc29e4e9f0c7f5603b": {
+      "description": "No objects detected. Can't help with the game. Let me know if you need assistance later!",
+      "generation_latency": 1.2057437896728516,
+      "tokens_used": 207,
+      "yolo_model": "yolov8n",
+      "llm_model": "gpt-3.5-turbo",
+      "cached_at": 1764818419.5709288
+    },
+    "db1e4e9169ca02a2b64d10a4f45c7d4716e68cb220abc70f1c42c6e6c8d1ab2c": {
+      "description": "Game board is full. It's a tie!",
+      "generation_latency": 0.6923272609710693,
+      "tokens_used": 197,
+      "yolo_model": "yolov8n",
+      "llm_model": "gpt-3.5-turbo",
+      "cached_at": 1764818429.486691
+    },
+    "a758d1479a10447f622d6b6c2a726aebe5a0164e4d100fb506fe31ec04c5c3cf": {
+      "description": "Game state unknown without game board. Please provide game details for assistance.",
+      "generation_latency": 0.5116198062896729,
+      "tokens_used": 201,
+      "yolo_model": "yolov8n",
+      "llm_model": "gpt-3.5-turbo",
+      "cached_at": 1764818440.341866
+    },
+    "29ab1c482b93d7657e55744241a0011855e4fef3dd7a15e364935782f7680c12": {
+      "description": "You won! Three X's in a row. Great job!",
+      "generation_latency": 0.9371020793914795,
+      "tokens_used": 200,
+      "yolo_model": "yolov8n",
+      "llm_model": "gpt-3.5-turbo",
+      "cached_at": 1764818473.9715872
+    },
+    "714babcdb5b1bad3728524c8fe1a11488fc030b103718ed0a8d3850c167fb19a": {
+      "description": "Stop sign directly ahead, it's safe to cross. I see a stop sign in front of you. The path is clear to move forward.",
+      "generation_latency": 1.467756986618042,
+      "tokens_used": 446,
+      "yolo_model": "yolov8n",
+      "llm_model": "gpt-3.5-turbo",
+      "cached_at": 1764887923.982241
+    },
+    "daa12ac0aab8b964ea54f03243a7f8ff8939eba1578ea6e4030cafcbcf93a7df": {
+      "description": "Watch out for two cars to your left. There's a traffic light ahead in the center. It seems safe to continue forward.",
+      "generation_latency": 1.5189599990844727,
+      "tokens_used": 465,
+      "yolo_model": "yolov8n",
+      "llm_model": "gpt-3.5-turbo",
+      "cached_at": 1764889286.0932102
+    },
+    "b092f84a4bc172a5baa6d983dcd1c93b2048d02d6db41cbcccbad8d5b20913d0": {
+      "description": "\"Safe to cross. Traffic light ahead says 'Walk'. Two cars on the left waiting at the light. Clear path straight ahead. It's safe to go now.\"",
+      "generation_latency": 1.3854320049285889,
+      "tokens_used": 511,
+      "yolo_model": "yolov8n",
+      "llm_model": "gpt-3.5-turbo",
+      "cached_at": 1764889304.582989
+    },
+    "c5c4ca919ffc43eee2bee9f9273d15cca15f6daed6aea0c5a3b7fec952a531a4": {
+      "description": "Safe to cross - walk signal is on. Bus stop sign with bus schedule. Three people nearby - one on the left, one in the middle, and one on the right. You can continue straight ahead.",
+      "generation_latency": 1.5360803604125977,
+      "tokens_used": 699,
+      "yolo_model": "yolov8n",
+      "llm_model": "gpt-3.5-turbo",
+      "cached_at": 1764889738.4484859
+    },
+    "299804814cc11d35814ffa08817d1aa947589c22f3e6fbdca6f6d58f4e098296": {
+      "description": "Watch out for 3 people in front - one on the left, one in the center, and one on the right. Street sign ahead says 'Crosswalk'.",
+      "generation_latency": 0.7960748672485352,
+      "tokens_used": 491,
+      "yolo_model": "yolov8n",
+      "llm_model": "gpt-3.5-turbo",
+      "cached_at": 1764889776.020962
+    },
+    "63ab4d2c8bcb9eef8018c498bc2b6eb0b724590be2dbc3d88cf99d48e56e71d7": {
+      "description": "Caution - 7 cars on the right side. Go straight. Also, 2 people ahead. Sign ahead says \"Crosswalk\". Another sign says \"Pedestrian Crossing\". Safe to walk straight ahead.",
+      "generation_latency": 0.9477307796478271,
+      "tokens_used": 495,
+      "yolo_model": "yolov8n",
+      "llm_model": "gpt-3.5-turbo",
+      "cached_at": 1764891131.8020558
+    },
+    "2a97cb7a7eb8ed4f035e414191f2de1edf673c8780dd67f7c4bbec41d8ff6a70": {
+      "description": "Ahead on the right, there's a pharmacy sign reading \"Quick Meds\". In front, watch out for the crosswalk.",
+      "generation_latency": 1.5190210342407227,
+      "tokens_used": 548,
+      "yolo_model": "yolov8n",
+      "llm_model": "gpt-3.5-turbo",
+      "cached_at": 1764891152.969415
+    },
+    "7e33585e0ac0b3df5c96153a4b18a65339b3f0c83f40aa0e25d2c61a59cf0855": {
+      "description": "There are 7 cars around you, mostly in the center and on the right. Ahead, there are 2 people. Street sign says 'Maple Ave'. The safe path is straight ahead. It's clear in front of you.",
+      "generation_latency": 0.9031982421875,
+      "tokens_used": 538,
+      "yolo_model": "yolov8n",
+      "llm_model": "gpt-3.5-turbo",
+      "cached_at": 1764891169.1156101
     }
   },
   "stats": {
     "hits": 20,
-    "misses": 66,
+    "misses": 95,
     "evictions": 0,
-    "loads": 5,
-    "saves": 60
+    "loads": 19,
+    "saves": 75
   }
 }

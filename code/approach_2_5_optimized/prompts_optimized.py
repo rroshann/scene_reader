@@ -5,15 +5,44 @@ Reduced token count while maintaining quality
 import sys
 from pathlib import Path
 
-# Import base prompts from Approach 2
+# Import base prompts from Approach 2 (use absolute import to avoid conflicts)
 project_root = Path(__file__).parent.parent.parent
-approach2_dir = project_root / "code" / "approach_2_yolo_llm"
-sys.path.insert(0, str(approach2_dir))
+import importlib.util
 
-from prompts import SYSTEM_PROMPT as BASE_SYSTEM_PROMPT, create_user_prompt as BASE_CREATE_USER_PROMPT
+# Load prompts.py from approach_2_yolo_llm explicitly
+approach2_prompts_path = project_root / "code" / "approach_2_yolo_llm" / "prompts.py"
+spec = importlib.util.spec_from_file_location("approach_2_base_prompts", approach2_prompts_path)
+approach_2_base_prompts = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(approach_2_base_prompts)
 
-# Optimized System Prompt (reduced verbosity, ~40% fewer tokens)
-SYSTEM_PROMPT_MINIMAL = """Visual accessibility assistant for blind users. Provide concise, actionable descriptions. Include: (1) Spatial layout - object positions relative to viewer, (2) Critical status - important states/conditions, (3) Immediate concerns - threats/obstacles. Prioritize actionable information. Be brief and context-aware."""
+BASE_SYSTEM_PROMPT = approach_2_base_prompts.SYSTEM_PROMPT
+BASE_CREATE_USER_PROMPT = approach_2_base_prompts.create_user_prompt
+
+# Real-World System Prompts (for navigation, outdoor/indoor scenes)
+# User-friendly, conversational, actionable - NOT technical measurements
+SYSTEM_PROMPT_REAL_WORLD = """You're helping a blind friend navigate. Tell them what you see in simple, friendly words.
+
+Say the most important thing first - what's directly ahead or what they need to watch out for.
+
+Good examples:
+- "Road ahead with cars. Sidewalk on your left is safe to walk."
+- "Stairs coming up - be careful. Door on the right."
+- "Crosswalk ahead. Wait for cars to pass."
+
+Bad examples (too technical):
+- "Multiple vehicles detected at 15-20 meter distance..."
+- "Spatial analysis indicates sidewalk positioned left at 2 meters..."
+- "Object detection results: person at coordinates..."
+
+Rules:
+- Start with what's most urgent (danger or safe path)
+- Use everyday words only
+- Keep it under 20 words
+- Sound like a helpful friend, not a robot
+- No numbers, measurements, or technical terms
+- Focus on what they can do, not what you're detecting"""
+
+SYSTEM_PROMPT_MINIMAL = SYSTEM_PROMPT_REAL_WORLD  # Alias for backward compatibility
 
 # Structured System Prompt (bullet format, ~30% fewer tokens)
 SYSTEM_PROMPT_STRUCTURED = """Visual accessibility assistant. Describe scenes concisely:
@@ -22,14 +51,41 @@ SYSTEM_PROMPT_STRUCTURED = """Visual accessibility assistant. Describe scenes co
 • Immediate concerns: threats/obstacles
 Prioritize actionable information. Be brief."""
 
-# Template-based User Prompt (reduced verbosity)
+# Gaming System Prompt (optimized for game screens)
+SYSTEM_PROMPT_GAMING = """You're helping a blind friend play a game. Tell them what's happening in simple, friendly words.
+
+Check for win or loss first - that's most important. Then tell them the game state.
+
+Good examples:
+- "You won! Great job!"
+- "Your turn. X in center, O on top. Empty squares: 1, 2, 4, 6, 7, 8, 9."
+- "Game tied. Board is full."
+
+Bad examples (too technical):
+- "Game state analysis: Player X has 3 pieces, Player O has 2 pieces..."
+- "Board configuration detected: X at position (1,1), O at position (0,0)..."
+- "Object detection results: game pieces identified at coordinates..."
+
+Rules:
+- Check win/loss/status first
+- Use everyday words, not game jargon
+- Keep it under 20 words
+- Sound helpful and friendly, not technical
+- Focus on what they can do next"""
+
+# Template-based User Prompt (user-friendly, conversational)
 def create_user_prompt_minimal(detected_objects_text):
-    """Minimal user prompt - reduced verbosity"""
-    return f"""Describe this scene for a blind person based on detected objects:
+    """User-friendly prompt - conversational and actionable"""
+    return f"""Your blind friend is asking what's around them right now. Here's what you see:
 
 {detected_objects_text}
 
-Focus on: spatial relationships, safety-critical elements, actionable context. Be concise."""
+Tell them in simple, friendly words:
+- What's most important first (danger or safe path ahead)
+- What to watch out for
+- Where they can go safely
+
+Talk naturally, like you're helping a friend. Use everyday words. Keep it very short - they need quick, clear guidance to move safely. No technical details or measurements."""
 
 # Structured User Prompt (bullet format)
 def create_user_prompt_structured(detected_objects_text):
@@ -52,7 +108,52 @@ def create_user_prompt_template(detected_objects_text):
 
 Describe scene (spatial layout, safety, actions). Brief."""
 
-# Default: Use minimal prompt (best balance)
+# Gaming User Prompts
+def create_user_prompt_gaming(detected_objects_text):
+    """Gaming-specific user prompt"""
+    return f"""Your friend is playing a game and needs to know what's happening. Here's what you see:
+
+{detected_objects_text}
+
+Tell them in simple, friendly words:
+- Did they win or lose? (check this first - most important)
+- What's the game state right now?
+- What can they do next?
+
+Talk naturally, like you're helping a friend play. Use everyday words, not game jargon. Keep it very short and helpful."""
+
+# Mode selector functions
+def get_system_prompt(mode='real_world'):
+    """
+    Get system prompt based on mode
+    
+    Args:
+        mode: 'gaming' or 'real_world'
+    
+    Returns:
+        System prompt string
+    """
+    if mode == 'gaming':
+        return SYSTEM_PROMPT_GAMING
+    else:
+        return SYSTEM_PROMPT_REAL_WORLD
+
+def get_user_prompt_function(mode='real_world'):
+    """
+    Get user prompt function based on mode
+    
+    Args:
+        mode: 'gaming' or 'real_world'
+    
+    Returns:
+        User prompt function
+    """
+    if mode == 'gaming':
+        return create_user_prompt_gaming
+    else:
+        return create_user_prompt_minimal
+
+# Default: Use minimal prompt (best balance) - real-world mode
 SYSTEM_PROMPT = SYSTEM_PROMPT_MINIMAL
 create_user_prompt = create_user_prompt_minimal
 

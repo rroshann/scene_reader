@@ -621,12 +621,12 @@ description = model.generate(pixel_values=image, max_length=50)
 
 ---
 
-### **Approach 5: Streaming/Progressive Models** ✅ COMPLETE - TIER 2
+### **Approach 1.5: Optimized Pure VLM** ✅ COMPLETE - TIER 2
 
 **Status:** ✅ Testing Complete, Analysis Complete  
 **Date:** November 25, 2025
 
-**Concept:** Optimize perceived latency through progressive disclosure
+**Concept:** Optimized version of Approach 1 (Pure VLM) with concise prompts, lower token limits, and progressive disclosure
 
 **Two-Tier Architecture:**
 ```
@@ -702,9 +702,8 @@ async def streaming_describe(image):
 **Key Finding:** Users perceive responses **3.9 seconds faster** (69% improvement) compared to single GPT-4V baseline, while maintaining same cost and quality.
 
 **Implementation Files:**
-- `code/approach_5_streaming/streaming_pipeline.py` - Main async pipeline
-- `code/approach_5_streaming/model_wrappers.py` - Async wrappers
-- `code/approach_5_streaming/batch_test_streaming.py` - Batch testing
+- `code/approach_1_5_optimized/streaming_pipeline.py` - Main async pipeline
+- `code/approach_1_5_optimized/model_wrappers.py` - Async wrappers
 - `code/evaluation/analyze_streaming_results.py` - Quantitative analysis
 - `code/evaluation/create_streaming_visualizations.py` - Visualizations
 - `code/evaluation/compare_streaming_vs_baseline.py` - Baseline comparison
@@ -1302,7 +1301,7 @@ scene-reader/
 │   │   ├── batch_test_local.py     # Batch testing script
 │   │   └── local_vlm.py             # Local model utilities
 │   │
-│   ├── approach_5_streaming/         # Approach 5: Streaming
+│   ├── approach_1_5_optimized/       # Approach 1.5: Optimized Pure VLM
 │   │   ├── streaming_pipeline.py    # Two-tier streaming
 │   │   └── async_handler.py         # Async implementation
 │   │
@@ -1337,7 +1336,7 @@ scene-reader/
 │   │   ├── approach_3_ocr.csv
 │   │   ├── approach_3_depth.csv
 │   │   ├── approach_4_blip2.csv
-│   │   ├── approach_5_streaming.csv
+│   │   ├── approach_1_5_optimized.csv
 │   │   ├── approach_6_rag.csv
 │   │   └── approach_7_cot.csv
 │   │
@@ -1831,7 +1830,7 @@ for each image in dataset:
 **Approaches Owned:**
 - ✅ Approach 1: Pure VLMs (all 3 models) - COMPLETE
 - 🔨 Approach 7: Chain-of-Thought (prompt engineering) - TIER 1
-- ⭐ Approach 5: Streaming (if time allows) - TIER 2
+- ⭐ Approach 1.5: Optimized Pure VLM (if time allows) - TIER 2
 
 **Analysis Responsibilities:**
 - Latency analysis across all approaches
@@ -2184,7 +2183,7 @@ This project was inspired by the need to make visual information accessible to t
    - ✅ Approach 3.5: Optimized Specialized (COMPLETE - 1.50s mean, 75% under 2s)
 
 ✅ Week 3-4: Advanced Approaches (COMPLETE)
-   - ✅ Approach 5: Streaming (COMPLETE - 1.73s perceived latency, 69% improvement)
+   - ✅ Approach 1.5: Optimized Pure VLM (COMPLETE - 1.73s perceived latency, 69% improvement)
    - 🔄 Approach 3: Specialized (if time)
 
 📊 Week 4: Analysis & Deliverables (IN PROGRESS)
@@ -2200,15 +2199,15 @@ This project was inspired by the need to make visual information accessible to t
 
 **Phase 1 Findings:**
 - **Fastest Approach:** Approach 2.5 - Optimized YOLO+LLM (1.10s mean latency, **<2s target achieved**)
-- **Best Perceived Latency:** Approach 5 - Streaming (1.73s time to first output, **69% improvement**)
+- **Best Perceived Latency:** Approach 1.5 - Optimized Pure VLM (1.73s time to first output, **69% improvement**)
 - **Speed Improvement:** 67.4% faster than Approach 2 baseline (3.39s → 1.10s)
 - **Perceived Latency Improvement:** 69% faster perceived response (1.73s vs 5.63s baseline)
 - **Optimizations:** GPT-3.5-turbo model, caching (15x speedup), adaptive parameters, progressive disclosure
 - **Statistical Significance:** Highly significant improvement (p < 0.000001, Cohen's d = 2.61)
-- **Best for Gaming:** RAG-Enhanced (educational context), Approach 2.5 (speed-critical), Approach 5 (perceived speed)
+- **Best for Gaming:** RAG-Enhanced (educational context), Approach 2.5 (speed-critical), Approach 1.5 (perceived speed)
 - **Most Consistent:** Claude 3.5 Haiku (0.99s std dev)
 - **Zero Cost Option:** Local Models (35.4s latency, $0.00 cost)
-- **UX Innovation:** Approach 5 provides immediate feedback (1.73s) while detailed description generates (5.47s)
+- **UX Innovation:** Approach 1.5 provides immediate feedback (1.73s) while detailed description generates (5.47s)
 
 **Last Updated:** November 25, 2025
 

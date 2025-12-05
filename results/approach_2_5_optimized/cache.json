@@ -7,13 +7,133 @@
       "yolo_model": "yolov8n",
       "llm_model": "gpt-3.5-turbo",
       "cached_at": 1763968491.2422552
+    },
+    "e50ae65ffcd5e28990e2d3f09abcf062053796c16e78c6e0e2c1bb355b7a8d32": {
+      "description": "No objects detected in the image. No critical elements or immediate concerns present. The scene is likely empty or contains elements not detectable by the system. No specific actions needed based on the information provided.",
+      "generation_latency": 2.0715620517730713,
+      "tokens_used": 241,
+      "yolo_model": "yolov8n",
+      "llm_model": "gpt-3.5-turbo",
+      "cached_at": 1764783757.0576441
+    },
+    "3d928285b432dec8a6059f1aab481afc684d605e8a3d7133832bb77e04cc624c": {
+      "description": "There is a laptop and a TV in the center of the image. The laptop is more confidently detected than the TV. No safety-critical elements or obstacles are detected. The user should be aware of the presence and location of the laptop and TV in the center of the scene.",
+      "generation_latency": 1.6735589504241943,
+      "tokens_used": 283,
+      "yolo_model": "yolov8n",
+      "llm_model": "gpt-3.5-turbo",
+      "cached_at": 1764808157.510012
+    },
+    "eab4854cfc389c9a89333849e74ad8a11191bc2b2f87178381b1dccda11600b1": {
+      "description": "Four cars are detected in the image: one in the center, one in the center, another in the center, and one on the right. Focus on the three cars in the center as they have higher confidence scores. Be cautious of the cars in the center area and stay alert for potential hazards while navigating through the scene. Take action to avoid any potential collisions by listening for vehicle sounds and using caution when crossing paths with the detected cars.",
+      "generation_latency": 1.9944722652435303,
+      "tokens_used": 346,
+      "yolo_model": "yolov8n",
+      "llm_model": "gpt-3.5-turbo",
+      "cached_at": 1764813582.593206
+    },
+    "d7ddb0c06fd41005a579186b195bb035500aeb0911c3bbf1283ae12a8a92e2b4": {
+      "description": "\"Stop sign directly ahead. Keyboard at bottom. Stop and listen for traffic before proceeding.\"",
+      "generation_latency": 0.755040168762207,
+      "tokens_used": 355,
+      "yolo_model": "yolov8n",
+      "llm_model": "gpt-3.5-turbo",
+      "cached_at": 1764876148.245746
+    },
+    "d86c475af609be1ef6331b5c1eb6d9d3bf2f908a845a96ccc952b931aa232508": {
+      "description": "There is a stop sign directly ahead. Pay attention and wait before moving forward.",
+      "generation_latency": 0.7691690921783447,
+      "tokens_used": 380,
+      "yolo_model": "yolov8n",
+      "llm_model": "gpt-3.5-turbo",
+      "cached_at": 1764876163.696109
+    },
+    "87166b1a388ccf500996468cfb29c8b3cb34dd014506857f26e1c20e6a4b5f5d": {
+      "description": "Two cars at left. Traffic light ahead. Walk carefully and cross when light is green.",
+      "generation_latency": 1.2982900142669678,
+      "tokens_used": 394,
+      "yolo_model": "yolov8n",
+      "llm_model": "gpt-3.5-turbo",
+      "cached_at": 1764877077.782994
+    },
+    "80280712b32fc4b89d2a62e075ddb333d87435295d25df6e7764faa3d235b525": {
+      "description": "Three people detected from left to right. Center person poses the highest safety concern. Approach cautiously.",
+      "generation_latency": 0.685725212097168,
+      "tokens_used": 399,
+      "yolo_model": "yolov8n",
+      "llm_model": "gpt-3.5-turbo",
+      "cached_at": 1764889806.710465
+    },
+    "f2ff0becf4a48af4e7fc3e76c3af823a4e15a4b6f89c4b670d1335b4c4518dd3": {
+      "description": "Three people ahead: left, center, right. Walk straight carefully.",
+      "generation_latency": 1.188643217086792,
+      "tokens_used": 408,
+      "yolo_model": "yolov8n",
+      "llm_model": "gpt-3.5-turbo",
+      "cached_at": 1764889887.372001
+    },
+    "e16c029c38991429d0daf3b0ece448de98bd51773497e5231ddeef1cf174460d": {
+      "description": "Stop sign directly ahead. Watch out for it and stay on the safe path. Keep going straight.",
+      "generation_latency": 0.6947410106658936,
+      "tokens_used": 357,
+      "yolo_model": "yolov8n",
+      "llm_model": "gpt-3.5-turbo",
+      "cached_at": 1764890721.8086069
+    },
+    "699b6e147ff2d6518654827ffd9b065d5ce9170aa80754c176aba8ef0e406d31": {
+      "description": "Stop sign directly ahead. No obstacles. Safe to walk forward.",
+      "generation_latency": 0.7109019756317139,
+      "tokens_used": 379,
+      "yolo_model": "yolov8n",
+      "llm_model": "gpt-3.5-turbo",
+      "cached_at": 1764890736.569349
+    },
+    "2d8532a34fca4dc678eed8e3d597a8535aa15b2af9bd5549eed02645640a41fb": {
+      "description": "Person ahead. Cars around. Stay on the left. Road ahead, use caution when crossing.",
+      "generation_latency": 0.8382241725921631,
+      "tokens_used": 565,
+      "yolo_model": "yolov8n",
+      "llm_model": "gpt-3.5-turbo",
+      "cached_at": 1764891078.658823
+    },
+    "977ed226e79744bd2cbd26f933bf9a21a0fb9aad7e432db9a4b480500985f53c": {
+      "description": "Person directly in front. Cars nearby on right and center. Proceed with caution.",
+      "generation_latency": 0.46732497215270996,
+      "tokens_used": 629,
+      "yolo_model": "yolov8n",
+      "llm_model": "gpt-3.5-turbo",
+      "cached_at": 1764891095.0156648
+    },
+    "1f9d1a2b7d5f9972cc4d0ef60f78fd310f6701a696c0f8f8d94cc74662830368": {
+      "description": "Person ahead. Cars on right and center. Walk straight, be cautious of cars.",
+      "generation_latency": 0.728611946105957,
+      "tokens_used": 535,
+      "yolo_model": "yolov8n",
+      "llm_model": "gpt-3.5-turbo",
+      "cached_at": 1764895059.579787
+    },
+    "af7e33b1524c88c5644bc9b4c46dab3eb229f202b2a72d1b1b57337458d14401": {
+      "description": "Pharmacy on the left. Safe to walk forward. No cars nearby. Just keep going straight.",
+      "generation_latency": 1.1370511054992676,
+      "tokens_used": 602,
+      "yolo_model": "yolov8n",
+      "llm_model": "gpt-3.5-turbo",
+      "cached_at": 1764895080.880349
+    },
+    "278ebae2cfe34d1526f028c5896a6bfa117ed9aa01e662e451d20c846de49d5a": {
+      "description": "You asked: 'how many cars do you'.\n\nDetected cars:\n- 7 cars on the right\n- 1 car in the center bottom\n- 4 cars in the center\n\nPriority: Beware of cars around you.",
+      "generation_latency": 0.8889660835266113,
+      "tokens_used": 630,
+      "yolo_model": "yolov8n",
+      "llm_model": "gpt-3.5-turbo",
+      "cached_at": 1764895100.953212
     }
   },
   "stats": {
-    "hits": 0,
-    "misses": 1,
+    "hits": 4,
+    "misses": 16,
     "evictions": 0,
-    "loads": 0,
-    "saves": 0
+    "loads": 10,
+    "saves": 5
   }
 }
