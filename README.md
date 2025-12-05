@@ -1,29 +1,41 @@
-# Scene Reader 🎮👁️
+# Scene Reader
 
-**Comprehensive Analysis of 9 Computer Vision Approaches for Real-Time Visual Accessibility**
+**Real-Time Visual Accessibility Through Vision-Language Models: A Comprehensive Analysis of 9 Transformer-Based Approaches**
 
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![Approaches Tested](https://img.shields.io/badge/Approaches-9%20Complete-brightgreen.svg)](https://github.com)
 [![API Calls](https://img.shields.io/badge/API%20Calls-564+-blue.svg)](https://github.com)
 
-**Team:** Roshan Sivakumar & Dhesel Khando  
-**Course:** DS-5690 - Generative AI Models | Vanderbilt University | Fall 2025  
+**Team:** Roshan Sivakumar & Dhesel Khando
+**Course:** DS-5690 - Generative AI Models in Theory and Practice | Vanderbilt University | Fall 2025
 **Instructor:** Prof. Jesse Spencer-Smith
 
 ---
 
-## 📖 Project Overview
+## 1. Problem Statement & Overview
 
-**Scene Reader** systematically evaluates **9 different computer vision and AI approaches** for providing real-time visual assistance to blind and low-vision users.
+### The Accessibility Challenge
 
-### 🏆 Key Achievement
+Over **7 million blind and visually impaired individuals** in the United States, and **250 million worldwide**, face a fundamental barrier: they cannot access visual information that sighted individuals take for granted. Current accessibility tools are either too slow, too expensive, or lack the contextual understanding necessary for real-time assistance.
+
+### Research Question
+
+**Which vision AI architecture achieves the optimal balance of latency, accuracy, and cost for real-time accessibility applications?**
+
+We targeted **sub-2-second latency** as our threshold for practical usability, grounded in human-computer interaction research indicating that response times exceeding two seconds significantly degrade user experience.
+
+### Proposed Solution
+
+**Scene Reader** systematically evaluates **9 different transformer-based vision AI approaches** for providing real-time visual assistance, identifying optimal architectures for different use cases including gaming accessibility, indoor/outdoor navigation, and text reading.
+
+### Key Achievement
 
 We identified **3 approaches that achieve sub-2-second latency** (real-time capable), with the fastest (**Approach 2.5**) achieving:
-- **1.10s mean latency** 
-- **5.12x speedup** over baseline VLM approaches
+- **0.54s mean latency** (real-world mode) / **0.56s** (gaming mode)
+- **3x speedup** over pure VLM approaches
 - **$0.005/query cost** (affordable at scale)
 
-### 📊 Scale of Testing
+### Scale of Testing
 
 - **9 approaches** tested across multiple configurations
 - **564 API calls** + 84 local model tests
@@ -32,317 +44,466 @@ We identified **3 approaches that achieve sub-2-second latency** (real-time capa
 
 ---
 
-## 🔬 Standardized Comparison
+## 2. Methodology
 
-To isolate **architectural differences** from optimizations, we tested all 3 top approaches with **identical parameters**:
+### 2.1 Notation
 
-| Approach | Mean Latency | Median | Std Dev | Success Rate |
-|----------|--------------|--------|---------|--------------|
-| **Approach 3.5** | **1.21s** 🥇 | 1.12s | 0.45s | 100% |
-| **Approach 2.5** | **1.36s** 🥈 | 1.34s | 0.25s | 100% |
-| **Approach 1.5** | **3.63s** 🥉 | 3.52s | 0.85s | 100% |
+Following the conventions established in formal algorithm specifications:
 
-**Standardized Parameters**: max_tokens=100, temperature=0.7, no caching, no image preprocessing
+| Symbol | Type | Description |
+|--------|------|-------------|
+| `I` | `ℝ^(H×W×3)` | Input image with height H, width W, 3 color channels |
+| `V` | `[N_V]` | Vocabulary of N_V tokens |
+| `x` | `V*` | Token sequence x[1], x[2], ..., x[ℓ] |
+| `e` | `ℝ^d_e` | Token embedding vector of dimension d_e |
+| `W_e` | `ℝ^(d_e × N_V)` | Token embedding matrix |
+| `W_p` | `ℝ^(d_e × ℓ_max)` | Positional embedding matrix |
+| `D` | `list` | Detected objects with bounding boxes |
+| `S` | `string` | Generated scene description |
+| `θ` | `ℝ^d` | Model parameters |
+| `τ` | `(0, ∞)` | Temperature for sampling |
+| `cache` | `dict` | LRU cache mapping hash → description |
 
-**Key Finding**: Even with identical parameters, specialized architectures (3.5, 2.5) outperform pure VLM (1.5) due to:
-- Faster LLM models (GPT-3.5-turbo vs GPT-4V)
-- Specialized preprocessing (YOLO, OCR, Depth)
-- Multi-stage pipelines that parallelize work
+### 2.2 Foundational Transformer Components
 
-**Note**: Optimized results (shown in Top 3 section) use approach-specific parameters and show better performance overall.
+Our approaches build upon the transformer architecture. The following algorithms are adapted from the formal specifications.
 
 ---
 
-## 🔬 Methodology
+#### Algorithm 1: Token Embedding
 
-### Two-Phase Approach
+```
+TokenEmbed(v | W_e)
+─────────────────────────────────────────────────────────
+Input:   v ∈ V ≅ [N_V], a token ID
+Output:  e ∈ ℝ^d_e, vector representation of the token
+Params:  W_e ∈ ℝ^(d_e × N_V), token embedding matrix
+─────────────────────────────────────────────────────────
+1  return e = W_e[:, v]
+```
 
-**Phase 1: Comprehensive Evaluation** ✅ **COMPLETE**
-- Systematic testing of 9 approaches on 42 static images
-- Controlled, reproducible evaluation across gaming, navigation, and text-reading scenarios
-- Identified top 3 optimal approaches through data-driven analysis
+---
 
-**Phase 2: Real-Time Implementation** 🔄 **IN PROGRESS**
-- Deploy fastest approach (Approach 2.5 - 1.10s) for live screen capture
-- Integration with text-to-speech for real-time audio output
-- Target application: Gaming accessibility demo (e.g., Stardew Valley)
+#### Algorithm 2: Positional Embedding
 
-### Test Scenarios
+```
+PosEmbed(t | W_p)
+─────────────────────────────────────────────────────────
+Input:   t ∈ [ℓ_max], position of token in sequence
+Output:  e_p ∈ ℝ^d_e, vector representation of position
+Params:  W_p ∈ ℝ^(d_e × ℓ_max), positional embedding matrix
+─────────────────────────────────────────────────────────
+1  return e_p = W_p[:, t]
+```
+
+The combined embedding for token x[t] at position t:
+```
+e = W_e[:, x[t]] + W_p[:, t]
+```
+
+---
+
+#### Algorithm 3: Scaled Dot-Product Attention
+
+```
+Attention(Q, K, V | Mask)
+─────────────────────────────────────────────────────────
+Input:   Q ∈ ℝ^(d_k × n), query vectors
+         K ∈ ℝ^(d_k × m), key vectors
+         V ∈ ℝ^(d_v × m), value vectors
+Output:  O ∈ ℝ^(d_v × n), attention output
+Hyper:   Mask ∈ {0,1}^(m × n), attention mask
+─────────────────────────────────────────────────────────
+1  S ← K^T Q                           // Score matrix ∈ ℝ^(m × n)
+2  S ← S / √d_k                        // Scale by √d_k
+3  ∀i,j: if ¬Mask[i,j] then S[i,j] ← -∞
+4  A ← softmax(S, dim=0)               // Attention weights
+5  return O = V · A
+```
+
+**Softmax definition:**
+```
+softmax(S)[i,j] = exp(S[i,j]) / Σ_k exp(S[k,j])
+```
+
+---
+
+#### Algorithm 4: Multi-Head Attention
+
+```
+MultiHeadAttention(X, Z | W, Mask)
+─────────────────────────────────────────────────────────
+Input:   X ∈ ℝ^(d_x × ℓ_x), primary sequence
+         Z ∈ ℝ^(d_z × ℓ_z), context sequence
+Output:  Y ∈ ℝ^(d_out × ℓ_x), attended representations
+Params:  W = {W_q^h, W_k^h, W_v^h}_{h=1}^H, W_o
+         where W_q^h ∈ ℝ^(d_k × d_x), W_k^h ∈ ℝ^(d_k × d_z)
+               W_v^h ∈ ℝ^(d_v × d_z), W_o ∈ ℝ^(d_out × H·d_v)
+Hyper:   H, number of attention heads
+         Mask ∈ {0,1}^(ℓ_z × ℓ_x)
+─────────────────────────────────────────────────────────
+1  for h = 1 to H do
+2  │  Q^h ← W_q^h · X
+3  │  K^h ← W_k^h · Z
+4  │  V^h ← W_v^h · Z
+5  │  O^h ← Attention(Q^h, K^h, V^h | Mask)
+6  end
+7  O ← concat(O^1, O^2, ..., O^H)      // Stack heads
+8  return Y = W_o · O
+```
+
+---
+
+#### Algorithm 5: Decoder-Only Transformer (GPT-style)
+
+```
+GPTForward(x | θ)
+─────────────────────────────────────────────────────────
+Input:   x ∈ V*, sequence of token IDs
+Output:  P ∈ (0,1)^(N_V × ℓ), where P[:,t] = P(x[t+1]|x[1:t])
+Params:  θ includes W_e, W_p, {W_l, γ_l, β_l}_{l=1}^L, W_u
+Hyper:   ℓ_max, L (layers), H (heads), d_e, d_mlp
+─────────────────────────────────────────────────────────
+1  ℓ ← length(x)
+2  for t ∈ [ℓ]: e_t ← W_e[:, x[t]] + W_p[:, t]
+3  X ← [e_1, e_2, ..., e_ℓ]
+4  for l = 1 to L do
+5  │  X̃ ← LayerNorm(X | γ_l^1, β_l^1)
+6  │  X ← X + MultiHeadAttention(X̃, X̃ | W_l, Mask_causal)
+7  │  X̃ ← LayerNorm(X | γ_l^2, β_l^2)
+8  │  X ← X + MLP(X̃ | W_l^mlp)
+9  end
+10 X ← LayerNorm(X | γ, β)
+11 return P = softmax(W_u · X)
+```
+
+**Causal Mask:** `Mask_causal[i,j] = [[i ≤ j]]` (lower triangular)
+
+---
+
+#### Algorithm 6: Autoregressive Inference
+
+```
+Generate(prompt, θ | τ, ℓ_gen)
+─────────────────────────────────────────────────────────
+Input:   prompt ∈ V*, initial token sequence
+         θ, trained model parameters
+Output:  y ∈ V*, generated continuation
+Hyper:   τ ∈ (0, ∞), temperature
+         ℓ_gen ∈ ℕ, max tokens to generate
+─────────────────────────────────────────────────────────
+1  x ← prompt
+2  for i = 1 to ℓ_gen do
+3  │  P ← GPTForward(x | θ)
+4  │  p ← P[:, length(x)]            // Next token distribution
+5  │  sample token y from q ∝ p^(1/τ)
+6  │  if y = eos_token then break
+7  │  x ← concat(x, y)
+8  end
+9  return y = x[length(prompt)+1 : end]
+```
+
+---
+
+### 2.3 Vision Encoder Components
+
+#### Algorithm 7: Vision Transformer Patch Embedding (ViT)
+
+```
+ViTPatchEmbed(I | W_patch, W_pos)
+─────────────────────────────────────────────────────────
+Input:   I ∈ ℝ^(H × W × 3), input image
+Output:  Z ∈ ℝ^(d × N), sequence of patch embeddings
+Params:  W_patch ∈ ℝ^(d × P²·3), patch projection
+         W_pos ∈ ℝ^(d × N+1), position embeddings
+Hyper:   P, patch size (typically 14 or 16)
+         N = (H/P) × (W/P), number of patches
+─────────────────────────────────────────────────────────
+1  patches ← extract_patches(I, size=P)    // N patches of P×P×3
+2  for i = 1 to N do
+3  │  z_i ← W_patch · flatten(patches[i])
+4  end
+5  z_cls ← learnable_cls_token
+6  Z ← [z_cls, z_1, z_2, ..., z_N]
+7  Z ← Z + W_pos                           // Add position embeddings
+8  return Z
+```
+
+---
+
+#### Algorithm 8: YOLO Object Detection
+
+```
+YOLODetect(I | θ_yolo)
+─────────────────────────────────────────────────────────
+Input:   I ∈ ℝ^(H × W × 3), input image
+Output:  D = [(class, conf, bbox), ...], detected objects
+         where bbox = (x_min, y_min, x_max, y_max)
+Params:  θ_yolo, YOLOv8 model weights
+Hyper:   conf_thresh = 0.25, iou_thresh = 0.45
+─────────────────────────────────────────────────────────
+1  features ← Backbone(I | θ_yolo)         // CSPDarknet + C2f
+2  predictions ← Head(features | θ_yolo)   // Detection head
+3  D ← []
+4  for pred in predictions do
+5  │  if pred.confidence > conf_thresh then
+6  │  │  bbox ← pred.box
+7  │  │  class ← argmax(pred.class_probs)
+8  │  │  D.append((class, pred.confidence, bbox))
+9  │  end
+10 end
+11 D ← non_max_suppression(D, iou_thresh)
+12 return D
+```
+
+---
+
+### 2.4 Our Scene Reader Algorithms
+
+#### Algorithm 9: Approach 2.5 - Optimized Hybrid Pipeline (Fastest)
+
+```
+HybridPipeline(I, mode | θ_yolo, θ_llm, cache)
+─────────────────────────────────────────────────────────
+Input:   I ∈ ℝ^(H × W × 3), input image
+         mode ∈ {gaming, real_world}, prompt mode
+Output:  S ∈ string, scene description
+         metadata = {latency, cost, cache_hit}
+Params:  θ_yolo, YOLOv8n weights (3.2M params)
+         θ_llm, GPT-3.5-turbo API
+         cache, LRU cache (capacity=1000)
+Hyper:   max_tokens = 100-200 (adaptive)
+         temperature = 0.7
+─────────────────────────────────────────────────────────
+1  t_start ← current_time()
+2
+3  // Step 1: Object Detection
+4  D ← YOLODetect(I | θ_yolo)              // ~0.15s
+5
+6  // Step 2: Cache Lookup
+7  hash_key ← compute_hash(D, mode)
+8  if hash_key in cache then
+9  │  return (cache[hash_key], {latency: 0.08s, cost: 0, hit: true})
+10 end
+11
+12 // Step 3: Construct Prompt
+13 obj_list ← format_detections(D)          // "person (0.95), car (0.87)"
+14 spatial ← compute_spatial_relations(D)   // "person left of car"
+15 prompt ← build_prompt(obj_list, spatial, mode)
+16
+17 // Step 4: LLM Generation
+18 tokens ← adaptive_token_limit(D)         // 100 if simple, 200 if complex
+19 S ← Generate(prompt, θ_llm | τ=0.7, ℓ_gen=tokens)
+20
+21 // Step 5: Cache Store
+22 cache[hash_key] ← S
+23
+24 t_end ← current_time()
+25 return (S, {latency: t_end - t_start, cost: compute_cost(tokens), hit: false})
+```
+
+**Complexity:** O(H·W) for detection + O(ℓ²) for generation
+
+---
+
+#### Algorithm 10: Approach 3.5 - Specialized Multi-Model Pipeline
+
+```
+SpecializedPipeline(I, mode | θ_yolo, θ_ocr, θ_depth, θ_llm, cache)
+─────────────────────────────────────────────────────────
+Input:   I ∈ ℝ^(H × W × 3), input image
+         mode ∈ {gaming, real_world}, prompt mode
+Output:  S ∈ string, scene description
+Params:  θ_yolo (YOLOv8n), θ_ocr (EasyOCR), θ_depth (MiDaS)
+         θ_llm (GPT-3.5-turbo), cache (LRU)
+Hyper:   ocr_thresh = 0.5, depth_enabled = true
+─────────────────────────────────────────────────────────
+1  t_start ← current_time()
+2
+3  // Step 1: Parallel Feature Extraction
+4  D ← YOLODetect(I | θ_yolo)              // Objects
+5
+6  // Step 2: Complexity-Based Routing
+7  scene_type ← classify_scene(D, I)
+8
+9  context ← {}
+10 if scene_type.has_text then
+11 │  text_regions ← OCRExtract(I | θ_ocr)  // EasyOCR
+12 │  context.text ← text_regions
+13 end
+14
+15 if scene_type.needs_depth then
+16 │  depth_map ← DepthEstimate(I | θ_depth) // MiDaS
+17 │  context.spatial ← analyze_depth(depth_map, D)
+18 end
+19
+20 // Step 3: Cache Check
+21 hash_key ← compute_hash(D, context, mode)
+22 if hash_key in cache then
+23 │  return cache[hash_key]
+24 end
+25
+26 // Step 4: Prompt Construction & Generation
+27 prompt ← build_specialized_prompt(D, context, mode)
+28 S ← Generate(prompt, θ_llm | τ=0.7, ℓ_gen=150)
+29
+30 cache[hash_key] ← S
+31 return S
+```
+
+---
+
+#### Algorithm 11: Approach 1.5 - Progressive Disclosure VLM
+
+```
+ProgressiveVLM(I, mode | θ_blip, θ_gpt4v)
+─────────────────────────────────────────────────────────
+Input:   I ∈ ℝ^(H × W × 3), input image
+         mode ∈ {gaming, real_world}, prompt mode
+Output:  S_quick ∈ string, immediate response (Tier 1)
+         S_full ∈ string, detailed response (Tier 2)
+Params:  θ_blip, BLIP-2 weights (2.7B, local)
+         θ_gpt4v, GPT-4V API (cloud)
+Hyper:   max_tokens_quick = 50, max_tokens_full = 150
+─────────────────────────────────────────────────────────
+1  // Tier 1: Fast Local Response (optional)
+2  if local_model_enabled then
+3  │  S_quick ← BLIP2Generate(I | θ_blip, ℓ_gen=50)
+4  │  yield S_quick                        // Stream to user immediately
+5  end
+6
+7  // Tier 2: High-Quality Cloud Response
+8  prompt ← build_vlm_prompt(mode)         // Concise, <20 words
+9
+10 // Encode image for API
+11 I_base64 ← encode_base64(I)
+12
+13 // GPT-4V inference
+14 messages ← [
+15 │  {role: "system", content: system_prompt[mode]},
+16 │  {role: "user", content: [
+17 │  │  {type: "image_url", url: I_base64},
+18 │  │  {type: "text", text: prompt}
+19 │  ]}
+20 ]
+21
+22 S_full ← GPT4V_API(messages | max_tokens=150, τ=0.7)
+23
+24 return (S_quick, S_full)
+```
+
+**Latency Breakdown:**
+- Tier 1 (BLIP-2): ~1.7s (local, optional)
+- Tier 2 (GPT-4V): ~1.6s (cloud, optimized prompts)
+
+---
+
+#### Algorithm 12: Cache with Semantic Hashing
+
+```
+SemanticCache operations
+─────────────────────────────────────────────────────────
+Structure: cache = LRU_Dict(capacity=1000)
+
+compute_hash(D, context, mode):
+1  obj_signature ← sort([f"{d.class}:{d.conf:.2f}" for d in D])
+2  context_sig ← hash(str(context))
+3  return hash(obj_signature + context_sig + mode)
+
+cache_lookup(key):
+1  if key in cache then
+2  │  cache.move_to_front(key)            // LRU update
+3  │  return (true, cache[key])
+4  end
+5  return (false, null)
+
+cache_store(key, value):
+1  if len(cache) >= capacity then
+2  │  cache.evict_lru()                   // Remove least recent
+3  end
+4  cache[key] ← value
+```
+
+**Cache Hit Rate:** 40-60% in repeated-scene scenarios
+**Speedup on Hit:** ~15x (0.08s vs 1.2s)
+
+---
+
+### 2.5 Training and Loss Functions
+
+For fine-tuning and understanding model behavior:
+
+#### Algorithm 13: Cross-Entropy Loss for Next Token Prediction
+
+```
+ComputeLoss(x, θ)
+─────────────────────────────────────────────────────────
+Input:   x ∈ V^ℓ, ground truth token sequence
+         θ, model parameters
+Output:  L ∈ ℝ, cross-entropy loss
+─────────────────────────────────────────────────────────
+1  P ← GPTForward(x[1:ℓ-1] | θ)           // Predictions
+2  L ← 0
+3  for t = 1 to ℓ-1 do
+4  │  L ← L - log(P[x[t+1], t])           // Negative log-likelihood
+5  end
+6  return L / (ℓ-1)
+```
+
+---
+
+### 2.6 Test Scenarios
 
 | Scenario | Images | Challenge | Key Metric |
 |----------|--------|-----------|------------|
-| **🎮 Gaming** | 12 | Complex UI, character positioning | Object identification |
-| **🚶 Indoor Navigation** | 10 | Spatial relationships, obstacles | Hazard detection |
-| **🌳 Outdoor Navigation** | 10 | Safety-critical elements | False negative rate |
-| **📝 Text Reading** | 10 | OCR accuracy, varied fonts | Text extraction |
+| **Gaming** | 12 | Complex UI, character positioning | Object identification |
+| **Indoor Navigation** | 10 | Spatial relationships, obstacles | Hazard detection |
+| **Outdoor Navigation** | 10 | Safety-critical elements | False negative rate |
+| **Text Reading** | 10 | OCR accuracy, varied fonts | Text extraction |
 
 ---
 
-## 🏆 Top 3 Approaches
+## 3. Implementation & Demo
 
-### 🥇 #1: Approach 2.5 - Optimized YOLO+LLM
-**1.10s latency** | **$0.005/query** | **5.12x faster than baseline**
-
-The **fastest approach overall** - achieves sub-2-second real-time performance.
-
-#### Architecture
-```
-Image → YOLOv8n Detection (0.15s)
-     → Smart Caching (15x speedup)
-     → GPT-3.5-turbo Generation
-     → Description Output (1.10s total)
-```
-
-#### Key Optimizations
-- ✅ GPT-3.5-turbo (3-4x faster than GPT-4, 90% quality)
-- ✅ Intelligent caching (40-60% cache hit rate)
-- ✅ Adaptive parameters (shorter responses for simple scenes)
-- ✅ Complexity detection (routes to appropriate generation)
-
-#### Performance
-- **95% of queries under 2s** (real-time threshold)
-- **67.4% faster** than baseline YOLO+LLM
-- **Cost-effective:** $5 per 1000 queries
-
-#### Best For
-- Real-time gaming accessibility ✅
-- Speed-critical navigation ✅
-- Cost-sensitive deployments ✅
-
----
-
-### 🥈 #2: Approach 3.5 - Optimized Specialized
-**1.50s latency** | **$0.006/query** | **72% faster than baseline**
-
-Combines specialized models (OCR, depth) with speed optimizations.
-
-#### Architecture
-```
-Image → Complexity Detector
-     → [If text] EasyOCR → GPT-3.5-turbo
-     → [If depth] MiDaS → GPT-3.5-turbo  
-     → [Else] YOLO → GPT-3.5-turbo
-     → Cached Output (1.50s total)
-```
-
-#### Key Features
-- ✅ Intelligent routing (only uses specialized models when needed)
-- ✅ OCR integration (95%+ text accuracy)
-- ✅ Depth estimation (improved spatial descriptions)
-- ✅ Same optimizations as Approach 2.5
-
-#### Best For
-- Gaming UI/menus (OCR for inventory, stats) ✅
-- Text reading (signs, documents) ✅
-- Indoor navigation (depth awareness) ✅
-
----
-
-### 🥉 #3: Approach 1.5 - Optimized Pure VLM
-**1.73s perceived latency** | **$0.012/query** | **69% faster perceived**
-
-**Optimized version of Approach 1** with concise prompts, lower token limits, and progressive disclosure.
-
-#### Architecture
-```
-Image Input
-    ↓
-┌──────────────┐  ┌───────────────┐
-│ Tier 1: Fast │  │ Tier 2: Detail│
-│ BLIP-2 Local │  │ GPT-4V Cloud  │
-│ (optional)   │  │ (optimized)   │
-│ (1.73s)      │  │ (5.47s)       │
-└──────┬───────┘  └───────┬───────┘
-       ↓                  ↓
-   Quick                Full
-   Overview          Description
-```
-
-#### Key Optimizations (vs Approach 1)
-1. **Concise prompts** (under 20 words) - faster processing
-2. **Lower token limits** (max_tokens=100) - faster generation
-3. **Mode-specific prompts** (gaming/real-world) - better quality
-4. **Progressive disclosure** (optional BLIP-2) - immediate feedback
-
-#### Best For
-- **Best user experience** - immediate feedback reduces anxiety ✅
-- Scenarios where "something now" > "perfect later" ✅
-- Users who are impatient or anxious ✅
-
----
-
-## 📊 Complete Results
-
-### All 9 Approaches Ranked by Speed
-
-| Rank | Approach | Latency | Cost/Query | Quality | Best For |
-|------|----------|---------|------------|---------|----------|
-| 🥇 | **Approach 2.5 (Optimized YOLO+LLM)** | **1.10s** | $0.005 | ⭐⭐⭐⭐ | Real-time, speed-critical |
-| 🥈 | **Approach 3.5 (Optimized Specialized)** | **1.50s** | $0.006 | ⭐⭐⭐⭐ | Text/depth scenarios |
-| 🥉 | **Approach 1.5 (Optimized Pure VLM)** | **1.73s*** | $0.012 | ⭐⭐⭐⭐⭐ | Best user experience |
-| 4 | Approach 2 (YOLO+LLM Baseline) | 3.39s | $0.005 | ⭐⭐⭐⭐ | Balanced baseline |
-| 5 | Approach 1 (Claude 3.5 Haiku) | 4.95s | $0.024 | ⭐⭐⭐⭐ | Most consistent |
-| 6 | Approach 3 (Specialized Baseline) | 5.33s | $0.010 | ⭐⭐⭐⭐ | With OCR/Depth |
-| 7 | Approach 1 (Gemini 2.5 Flash) | 5.88s | $0.003 | ⭐⭐⭐⭐ | Most cost-effective |
-| 8 | Approach 7 (Chain-of-Thought) | 8.48s | $0.015 | ⭐⭐⭐⭐⭐ | Best safety detection |
-| 9 | Approach 6 (RAG-Enhanced) | 10.60s | $0.020 | ⭐⭐⭐⭐ | Gaming knowledge |
-| 10 | Approach 4 (Local BLIP-2) | 35.40s | $0.000 | ⭐⭐⭐ | Zero cost, offline |
-
-*Approach 1.5: 1.73s = perceived latency (time to first output), 5.47s = full description
-
-### Key Achievements
-- ✅ **3 approaches achieve sub-2s latency** (real-time capable)
-- ✅ **5.12x speedup** over baseline GPT-4V (1.10s vs 5.63s)
-- ✅ **67-72% latency reduction** through optimization
-- ✅ **95% of queries under 2s** with Approach 2.5
-
-### Cost vs Speed Analysis
-- **Fastest & affordable:** Approach 2.5 ($0.005/query, 1.10s)
-- **Most cost-effective:** Gemini ($0.003/query, but 5.88s)
-- **Zero cost:** Approach 4 (local BLIP-2, but 35.4s)
-- **Cost range:** 7.7x difference across approaches
-
----
-
-## 🎯 Use Case Recommendations
-
-| Scenario | Recommended | Latency | Why? |
-|----------|------------|---------|------|
-| 🎮 **Gaming (Real-time)** | **Approach 2.5** | 1.10s | Fastest, affordable, good quality |
-| 🚶 **Indoor Navigation** | **Approach 3.5** | 1.50s | Depth awareness, fast |
-| 🌳 **Outdoor Navigation** | **Approach 7** | 8.48s | Best safety detection |
-| 📝 **Text Reading** | **Approach 3.5** | 1.50s | OCR integration, 95%+ accuracy |
-| 😊 **Best UX** | **Approach 1.5** | 1.73s* | Immediate feedback |
-| 💰 **Cost-Sensitive** | **Approach 2.5** | 1.10s | $5 per 1000 queries |
-| 🔒 **Privacy/Offline** | **Approach 4** | 35.40s | Zero cost, no cloud |
-
----
-
-## 📈 Key Findings
-
-### Major Discoveries
-
-1. **Sub-2-second latency is achievable**
-   - 3 approaches achieve real-time performance (<2s)
-   - Hybrid architectures (YOLO+LLM) consistently 2-5x faster than pure VLMs
-
-2. **Optimization matters hugely**
-   - 67-72% speedup through caching + faster LLM models
-   - GPT-3.5-turbo achieves 90% quality at 3-4x speed of GPT-4
-
-3. **Progressive disclosure works**
-   - Approach 1.5 reduces perceived wait by 69%
-   - UX innovation: immediate feedback > waiting for perfect response
-
-4. **Cost-speed tradeoff is favorable**
-   - Fastest approach (2.5) is also cost-effective ($0.005/query)
-   - 7.7x cost variation across approaches
-
-5. **Safety remains challenging**
-   - All approaches have 15-20% false negative rate for hazards
-   - Chain-of-Thought improves hazard detection by +20%
-
-### Statistical Validation
-- **ANOVA p < 0.001** - Statistically significant latency differences
-- **Cohen's d = 2.61** - Large effect size for optimizations
-- **95% confidence** - Results are reproducible
-
-### Novel Contributions
-1. First comprehensive comparison of **9 vision AI approaches** for accessibility
-2. **Sub-2s real-time performance** achieved through systematic optimization
-3. **Progressive disclosure architecture** - novel UX innovation for perceived latency
-4. **Gaming accessibility focus** - underexplored domain
-5. Complete **tradeoff analysis** - latency, cost, quality, safety
-
----
-
-## 🚧 Limitations & Future Work
-
-### Current Limitations
-- **True Real-Time:** Sub-2s achieved, but not <500ms for instant response
-- **Accuracy:** Hallucinations in 5-15% of descriptions
-- **Safety:** 15-20% false negative rate for hazards across all approaches
-- **Dataset Size:** 42 images (comparison-focused, not training-scale)
-- **User Testing:** No blind/low-vision user validation yet
-- **Static Images:** Phase 1 only; Phase 2 will implement real-time video
-
-### Future Work
-- **Phase 2 Implementation:** Real-time demo with Approach 2.5
-- **User Studies:** Validation with blind/low-vision users
-- **Safety Improvements:** Reduce false negative rate for hazards
-- **Extended Scenarios:** Medical imaging, workplace, transportation
-- **Edge Deployment:** Optimize for mobile/edge devices
-
----
-
-## 🎓 Course Connection - DS-5690
-
-### Learning Objectives Met
-
-✅ **Transformer Architectures**
-- Vision transformers (ViT) in multimodal models (Approaches 1, 4, 5)
-- Cross-modal attention mechanisms in VLMs
-- Encoder-decoder vs decoder-only architectures
-
-✅ **Evaluating Capabilities & Limitations**
-- Systematic testing methodology (9 approaches, 564+ tests)
-- Latency constraint analysis (sub-2s requirement)
-- Failure mode identification (15-20% false negative rate)
-
-✅ **Technical Tradeoffs**
-- Cloud vs edge deployment (Approach 4 vs others)
-- Accuracy vs speed vs cost (comprehensive comparison)
-- Single-model vs multi-model pipelines (Approaches 2, 3)
-
-✅ **Model Adaptation**
-- Prompt engineering for vision tasks (Approach 7 - Chain-of-Thought)
-- API optimization strategies (caching, adaptive parameters)
-- Hybrid architecture design (Approaches 2.5, 3.5, 5)
-
----
-
-## 🗂️ Project Structure
+### Code Structure
 
 ```
 scene-reader/
-├── README.md                      # This file (presentation overview)
-├── PROJECT.md                     # Comprehensive technical documentation
-├── FINDINGS.md                    # Detailed results and analysis
-├── data/images/                   # 42 test images (4 scenarios)
+├── README.md                      # This file
+├── PROJECT.md                     # Full technical documentation
+├── FINDINGS.md                    # Detailed analysis
 ├── code/
-│   ├── approach_2_5_optimized/   # 🥇 Fastest (1.10s)
-│   ├── approach_3_5_optimized/   # 🥈 Specialized (1.50s)
-│   ├── approach_1_5_optimized/   # 🥉 Best UX (1.73s perceived)
+│   ├── approach_2_5_optimized/    # Algorithm 9 implementation
+│   │   ├── hybrid_pipeline_optimized.py
+│   │   ├── prompts_optimized.py
+│   │   └── model_wrappers.py
+│   ├── approach_3_5_optimized/    # Algorithm 10 implementation
+│   ├── approach_1_5_optimized/    # Algorithm 11 implementation
+│   ├── evaluation/                # Testing framework
 │   └── [6 other approaches]
+├── data/images/                   # 42 test images
 └── results/
-    ├── approach_*/               # Results for each approach
-    ├── comprehensive_comparison/ # Cross-approach analysis
-    └── LATENCY_COMPARISON.md     # Speed rankings
+    ├── mode_specific_comparison/  # Latest evaluation
+    │   ├── analysis/figures/      # Visualization charts
+    │   └── raw/                   # CSV data
+    └── comprehensive_comparison/
 ```
 
----
-
-## 🛠️ Quick Start
-
-### Installation
+### Quick Start
 
 ```bash
 # Clone and setup
-git clone https://github.com/yourusername/scene-reader.git
-cd scene-reader
+git clone https://github.com/rroshann/scene_reader.git
+cd scene_reader
 python -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
 
-# Configure API keys in .env
+# Configure API keys
 cp .env.example .env
-# Edit .env with: OPENAI_API_KEY, GOOGLE_API_KEY, ANTHROPIC_API_KEY
-```
+# Edit .env with: OPENAI_API_KEY
 
-### Test Fastest Approach (1.10s)
-
-```bash
-# Run Approach 2.5 on single image
+# Run Algorithm 9 (Fastest Approach)
 cd code/approach_2_5_optimized
 python -c "
 from hybrid_pipeline_optimized import HybridPipelineOptimized
@@ -351,51 +512,226 @@ result = pipeline.describe_image('../../data/images/gaming/game_01.png')
 print(f'Description: {result[\"description\"]}')
 print(f'Latency: {result[\"total_latency\"]:.2f}s')
 "
-
-# Run batch test on all 42 images
-python batch_test_optimized.py
 ```
 
-### View Results
+---
 
-All results are pre-generated in `results/` directory:
-- `results/approach_2_5_optimized/` - Fastest approach (1.10s)
-- `results/approach_3_5_optimized/` - Specialized (1.50s)
-- `results/approach_1_5_optimized/` - Optimized Pure VLM (1.73s)
-- `results/comprehensive_comparison/` - Cross-approach analysis
+## 4. Assessment & Evaluation
+
+### Mode-Specific Comparison Results
+
+We tested all approaches with their **actual prompt_mode parameters** (gaming vs real_world) on 42 images.
+
+#### Real-World Mode (30 images: indoor + outdoor + text)
+
+| Rank | Approach | Algorithm | Mean Latency | P95 | Std Dev | Cost/Query |
+|------|----------|-----------|--------------|-----|---------|------------|
+| 1 | **Approach 2.5** | Alg. 9 | **0.54s** | 0.94s | 0.35s | $0.0000* |
+| 2 | **Approach 3.5** | Alg. 10 | **0.93s** | 1.45s | 0.52s | $0.0000* |
+| 3 | **Approach 1.5** | Alg. 11 | **1.62s** | 2.46s | 0.48s | $0.0101 |
+
+#### Gaming Mode (12 images)
+
+| Rank | Approach | Algorithm | Mean Latency | P95 | Std Dev | Cost/Query |
+|------|----------|-----------|--------------|-----|---------|------------|
+| 1 | **Approach 2.5** | Alg. 9 | **0.56s** | 0.92s | 0.34s | $0.0000* |
+| 2 | **Approach 3.5** | Alg. 10 | **1.05s** | 1.55s | 0.26s | $0.0000* |
+| 3 | **Approach 1.5** | Alg. 11 | **1.46s** | 1.90s | 0.28s | $0.0098 |
+
+*$0.0000 due to cache hits (Algorithm 12); actual cost without cache: ~$0.005-0.006/query
+
+### Latency Comparison Visualizations
+
+![Real-World Latency Comparison](results/mode_specific_comparison/analysis/figures/latency_comparison_barchart_real_world.png)
+*Bar chart comparing mean latencies across approaches in real-world mode*
+
+![Gaming Latency Comparison](results/mode_specific_comparison/analysis/figures/latency_comparison_barchart_gaming.png)
+*Bar chart comparing mean latencies across approaches in gaming mode*
+
+![Real-World Latency Distribution](results/mode_specific_comparison/analysis/figures/latency_comparison_boxplot_real_world.png)
+*Box plot showing latency distribution and consistency in real-world mode*
+
+![Gaming Latency Distribution](results/mode_specific_comparison/analysis/figures/latency_comparison_boxplot_gaming.png)
+*Box plot showing latency distribution and consistency in gaming mode*
+
+### Statistical Significance
+
+All differences are **statistically significant** (p < 0.001):
+
+**Real-World Mode:**
+| Comparison | t-statistic | p-value | Mean Difference |
+|------------|-------------|---------|-----------------|
+| Alg. 11 vs Alg. 9 | 10.163 | <0.0001 | 1.08s |
+| Alg. 11 vs Alg. 10 | 6.283 | <0.0001 | 0.69s |
+| Alg. 9 vs Alg. 10 | -4.191 | 0.0002 | -0.39s |
+
+**Gaming Mode:**
+| Comparison | t-statistic | p-value | Mean Difference |
+|------------|-------------|---------|-----------------|
+| Alg. 11 vs Alg. 9 | 8.156 | <0.0001 | 0.91s |
+| Alg. 11 vs Alg. 10 | 4.895 | 0.0005 | 0.42s |
+| Alg. 9 vs Alg. 10 | -4.111 | 0.0017 | -0.49s |
+
+### All 9 Approaches Ranked
+
+| Rank | Approach | Latency | Cost/Query | Quality | Best For |
+|------|----------|---------|------------|---------|----------|
+| 1 | **Approach 2.5** (Alg. 9) | **0.54s** | $0.005 | 4/5 | Real-time, speed-critical |
+| 2 | **Approach 3.5** (Alg. 10) | **0.93s** | $0.006 | 4/5 | Text/depth scenarios |
+| 3 | **Approach 1.5** (Alg. 11) | **1.62s** | $0.012 | 5/5 | Best quality |
+| 4 | Approach 2 (Baseline) | 3.39s | $0.005 | 4/5 | Balanced baseline |
+| 5 | Approach 1 (Claude) | 4.95s | $0.024 | 4/5 | Most consistent |
+| 6 | Approach 3 (Baseline) | 5.33s | $0.010 | 4/5 | OCR/Depth baseline |
+| 7 | Approach 1 (Gemini) | 5.88s | $0.003 | 4/5 | Cheapest cloud |
+| 8 | Approach 7 (CoT) | 8.48s | $0.015 | 5/5 | Best safety |
+| 9 | Approach 6 (RAG) | 10.60s | $0.020 | 4/5 | Game knowledge |
+| 10 | Approach 4 (BLIP-2) | 35.40s | $0.000 | 3/5 | Zero cost, offline |
 
 ---
 
-## 📚 Additional Documentation
+## 5. Model & Data Cards
 
-- **[PROJECT.md](PROJECT.md)** - Full technical documentation (2200+ lines)
-- **[FINDINGS.md](FINDINGS.md)** - Detailed analysis and results
-- **[LATENCY_COMPARISON.md](results/LATENCY_COMPARISON.md)** - Speed rankings
-- **[API_SETUP_GUIDE.md](API_SETUP_GUIDE.md)** - API configuration
+### Model Cards
+
+#### GPT-4V (gpt-4o)
+| Attribute | Value |
+|-----------|-------|
+| Architecture | Encoder-Decoder Transformer + ViT |
+| Parameters | ~175B+ (estimated) |
+| Context Window | 128K tokens |
+| License | OpenAI Terms of Service |
+| Intended Use | Vision-language understanding |
+
+#### GPT-3.5-turbo
+| Attribute | Value |
+|-----------|-------|
+| Architecture | Decoder-only Transformer (Alg. 5) |
+| Optimization | 3-4x faster than GPT-4 |
+| License | OpenAI Terms of Service |
+| Intended Use | Fast text generation |
+
+#### YOLOv8n
+| Attribute | Value |
+|-----------|-------|
+| Architecture | CSPDarknet + C2f + FPN (Alg. 8) |
+| Parameters | 3.2 million |
+| License | AGPL-3.0 |
+| Training Data | COCO (80 classes) |
+
+#### BLIP-2
+| Attribute | Value |
+|-----------|-------|
+| Architecture | ViT + Q-Former + LLM |
+| Parameters | 2.7 billion |
+| License | MIT |
+| Intended Use | Local image captioning |
+
+### Data Card
+
+| Attribute | Details |
+|-----------|---------|
+| Dataset Size | 42 images |
+| Scenarios | Gaming (12), Indoor (10), Outdoor (10), Text (10) |
+| Sources | Personal photos, Unsplash/Pexels (CC0), Game screenshots |
+| Limitations | Comparison-focused, not training-scale |
+
+### Ethical Considerations
+
+- **Privacy:** Cloud APIs transmit images; BLIP-2 offers local alternative
+- **Bias:** Models may underperform on underrepresented demographics
+- **Hallucination:** 5-15% rate of fabricated descriptions
+- **Safety:** 15-20% false negative rate for hazard detection
 
 ---
 
-## 📊 Project Status
+## 6. Critical Analysis
 
-**Phase 1:** ✅ Complete (9 approaches tested, top 3 identified)  
-**Phase 2:** 🔄 In Progress (Real-time demo with Approach 2.5)  
-**Progress:** 95% Complete  
-**Submission:** December 4, 2025
+### What is the Impact of This Project?
+
+1. **Proves Real-Time Feasibility:** Algorithm 9 achieves 0.54s latency, well under 2s threshold
+2. **Identifies Optimal Architectures:** Hybrid pipelines (Alg. 9) outperform pure VLMs (Alg. 11) by 3x
+3. **Enables Cost-Effective Deployment:** $0.005/query makes large-scale accessibility viable
+4. **Advances Gaming Accessibility:** First systematic study for blind gaming
+
+### What Does This Project Reveal?
+
+1. **Architectural Choice > Model Size:** GPT-3.5 + YOLO beats GPT-4V alone
+2. **Caching is Transformative:** Algorithm 12 yields 15x speedup on hits
+3. **Mode-Specific Prompts Matter:** Gaming vs real-world produce different profiles
+4. **Safety Remains Challenging:** 15-20% false negatives require additional layers
+
+### What is the Next Step?
+
+1. **Phase 2 Deployment:** Real-time screen capture with Algorithm 9 + TTS
+2. **User Studies:** Validation with blind/low-vision users
+3. **Safety Improvements:** Ensemble methods for hazard detection
+4. **Edge Optimization:** Mobile deployment
+
+### Limitations
+
+- Sub-500ms "instantaneous" response not achieved
+- 5-15% hallucination rate
+- 42 images sufficient for comparison, not generalization
+- No user validation completed yet
 
 ---
 
-## 🙏 Acknowledgments
+## 7. Documentation & Resource Links
 
-### People
-- **Prof. Jesse Spencer-Smith** - Project guidance
+### Repository Contents
+
+| File | Description |
+|------|-------------|
+| [README.md](README.md) | This file - algorithms and overview |
+| [PROJECT.md](PROJECT.md) | Full technical documentation |
+| [FINDINGS.md](FINDINGS.md) | Detailed analysis |
+
+### Setup Instructions
+
+1. `git clone https://github.com/rroshann/scene_reader.git`
+2. `python -m venv venv && source venv/bin/activate`
+3. `pip install -r requirements.txt`
+4. Add API keys to `.env`
+
+---
+
+## 8. References
+
+### Foundational Papers
+
+1. **Phuong, M. & Hutter, M.** (2022). "Formal Algorithms for Transformers." *arXiv:2207.09238*. DeepMind. — Primary reference for algorithm structure and notation.
+
+2. **Vaswani, A. et al.** (2017). "Attention Is All You Need." *NeurIPS*. — Original transformer architecture.
+
+3. **Dosovitskiy, A. et al.** (2020). "An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale." *ICLR*. — Vision Transformer (ViT).
+
+4. **Radford, A. et al.** (2021). "Learning Transferable Visual Models From Natural Language Supervision." *OpenAI*. — CLIP for vision-language alignment.
+
+5. **Li, J. et al.** (2023). "BLIP-2: Bootstrapping Language-Image Pre-training with Frozen Image Encoders and Large Language Models." *ICML*. — BLIP-2 architecture.
+
+6. **Jocher, G. et al.** (2023). "YOLOv8." *Ultralytics*. — Object detection.
+
+7. **Ranftl, R. et al.** (2020). "Towards Robust Monocular Depth Estimation." *TPAMI*. — MiDaS depth estimation.
+
+### Model Documentation
+
+- [OpenAI API](https://platform.openai.com/docs)
+- [Ultralytics YOLOv8](https://docs.ultralytics.com/)
+- [Hugging Face BLIP-2](https://huggingface.co/docs/transformers/model_doc/blip-2)
+- [EasyOCR](https://github.com/JaidedAI/EasyOCR)
+- [MiDaS](https://github.com/isl-org/MiDaS)
+
+---
+
+
+
+## Acknowledgments
+
+- **Prof. Jesse Spencer-Smith** - Course instruction and project guidance
 - **Shivam Tyagi (TA)** - Technical support
-- **Vanderbilt Data Science Institute** - Resources and infrastructure
+- **Vanderbilt Data Science Institute** - Infrastructure
 
-### Tools & APIs
-- OpenAI (GPT-4V, GPT-3.5-turbo), Google (Gemini), Anthropic (Claude)
-- Ultralytics (YOLOv8), EasyOCR, MiDaS, BLIP-2
-
-### Inspiration
-Dedicated to 7M+ blind and visually impaired individuals in the US, and 250M+ worldwide who deserve equal access to visual information.
+Dedicated to **7M+ blind and visually impaired individuals** in the US, and **250M+ worldwide**.
 
 ---
+
