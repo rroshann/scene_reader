@@ -49,7 +49,8 @@ class CacheManager:
         mode: str,
         ocr_results: Optional[Dict] = None,
         depth_results: Optional[Dict] = None,
-        prompt_template: str = 'default'
+        prompt_template: str = 'default',
+        user_question: Optional[str] = None  # Include user question in cache key
     ) -> str:
         """
         Generate cache key from inputs (includes OCR/depth data for Approach 3.5)
@@ -120,8 +121,11 @@ class CacheManager:
         
         specialized_str = json.dumps(specialized_data, sort_keys=True)
         
+        # Include user question in cache key (different questions = different cache entries)
+        user_question_str = user_question.lower().strip() if user_question else ''
+        
         # Create hash
-        key_string = f"{yolo_model}:{mode}:{prompt_template}:{objects_str}:{specialized_str}"
+        key_string = f"{yolo_model}:{mode}:{prompt_template}:{objects_str}:{specialized_str}:{user_question_str}"
         return hashlib.sha256(key_string.encode()).hexdigest()
     
     def get_cached_result(self, cache_key: str) -> Optional[Dict]:

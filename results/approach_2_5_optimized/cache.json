@@ -351,13 +351,29 @@
       "yolo_model": "yolov8n",
       "llm_model": "gpt-3.5-turbo",
       "cached_at": 1764898317.150423
+    },
+    "c1196e371704d8e265c05ed5a6fd029eaded95fe097f09199832a65243bf085f": {
+      "description": "Person in front. Cars on the right. Safe to move left. Watch for traffic.",
+      "generation_latency": 1.4991681575775146,
+      "tokens_used": 612,
+      "yolo_model": "yolov8n",
+      "llm_model": "gpt-3.5-turbo",
+      "cached_at": 1764909948.437983
+    },
+    "9bbc6c1748155a0d605698a2d920e40103ed7a7be089a94ea487d3e5a4cb1d0c": {
+      "description": "Person ahead. Cars on the right and left. Watch for traffic lights. Stay cautious and listen carefully.",
+      "generation_latency": 0.7077670097351074,
+      "tokens_used": 615,
+      "yolo_model": "yolov8n",
+      "llm_model": "gpt-3.5-turbo",
+      "cached_at": 1764911273.999184
     }
   },
   "stats": {
     "hits": 18,
-    "misses": 44,
+    "misses": 46,
     "evictions": 0,
-    "loads": 11,
+    "loads": 13,
     "saves": 32
   }
 }

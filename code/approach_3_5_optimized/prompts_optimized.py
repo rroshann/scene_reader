@@ -126,7 +126,8 @@ def create_ocr_fusion_prompt(
     objects_text: str, 
     ocr_results: Dict,
     detections: Optional[List[Dict]] = None,
-    mode: str = 'real_world'  # 'gaming' or 'real_world'
+    mode: str = 'real_world',  # 'gaming' or 'real_world'
+    user_question: Optional[str] = None  # User's specific question to answer
 ) -> str:
     """
     Create optimized fusion prompt combining object detections with OCR results
@@ -167,9 +168,16 @@ def create_ocr_fusion_prompt(
     
     # Mode-specific instruction
     if mode == 'gaming':
-        prompt_parts.append("Tell them what's happening in the game. Check for win or loss first, then the game state. Use simple words, like helping a friend.")
+        if user_question:
+            prompt_parts.append(f"CRITICAL: The user asked: '{user_question}'. Answer this question directly. Check the text you read and game objects to answer specifically.")
+        else:
+            prompt_parts.append("Tell them what's happening in the game. Check for win or loss first, then the game state. Use simple words, like helping a friend.")
     else:
-        prompt_parts.append("CRITICAL: You MUST mention ALL text/signs you read - don't skip any! List multiple signs if present. Combine text + objects for complete picture. Tell them what's around them in simple, friendly words. Focus on what they need to know to move safely.")
+        if user_question:
+            # If user asked a specific question, emphasize answering it with OCR text
+            prompt_parts.append(f"CRITICAL: The user asked: '{user_question}'. Answer this question directly. You MUST check the text you read - if the question is about signs, labels, stores, or text, use the OCR text to answer. List ALL relevant text/signs that answer the question. Don't skip any signs!")
+        else:
+            prompt_parts.append("CRITICAL: You MUST mention ALL text/signs you read - don't skip any! List multiple signs if present. Combine text + objects for complete picture. Tell them what's around them in simple, friendly words. Focus on what they need to know to move safely.")
     
     return '\n'.join(prompt_parts)
 

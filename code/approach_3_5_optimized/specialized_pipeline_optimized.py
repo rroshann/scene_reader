@@ -474,7 +474,8 @@ def run_specialized_pipeline_optimized(
                 mode=mode,
                 ocr_results=specialized_result if mode == 'ocr' else None,
                 depth_results=specialized_result if mode == 'depth' else None,
-                prompt_template='optimized'
+                prompt_template='optimized',
+                user_question=user_question  # Include user question in cache key
             )
             
             cached_result = cache_manager.get_cached_result(cache_key)
@@ -496,9 +497,16 @@ def run_specialized_pipeline_optimized(
                 objects_text, 
                 specialized_result,
                 detections=detections,  # Pass detections for smart truncation
-                mode=prompt_mode  # Pass prompt mode
+                mode=prompt_mode,  # Pass prompt mode
+                user_question=user_question  # Pass user question
             )
+            # Append user question to fusion prompt if provided (additional emphasis)
+            if user_question:
+                fusion_prompt = f"{fusion_prompt}\n\nUser's question: {user_question}. Please answer this question directly based on what you see in the image, especially focusing on any text/signs you read."
             fusion_system_prompt = system_prompt if system_prompt else get_ocr_system_prompt(prompt_mode)
+            # Also update system prompt to emphasize answering the question
+            if user_question and not system_prompt:
+                fusion_system_prompt = f"{fusion_system_prompt}\n\nIMPORTANT: The user asked: '{user_question}'. Answer this question directly and specifically. If the question is about text, signs, labels, or stores, prioritize the OCR text you read. Focus on what the user wants to know, not just general scene description."
         else:  # depth mode
             # Analyze spatial relationships
             if depth_estimator and specialized_result.get('depth_map') is not None:

@@ -575,13 +575,61 @@
       "yolo_model": "yolov8n",
       "llm_model": "gpt-3.5-turbo",
       "cached_at": 1764898318.039259
+    },
+    "ded1143017bca765e120f0bd71a045fbdd4418e2ec3d5686ec678b34640c2a8b": {
+      "description": "Ahead of you is a \"Stop\" sign. On your right, there are 8 cars parked. I see a street sign that says \"Maple Avenue.\" Stay on the sidewalk for safety.",
+      "generation_latency": 1.0566599369049072,
+      "tokens_used": 494,
+      "yolo_model": "yolov8n",
+      "llm_model": "gpt-3.5-turbo",
+      "cached_at": 1764910008.519907
+    },
+    "d7918fb9e024068785dd9569cb2186f3799bafbd81af2233be6c8097dd66ebf8": {
+      "description": "Watch out for the cars on your right and in the center. Proceed straight ahead. Street sign says 'Maple Avenue'. Be aware of pedestrians ahead. Safe path is straight.",
+      "generation_latency": 1.5509648323059082,
+      "tokens_used": 490,
+      "yolo_model": "yolov8n",
+      "llm_model": "gpt-3.5-turbo",
+      "cached_at": 1764910508.863691
+    },
+    "2adda2b30b0c9bfdc746e5098e49500504a5fec47023495a4d4bd1136a26d192": {
+      "description": "Caution: 8 cars to the right and ahead. Stay on the left side. Street sign reads \"Main Street.\" A sign on the front building says \"Coffee Shop.\" Be aware of the pedestrian crossing sign ahead. Walk straight for safety.",
+      "generation_latency": 1.6559817790985107,
+      "tokens_used": 504,
+      "yolo_model": "yolov8n",
+      "llm_model": "gpt-3.5-turbo",
+      "cached_at": 1764910605.939081
+    },
+    "3549142e99c50c737210218d382b33df68b45f938dcc320958ccca731def996c": {
+      "description": "\"Pharmacy ahead on the right side - sign says 'Green Pharmacy'. Crosswalk ahead. Cars parked nearby. Safe to walk straight to reach the pharmacy.\"",
+      "generation_latency": 0.6127941608428955,
+      "tokens_used": 575,
+      "yolo_model": "yolov8n",
+      "llm_model": "gpt-3.5-turbo",
+      "cached_at": 1764910626.522002
+    },
+    "87453ce0e9b67113af932270a558836d6e30dc449f3f3d09751331eb910bbe59": {
+      "description": "Caution, 8 cars on the right and ahead. Street sign says \"Willow Street.\" Another sign reads \"Pedestrian Crossing.\" Safe path straight ahead. Be alert for cars and cross cautiously when safe. Let me know if you need more assistance.",
+      "generation_latency": 0.8190562725067139,
+      "tokens_used": 507,
+      "yolo_model": "yolov8n",
+      "llm_model": "gpt-3.5-turbo",
+      "cached_at": 1764911333.753768
+    },
+    "dec6e741fb051fa53c0b72004379c0dba88b0c9f8ff2789555d61bf401e7b120": {
+      "description": "Pharmacy sign directly ahead reading \"Green Valley Pharmacy.\" Safe path to the left with a clear sidewalk. On the right, multiple cars parked nearby. The pharmacy is in front of you.",
+      "generation_latency": 1.0602939128875732,
+      "tokens_used": 584,
+      "yolo_model": "yolov8n",
+      "llm_model": "gpt-3.5-turbo",
+      "cached_at": 1764911365.166659
     }
   },
   "stats": {
     "hits": 29,
-    "misses": 128,
+    "misses": 134,
     "evictions": 0,
-    "loads": 20,
-    "saves": 107
+    "loads": 24,
+    "saves": 109
   }
 }
